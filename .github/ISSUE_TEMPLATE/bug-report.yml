@@ -1,0 +1,86 @@
+name: Bug report
+description: Report a reproducible configurator, installation, or reward problem.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Progression QOL. Do not include account information or personal paths in public reports.
+
+  - type: input
+    id: app-version
+    attributes:
+      label: Progression QOL version
+      placeholder: 0.9.0-rc.1
+    validations:
+      required: true
+
+  - type: input
+    id: game-version
+    attributes:
+      label: DragonSword game version
+      placeholder: 1.0.8
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem-area
+    attributes:
+      label: Problem area
+      options:
+        - Configurator interface
+        - Build or verification
+        - Installation or conflict scan
+        - Dungeon, hunt, raid, or Sudden Mission rewards
+        - World gathering or enemy materials
+        - World chests
+        - Spread Equipment Rolls
+        - Favor Better Rarity
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Selected configuration
+      description: List every non-default multiplier and whether Spread or Better Rarity was enabled.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include the activity, difficulty, expected result, and actual result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: audit-log
+    attributes:
+      label: Sanitized Audit Log and BUILD-REPORT.json
+      description: Remove personal folder paths before posting. Drag the build report here if useful.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: installed-paks
+    attributes:
+      label: Other installed PAKs
+      description: List PAK filenames in DS/Content/Paks and DS/Content/Paks/~mods, especially anything reported by the conflict scan.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Verification
+      options:
+        - label: I closed the game before installing the generated PAK.
+          required: true
+        - label: I confirmed the Audit Log contains an Installed line and verified SHA-256.
+          required: true
+        - label: I removed personal information from logs and screenshots.
+          required: true

@@ -1,0 +1,20 @@
+DragonSword Progression QOL — Third-Party Notices
+=================================================
+
+repak
+-----
+Project: https://github.com/trumank/repak
+Purpose: local Unreal Engine PAK pack, list, unpack, and verification
+License: MIT OR Apache-2.0
+
+The complete license texts are included beside repak.exe:
+  Tools/LICENSE-repak-MIT.txt
+  Tools/LICENSE-repak-APACHE.txt
+
+The application does not download repak or connect to its project site at runtime.
+
+Project artwork
+---------------
+The release artwork is an original AI-generated fantasy reward-forge scene created
+for DragonSword Progression QOL. It contains no game characters, game logos,
+third-party mod assets, or third-party mod branding.

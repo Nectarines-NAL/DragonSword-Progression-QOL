@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+Build/
+Release/
+ReleaseCandidate/
+*.user
+*.suo
+*.pdb
+*.zip
+*.sha256
+Generated/

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>DragonSword.ProgressionQoL</AssemblyName>
+    <RootNamespace>DragonSword.ProgressionQoL</RootNamespace>
+    <Version>0.9.0</Version>
+    <InformationalVersion>0.9.0-rc.1</InformationalVersion>
+    <Authors>nectarines</Authors>
+    <Company>nectarines</Company>
+    <Copyright>Copyright © 2026 nectarines</Copyright>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+</Project>
