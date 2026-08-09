@@ -1,0 +1,9 @@
+DragonSword PAK Tool helper
+Source: https://github.com/Null993/DragonSword-Pak-Tool
+Source commit: 48c48e47697e25538f5878c595d3169d695c3bdb
+Packaged file: DragonSwordExtract.exe
+SHA-256: AFEAAF3B49625F586343398DD1BA99DEEAAF31F1970746F9A94EBC3EA84C7AD0
+
+The packaged file is a compressed, self-contained, single-file win-x64 publish
+produced from the source commit above and renamed for its baseline-extraction
+role here.

@@ -19,6 +19,7 @@ internal sealed class MainForm : Form
     private readonly ToolTip _toolTips = new() { AutoPopDelay = 12000, InitialDelay = 350, ReshowDelay = 100 };
     private readonly CheckBox _spread = new();
     private readonly CheckBox _rarity = new();
+    private readonly CheckBox _currentGameBaseline = new();
     private readonly TextBox _gamePath = new();
     private readonly TextBox _outputPath = new();
     private readonly RichTextBox _log = new();
@@ -31,17 +32,23 @@ internal sealed class MainForm : Form
     public MainForm(bool startMaximized = false)
     {
         Text = "DragonSword Progression QOL — Release Candidate";
-        MinimumSize = new Size(1120, 820);
+        MinimumSize = new Size(640, 480);
         var working = Screen.PrimaryScreen?.WorkingArea ?? new Rectangle(0, 0, 1600, 1000);
         Size = new Size(Math.Min(1480, working.Width - 96), Math.Min(1000, working.Height - 72));
         StartPosition = FormStartPosition.CenterScreen;
         BackColor = Ink;
         ForeColor = TextMain;
         Font = new Font("Segoe UI", 10f);
-        AutoScaleMode = AutoScaleMode.Dpi;
-        if (startMaximized) WindowState = FormWindowState.Maximized;
+        using (var desktopGraphics = Graphics.FromHwnd(IntPtr.Zero))
+            if (startMaximized || desktopGraphics.DpiX > 120f || desktopGraphics.DpiY > 120f)
+                WindowState = FormWindowState.Maximized;
         _engine = new BuildEngine(AppContext.BaseDirectory);
         BuildLayout();
+        // WinForms scales only controls that already belong to the form. These
+        // properties therefore belong after the runtime-created control tree,
+        // just as they do at the end of designer-generated InitializeComponent.
+        AutoScaleDimensions = new SizeF(96f, 96f);
+        AutoScaleMode = AutoScaleMode.Dpi;
         SetDefaults();
         ScanConflicts();
     }
@@ -63,21 +70,23 @@ internal sealed class MainForm : Form
         _tabs.TabPages.Add(BuildAuditTab());
         shell.Controls.Add(_tabs, 0, 1);
 
-        var footer = new Panel { Dock = DockStyle.Fill, BackColor = Ink };
+        var footer = new TableLayoutPanel { Dock = DockStyle.Fill, BackColor = Ink, ColumnCount = 2, RowCount = 1 };
+        footer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+        footer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 300));
         _status.Text = "Ready — builds are local, offline, and reversible.";
         _status.ForeColor = TextMuted;
         _status.AutoSize = true;
-        _status.Location = new Point(4, 20);
-        footer.Controls.Add(_status);
+        _status.Dock = DockStyle.Fill;
+        _status.TextAlign = ContentAlignment.MiddleLeft;
+        footer.Controls.Add(_status, 0, 0);
 
         _build.Text = "BUILD + INSTALL";
         StyleButton(_build, Ember, TextMain);
         _build.Size = new Size(180, 42);
-        _build.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-        _build.Location = new Point(footer.Width - 170, 8);
+        _build.Dock = DockStyle.Fill;
+        _build.Margin = new Padding(8, 6, 0, 6);
         _build.Click += async (_, _) => await BuildAsync();
-        footer.Controls.Add(_build);
-        footer.Resize += (_, _) => _build.Left = footer.ClientSize.Width - _build.Width;
+        footer.Controls.Add(_build, 1, 0);
         shell.Controls.Add(footer, 0, 2);
     }
 
@@ -96,7 +105,7 @@ internal sealed class MainForm : Form
     private TabPage BuildRewardsTab()
     {
         var tab = NewTab("Rewards");
-        var layout = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 3, RowCount = 1, Padding = new Padding(8), BackColor = PanelColor };
+        var layout = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 3, RowCount = 1, Padding = new Padding(8), BackColor = PanelColor, AutoScroll = true, AutoScrollMinSize = new Size(1040, 620) };
         layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30f));
         layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40f));
         layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30f));
@@ -142,15 +151,15 @@ internal sealed class MainForm : Form
     private TabPage BuildPathsTab()
     {
         var tab = NewTab("Build & Install");
-        var layout = new TableLayoutPanel { Dock = DockStyle.Fill, BackColor = PanelColor, Padding = new Padding(22), ColumnCount = 1, RowCount = 5 };
+        var layout = new TableLayoutPanel { Dock = DockStyle.Fill, BackColor = PanelColor, Padding = new Padding(22), ColumnCount = 1, RowCount = 5, AutoScroll = true, AutoScrollMinSize = new Size(820, 650) };
         layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
         layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 92));
         layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 152));
         layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 152));
-        layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 178));
+        layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 230));
         layout.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
         layout.Controls.Add(BuildPageHeader(), 0, 0);
-        layout.Controls.Add(BuildPathCard("DragonSword installation", "Select the game folder—or DS, Paks, ~mods, Win64, or the game EXE. It is normalized automatically; installation goes to DS\\Content\\Paks.", _gamePath, BrowseGame, RewardGlyph.GameFolder), 0, 1);
+        layout.Controls.Add(BuildPathCard("DragonSword installation (auto-detected)", "The game location is scanned automatically. Use Browse to correct it if needed; installation goes to DS\\Content\\Paks.", _gamePath, BrowseGame, RewardGlyph.GameFolder), 0, 1);
         layout.Controls.Add(BuildPathCard("Build output folder", "Defaults to this Windows user's Documents folder. Verified PAKs and reports are created here; any writable folder can be selected.", _outputPath, BrowseOutput, RewardGlyph.OutputFolder), 0, 2);
         layout.Controls.Add(BuildScanCard(), 0, 3);
         tab.Controls.Add(layout);
@@ -164,7 +173,7 @@ internal sealed class MainForm : Form
         var title = new Label { Text = "BUILD & INSTALL", UseMnemonic = false, ForeColor = Gold, Font = new Font("Segoe UI Semibold", 13f), AutoSize = true, Location = new Point(62, 8) };
         var detail = new Label
         {
-            Text = "Choose settings, then use Build + Install. The verified PAK replaces only this app's previous PAK after confirmation; other mods are never changed.",
+            Text = "Choose settings, then use Build + Install. Active mods that edit the same tables are merged into the new PAK; their own files are never changed.",
             ForeColor = TextMuted,
             AutoSize = false,
             Location = new Point(62, 37),
@@ -190,7 +199,7 @@ internal sealed class MainForm : Form
         var detail = new Label { Text = description, ForeColor = TextMuted, Dock = DockStyle.Fill, UseCompatibleTextRendering = true };
         var pathRow = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, RowCount = 1, BackColor = PanelRaised };
         pathRow.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-        pathRow.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 118));
+        pathRow.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
         box.Dock = DockStyle.Fill;
         box.BackColor = Ink;
         box.ForeColor = TextMain;
@@ -216,15 +225,16 @@ internal sealed class MainForm : Form
         card.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 52));
         card.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
         var icon = new RewardIcon(RewardGlyph.Scan) { Dock = DockStyle.Top, Size = new Size(40, 40), Margin = new Padding(2, 8, 8, 0) };
-        var content = new TableLayoutPanel { Dock = DockStyle.Fill, BackColor = PanelRaised, ColumnCount = 2, RowCount = 3 };
-        content.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 210));
+        var content = new TableLayoutPanel { Dock = DockStyle.Fill, BackColor = PanelRaised, ColumnCount = 2, RowCount = 4 };
+        content.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 300));
         content.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
         content.RowStyles.Add(new RowStyle(SizeType.Absolute, 28));
         content.RowStyles.Add(new RowStyle(SizeType.Absolute, 48));
+        content.RowStyles.Add(new RowStyle(SizeType.Absolute, 42));
         content.RowStyles.Add(new RowStyle(SizeType.Absolute, 54));
         var title = new Label { Text = "Installed mod check", ForeColor = Gold, Font = new Font("Segoe UI Semibold", 10f), Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleLeft };
-        var detail = new Label { Text = "Scans likely mod PAKs in DS\\Content\\Paks and ~mods, then verifies their internal table paths. It never disables, deletes, or moves another mod.", ForeColor = TextMuted, Dock = DockStyle.Fill, UseCompatibleTextRendering = true };
-        var scan = new Button { Text = "SCAN INSTALLED MODS", Dock = DockStyle.Fill, Margin = new Padding(0, 6, 14, 6) };
+        var detail = new Label { Text = "Scans active mod PAKs in DS\\Content\\Paks and ~mods and verifies their internal table paths. Matching changes are merged automatically during build.", ForeColor = TextMuted, Dock = DockStyle.Fill, UseCompatibleTextRendering = true };
+        var scan = new Button { Text = "SCAN MODS", Dock = DockStyle.Fill, Margin = new Padding(0, 6, 14, 6) };
         StyleButton(scan, Ink, Teal);
         scan.Click += (_, _) => ScanConflicts();
         _conflictSummary.Text = "Not scanned yet.";
@@ -232,12 +242,20 @@ internal sealed class MainForm : Form
         _conflictSummary.Dock = DockStyle.Fill;
         _conflictSummary.TextAlign = ContentAlignment.MiddleLeft;
         _conflictSummary.AutoEllipsis = false;
+        _currentGameBaseline.Text = "Extract the vanilla baseline from the current game (slower; static bundled baseline is the default)";
+        _currentGameBaseline.Checked = false;
+        _currentGameBaseline.ForeColor = TextMain;
+        _currentGameBaseline.BackColor = PanelRaised;
+        _currentGameBaseline.Dock = DockStyle.Fill;
+        _currentGameBaseline.TextAlign = ContentAlignment.MiddleLeft;
         content.Controls.Add(title, 0, 0);
         content.SetColumnSpan(title, 2);
         content.Controls.Add(detail, 0, 1);
         content.SetColumnSpan(detail, 2);
-        content.Controls.Add(scan, 0, 2);
-        content.Controls.Add(_conflictSummary, 1, 2);
+        content.Controls.Add(_currentGameBaseline, 0, 2);
+        content.SetColumnSpan(_currentGameBaseline, 2);
+        content.Controls.Add(scan, 0, 3);
+        content.Controls.Add(_conflictSummary, 1, 3);
         card.Controls.Add(icon, 0, 0);
         card.Controls.Add(content, 1, 0);
         return card;
@@ -277,18 +295,40 @@ internal sealed class MainForm : Form
         var icon = new RewardIcon(glyph) { Location = new Point(8, 13), Size = new Size(36, 36) };
         var label = new Label { Text = title, ForeColor = TextMain, AutoSize = false, Font = new Font("Segoe UI Semibold", 9.5f), Location = new Point(54, 3), Height = 23 };
         var help = new Label { Text = description, ForeColor = TextMuted, AutoEllipsis = false, AutoSize = false, Location = new Point(54, 63), Height = 76, UseCompatibleTextRendering = true };
-        var combo = new MultiplierDropDown(options, selectedValue) { Width = buttonWidth, Height = 32, Location = new Point(54, 27) };
+        var combo = new MultiplierDropDown(options, selectedValue) { Width = (int)(buttonWidth * 1.5), Height = 32, Location = new Point(54, 27) };
         _multipliers[key] = combo;
         _toolTips.SetToolTip(host, description);
         _toolTips.SetToolTip(combo, description);
         host.Controls.Add(icon); host.Controls.Add(label); host.Controls.Add(help); host.Controls.Add(combo);
-        host.Resize += (_, _) =>
+        void LayoutChoice()
         {
-            combo.Left = label.Left;
-            combo.Top = 27;
+            var dpiScale = host.DeviceDpi / 96f;
+            var gap = Math.Max(4, (int)Math.Round(4f * dpiScale));
             label.Width = Math.Max(120, host.ClientSize.Width - label.Left - 8);
+            label.Height = TextRenderer.MeasureText(
+                label.Text,
+                label.Font,
+                new Size(int.MaxValue, int.MaxValue),
+                TextFormatFlags.SingleLine | TextFormatFlags.NoPadding).Height + gap;
+            combo.Left = label.Left;
+            combo.Top = label.Bottom + gap;
+            var comboTextWidth = TextRenderer.MeasureText(
+                options.MaxBy(x => x.Label.Length)!.Label + "   ▼",
+                combo.Font,
+                new Size(int.MaxValue, int.MaxValue),
+                TextFormatFlags.SingleLine | TextFormatFlags.NoPadding).Width;
+            var desiredWidth = Math.Max((int)Math.Round(buttonWidth * 1.5f * dpiScale), comboTextWidth + (int)Math.Round(44f * dpiScale));
+            combo.Width = Math.Max((int)Math.Round(100f * dpiScale), Math.Min(desiredWidth, host.ClientSize.Width - combo.Left - 8));
+            combo.Height = Math.Max(
+                (int)Math.Round(32f * dpiScale),
+                TextRenderer.MeasureText("Ag", combo.Font, new Size(int.MaxValue, int.MaxValue), TextFormatFlags.SingleLine | TextFormatFlags.NoPadding).Height + (int)Math.Round(10f * dpiScale));
+            combo.Padding = new Padding((int)Math.Round(8f * dpiScale), 0, (int)Math.Round(24f * dpiScale), 0);
             help.Width = Math.Max(120, host.ClientSize.Width - help.Left - 8);
-        };
+            help.Top = combo.Bottom + gap;
+            help.Height = Math.Max(24, host.ClientSize.Height - help.Top - gap);
+        }
+        host.Resize += (_, _) => LayoutChoice();
+        host.Layout += (_, _) => LayoutChoice();
         return host;
     }
 
@@ -357,7 +397,7 @@ internal sealed class MainForm : Form
     }
 
     private static Label Info(string text) => new() { Text = text, ForeColor = TextMuted, BackColor = PanelRaised, AutoEllipsis = false, Height = 68, Padding = new Padding(5, 7, 5, 5), UseCompatibleTextRendering = true };
-    private static TabPage NewTab(string text) => new(text) { BackColor = PanelColor, ForeColor = TextMain, Padding = new Padding(5) };
+    private static TabPage NewTab(string text) => new(text) { BackColor = PanelColor, ForeColor = TextMain, Padding = new Padding(5), AutoScroll = true };
 
     private Control PathRow(string labelText, TextBox box, int top, Action browse)
     {
@@ -391,10 +431,14 @@ internal sealed class MainForm : Form
         {
             _build.Enabled = false; _status.Text = "Building and verifying...";
             var progress = new Progress<string>(message => { _status.Text = message; Append(message, TextMuted); });
-            _latestBuild = await _engine.BuildAsync(ReadConfig(), _outputPath.Text, progress);
+            var gameRoot = BuildEngine.ResolveGameRoot(_gamePath.Text) ?? throw new DirectoryNotFoundException("DragonSword could not be found from the selected path.");
+            _gamePath.Text = gameRoot;
+            var baselineSource = _currentGameBaseline.Checked ? BaselineSource.CurrentGame : BaselineSource.BundledStatic;
+            _latestBuild = await _engine.BuildAsync(ReadConfig(), _outputPath.Text, progress, gameRoot, baselineSource);
             Append($"PAK: {_latestBuild.PakPath}", TextMain);
             Append($"SHA256: {_latestBuild.Sha256}", Teal);
             Append($"Rows — gathering {_latestBuild.GatheringRows}, enemies {_latestBuild.EnemyMaterialRows}, activities {_latestBuild.ActivityRows}, chests {_latestBuild.ChestRows}, spread rewards {_latestBuild.SpreadRewardRows}.", Gold);
+            Append($"Merged active overlapping mods: {_latestBuild.MergedModPaks.Count}.", _latestBuild.MergedModPaks.Count == 0 ? Teal : Gold);
             _status.Text = "Build verified — not installed yet.";
             Append("BUILD VERIFIED — NOT INSTALLED YET.", Gold);
             InstallLatest();
@@ -419,8 +463,12 @@ internal sealed class MainForm : Form
             var gameRoot = BuildEngine.ResolveGameRoot(_gamePath.Text) ?? throw new DirectoryNotFoundException("DragonSword could not be found from the selected path.");
             _gamePath.Text = gameRoot;
             var conflicts = FindKnownConflicts(gameRoot);
-            var warning = conflicts.Count == 0 ? "" : "\n\nConflicting reward/material PAKs detected:\n" + string.Join("\n", conflicts.Select(Path.GetFileName)) + "\n\nThe installer will NOT remove them. Disable those PAKs before launching the game.";
-            if (MessageBox.Show("The new PAK is built and verified, but it is not installed yet.\n\nInstall it now? The existing Progression QOL PAK will be disabled and backed up." + warning, "Install verified build", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+            var merged = _latestBuild.MergedModPaks.ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var changedSinceBuild = conflicts.Where(x => !merged.Contains(Path.GetFileName(x))).ToList();
+            if (changedSinceBuild.Count > 0)
+                throw new InvalidOperationException("New overlapping PAKs appeared after this build: " + string.Join(", ", changedSinceBuild.Select(Path.GetFileName)) + ". Build again so their changes can be merged safely.");
+            var mergeNote = merged.Count == 0 ? "" : $"\n\nChanges from {merged.Count} overlapping active mod(s) are included in this build; those mod files will remain untouched.";
+            if (MessageBox.Show("The new PAK is built and verified, but it is not installed yet.\n\nInstall it now? The existing Progression QOL PAK will be disabled and backed up." + mergeNote, "Install verified build", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
             {
                 Append("Installation skipped. The installed PAK was not changed.", Gold);
                 _status.Text = "Build verified — installation was skipped.";
@@ -429,7 +477,7 @@ internal sealed class MainForm : Form
             var destination = _engine.Install(_latestBuild, gameRoot);
             Append("Installed: " + destination, Teal);
             Append("Installed SHA256 verified: " + _latestBuild.Sha256, Teal);
-            _status.Text = "Installed and hash-verified. Resolve any logged conflicts before launch.";
+            _status.Text = "Installed and hash-verified with overlapping mod changes merged.";
         }
         catch (Exception ex) { Append("INSTALL ERROR: " + ex.Message, Ember); MessageBox.Show(ex.Message, "Install failed", MessageBoxButtons.OK, MessageBoxIcon.Error); }
     }
@@ -454,10 +502,10 @@ internal sealed class MainForm : Form
         }
         else
         {
-            _conflictSummary.Text = $"{conflicts.Count} possible reward/material conflict(s) found. Review the Audit Log.";
-            _conflictSummary.ForeColor = Ember;
-            Append($"Conflict scan: {conflicts.Count} reward/material PAK(s) require manual disabling:", Ember);
-            foreach (var file in conflicts) Append("  " + file, Ember);
+            _conflictSummary.Text = $"{conflicts.Count} overlapping mod(s) found; their table changes will be merged during build.";
+            _conflictSummary.ForeColor = Gold;
+            Append($"Conflict scan: {conflicts.Count} reward/material PAK(s) will be merged during build:", Gold);
+            foreach (var file in conflicts) Append("  " + file, Gold);
         }
         var paksRoot = Path.Combine(gameRoot, "DS", "Content", "Paks");
         var respawn = Directory.EnumerateFiles(paksRoot, "DS_TreasureRespawn.pak", SearchOption.TopDirectoryOnly)
@@ -501,13 +549,11 @@ internal sealed class MainForm : Form
         var paksRoot = Path.Combine(gameRoot, "DS", "Content", "Paks");
         if (!Directory.Exists(paksRoot)) return [];
         var owned = "DS_ZZZ_ProgressionQoL_Configured_P.pak";
-        var directories = new[] { paksRoot, Path.Combine(paksRoot, "~mods") }.Where(Directory.Exists);
-        var candidates = directories.SelectMany(x => Directory.EnumerateFiles(x, "*.pak", SearchOption.TopDirectoryOnly))
+        var candidates = Directory.EnumerateFiles(paksRoot, "*.pak", SearchOption.AllDirectories)
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .Where(x => !Path.GetFileName(x).Equals(owned, StringComparison.OrdinalIgnoreCase))
-            .Where(x => !Path.GetFileName(x).StartsWith("pakchunk", StringComparison.OrdinalIgnoreCase))
-            .Where(x => !Path.GetFileName(x).Equals("DS_TreasureRespawn.pak", StringComparison.OrdinalIgnoreCase))
-            .Where(x => RegexLike(Path.GetFileName(x), "Dungeon", "Reward", "Material", "Combined", "AllInOne", "ProgressionQoL", "Loot", "Drop"));
+            .Where(x => !BuildEngine.IsBaseGamePak(Path.GetFileName(x)))
+            .Where(x => !Path.GetFileName(x).Equals("DS_TreasureRespawn.pak", StringComparison.OrdinalIgnoreCase));
         var conflicts = new List<string>();
         foreach (var pak in candidates)
         {

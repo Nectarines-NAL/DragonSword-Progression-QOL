@@ -37,7 +37,7 @@ All multipliers open at `x1 — Default`. Spread Equipment Rolls and Favor Bette
 3. Close DragonSword: Awakening.
 4. Run `DragonSword.ProgressionQoL.exe`.
 5. Confirm the game folder and choose your settings.
-6. Select **Build + Install**, review any conflict warning, and confirm.
+6. Select **Build + Install**, review the overlapping-mod merge summary, and confirm.
 
 The app installs one file to `DS\Content\Paks`:
 
@@ -47,7 +47,7 @@ To change settings later, open the app and use **Build + Install** again. The pr
 
 ## Compatibility
 
-This release candidate has been tested with DragonSword: Awakening 1.0.8. Because another PAK that replaces the same Unreal reward tables cannot be row-merged at load time, disable any file identified by the built-in conflict scan before playing.
+This release candidate has been tested with DragonSword: Awakening 1.0.8. Since Unreal does not row-merge replacement tables at load time, the builder detects active overlapping PAKs and folds their vanilla-relative differences into the generated PAK before applying your Progression QOL settings.
 
 ## Transparent and offline
 
@@ -56,7 +56,7 @@ This release candidate has been tested with DragonSword: Awakening 1.0.8. Becaus
 - No installer service or registry changes
 - No DLL injection or game executable modification
 - No obfuscation
-- Other PAKs are scanned read-only and never changed
+- Other PAKs are scanned and read only; overlapping table changes are merged into the locally generated PAK
 - Generated and installed PAKs are SHA-256 verified
 - Full source code and third-party license notices are provided
 
@@ -64,7 +64,7 @@ The archive includes the open-source `repak` utility for local PAK creation and 
 
 ## Independent work
 
-Progression QOL is independently authored from unmodified game-table baselines and nectarines' own Dungeon QOL target work. It does not require, ingest, copy, or redistribute another mod. It includes no third-party mod files, settings, branding, descriptions, screenshots, or artwork.
+Progression QOL is independently authored from unmodified game-table baselines and nectarines' own Dungeon QOL target work. It does not bundle or require another mod. For compatibility, it can locally merge table differences from active installed mods into the user's generated PAK without altering or redistributing their source PAKs. It includes no third-party mod files, branding, descriptions, screenshots, or artwork.
 
 The original fantasy reward-forge artwork was AI-generated specifically for this project and contains no game characters or logos. OpenAI Codex assisted with code, UI implementation, test tooling, and documentation. The application is unobfuscated and the matching source release is available for inspection.
 

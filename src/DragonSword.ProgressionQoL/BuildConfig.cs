@@ -1,5 +1,11 @@
 namespace DragonSword.ProgressionQoL;
 
+internal enum BaselineSource
+{
+    BundledStatic,
+    CurrentGame
+}
+
 internal sealed record BuildConfig(
     int WorldGatheringMultiplier,
     int EnemyMaterialMultiplier,
@@ -23,4 +29,5 @@ internal sealed record BuildResult(
     int ChestRows,
     int SpreadRewardRows,
     int GeneratedGroups,
-    IReadOnlyList<string> PackedFiles);
+    IReadOnlyList<string> PackedFiles,
+    IReadOnlyList<string> MergedModPaks);

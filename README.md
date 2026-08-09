@@ -58,7 +58,7 @@ The application:
 - scans other PAKs read-only and never disables, deletes, or moves them;
 - installs only after explicit confirmation.
 
-The bundled `repak.exe` is the open-source Unreal PAK tool by trumank. It is used locally to pack, list, unpack, and verify the generated PAK. Its complete MIT and Apache-2.0 license texts are included.
+The bundled `repak.exe` is the open-source Unreal PAK tool by trumank. It is used locally to pack, list, unpack, and verify mod PAKs. A self-contained build of Null993's open-source [DragonSword PAK Tool](https://github.com/Null993/DragonSword-Pak-Tool) uses the DragonSword-specific package format to read official pakchunk108 and pakchunk109 when the current-game baseline option is selected. Complete license texts are included.
 
 ## Compatibility and conflicts
 
@@ -69,16 +69,16 @@ The generated PAK may contain these game paths:
 - `DS/Content/Design/GameData/PropCollectData.table` when gathering is changed
 - matching generated server XML files
 
-Another PAK editing the same tables conflicts at the file level; Unreal PAK load order does not merge individual rows. The built-in scanner lists likely PAKs and verifies their internal paths before warning.
+Another PAK editing the same tables conflicts at the file level because Unreal does not merge individual rows. The builder therefore scans every active mod PAK, compares overlapping resources with the verified vanilla baseline, merges the other mod's differences, and applies the selected Progression QOL changes last. Other PAK files remain read-only and unchanged.
 
-The table baseline was extracted from unmodified game version 1.0.5 and the release candidate has been tested against game version 1.0.8. The published 1.0.8 notes did not describe reward-table changes, but future game updates can still require a new baseline.
+The default static table baseline was extracted from unmodified game version 1.0.5 and the release candidate has been tested against game version 1.0.8. The Build & Install page can instead extract the seven required resources directly from the selected game's pakchunk108 and pakchunk109, which avoids relying on an older static baseline after a game update.
 
 ## Independent provenance
 
 - Activity targets come from the Dungeon QOL work authored by nectarines in this workspace.
 - Enemy-material and gathering targets are derived from unmodified game-table fields and item classifications.
 - Safe chest and rarity targets are derived from unmodified game-table relationships.
-- The application does not ingest another mod, require another mod, or include another mod's files, settings, branding, or artwork.
+- No third-party mod is bundled or required. At build time, the application can locally read and merge table differences from active overlapping mods into the user's generated PAK; it does not alter or redistribute their source PAKs.
 - Release artwork is an original AI-generated fantasy reward-forge scene created for this project. It contains no game characters, logos, or third-party mod assets.
 
 See [PROVENANCE.md](PROVENANCE.md) for the detailed boundary and [SECURITY.md](SECURITY.md) for the audit surface.

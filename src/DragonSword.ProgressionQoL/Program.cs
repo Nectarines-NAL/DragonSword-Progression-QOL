@@ -5,9 +5,14 @@ internal static class Program
     [STAThread]
     private static void Main(string[] args)
     {
-        if (args.Length == 2 && args[0].Equals("--build-test", StringComparison.OrdinalIgnoreCase))
+        if (args.Length is 2 or 3 && args[0].Equals("--build-test", StringComparison.OrdinalIgnoreCase))
         {
-            RunBuildTest(args[1]);
+            RunBuildTest(args[1], args.Length == 3 ? args[2] : null);
+            return;
+        }
+        if (args.Length == 3 && args[0].Equals("--build-test-current", StringComparison.OrdinalIgnoreCase))
+        {
+            RunBuildTest(args[1], args[2], BaselineSource.CurrentGame);
             return;
         }
         if (args.Length == 2 && args[0].Equals("--ui-snapshot", StringComparison.OrdinalIgnoreCase))
@@ -43,14 +48,14 @@ internal static class Program
         Application.Run(new MainForm());
     }
 
-    private static void RunBuildTest(string outputDirectory)
+    private static void RunBuildTest(string outputDirectory, string? gameRoot, BaselineSource baselineSource = BaselineSource.BundledStatic)
     {
         try
         {
             var engine = new BuildEngine(AppContext.BaseDirectory);
             var config = new BuildConfig(2, 2, 5, 5, 5, 10, 10, 2, true, true, 90m);
             var progress = new Progress<string>(Console.WriteLine);
-            var result = engine.BuildAsync(config, outputDirectory, progress).GetAwaiter().GetResult();
+            var result = engine.BuildAsync(config, outputDirectory, progress, gameRoot, baselineSource).GetAwaiter().GetResult();
             Console.WriteLine($"TEST_BUILD_OK|{result.PakPath}|{result.Sha256}|{result.FilesPacked}");
         }
         catch (Exception ex)
