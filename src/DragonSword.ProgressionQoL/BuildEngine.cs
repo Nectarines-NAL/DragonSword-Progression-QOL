@@ -6,30 +6,36 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
+using Microsoft.Win32;
 
 namespace DragonSword.ProgressionQoL;
 
 internal sealed class BuildEngine
 {
     private const string PakName = "DS_ZZZ_ProgressionQoL_Configured_P.pak";
+    private const string GamePakAesKey = "263479C442D45B7EEDE7B3A36BBB3C3B39EF9178A2F82AB694FB410AB15E01AD";
     private static readonly CultureInfo Invariant = CultureInfo.InvariantCulture;
     private static readonly Regex XmlId = new("\\b(?:\\w+:)?ID=\"(\\d+)\"", RegexOptions.Compiled);
+    private static readonly Regex XmlAttribute = new("(?:\\w+:)?(?<name>[A-Za-z_][\\w.-]*)=\"(?<value>[^\"]*)\"", RegexOptions.Compiled);
 
     private readonly string _baseDirectory;
     private readonly string _baselineDirectory;
     private readonly string _repakPath;
+    private readonly string _dragonSwordExtractPath;
 
     public BuildEngine(string baseDirectory)
     {
         _baseDirectory = baseDirectory;
         _baselineDirectory = Path.Combine(baseDirectory, "Baselines");
         _repakPath = Path.Combine(baseDirectory, "Tools", "repak.exe");
+        _dragonSwordExtractPath = Path.Combine(baseDirectory, "Tools", "DragonSwordExtract", "DragonSwordExtract.exe");
     }
 
-    public async Task<BuildResult> BuildAsync(BuildConfig config, string outputRoot, IProgress<string>? progress = null)
+    public async Task<BuildResult> BuildAsync(BuildConfig config, string outputRoot, IProgress<string>? progress = null, string? gameRoot = null, BaselineSource baselineSource = BaselineSource.BundledStatic)
     {
         Validate(config);
         RequireFile(_repakPath);
+        if (baselineSource == BaselineSource.CurrentGame) RequireFile(_dragonSwordExtractPath);
         foreach (var name in new[] { "RewardRandomData.table", "RewardRandomData.xml", "RewardData.table", "RewardData.xml", "PropCollectData.table", "PropCollectData.xml", "GameItemData.table", "BaselineTargets.json" })
             RequireFile(Path.Combine(_baselineDirectory, name));
 
@@ -46,14 +52,42 @@ internal sealed class BuildEngine
         Directory.CreateDirectory(serverDirectory);
         Directory.CreateDirectory(packageDirectory);
 
-        progress?.Report("Loading verified baseline tables...");
-        var vanillaRandom = LoadObject("RewardRandomData.table");
-        var modifiedRandom = (JsonObject)vanillaRandom.DeepClone();
-        var vanillaRewardData = LoadObject("RewardData.table");
-        var modifiedRewardData = (JsonObject)vanillaRewardData.DeepClone();
-        var vanillaCollect = LoadObject("PropCollectData.table");
-        var modifiedCollect = (JsonObject)vanillaCollect.DeepClone();
-        var gameItems = LoadObject("GameItemData.table");
+        var resolvedGameRoot = string.IsNullOrWhiteSpace(gameRoot) ? null : ResolveGameRoot(gameRoot);
+        progress?.Report(baselineSource == BaselineSource.CurrentGame
+            ? "Extracting current vanilla tables from official game PAKs..."
+            : "Loading verified bundled baseline tables...");
+        var baseline = baselineSource == BaselineSource.CurrentGame
+            ? await LoadCurrentGameBaselineAsync(resolvedGameRoot ?? throw new DirectoryNotFoundException("Current-game baseline mode requires a valid DragonSword installation."), progress)
+            : LoadBundledBaseline();
+        var vanillaRandom = baseline.Random;
+        var vanillaRewardData = baseline.Reward;
+        var vanillaCollect = baseline.Collect;
+        var randomXml = baseline.RandomXml;
+        var rewardXml = baseline.RewardXml;
+        var collectXml = baseline.CollectXml;
+        var mergedModPaks = new List<string>();
+
+        var inputRandom = (JsonObject)vanillaRandom.DeepClone();
+        var inputRewardData = (JsonObject)vanillaRewardData.DeepClone();
+        var inputCollect = (JsonObject)vanillaCollect.DeepClone();
+        if (!string.IsNullOrWhiteSpace(gameRoot))
+        {
+            var resolvedRoot = resolvedGameRoot ?? throw new DirectoryNotFoundException("DragonSword could not be found from the selected build path.");
+            var merge = await MergeActiveModsAsync(resolvedRoot, buildRoot, vanillaRandom, vanillaRewardData, vanillaCollect, randomXml, rewardXml, collectXml, progress);
+            inputRandom = merge.Random;
+            inputRewardData = merge.Reward;
+            inputCollect = merge.Collect;
+            randomXml = merge.RandomXml;
+            rewardXml = merge.RewardXml;
+            collectXml = merge.CollectXml;
+            mergedModPaks.AddRange(merge.Paks);
+            var extractedMods = Path.Combine(buildRoot, "MergedMods");
+            if (Directory.Exists(extractedMods)) Directory.Delete(extractedMods, true);
+        }
+        var modifiedRandom = (JsonObject)inputRandom.DeepClone();
+        var modifiedRewardData = (JsonObject)inputRewardData.DeepClone();
+        var modifiedCollect = (JsonObject)inputCollect.DeepClone();
+        var gameItems = baseline.Items;
         var targets = LoadObject("BaselineTargets.json");
 
         var itemTypes = BuildItemTypeMap(gameItems);
@@ -79,7 +113,7 @@ internal sealed class BuildEngine
             };
             if (multiplier != 1)
             {
-                ScaleRewardRow(vanillaRandom, modifiedRandom, target, multiplier);
+                ScaleRewardRow(inputRandom, modifiedRandom, target, multiplier);
                 activityChanged++;
             }
         }
@@ -89,7 +123,7 @@ internal sealed class BuildEngine
         {
             foreach (var target in enemyTargets)
             {
-                ScaleRewardRow(vanillaRandom, modifiedRandom, target, config.EnemyMaterialMultiplier);
+                ScaleRewardRow(inputRandom, modifiedRandom, target, config.EnemyMaterialMultiplier);
                 enemyChanged++;
             }
         }
@@ -99,17 +133,17 @@ internal sealed class BuildEngine
         {
             foreach (var target in chestTargets)
             {
-                ScaleRewardRow(vanillaRandom, modifiedRandom, target, config.WorldChestMultiplier);
+                ScaleRewardRow(inputRandom, modifiedRandom, target, config.WorldChestMultiplier);
                 chestChanged++;
             }
         }
 
-        var gatheringChanged = ScaleGathering(vanillaCollect, modifiedCollect, gatheringIds, config.WorldGatheringMultiplier);
+        var gatheringChanged = ScaleGathering(inputCollect, modifiedCollect, gatheringIds, config.WorldGatheringMultiplier);
         if (config.EnhancedRarity)
             ApplyRarity(modifiedRandom, targets["rarity_groups"] as JsonArray ?? [], config.HighGradeChance);
 
         var spread = config.SpreadRolls && config.EquipmentMultiplier > 1
-            ? ApplySpreadRolls(vanillaRandom, modifiedRandom, modifiedRewardData, activityTargets, config.EquipmentMultiplier)
+            ? ApplySpreadRolls(inputRandom, modifiedRandom, modifiedRewardData, activityTargets, config.EquipmentMultiplier)
             : new SpreadResult(0, []);
 
         var rewardChanged = activityChanged > 0 || enemyChanged > 0 || chestChanged > 0 || config.EnhancedRarity || spread.GeneratedGroups.Count > 0;
@@ -120,21 +154,21 @@ internal sealed class BuildEngine
         if (rewardChanged)
         {
             WriteJson(Path.Combine(clientDirectory, "RewardRandomData.table"), modifiedRandom);
-            WriteRewardRandomXml(Path.Combine(_baselineDirectory, "RewardRandomData.xml"), modifiedRandom, spread.GeneratedGroups, Path.Combine(serverDirectory, "RewardRandomData.xml"));
+            WriteRewardRandomXml(randomXml, modifiedRandom, spread.GeneratedGroups, Path.Combine(serverDirectory, "RewardRandomData.xml"));
             packedFiles.Add("Design/GameData/RewardRandomData.table");
             packedFiles.Add("__GeneratedGameData__/Server/XML/GameData/RewardRandomData.xml");
         }
         if (gatheringChanged > 0)
         {
             WriteJson(Path.Combine(clientDirectory, "PropCollectData.table"), modifiedCollect);
-            WritePropCollectXml(Path.Combine(_baselineDirectory, "PropCollectData.xml"), modifiedCollect, Path.Combine(serverDirectory, "PropCollectData.xml"));
+            WritePropCollectXml(collectXml, modifiedCollect, Path.Combine(serverDirectory, "PropCollectData.xml"));
             packedFiles.Add("Design/GameData/PropCollectData.table");
             packedFiles.Add("__GeneratedGameData__/Server/XML/GameData/PropCollectData.xml");
         }
         if (spread.TransformedRows > 0)
         {
             WriteJson(Path.Combine(clientDirectory, "RewardData.table"), modifiedRewardData);
-            WriteRewardDataXml(Path.Combine(_baselineDirectory, "RewardData.xml"), modifiedRewardData, Path.Combine(serverDirectory, "RewardData.xml"));
+            WriteRewardDataXml(rewardXml, modifiedRewardData, Path.Combine(serverDirectory, "RewardData.xml"));
             packedFiles.Add("Design/GameData/RewardData.table");
             packedFiles.Add("__GeneratedGameData__/Server/XML/GameData/RewardData.xml");
         }
@@ -163,10 +197,13 @@ internal sealed class BuildEngine
         var report = new JsonObject
         {
             ["application_version"] = "0.9.0-rc.1",
-            ["baseline"] = "Verified unmodified game 1.0.5 tables; application functions tested with game 1.0.8",
+            ["baseline"] = baseline.Description,
+            ["baseline_source"] = baselineSource.ToString(),
+            ["baseline_paks"] = new JsonArray(baseline.Paks.Select(x => JsonValue.Create(x)).ToArray()),
             ["generated_at"] = DateTimeOffset.Now.ToString("O", Invariant),
             ["pak_sha256"] = sha,
             ["configuration"] = JsonSerializer.SerializeToNode(config),
+            ["merged_mod_paks"] = new JsonArray(mergedModPaks.Select(x => JsonValue.Create(x)).ToArray()),
             ["counts"] = new JsonObject
             {
                 ["gathering_rows"] = gatheringChanged,
@@ -181,11 +218,11 @@ internal sealed class BuildEngine
         WriteJson(Path.Combine(buildRoot, "BUILD-REPORT.json"), report);
         File.WriteAllText(Path.Combine(buildRoot, "INSTALL.txt"),
             $"Copy Package\\DS\\Content\\Paks\\{PakName} to your game's DS\\Content\\Paks folder.\r\n" +
-            "Disable other mods that edit RewardRandomData, RewardData, or PropCollectData. DS_TreasureRespawn.pak does not overlap these paths.\r\n", new UTF8Encoding(false));
+            $"Merged {mergedModPaks.Count} active mod PAK(s) that edit managed tables before applying this configuration.\r\n", new UTF8Encoding(false));
 
         try { Directory.Delete(Path.Combine(buildRoot, "Staging"), true); Directory.Delete(verifyDirectory, true); } catch { /* Build remains valid if cleanup is blocked. */ }
         progress?.Report("Build complete and hash-verified.");
-        return new BuildResult(pakPath, sha, packedFiles.Count, gatheringChanged, enemyChanged, activityChanged, chestChanged, spread.TransformedRows, spread.GeneratedGroups.Count, packedFiles);
+        return new BuildResult(pakPath, sha, packedFiles.Count, gatheringChanged, enemyChanged, activityChanged, chestChanged, spread.TransformedRows, spread.GeneratedGroups.Count, packedFiles, mergedModPaks);
     }
 
     public string Install(BuildResult result, string gameRoot)
@@ -254,8 +291,22 @@ internal sealed class BuildEngine
     public static string? DetectGameRoot()
     {
         var candidates = new List<string>();
+        try
+        {
+            using var steamKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam");
+            if (steamKey?.GetValue("SteamPath") is string steamPath && Directory.Exists(steamPath))
+            {
+                candidates.Add(Path.Combine(steamPath, "steamapps", "common"));
+                var libraries = Path.Combine(steamPath, "steamapps", "libraryfolders.vdf");
+                if (File.Exists(libraries))
+                    foreach (Match match in Regex.Matches(File.ReadAllText(libraries), "\"path\"\\s+\"(?<path>[^\"]+)\"", RegexOptions.IgnoreCase))
+                        candidates.Add(Path.Combine(match.Groups["path"].Value.Replace("\\\\", "\\", StringComparison.Ordinal), "steamapps", "common"));
+            }
+        }
+        catch { /* Registry/VDF discovery is best-effort; drive scanning remains available. */ }
         foreach (var drive in DriveInfo.GetDrives().Where(x => x.IsReady))
         {
+            candidates.Add(Path.Combine(drive.RootDirectory.FullName, "Steam", "steamapps", "common"));
             candidates.Add(Path.Combine(drive.RootDirectory.FullName, "SteamLibrary", "steamapps", "common"));
             candidates.Add(Path.Combine(drive.RootDirectory.FullName, "Program Files (x86)", "Steam", "steamapps", "common"));
             candidates.Add(Path.Combine(drive.RootDirectory.FullName, "Program Files", "Steam", "steamapps", "common"));
@@ -274,7 +325,7 @@ internal sealed class BuildEngine
     public bool PakTouchesManagedTables(string pakPath)
     {
         RequireFile(_repakPath);
-        var listing = RunAsync(_repakPath, ["list", pakPath]).GetAwaiter().GetResult();
+        var listing = RunPakReadAsync(["list", pakPath]).GetAwaiter().GetResult();
         return listing.Contains("RewardRandomData.table", StringComparison.OrdinalIgnoreCase)
             || listing.Contains("RewardRandomData.xml", StringComparison.OrdinalIgnoreCase)
             || listing.Contains("RewardData.table", StringComparison.OrdinalIgnoreCase)
@@ -282,6 +333,315 @@ internal sealed class BuildEngine
             || listing.Contains("PropCollectData.table", StringComparison.OrdinalIgnoreCase)
             || listing.Contains("PropCollectData.xml", StringComparison.OrdinalIgnoreCase);
     }
+
+    private async Task<ModMergeResult> MergeActiveModsAsync(
+        string gameRoot,
+        string buildRoot,
+        JsonObject vanillaRandom,
+        JsonObject vanillaReward,
+        JsonObject vanillaCollect,
+        List<string> vanillaRandomXml,
+        List<string> vanillaRewardXml,
+        List<string> vanillaCollectXml,
+        IProgress<string>? progress)
+    {
+        var paksRoot = Path.Combine(gameRoot, "DS", "Content", "Paks");
+        if (!Directory.Exists(paksRoot))
+            return new ModMergeResult((JsonObject)vanillaRandom.DeepClone(), (JsonObject)vanillaReward.DeepClone(), (JsonObject)vanillaCollect.DeepClone(), [.. vanillaRandomXml], [.. vanillaRewardXml], [.. vanillaCollectXml], []);
+
+        var candidates = Directory.EnumerateFiles(paksRoot, "*.pak", SearchOption.AllDirectories)
+            .Where(x => !Path.GetFileName(x).Equals(PakName, StringComparison.OrdinalIgnoreCase))
+            .Where(x => !IsBaseGamePak(Path.GetFileName(x)))
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .OrderBy(x => x.Contains($"{Path.DirectorySeparatorChar}~mods{Path.DirectorySeparatorChar}") ? 1 : 0)
+            .ThenBy(x => Path.GetFileName(x), StringComparer.OrdinalIgnoreCase)
+            .ToList();
+
+        var relevant = new List<string>();
+        foreach (var pak in candidates)
+        {
+            var listing = await RunPakReadAsync(["list", pak]);
+            if (ManagedNames.Any(x => listing.Contains(x, StringComparison.OrdinalIgnoreCase))) relevant.Add(pak);
+        }
+
+        var random = (JsonObject)vanillaRandom.DeepClone();
+        var reward = (JsonObject)vanillaReward.DeepClone();
+        var collect = (JsonObject)vanillaCollect.DeepClone();
+        var randomXml = vanillaRandomXml.ToList();
+        var rewardXml = vanillaRewardXml.ToList();
+        var collectXml = vanillaCollectXml.ToList();
+        var unpackRoot = Path.Combine(buildRoot, "MergedMods");
+
+        for (var index = 0; index < relevant.Count; index++)
+        {
+            var pak = relevant[index];
+            progress?.Report($"Merging active mod {index + 1}/{relevant.Count}: {Path.GetFileName(pak)}");
+            var destination = Path.Combine(unpackRoot, index.ToString("D3", Invariant));
+            Directory.CreateDirectory(destination);
+            try
+            {
+                await RunPakReadAsync(["unpack", "-q", "-o", destination, pak]);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidDataException($"Active mod {Path.GetFileName(pak)} edits a managed resource but could not be unpacked, so a safe merge is impossible.", ex);
+            }
+
+            MergeTable("RewardRandomData.table", vanillaRandom, random);
+            MergeTable("RewardData.table", vanillaReward, reward);
+            MergeTable("PropCollectData.table", vanillaCollect, collect);
+            MergeXml("RewardRandomData.xml", vanillaRandomXml, randomXml);
+            MergeXml("RewardData.xml", vanillaRewardXml, rewardXml);
+            MergeXml("PropCollectData.xml", vanillaCollectXml, collectXml);
+
+            void MergeTable(string name, JsonObject vanilla, JsonObject target)
+            {
+                var file = FindManagedFile(destination, name);
+                if (file is null) return;
+                JsonObject modded;
+                try { modded = JsonNode.Parse(File.ReadAllText(file))?.AsObject() ?? throw new InvalidDataException(); }
+                catch (Exception ex) { throw new InvalidDataException($"{Path.GetFileName(pak)} contains an invalid {name}.", ex); }
+                ApplyThreeWayDiff(vanilla, modded, target);
+            }
+
+            void MergeXml(string name, List<string> vanilla, List<string> target)
+            {
+                var file = FindManagedFile(destination, name);
+                if (file is not null) ApplyXmlDiff(vanilla, File.ReadAllLines(file).ToList(), target);
+            }
+        }
+
+        return new ModMergeResult(random, reward, collect, randomXml, rewardXml, collectXml, relevant.Select(Path.GetFileName).ToList()!);
+    }
+
+    private static readonly string[] ManagedNames =
+    [
+        "RewardRandomData.table", "RewardRandomData.xml", "RewardData.table",
+        "RewardData.xml", "PropCollectData.table", "PropCollectData.xml"
+    ];
+
+    internal static bool IsBaseGamePak(string fileName) => Regex.IsMatch(
+        fileName,
+        "^pakchunk\\d+(?:_s\\d+)?(?:-[A-Za-z0-9]+)?\\.pak$",
+        RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+    private static string? FindManagedFile(string root, string name) => Directory
+        .EnumerateFiles(root, name, SearchOption.AllDirectories)
+        .OrderBy(x => x, StringComparer.OrdinalIgnoreCase)
+        .FirstOrDefault();
+
+    private static void ApplyThreeWayDiff(JsonNode vanilla, JsonNode modded, JsonNode target)
+    {
+        if (vanilla is JsonObject vanillaObject && modded is JsonObject modObject && target is JsonObject targetObject)
+        {
+            foreach (var property in modObject)
+            {
+                if (!vanillaObject.TryGetPropertyValue(property.Key, out var original))
+                {
+                    targetObject[property.Key] = property.Value?.DeepClone();
+                    continue;
+                }
+                if (property.Value is null || original is null)
+                {
+                    if (!JsonNode.DeepEquals(original, property.Value)) targetObject[property.Key] = property.Value?.DeepClone();
+                    continue;
+                }
+                if (targetObject[property.Key] is { } destination)
+                    ApplyThreeWayDiff(original, property.Value, destination);
+                else if (!JsonNode.DeepEquals(original, property.Value))
+                    targetObject[property.Key] = property.Value.DeepClone();
+            }
+            foreach (var removed in vanillaObject.Select(x => x.Key).Except(modObject.Select(x => x.Key), StringComparer.Ordinal).ToList())
+                targetObject.Remove(removed);
+            return;
+        }
+
+        if (vanilla is JsonArray vanillaArray && modded is JsonArray modArray && target is JsonArray targetArray)
+        {
+            for (var i = 0; i < modArray.Count; i++)
+            {
+                if (i >= vanillaArray.Count || i >= targetArray.Count)
+                {
+                    if (i >= targetArray.Count && (i >= vanillaArray.Count || !JsonNode.DeepEquals(vanillaArray[i], modArray[i])))
+                        targetArray.Add(modArray[i]?.DeepClone());
+                    else if (i < targetArray.Count)
+                        targetArray[i] = modArray[i]?.DeepClone();
+                    continue;
+                }
+                var original = vanillaArray[i];
+                var changed = modArray[i];
+                var destination = targetArray[i];
+                if (original is not null && changed is not null && destination is not null)
+                    ApplyThreeWayDiff(original, changed, destination);
+                else if (!JsonNode.DeepEquals(original, changed))
+                    targetArray[i] = changed?.DeepClone();
+            }
+            while (targetArray.Count > modArray.Count && vanillaArray.Count > modArray.Count)
+                targetArray.RemoveAt(targetArray.Count - 1);
+            return;
+        }
+
+        if (!JsonNode.DeepEquals(vanilla, modded)) ReplaceNode(target, modded.DeepClone());
+    }
+
+    private static void ReplaceNode(JsonNode target, JsonNode replacement)
+    {
+        if (target.Parent is JsonObject parentObject)
+        {
+            var key = parentObject.First(x => ReferenceEquals(x.Value, target)).Key;
+            parentObject[key] = replacement;
+        }
+        else if (target.Parent is JsonArray parentArray)
+        {
+            var index = parentArray.IndexOf(target);
+            parentArray[index] = replacement;
+        }
+    }
+
+    private static void ApplyXmlDiff(List<string> vanilla, List<string> modded, List<string> target)
+    {
+        var vanillaMap = MapXmlLines(vanilla);
+        var modMap = MapXmlLines(modded);
+        var targetMap = MapXmlLines(target);
+        var removals = new List<int>();
+        foreach (var (id, vanillaIndices) in vanillaMap)
+        {
+            if (!targetMap.TryGetValue(id, out var targetIndices)) continue;
+            var keep = modMap.TryGetValue(id, out var modIndices) ? modIndices.Count : 0;
+            if (keep >= vanillaIndices.Count) continue;
+            removals.AddRange(targetIndices.Skip(keep).Take(vanillaIndices.Count - keep));
+        }
+        foreach (var lineIndex in removals.Distinct().OrderDescending()) target.RemoveAt(lineIndex);
+
+        targetMap = MapXmlLines(target);
+        foreach (var (id, modIndices) in modMap)
+        {
+            if (!vanillaMap.TryGetValue(id, out var vanillaIndices))
+            {
+                ReplaceOrInsertAddedLines(id, modIndices.Select(x => modded[x]).ToList());
+                continue;
+            }
+            if (!targetMap.TryGetValue(id, out var targetIndices)) continue;
+            var count = Math.Min(modIndices.Count, Math.Min(vanillaIndices.Count, targetIndices.Count));
+            for (var i = 0; i < count; i++)
+            {
+                var originalAttributes = ReadAttributes(vanilla[vanillaIndices[i]]);
+                var modAttributes = ReadAttributes(modded[modIndices[i]]);
+                var line = target[targetIndices[i]];
+                foreach (var (name, value) in modAttributes)
+                    if (originalAttributes.TryGetValue(name, out var original) && !StringComparer.Ordinal.Equals(original, value))
+                        line = SetAttribute(line, name, value);
+                target[targetIndices[i]] = line;
+            }
+            if (modIndices.Count > vanillaIndices.Count)
+                ReplaceOrInsertAddedLines(id, modIndices.Skip(vanillaIndices.Count).Select(x => modded[x]).ToList(), vanillaIndices.Count);
+        }
+
+        void ReplaceOrInsertAddedLines(long id, List<string> lines, int offset = 0)
+        {
+            targetMap = MapXmlLines(target);
+            targetMap.TryGetValue(id, out var existing);
+            for (var i = 0; i < lines.Count; i++)
+            {
+                var occurrence = offset + i;
+                if (existing is not null && occurrence < existing.Count)
+                    target[existing[occurrence]] = lines[i];
+                else
+                {
+                    var insertion = target.FindLastIndex(x => x.TrimStart().StartsWith("</", StringComparison.Ordinal));
+                    target.Insert(insertion < 0 ? target.Count : insertion, lines[i]);
+                    targetMap = MapXmlLines(target);
+                    targetMap.TryGetValue(id, out existing);
+                }
+            }
+        }
+    }
+
+    private static Dictionary<string, string> ReadAttributes(string line) => XmlAttribute.Matches(line)
+        .Cast<Match>().ToDictionary(x => x.Groups["name"].Value, x => x.Groups["value"].Value, StringComparer.Ordinal);
+
+    private BaselineData LoadBundledBaseline() => new(
+        LoadObject("RewardRandomData.table"),
+        LoadObject("RewardData.table"),
+        LoadObject("PropCollectData.table"),
+        LoadObject("GameItemData.table"),
+        File.ReadAllLines(Path.Combine(_baselineDirectory, "RewardRandomData.xml")).ToList(),
+        File.ReadAllLines(Path.Combine(_baselineDirectory, "RewardData.xml")).ToList(),
+        File.ReadAllLines(Path.Combine(_baselineDirectory, "PropCollectData.xml")).ToList(),
+        "Verified bundled unmodified game 1.0.5 tables; application functions tested with game 1.0.8",
+        []);
+
+    private async Task<BaselineData> LoadCurrentGameBaselineAsync(string gameRoot, IProgress<string>? progress)
+    {
+        var paksRoot = Path.Combine(gameRoot, "DS", "Content", "Paks");
+        var requiredPaks = new[] { "pakchunk108-WindowsClient.pak", "pakchunk109-WindowsClient.pak" };
+        var missingPaks = requiredPaks.Where(x => !File.Exists(Path.Combine(paksRoot, x))).ToList();
+        if (missingPaks.Count > 0)
+            throw new InvalidDataException("Current-game baseline extraction requires: " + string.Join(", ", missingPaks) + ". Verify the selected DragonSword installation or use the bundled static baseline.");
+
+        var requiredFiles = new[]
+        {
+            "RewardRandomData.table", "RewardRandomData.xml", "RewardData.table", "RewardData.xml",
+            "PropCollectData.table", "PropCollectData.xml", "GameItemData.table"
+        };
+        var extractRoot = Path.Combine(Path.GetTempPath(), "DragonSword.ProgressionQoL", "current-baseline-" + Guid.NewGuid().ToString("N"));
+        var isolatedPaks = Path.Combine(extractRoot, "Paks");
+        Directory.CreateDirectory(isolatedPaks);
+        try
+        {
+            try
+            {
+                for (var index = 0; index < requiredPaks.Length; index++)
+                {
+                    var pakName = requiredPaks[index];
+                    progress?.Report($"Reading official game PAK {index + 1}/{requiredPaks.Length} with DragonSword PAK Tool: {pakName}");
+                    var isolatedPak = Path.Combine(isolatedPaks, pakName);
+                    File.Copy(Path.Combine(paksRoot, pakName), isolatedPak);
+                    await RunAsync(_dragonSwordExtractPath, ["--no-pause", isolatedPak]);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidDataException("Could not extract the current DragonSword baseline from pakchunk108 and pakchunk109 with DragonSword PAK Tool. Use the bundled static baseline if this game version changed its package format.", ex);
+            }
+
+            var tableRoot = Path.Combine(isolatedPaks, "pakchunk108-WindowsClient_Unpacked", "DS", "Content");
+            var xmlRoot = Path.Combine(isolatedPaks, "pakchunk109-WindowsClient_Unpacked", "DS", "Content");
+            var paths = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+            {
+                ["RewardRandomData.table"] = Path.Combine(tableRoot, "Design", "GameData", "RewardRandomData.table"),
+                ["RewardData.table"] = Path.Combine(tableRoot, "Design", "GameData", "RewardData.table"),
+                ["PropCollectData.table"] = Path.Combine(tableRoot, "Design", "GameData", "PropCollectData.table"),
+                ["GameItemData.table"] = Path.Combine(tableRoot, "Design", "GameData", "GameItemData.table"),
+                ["RewardRandomData.xml"] = Path.Combine(xmlRoot, "__GeneratedGameData__", "Server", "XML", "GameData", "RewardRandomData.xml"),
+                ["RewardData.xml"] = Path.Combine(xmlRoot, "__GeneratedGameData__", "Server", "XML", "GameData", "RewardData.xml"),
+                ["PropCollectData.xml"] = Path.Combine(xmlRoot, "__GeneratedGameData__", "Server", "XML", "GameData", "PropCollectData.xml")
+            };
+            var missing = requiredFiles.Where(x => !File.Exists(paths[x])).ToList();
+            if (missing.Count > 0)
+                throw new InvalidDataException("The DragonSword-specific parser did not extract: " + string.Join(", ", missing) + ". Use the bundled static baseline until this game layout is supported.");
+
+            return new BaselineData(
+                ParseObject(await File.ReadAllTextAsync(paths["RewardRandomData.table"]), "current RewardRandomData.table"),
+                ParseObject(await File.ReadAllTextAsync(paths["RewardData.table"]), "current RewardData.table"),
+                ParseObject(await File.ReadAllTextAsync(paths["PropCollectData.table"]), "current PropCollectData.table"),
+                ParseObject(await File.ReadAllTextAsync(paths["GameItemData.table"]), "current GameItemData.table"),
+                SplitLines(await File.ReadAllTextAsync(paths["RewardRandomData.xml"])),
+                SplitLines(await File.ReadAllTextAsync(paths["RewardData.xml"])),
+                SplitLines(await File.ReadAllTextAsync(paths["PropCollectData.xml"])),
+                "Tables extracted from the selected current DragonSword installation with DragonSword PAK Tool",
+                requiredPaks.ToList());
+        }
+        finally
+        {
+            if (Directory.Exists(extractRoot)) Directory.Delete(extractRoot, true);
+        }
+    }
+
+    private static JsonObject ParseObject(string text, string description) => JsonNode.Parse(text)?.AsObject()
+        ?? throw new InvalidDataException($"Invalid JSON in {description}.");
+
+    private static List<string> SplitLines(string text) => text.Replace("\r\n", "\n", StringComparison.Ordinal).Replace('\r', '\n').Split('\n').ToList();
 
     private JsonObject LoadObject(string name) => JsonNode.Parse(File.ReadAllText(Path.Combine(_baselineDirectory, name)))?.AsObject()
         ?? throw new InvalidDataException($"Invalid JSON baseline: {name}");
@@ -458,9 +818,9 @@ internal sealed class BuildEngine
         return new SpreadResult(transformed, generated);
     }
 
-    private static void WriteRewardRandomXml(string baselinePath, JsonObject modified, List<CloneDefinition> clones, string outputPath)
+    private static void WriteRewardRandomXml(List<string> baselineLines, JsonObject modified, List<CloneDefinition> clones, string outputPath)
     {
-        var lines = File.ReadAllLines(baselinePath).ToList();
+        var lines = baselineLines.ToList();
         UpdateRewardLines(lines, modified);
         var lineMap = MapXmlLines(lines);
         var insertion = lines.FindLastIndex(x => x.TrimStart().StartsWith("</", StringComparison.Ordinal));
@@ -503,9 +863,9 @@ internal sealed class BuildEngine
         }
     }
 
-    private static void WriteRewardDataXml(string baselinePath, JsonObject modified, string outputPath)
+    private static void WriteRewardDataXml(List<string> baselineLines, JsonObject modified, string outputPath)
     {
-        var lines = File.ReadAllLines(baselinePath).ToList();
+        var lines = baselineLines.ToList();
         var map = MapXmlLines(lines);
         foreach (var pair in modified["Data"]!.AsObject())
         {
@@ -529,9 +889,9 @@ internal sealed class BuildEngine
         WriteLines(outputPath, lines);
     }
 
-    private static void WritePropCollectXml(string baselinePath, JsonObject modified, string outputPath)
+    private static void WritePropCollectXml(List<string> baselineLines, JsonObject modified, string outputPath)
     {
-        var lines = File.ReadAllLines(baselinePath).ToList();
+        var lines = baselineLines.ToList();
         var map = MapXmlLines(lines);
         foreach (var pair in modified["Data"]!.AsObject())
             if (long.TryParse(pair.Key, out var id) && map.TryGetValue(id, out var indices) && indices.Count == 1)
@@ -576,6 +936,13 @@ internal sealed class BuildEngine
         return output;
     }
 
+    private Task<string> RunPakReadAsync(IReadOnlyList<string> arguments)
+    {
+        var withKey = new List<string> { "--aes-key", GamePakAesKey };
+        withKey.AddRange(arguments);
+        return RunAsync(_repakPath, withKey);
+    }
+
     private static void Validate(BuildConfig c)
     {
         foreach (var value in new[] { c.WorldGatheringMultiplier, c.EnemyMaterialMultiplier, c.EquipmentMultiplier, c.ActivityMaterialMultiplier, c.AdventurerEmblemMultiplier, c.GoldMultiplier, c.RankExperienceMultiplier, c.WorldChestMultiplier })
@@ -590,4 +957,6 @@ internal sealed class BuildEngine
     private sealed record RowTarget(long GroupId, int RowIndex, long ItemId, string Bucket);
     private sealed record CloneDefinition(long SourceGroupId, long CloneGroupId, long Quantity);
     private sealed record SpreadResult(int TransformedRows, List<CloneDefinition> GeneratedGroups);
+    private sealed record ModMergeResult(JsonObject Random, JsonObject Reward, JsonObject Collect, List<string> RandomXml, List<string> RewardXml, List<string> CollectXml, List<string> Paks);
+    private sealed record BaselineData(JsonObject Random, JsonObject Reward, JsonObject Collect, JsonObject Items, List<string> RandomXml, List<string> RewardXml, List<string> CollectXml, string Description, List<string> Paks);
 }

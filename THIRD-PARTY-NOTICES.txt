@@ -13,6 +13,23 @@ The complete license texts are included beside repak.exe:
 
 The application does not download repak or connect to its project site at runtime.
 
+DragonSword PAK Tool
+--------------------
+Project: https://github.com/Null993/DragonSword-Pak-Tool
+Revision used: 48c48e47697e25538f5878c595d3169d695c3bdb
+Purpose: DragonSword-specific encrypted PAK parsing and extraction of the seven
+vanilla baseline resources from pakchunk108 and pakchunk109
+License: MIT
+
+The tool is shipped as a separate self-contained helper executable. Its
+complete license text is included at:
+  Tools/DragonSwordExtract/LICENSE-DragonSword-Pak-Tool-MIT.txt
+
+DragonSword PAK Tool uses CUE4Parse revision
+f081f32e148c3db05785d7275e56bb266d745306 under Apache-2.0. The complete
+CUE4Parse license text is included at:
+  Tools/DragonSwordExtract/LICENSE-CUE4Parse-APACHE.txt
+
 Project artwork
 ---------------
 The release artwork is an original AI-generated fantasy reward-forge scene created

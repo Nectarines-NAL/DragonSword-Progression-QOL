@@ -9,10 +9,13 @@ DragonSword Progression QOL is independently authored by nectarines with OpenAI 
 - Project-authored C# source, documentation, interface, and test tooling.
 - Original AI-generated fantasy artwork created specifically for this project.
 - The separately licensed open-source `repak` utility.
+- Null993's separately licensed open-source [DragonSword PAK Tool](https://github.com/Null993/DragonSword-Pak-Tool), packaged as a standalone helper for DragonSword-specific official PAK extraction; it uses CUE4Parse under Apache-2.0.
 
-## Excluded inputs
+## Runtime compatibility inputs
 
-The project does not use, copy, patch, redistribute, inspect at runtime, or depend upon another reward or material mod. No third-party mod tables, configurations, archives, code, branding, descriptions, screenshots, or artwork are included.
+No third-party mod is bundled or required. During a local build, installed active PAKs are inspected read-only. If one replaces a managed table, its differences from the verified vanilla baseline are merged into the user's generated PAK before Progression QOL changes are applied. Temporary extracted files are deleted before the build completes; source PAKs are never changed.
+
+No third-party mod archives, code, branding, descriptions, screenshots, or artwork are distributed with this project.
 
 ## Derivation rules
 
@@ -21,4 +24,4 @@ The project does not use, copy, patch, redistribute, inspect at runtime, or depe
 - Safe chest targets are limited by allowlisted vanilla relationships, while unique and progression rewards are excluded.
 - Activity targets are categorized into equipment, materials, emblem currency, gold, and rank experience.
 
-Builds transform only the selected vanilla-derived targets. The configurator never asks for another mod archive as input.
+Progression QOL targets remain derived from the audited vanilla baseline. Compatibility merging uses only active PAKs already present in the selected game installation and records their names in `BUILD-REPORT.json`.

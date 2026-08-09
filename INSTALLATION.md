@@ -28,9 +28,11 @@ The application creates and verifies a PAK in the selected build-output folder b
 
 Open the configurator, choose new values, and select **Build + Install** again. The installed PAK does not need to be deleted manually. The application disables and backs up only its own previous PAK, installs the new one, and verifies that the installed SHA-256 matches the build.
 
-## Conflict warnings
+## Overlapping mod merge
 
-The scanner reads PAK listings in `DS\Content\Paks` and `DS\Content\Paks\~mods`. It warns when another likely PAK contains a table managed by this application. It does not alter that PAK. Disable a conflicting PAK yourself before launching the game.
+The scanner reads active PAK listings in `DS\Content\Paks` and `DS\Content\Paks\~mods`. During build, overlapping tables are unpacked temporarily, compared with the verified vanilla baseline, and merged before the selected Progression QOL changes are applied. Other PAKs are not altered. If an overlapping PAK cannot be read safely, the build stops instead of producing a partial merge.
+
+The bundled static baseline is the default. To compare against the installed game version instead, enable the current-game baseline option. The included open-source [DragonSword PAK Tool](https://github.com/Null993/DragonSword-Pak-Tool) build then reads only official `pakchunk108-WindowsClient.pak` and `pakchunk109-WindowsClient.pak`; FModel is not required.
 
 ## Troubleshooting
 
