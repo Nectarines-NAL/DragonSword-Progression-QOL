@@ -13,6 +13,7 @@ Verify Warg Cave and at least two other activities. Record each individual equip
 ## Pass B — Spread Rolls stress
 
 - Equipment x5; other activity values x1; Spread Rolls on.
+- Repeat with Favor Better Rarity on at 90%; generated spread rolls must retain the configured 90/10 better-tier weighting.
 
 Run Warg Cave at least 20 times. Record the number of equipment roll events, item types, stack sizes, and whether rewards remain within expected totals. A run may repeat an equipment type; diversity must not be forced.
 

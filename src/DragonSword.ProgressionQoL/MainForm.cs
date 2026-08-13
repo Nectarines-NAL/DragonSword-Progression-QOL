@@ -15,6 +15,7 @@ internal sealed class MainForm : Form
     private static readonly Color TextMuted = Color.FromArgb(161, 169, 173);
 
     private readonly BuildEngine _engine;
+    private readonly ProfileStore _profiles;
     private readonly Dictionary<string, MultiplierDropDown> _multipliers = [];
     private readonly ToolTip _toolTips = new() { AutoPopDelay = 12000, InitialDelay = 350, ReshowDelay = 100 };
     private readonly CheckBox _spread = new();
@@ -26,23 +27,32 @@ internal sealed class MainForm : Form
     private readonly Label _conflictSummary = new();
     private readonly TabControl _tabs = new();
     private readonly Button _build = new();
+    private readonly CrispBorderButton _profileButton = new();
+    private readonly Label _profileStatus = new();
+    private readonly ContextMenuStrip _profileMenu = new();
     private BuildResult? _latestBuild;
+    private string _currentProfileName = "Default";
+    private bool _configurationDirty;
+    private bool _applyingProfile;
 
     public MainForm(bool startMaximized = false)
     {
-        Text = "DragonSword Progression QOL — Release Candidate";
-        MinimumSize = new Size(1120, 820);
+        Text = "DragonSword Progression QOL — 1.09 Release Candidate";
+        MinimumSize = new Size(1000, 700);
         var working = Screen.PrimaryScreen?.WorkingArea ?? new Rectangle(0, 0, 1600, 1000);
         Size = new Size(Math.Min(1480, working.Width - 96), Math.Min(1000, working.Height - 72));
         StartPosition = FormStartPosition.CenterScreen;
         BackColor = Ink;
         ForeColor = TextMain;
         Font = new Font("Segoe UI", 10f);
+        AutoScaleDimensions = new SizeF(96f, 96f);
         AutoScaleMode = AutoScaleMode.Dpi;
         if (startMaximized) WindowState = FormWindowState.Maximized;
         _engine = new BuildEngine(AppContext.BaseDirectory);
+        _profiles = new ProfileStore(AppContext.BaseDirectory);
         BuildLayout();
         SetDefaults();
+        MigrateLegacyProfiles();
         ScanConflicts();
     }
 
@@ -77,7 +87,31 @@ internal sealed class MainForm : Form
         _build.Location = new Point(footer.Width - 170, 8);
         _build.Click += async (_, _) => await BuildAsync();
         footer.Controls.Add(_build);
-        footer.Resize += (_, _) => _build.Left = footer.ClientSize.Width - _build.Width;
+
+        _profileButton.Text = "PROFILES";
+        StyleButton(_profileButton, Ink, Teal);
+        _profileButton.FlatAppearance.BorderSize = 0;
+        _profileButton.BorderColor = Teal;
+        _profileButton.Size = new Size(126, 42);
+        _profileButton.Top = 8;
+        _profileButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+        _profileButton.Click += (_, _) => ShowProfileMenu();
+        footer.Controls.Add(_profileButton);
+
+        _profileStatus.Text = "Settings: Default";
+        _profileStatus.ForeColor = Teal;
+        _profileStatus.AutoSize = true;
+        _profileStatus.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+        footer.Controls.Add(_profileStatus);
+
+        footer.Resize += (_, _) =>
+        {
+            _build.Left = footer.ClientSize.Width - _build.Width;
+            _profileButton.Left = _build.Left - _profileButton.Width - 10;
+            _profileButton.Top = _build.Top;
+            _profileStatus.Left = _profileButton.Left - _profileStatus.Width - 16;
+            _profileStatus.Top = 20;
+        };
         shell.Controls.Add(footer, 0, 2);
     }
 
@@ -96,7 +130,8 @@ internal sealed class MainForm : Form
     private TabPage BuildRewardsTab()
     {
         var tab = NewTab("Rewards");
-        var layout = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 3, RowCount = 1, Padding = new Padding(8), BackColor = PanelColor };
+        tab.AutoScroll = true;
+        var layout = new TableLayoutPanel { Dock = DockStyle.Fill, MinimumSize = new Size(900, 680), ColumnCount = 3, RowCount = 1, Padding = new Padding(8), BackColor = PanelColor };
         layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30f));
         layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40f));
         layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30f));
@@ -107,15 +142,15 @@ internal sealed class MainForm : Form
             [
                 AddMultiplier("World gathering", "gathering", 1, 20, "Plants, ore, and cooking-ingredient nodes.", RewardGlyph.Gathering),
                 AddMultiplier("Enemy materials", "enemy", 1, 20, "Material drops from ordinary and field enemies.", RewardGlyph.Enemy),
-                AddMultiplier("Safe chest stacks", "chests", 1, 10, "Stackable rewards only. Unique and progression items stay unchanged.", RewardGlyph.Chest)
+                AddMultiplier("Safe chest stacks", "chests", 1, 10, "Stackable loot from one-time world exploration chests. Dungeon chests, unique items, and progression items stay unchanged.", RewardGlyph.Chest)
             ]), 0, 0);
         layout.Controls.Add(BuildSection(
             "ACTIVITIES",
-            "Dungeons, hunts, raids, and Sudden Missions. Each setting multiplies its original reward.",
+            "Dungeons, hunts, raids, and Sudden Missions. Each setting multiplies its original 1.09 reward.",
             RewardGlyph.Activities,
             [
                 AddMultiplier("Equipment", "equipment", 1, 10, "Activity gear. x10 max. Inventory: 500 items.", RewardGlyph.Equipment),
-                AddMultiplier("Crafting materials", "activityMaterials", 1, 20, "Boss parts, runes, upgrades, XP items; Sudden Missions.", RewardGlyph.Material),
+                AddMultiplier("Crafting materials", "activityMaterials", 1, 20, "Trait stones, boss parts, Raid runes, upgrades, and character, equipment, or Karma XP items.", RewardGlyph.Material),
                 AddMultiplier("Emblems", "emblems", 1, 20, "Exchange Shop currency; Sudden Missions included.", RewardGlyph.Emblem),
                 AddMultiplier("Gold", "gold", 1, 20, "Gold from activity completions.", RewardGlyph.Gold),
                 AddMultiplier("Experience", "rankXp", 1, 20, "Mercenary Corps Rank EXP.", RewardGlyph.Experience)
@@ -125,14 +160,16 @@ internal sealed class MainForm : Form
         _rarity.Checked = false;
         var rarityChance = AddPercent("Better-tier chance", "rarityChance", 90, "When enabled, about 9 of 10 supported rolls select the better tier.", RewardGlyph.Rarity);
         _rarity.CheckedChanged += (_, _) => rarityChance.Enabled = _rarity.Checked;
+        _rarity.CheckedChanged += (_, _) => MarkConfigurationEdited();
+        _spread.CheckedChanged += (_, _) => MarkConfigurationEdited();
         rarityChance.Enabled = false;
         layout.Controls.Add(BuildSection(
             "LOOT SHAPE",
             "Changes equipment rolls; neither option adds rewards by itself.",
             RewardGlyph.LootShape,
             [
-                AddToggle(_spread, "Spread equipment rolls", "Off (vanilla): one stacked equipment result. On: several selections from the same pool for more variety.", RewardGlyph.Spread),
-                AddToggle(_rarity, "Favor better rarity", "Off (vanilla): original rarity odds. On: favors Epic over Rare or Legendary over Epic. Quantity is unchanged.", RewardGlyph.Rarity),
+                AddToggle(_spread, "Spread equipment rolls", "Off (vanilla): multiplied gear stays stacked. On: the same total is split into independent equipment selections for more variety. Equipment only; Raid runes and item stats are unchanged.", RewardGlyph.Spread),
+                AddToggle(_rarity, "Favor better rarity", "Off (vanilla): original rarity odds. On: supported mixed-tier equipment and Raid rune pools favor their better listed tier. Quantity and item stats are unchanged.", RewardGlyph.Rarity),
                 rarityChance
             ]), 2, 0);
         tab.Controls.Add(layout);
@@ -278,6 +315,7 @@ internal sealed class MainForm : Form
         var label = new Label { Text = title, ForeColor = TextMain, AutoSize = false, Font = new Font("Segoe UI Semibold", 9.5f), Location = new Point(54, 3), Height = 23 };
         var help = new Label { Text = description, ForeColor = TextMuted, AutoEllipsis = false, AutoSize = false, Location = new Point(54, 63), Height = 76, UseCompatibleTextRendering = true };
         var combo = new MultiplierDropDown(options, selectedValue) { Width = buttonWidth, Height = 32, Location = new Point(54, 27) };
+        combo.ValueChanged += (_, _) => MarkConfigurationEdited();
         _multipliers[key] = combo;
         _toolTips.SetToolTip(host, description);
         _toolTips.SetToolTip(combo, description);
@@ -374,7 +412,7 @@ internal sealed class MainForm : Form
     {
         _gamePath.Text = BuildEngine.DetectGameRoot() ?? "Select your DragonSword installation";
         _outputPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "DragonSword Progression QOL Builds");
-        Append("Baseline: verified unmodified game 1.0.5 tables; application functions tested with game 1.0.8.", Gold);
+        Append($"Baseline: verified unmodified game {BuildEngine.SupportedGameVersion} tables (Steam build {BuildEngine.SupportedSteamBuildId}).", Gold);
         Append("Network, telemetry, auto-update, DLL injection, and elevation: none.", Teal);
     }
 
@@ -385,13 +423,240 @@ internal sealed class MainForm : Form
 
     private int SelectedValue(string key) => _multipliers[key].Value;
 
+    private void ApplyConfig(BuildConfig config)
+    {
+        _applyingProfile = true;
+        try
+        {
+            _multipliers["gathering"].SetValue(config.WorldGatheringMultiplier);
+            _multipliers["enemy"].SetValue(config.EnemyMaterialMultiplier);
+            _multipliers["equipment"].SetValue(config.EquipmentMultiplier);
+            _multipliers["activityMaterials"].SetValue(config.ActivityMaterialMultiplier);
+            _multipliers["emblems"].SetValue(config.AdventurerEmblemMultiplier);
+            _multipliers["gold"].SetValue(config.GoldMultiplier);
+            _multipliers["rankXp"].SetValue(config.RankExperienceMultiplier);
+            _multipliers["chests"].SetValue(config.WorldChestMultiplier);
+            _multipliers["rarityChance"].SetValue((int)config.HighGradeChance);
+            _spread.Checked = config.SpreadRolls;
+            _rarity.Checked = config.EnhancedRarity;
+        }
+        finally { _applyingProfile = false; }
+    }
+
+    private void MarkConfigurationEdited()
+    {
+        if (_applyingProfile) return;
+        _configurationDirty = true;
+        UpdateProfileStatus();
+    }
+
+    private void UpdateProfileStatus()
+    {
+        _profileStatus.Text = _currentProfileName == "Default" && _configurationDirty
+            ? "Settings: Custom (unsaved)"
+            : $"Settings: {_currentProfileName}{(_configurationDirty ? " (edited)" : "")}";
+        _profileStatus.Left = Math.Max(4, _profileButton.Left - _profileStatus.Width - 16);
+    }
+
+    private void ShowProfileMenu()
+    {
+        _profileMenu.Items.Clear();
+        _profileMenu.BackColor = PanelRaised;
+        _profileMenu.ForeColor = TextMain;
+
+        var save = NewProfileMenuItem("SAVE CURRENT SETTINGS AS…", (_, _) => SaveProfile());
+        var load = NewProfileMenuItem("LOAD PROFILE");
+        var delete = NewProfileMenuItem("DELETE PROFILE");
+        var profiles = _profiles.List();
+        if (profiles.Count == 0)
+        {
+            load.DropDownItems.Add(new ToolStripMenuItem("No saved profiles") { Enabled = false });
+            delete.DropDownItems.Add(new ToolStripMenuItem("No saved profiles") { Enabled = false });
+        }
+        else
+        {
+            foreach (var profile in profiles)
+            {
+                load.DropDownItems.Add(NewProfileMenuItem(profile.Name, (_, _) => LoadProfile(profile.Name)));
+                delete.DropDownItems.Add(NewProfileMenuItem(profile.Name, (_, _) => DeleteProfile(profile.Name)));
+            }
+        }
+        var open = NewProfileMenuItem("OPEN PROFILES FOLDER", (_, _) => OpenProfilesFolder());
+        var import = NewProfileMenuItem("IMPORT FROM OLDER VERSION…", (_, _) => ImportProfilesFromOlderVersion());
+        var reset = NewProfileMenuItem("RESET TO VANILLA DEFAULTS", (_, _) => ResetToDefaults());
+        _profileMenu.Items.Add(save);
+        _profileMenu.Items.Add(load);
+        _profileMenu.Items.Add(delete);
+        _profileMenu.Items.Add(new ToolStripSeparator());
+        _profileMenu.Items.Add(reset);
+        _profileMenu.Items.Add(import);
+        _profileMenu.Items.Add(open);
+        _profileMenu.Show(_profileButton, new Point(0, -_profileMenu.PreferredSize.Height));
+    }
+
+    private static ToolStripMenuItem NewProfileMenuItem(string text, EventHandler? click = null)
+    {
+        var item = new ToolStripMenuItem(text) { BackColor = PanelRaised, ForeColor = TextMain };
+        if (click is not null) item.Click += click;
+        return item;
+    }
+
+    private void SaveProfile()
+    {
+        var suggested = _currentProfileName == "Default" ? "My Settings" : _currentProfileName;
+        var name = PromptForProfileName(suggested);
+        if (name is null) return;
+        try
+        {
+            var path = _profiles.GetManagedPath(name);
+            if (File.Exists(path) && MessageBox.Show(this, $"Replace the saved profile ‘{name}’?", "Replace profile", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+            path = _profiles.Save(name, ReadConfig());
+            _currentProfileName = name.Trim();
+            _configurationDirty = false;
+            UpdateProfileStatus();
+            Append($"Profile saved: {_currentProfileName} ({path})", Teal);
+        }
+        catch (Exception ex) { ShowProfileError("Profile could not be saved", ex); }
+    }
+
+    private void LoadProfile(string name)
+    {
+        try
+        {
+            var document = _profiles.Load(_profiles.GetManagedPath(name));
+            ApplyConfig(document.Settings);
+            _currentProfileName = document.Name;
+            _configurationDirty = false;
+            UpdateProfileStatus();
+            Append($"Profile loaded: {_currentProfileName}. No PAK was built or installed.", Teal);
+        }
+        catch (Exception ex) { ShowProfileError("Profile could not be loaded", ex); }
+    }
+
+    private void DeleteProfile(string name)
+    {
+        if (MessageBox.Show(this, $"Delete the saved profile ‘{name}’?\n\nThis deletes only its JSON settings file. It does not change any PAK.", "Delete profile", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes) return;
+        try
+        {
+            _profiles.Delete(name);
+            if (_currentProfileName.Equals(name, StringComparison.OrdinalIgnoreCase))
+            {
+                _currentProfileName = "Default";
+                _configurationDirty = true;
+                UpdateProfileStatus();
+            }
+            Append($"Profile deleted: {name}. Current settings and installed PAK were not changed.", Gold);
+        }
+        catch (Exception ex) { ShowProfileError("Profile could not be deleted", ex); }
+    }
+
+    private void OpenProfilesFolder()
+    {
+        try
+        {
+            _profiles.EnsureDirectory();
+            var start = new ProcessStartInfo { FileName = "explorer.exe", UseShellExecute = true };
+            start.ArgumentList.Add(_profiles.ProfilesDirectory);
+            Process.Start(start);
+        }
+        catch (Exception ex) { ShowProfileError("Profiles folder could not be opened", ex); }
+    }
+
+    private void MigrateLegacyProfiles()
+    {
+        try
+        {
+            var result = _profiles.MigrateLegacyProfiles();
+            if (result.Imported > 0)
+                Append($"Migrated {result.Imported} saved profile(s) from the older application folder into persistent Windows user storage. Old files were preserved.", Teal);
+            if (result.Invalid > 0)
+                Append($"Legacy profile migration skipped {result.Invalid} invalid JSON file(s).", Gold);
+        }
+        catch (Exception ex)
+        {
+            Append($"PROFILE MIGRATION WARNING: {ex.Message}", Gold);
+        }
+    }
+
+    private void ImportProfilesFromOlderVersion()
+    {
+        using var dialog = new FolderBrowserDialog
+        {
+            Description = "Select an older Progression QOL application folder or its Profiles folder",
+            UseDescriptionForTitle = true
+        };
+        if (dialog.ShowDialog(this) != DialogResult.OK) return;
+
+        try
+        {
+            var result = _profiles.ImportFromDirectory(dialog.SelectedPath);
+            Append($"Profile import: {result.Imported} imported, {result.Skipped} already present, {result.Invalid} invalid. Source files were preserved.", result.Invalid > 0 ? Gold : Teal);
+            MessageBox.Show(this,
+                $"Imported: {result.Imported}\nAlready present: {result.Skipped}\nInvalid files skipped: {result.Invalid}\n\nOlder profile files were not deleted.",
+                "Profile import complete",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+        catch (Exception ex) { ShowProfileError("Profiles could not be imported", ex); }
+    }
+
+    private void ResetToDefaults()
+    {
+        ApplyConfig(new BuildConfig(1, 1, 1, 1, 1, 1, 1, 1, false, false, 90m));
+        _currentProfileName = "Default";
+        _configurationDirty = false;
+        UpdateProfileStatus();
+        Append("Reward settings reset to vanilla defaults. Use Build + Install to disable this app's installed PAK and restore vanilla behavior.", Teal);
+    }
+
+    private string? PromptForProfileName(string suggested)
+    {
+        using var dialog = new Form
+        {
+            Text = "Save configuration profile",
+            StartPosition = FormStartPosition.CenterParent,
+            FormBorderStyle = FormBorderStyle.FixedDialog,
+            MinimizeBox = false,
+            MaximizeBox = false,
+            ShowInTaskbar = false,
+            ClientSize = new Size(470, 150),
+            BackColor = PanelColor,
+            ForeColor = TextMain,
+            Font = Font,
+            AutoScaleMode = AutoScaleMode.Dpi
+        };
+        var label = new Label { Text = "Profile name", AutoSize = true, ForeColor = Gold, Location = new Point(18, 16) };
+        var box = new TextBox { Text = suggested, Location = new Point(18, 43), Width = 434, BackColor = Ink, ForeColor = TextMain, BorderStyle = BorderStyle.FixedSingle };
+        var save = new Button { Text = "SAVE PROFILE", DialogResult = DialogResult.OK, Size = new Size(132, 38), Location = new Point(320, 92) };
+        var cancel = new Button { Text = "CANCEL", DialogResult = DialogResult.Cancel, Size = new Size(105, 38), Location = new Point(205, 92) };
+        StyleButton(save, Ember, TextMain);
+        StyleButton(cancel, Ink, TextMuted);
+        dialog.Controls.Add(label); dialog.Controls.Add(box); dialog.Controls.Add(save); dialog.Controls.Add(cancel);
+        dialog.AcceptButton = save;
+        dialog.CancelButton = cancel;
+        dialog.Shown += (_, _) => { box.SelectAll(); box.Focus(); };
+        return dialog.ShowDialog(this) == DialogResult.OK ? box.Text : null;
+    }
+
+    private void ShowProfileError(string title, Exception ex)
+    {
+        Append($"PROFILE ERROR: {ex.Message}", Ember);
+        MessageBox.Show(this, ex.Message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+    }
+
     private async Task BuildAsync()
     {
         try
         {
             _build.Enabled = false; _status.Text = "Building and verifying...";
+            var config = ReadConfig();
+            if (IsVanillaConfig(config))
+            {
+                RestoreVanillaSettings();
+                return;
+            }
             var progress = new Progress<string>(message => { _status.Text = message; Append(message, TextMuted); });
-            _latestBuild = await _engine.BuildAsync(ReadConfig(), _outputPath.Text, progress);
+            _latestBuild = await _engine.BuildAsync(config, _outputPath.Text, progress);
             Append($"PAK: {_latestBuild.PakPath}", TextMain);
             Append($"SHA256: {_latestBuild.Sha256}", Teal);
             Append($"Rows — gathering {_latestBuild.GatheringRows}, enemies {_latestBuild.EnemyMaterialRows}, activities {_latestBuild.ActivityRows}, chests {_latestBuild.ChestRows}, spread rewards {_latestBuild.SpreadRewardRows}.", Gold);
@@ -406,6 +671,55 @@ internal sealed class MainForm : Form
         }
         finally { _build.Enabled = true; }
     }
+
+    private void RestoreVanillaSettings()
+    {
+        var gameRoot = BuildEngine.ResolveGameRoot(_gamePath.Text) ?? throw new DirectoryNotFoundException("DragonSword could not be found from the selected path.");
+        _gamePath.Text = gameRoot;
+        var installedPak = BuildEngine.FindInstalledPak(gameRoot);
+        if (installedPak is null)
+        {
+            _status.Text = "Vanilla defaults selected — no Progression QOL PAK is installed.";
+            Append("Vanilla defaults confirmed. No installed Progression QOL PAK was found, so the game was not changed.", Teal);
+            MessageBox.Show(this, "All settings are already at vanilla defaults, and no Progression QOL PAK is installed.\n\nNothing needs to be removed.", "Already using vanilla defaults", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return;
+        }
+
+        var answer = MessageBox.Show(this,
+            "Every reward setting is at its vanilla default.\n\nDisable the installed Progression QOL PAK and return this mod's rewards to vanilla behavior?\n\nThe PAK will be preserved as a disabled backup. Other mods will not be changed.",
+            "Restore vanilla rewards?",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+        if (answer != DialogResult.Yes)
+        {
+            _status.Text = "Vanilla restore cancelled — the installed PAK was not changed.";
+            Append("Vanilla restore cancelled. The installed PAK was not changed.", Gold);
+            return;
+        }
+
+        var backup = _engine.DisableInstalledPakForVanilla(gameRoot);
+        if (backup is null) throw new IOException("The installed Progression QOL PAK disappeared before it could be disabled.");
+        _latestBuild = null;
+        _status.Text = "Progression QOL disabled — vanilla rewards restored for this mod.";
+        Append($"Vanilla restored: disabled the installed Progression QOL PAK and preserved it at {backup}", Teal);
+        MessageBox.Show(this,
+            "Progression QOL has been disabled and its PAK was preserved as a non-loadable backup.\n\nThis restores vanilla reward behavior for this mod. Any other installed reward mod may still affect the game.",
+            "Vanilla rewards restored",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+    }
+
+    private static bool IsVanillaConfig(BuildConfig config) =>
+        config.WorldGatheringMultiplier == 1 &&
+        config.EnemyMaterialMultiplier == 1 &&
+        config.EquipmentMultiplier == 1 &&
+        config.ActivityMaterialMultiplier == 1 &&
+        config.AdventurerEmblemMultiplier == 1 &&
+        config.GoldMultiplier == 1 &&
+        config.RankExperienceMultiplier == 1 &&
+        config.WorldChestMultiplier == 1 &&
+        !config.SpreadRolls &&
+        !config.EnhancedRarity;
 
     private void InstallLatest()
     {
@@ -445,6 +759,21 @@ internal sealed class MainForm : Form
             return;
         }
         _gamePath.Text = gameRoot;
+        var buildId = BuildEngine.ReadInstalledSteamBuildId(gameRoot);
+        if (buildId is null)
+        {
+            _conflictSummary.Text = "Steam build could not be verified; automatic installation will stay blocked.";
+            _conflictSummary.ForeColor = Ember;
+            Append("Game detected, but Steam build ID could not be verified.", Ember);
+            return;
+        }
+        else if (!buildId.Equals(BuildEngine.SupportedSteamBuildId, StringComparison.Ordinal))
+        {
+            _conflictSummary.Text = $"Game build {buildId} is unsupported. Required: {BuildEngine.SupportedSteamBuildId}.";
+            _conflictSummary.ForeColor = Ember;
+            Append($"Unsupported game build {buildId}; automatic installation requires {BuildEngine.SupportedSteamBuildId}.", Ember);
+            return;
+        }
         var conflicts = FindKnownConflicts(gameRoot);
         if (conflicts.Count == 0)
         {
@@ -460,8 +789,8 @@ internal sealed class MainForm : Form
             foreach (var file in conflicts) Append("  " + file, Ember);
         }
         var paksRoot = Path.Combine(gameRoot, "DS", "Content", "Paks");
-        var respawn = Directory.EnumerateFiles(paksRoot, "DS_TreasureRespawn.pak", SearchOption.TopDirectoryOnly)
-            .Concat(Directory.Exists(Path.Combine(paksRoot, "~mods")) ? Directory.EnumerateFiles(Path.Combine(paksRoot, "~mods"), "DS_TreasureRespawn.pak", SearchOption.TopDirectoryOnly) : [])
+        var respawn = Directory.EnumerateFiles(paksRoot, "DS_TreasureRespawn*.pak", SearchOption.TopDirectoryOnly)
+            .Concat(Directory.Exists(Path.Combine(paksRoot, "~mods")) ? Directory.EnumerateFiles(Path.Combine(paksRoot, "~mods"), "DS_TreasureRespawn*.pak", SearchOption.TopDirectoryOnly) : [])
             .FirstOrDefault();
         if (respawn is not null)
         {
@@ -506,7 +835,7 @@ internal sealed class MainForm : Form
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .Where(x => !Path.GetFileName(x).Equals(owned, StringComparison.OrdinalIgnoreCase))
             .Where(x => !Path.GetFileName(x).StartsWith("pakchunk", StringComparison.OrdinalIgnoreCase))
-            .Where(x => !Path.GetFileName(x).Equals("DS_TreasureRespawn.pak", StringComparison.OrdinalIgnoreCase))
+            .Where(x => !Path.GetFileName(x).StartsWith("DS_TreasureRespawn", StringComparison.OrdinalIgnoreCase))
             .Where(x => RegexLike(Path.GetFileName(x), "Dungeon", "Reward", "Material", "Combined", "AllInOne", "ProgressionQoL", "Loot", "Drop"));
         var conflicts = new List<string>();
         foreach (var pak in candidates)
@@ -557,12 +886,32 @@ internal sealed class MainForm : Form
         public override string ToString() => Label;
     }
 
+    private sealed class CrispBorderButton : Button
+    {
+        public Color BorderColor { get; set; } = Teal;
+
+        public CrispBorderButton()
+        {
+            DoubleBuffered = true;
+            ResizeRedraw = true;
+        }
+
+        protected override void OnPaint(PaintEventArgs paintEvent)
+        {
+            base.OnPaint(paintEvent);
+            if (ClientSize.Width < 2 || ClientSize.Height < 2) return;
+            using var border = new Pen(BorderColor, 1f);
+            paintEvent.Graphics.DrawRectangle(border, 0, 0, ClientSize.Width - 1, ClientSize.Height - 1);
+        }
+    }
+
     private sealed class MultiplierDropDown : Button
     {
         private readonly ContextMenuStrip _menu = new();
         private readonly IReadOnlyList<Choice> _choices;
 
         public int Value { get; private set; }
+        public event EventHandler? ValueChanged;
 
         public MultiplierDropDown(IReadOnlyList<Choice> choices, int selectedValue)
         {
@@ -595,11 +944,13 @@ internal sealed class MainForm : Form
 
         private void SelectChoice(Choice choice)
         {
+            var changed = Value != choice.Value;
             Value = choice.Value;
             Text = choice.Label + "   ▼";
             AccessibleName = choice.Label;
             foreach (ToolStripMenuItem item in _menu.Items)
                 item.Checked = ((Choice)item.Tag!).Value == Value;
+            if (changed) ValueChanged?.Invoke(this, EventArgs.Empty);
         }
 
         public void SetValue(int value) => SelectChoice(_choices.First(x => x.Value == value));
@@ -821,7 +1172,7 @@ internal sealed class MainForm : Form
             var buildY = creditY + creditFont.GetHeight(e.Graphics) + 3f;
             e.Graphics.DrawString("PROGRESSION QOL", titleFont, titleBrush, 34f, titleY);
             e.Graphics.DrawString("DRAGONSWORD REWARD CONFIGURATOR  •  CREATED BY NECTARINES", creditFont, creditBrush, 38f, creditY);
-            e.Graphics.DrawString("VERSION 0.9.0 RC1  •  TESTED WITH GAME 1.0.8  •  ONE CUSTOM PAK  •  OFFLINE", buildFont, titleBrush, 39f, buildY);
+            e.Graphics.DrawString("VERSION 0.9.2 RC3  •  BUILT FOR GAME 1.0.9  •  ONE CUSTOM PAK  •  OFFLINE", buildFont, titleBrush, 39f, buildY);
         }
     }
 }

@@ -4,17 +4,32 @@ Created by **nectarines**
 
 Progression QOL lets you build one custom reward PAK instead of choosing between a pile of fixed multiplier files. Every setting starts at vanilla behavior, so you decide exactly what changes.
 
+**Current release:** Progression QOL 0.9.2 RC3 for DragonSword: Awakening 1.0.9, Steam build 24693558.
+
+## Updated for DragonSword 1.0.9
+
+- Rebuilt from the unmodified 1.0.9 game tables
+- Updated dungeon, hunt, raid, Trait, Currency, and Sudden Mission reward routes
+- Fixed activity equipment, materials, Emblems, Gold, EXP, and Trait stone multipliers
+- Fixed World Gathering x20
+- Fixed Favor Better Rarity when used with Spread Equipment Rolls
+- Preserved the new Nightmare Barduk achievement reward
+- Added named profiles that remain available after updating or moving the app
+- Added a confirmed one-click return to vanilla behavior
+- Improved layout behavior on Windows display scaling
+
 ## What you can configure
 
 - World gathering: plants, ore, and cooking-ingredient nodes
 - Enemy materials: ordinary and field-enemy material drops
-- Safe chest stacks: stackable chest rewards while known unique and progression items remain unchanged
+- Safe chest stacks: stackable rewards from one-time world exploration chests; dungeon chests, unique items, and progression items remain unchanged
 - Equipment from dungeons, hunts, raids, and Sudden Missions
 - Activity crafting materials, including boss parts, runes, upgrades, and XP items
 - Adventurer's Emblems for the Exchange Shop
 - Gold and Mercenary Corps Rank EXP
 - Spread Equipment Rolls for more variety within the same total equipment quantity
 - Favor Better Rarity for supported mixed-tier equipment pools
+- Named profiles for saving and reloading favorite configurations
 
 Equipment is capped at x10 because the game equipment inventory holds 500 items. World-chest scaling is also capped at x10.
 
@@ -22,13 +37,19 @@ Equipment is capped at x10 because the game equipment inventory holds 500 items.
 
 All multipliers open at `x1 — Default`. Spread Equipment Rolls and Favor Better Rarity open **off**, which preserves vanilla behavior. The displayed 90% better-tier value is only used if Favor Better Rarity is enabled.
 
-**Spread off:** multiplied equipment remains one stacked result, matching normal reward behavior.
+**Spread off:** multiplied equipment remains one stacked result, matching vanilla reward behavior.
 
-**Spread on:** the same multiplied total is split into several independent selections from the original equipment pool. This can produce more item variety in one clear, but it does not force every item type and does not add extra quantity.
+**Spread on:** the same multiplied total is split into several independent selections from the original equipment pool. This can produce more item variety in one clear, but it does not force every item type, add quantity, affect Raid runes, or change equipment stats.
 
 **Favor Better Rarity off:** each supported pool uses its original odds.
 
-**Favor Better Rarity on:** a Rare/Epic pool favors Epic, while an Epic/Legendary pool favors Legendary. The selected percentage is the chance for the better of those two available tiers; quantity does not change.
+**Favor Better Rarity on:** a supported Rare/Epic pool favors Epic, while an Epic/Legendary pool favors Legendary. Supported Raid rune pools are included. The selected percentage is the chance for the better of those two available tiers; quantity and equipment main/substat rolls do not change.
+
+**Raid runes:** Spread Equipment Rolls does not affect them. The Crafting Materials multiplier changes supported rune quantities, while Favor Better Rarity can change supported mixed-tier rune pools.
+
+**Profiles:** save the current controls under a custom name, then load them later from the **Profiles** button. Profiles are readable JSON stored in the current Windows user's Local AppData, so they remain available after replacing or moving the application folder. No username or drive is hard-coded. Portable profiles from an earlier version can be migrated automatically when beside the app or manually with **Import from Older Version**. The configurator always opens at vanilla defaults and loads a saved profile only when you choose it. Loading a profile does not install anything; use **Build + Install** afterward.
+
+**Returning to vanilla:** choose **Reset to Vanilla Defaults**, then select **Build + Install**. If the Progression QOL PAK is installed, the app asks before disabling and backing up that exact file. Other mods are not changed. The built-in Default state is the vanilla control state, not a saved profile.
 
 ## Install
 
@@ -47,7 +68,7 @@ To change settings later, open the app and use **Build + Install** again. The pr
 
 ## Compatibility
 
-This release candidate has been tested with DragonSword: Awakening 1.0.8. Because another PAK that replaces the same Unreal reward tables cannot be row-merged at load time, disable any file identified by the built-in conflict scan before playing.
+This release was rebuilt from DragonSword: Awakening 1.0.9, Steam build 24693558. Automatic installation refuses a different game build. Because two PAKs that replace the same Unreal reward tables cannot be row-merged at load time, disable any file identified by the built-in conflict scan before playing.
 
 ## Transparent and offline
 

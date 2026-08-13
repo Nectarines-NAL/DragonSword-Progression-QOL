@@ -7,7 +7,12 @@ internal static class Program
     {
         if (args.Length == 2 && args[0].Equals("--build-test", StringComparison.OrdinalIgnoreCase))
         {
-            RunBuildTest(args[1]);
+            RunBuildTest(args[1], maximums: false);
+            return;
+        }
+        if (args.Length == 2 && args[0].Equals("--build-test-maximums", StringComparison.OrdinalIgnoreCase))
+        {
+            RunBuildTest(args[1], maximums: true);
             return;
         }
         if (args.Length == 2 && args[0].Equals("--ui-snapshot", StringComparison.OrdinalIgnoreCase))
@@ -43,12 +48,14 @@ internal static class Program
         Application.Run(new MainForm());
     }
 
-    private static void RunBuildTest(string outputDirectory)
+    private static void RunBuildTest(string outputDirectory, bool maximums)
     {
         try
         {
             var engine = new BuildEngine(AppContext.BaseDirectory);
-            var config = new BuildConfig(2, 2, 5, 5, 5, 10, 10, 2, true, true, 90m);
+            var config = maximums
+                ? new BuildConfig(20, 20, 10, 20, 20, 20, 20, 10, true, true, 90m)
+                : new BuildConfig(2, 2, 5, 5, 5, 10, 10, 2, true, true, 90m);
             var progress = new Progress<string>(Console.WriteLine);
             var result = engine.BuildAsync(config, outputDirectory, progress).GetAwaiter().GetResult();
             Console.WriteLine($"TEST_BUILD_OK|{result.PakPath}|{result.Sha256}|{result.FilesPacked}");

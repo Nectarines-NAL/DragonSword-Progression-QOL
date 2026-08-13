@@ -68,56 +68,56 @@
       "Memo": "바위 버섯",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Mushroom_01.Mushroom_01'",
       "ItemID": 1430503,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "11": {
       "ID": 11,
       "Memo": "나무진액 버섯",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Mushroom_02.Mushroom_02'",
       "ItemID": 1430504,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "12": {
       "ID": 12,
       "Memo": "푸른 연꽃 버섯",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Mushroom_03.Mushroom_03'",
       "ItemID": 1430506,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "13": {
       "ID": 13,
       "Memo": "동굴 버섯",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Mushroom_04.Mushroom_04'",
       "ItemID": 1430505,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "14": {
       "ID": 14,
       "Memo": "마른 갈기꽃",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Herb_01.Herb_01'",
       "ItemID": 1430705,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "15": {
       "ID": 15,
       "Memo": "하얀 이슬꽃",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Herb_02.Herb_02'",
       "ItemID": 1430706,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "16": {
       "ID": 16,
       "Memo": "묘지 방울초",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Herb_04.Herb_04'",
       "ItemID": 1430704,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "17": {
       "ID": 17,
       "Memo": "새벽 초롱이",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Herb_03.Herb_03'",
       "ItemID": 1430703,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "18": {
       "ID": 18,
@@ -145,154 +145,154 @@
       "Memo": "참무",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Radish_01.Radish_01'",
       "ItemID": 1430403,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "22": {
       "ID": 22,
       "Memo": "물빛 나리",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Water_Parsley_01.Water_Parsley_01'",
       "ItemID": 1430404,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "23": {
       "ID": 23,
       "Memo": "물결 배추",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Water_Cabbage_01.Water_Cabbage_01'",
       "ItemID": 1430407,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "24": {
       "ID": 24,
       "Memo": "동글 가지",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Eggplant_01.Eggplant_01'",
       "ItemID": 1430412,
-      "ItemCount": 2
+      "ItemCount": 4
     },
     "25": {
       "ID": 25,
       "Memo": "잎새 토마토",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Tomato_01.Tomato_01'",
       "ItemID": 1430405,
-      "ItemCount": 2
+      "ItemCount": 4
     },
     "26": {
       "ID": 26,
       "Memo": "난쟁이 감자",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Potato_01.Potato_01'",
       "ItemID": 1430408,
-      "ItemCount": 3
+      "ItemCount": 6
     },
     "27": {
       "ID": 27,
       "Memo": "흰 꽃 당근",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Carrot_01.Carrot_01'",
       "ItemID": 1430409,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "28": {
       "ID": 28,
       "Memo": "절벽 고추",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Pepper_01.Pepper_01'",
       "ItemID": 1430410,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "29": {
       "ID": 29,
       "Memo": "초롱 호박",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Pumpkin_01.Pumpkin_01'",
       "ItemID": 1430411,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "30": {
       "ID": 30,
       "Memo": "달래 양파",
       "BluePrintPath": "Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Onion_01.Onion_01'",
       "ItemID": 1430406,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "31": {
       "ID": 31,
       "Memo": "태고의 씨앗",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Ancient_Seed_01.Ancient_Seed_01'",
       "ItemID": 1450502,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "32": {
       "ID": 32,
       "Memo": "순수의 방울",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Pure_Water_01.Pure_Water_01'",
       "ItemID": 1450503,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "33": {
       "ID": 33,
       "Memo": "활력의 잎",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Vitality_Leave_01.Vitality_Leave_01'",
       "ItemID": 1450504,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "34": {
       "ID": 34,
       "Memo": "생기의 열매",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Life_Fruit_01.Life_Fruit_01'",
       "ItemID": 1450501,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "35": {
       "ID": 35,
       "Memo": "소라",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Conch_01.Conch_01'",
       "ItemID": 1430304,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "36": {
       "ID": 36,
       "Memo": "조개",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Shellfish_01.Shellfish_01'",
       "ItemID": 1430303,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "37": {
       "ID": 37,
       "Memo": "벌집",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Honeycomb_01.Honeycomb_01'",
       "ItemID": 1430810,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "38": {
       "ID": 38,
       "Memo": "새알",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Bird_Egg01.Bird_Egg01'",
       "ItemID": 1430901,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "39": {
       "ID": 39,
       "Memo": "거위알",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Goose_Egg01.Goose_Egg01'",
       "ItemID": 1430902,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "40": {
       "ID": 40,
       "Memo": "물고기 (연어)",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Design/DsCharacter/Animal/Fish/Salmon/DsMon_Salmon_Interaction.DsMon_Salmon_Interaction'",
       "ItemID": 1430106,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "41": {
       "ID": 41,
       "Memo": "물고기 (실버윙)",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Design/DsCharacter/Animal/Fish/SilverWing/DsMon_SilverWing_Interaction.DsMon_SilverWing_Interaction'",
       "ItemID": 1430105,
-      "ItemCount": 3
+      "ItemCount": 6
     },
     "42": {
       "ID": 42,
       "Memo": "모래게",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Design/DsCharacter/Animal/SandCrab/DsMon_SandCrab_Interaction.DsMon_SandCrab_Interaction'",
       "ItemID": 1430203,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "43": {
       "ID": 43,
@@ -313,35 +313,35 @@
       "Memo": "소라03",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Conch_03.Conch_03'",
       "ItemID": 1430304,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "46": {
       "ID": 46,
       "Memo": "조개02",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Shellfish_02.Shellfish_02'",
       "ItemID": 1430303,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "47": {
       "ID": 47,
       "Memo": "조개03",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Maps/world/world_01/World_01_Collection/Collection/Shellfish_03.Shellfish_03'",
       "ItemID": 1430303,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "48": {
       "ID": 48,
       "Memo": "송어",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Design/DsCharacter/Animal/Fish/Trout/DsMon_Trout_Interaction.DsMon_Trout_Interaction'",
       "ItemID": 1430104,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "49": {
       "ID": 49,
       "Memo": "새우",
       "BluePrintPath": "/Script/Engine.Blueprint'/Game/Design/DsCharacter/Animal/Shrimp/DsMon_Shrimp_Interaction.DsMon_Shrimp_Interaction'",
       "ItemID": 1430204,
-      "ItemCount": 1
+      "ItemCount": 2
     },
     "50": {
       "ID": 50,

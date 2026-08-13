@@ -1,12 +1,8 @@
 # DragonSword Progression QOL
 
-![Progression QOL reward configurator banner](docs/images/progression-qol-hero.png)
-
 An offline reward configurator for **DragonSword: Awakening**, created by **nectarines**.
 
-Version `0.9.0-rc.1` is a public release candidate tested with game version 1.0.8. It builds one custom Unreal PAK from independently maintained targets and unmodified game-table baselines. Every multiplier starts at vanilla `x1`; both optional loot-shape features start off.
-
-Download the current application from [GitHub Releases](https://github.com/Nectarines-NAL/DragonSword-Progression-QOL/releases). Do not download the automatically generated GitHub source archive as the runnable application.
+Version `0.9.2-rc.3` is a test candidate rebuilt from unmodified game version 1.0.9, Steam build `24693558`. It builds one custom Unreal PAK from independently maintained targets and official game-table baselines. Every multiplier starts at vanilla `x1`; both optional loot-shape features start off.
 
 ## Features
 
@@ -17,18 +13,9 @@ Download the current application from [GitHub Releases](https://github.com/Necta
 - Optional Spread Equipment Rolls turns a multiplied equipment stack into several independent selections from the same pool, allowing more variety without forcing unique item types.
 - Optional Favor Better Rarity shifts supported mixed pools toward their better available tier without adding quantity.
 - One generated PAK for any supported configuration.
+- Named configuration profiles stored as plain, readable JSON in the current Windows user's persistent Local AppData folder.
 - PAK contents and SHA-256 are verified before installation.
 - The app owns one installed file: `DS_ZZZ_ProgressionQoL_Configured_P.pak`.
-
-## Interface
-
-| Vanilla defaults | Configured example |
-| --- | --- |
-| ![Rewards page with vanilla defaults](docs/images/ui-rewards-default.png) | ![Configured rewards example](docs/images/ui-rewards-configured.png) |
-
-| Build and install | Audit log |
-| --- | --- |
-| ![Build and Install page](docs/images/ui-build-install.png) | ![Audit Log page](docs/images/ui-audit-log.png) |
 
 ## Install and use
 
@@ -40,6 +27,12 @@ Download the current application from [GitHub Releases](https://github.com/Necta
 6. Choose reward settings. `x1 — Default` and unchecked options preserve vanilla behavior.
 7. Select **Build + Install**.
 8. Review the conflict scan and confirm installation.
+
+Use **Profiles** to save the current reward settings under a custom name, load a saved profile, delete a profile, reset to vanilla defaults, import profiles from an older extracted release, or open the profile folder. Profiles are stored under `%LOCALAPPDATA%\nectarines\DragonSword Progression QOL\Profiles`, resolved separately for each Windows user and retained when the application folder is replaced or moved. The app always starts at vanilla defaults and never auto-loads a saved profile. Loading or deleting a profile does not build, install, or remove a PAK; only **Build + Install** changes the app's owned game file.
+
+On first launch after upgrading from the portable profile format, the app safely copies validated JSON profiles found in a `Profiles` folder beside that executable into persistent storage. Old files are preserved and existing persistent profiles are never overwritten. If the older release is in another folder, use **Profiles → Import from Older Version** and select either its application folder or its `Profiles` folder.
+
+**Reset to Vanilla Defaults** resets the visible controls only. After resetting, use **Build + Install**: if this application's PAK is installed, the app asks whether to disable it and return this mod's rewards to vanilla behavior. The PAK is preserved as a non-loadable backup. Other mods are never changed.
 
 The PAK is installed to `DS\Content\Paks`. Reconfiguring does not require manual deletion: the current owned PAK is moved to `DS\Content\Paks\ProgressionQoL-Backups` with a non-loadable `.pak.disabled` extension, then the new PAK is installed and hash-verified.
 
@@ -55,6 +48,7 @@ The application:
 - performs no DLL injection or game-executable modification;
 - uses no installer service and makes no registry changes;
 - never downloads a dependency;
+- stores optional profiles as unobfuscated JSON in the visible per-user `%LOCALAPPDATA%\nectarines\DragonSword Progression QOL\Profiles` folder;
 - scans other PAKs read-only and never disables, deletes, or moves them;
 - installs only after explicit confirmation.
 
@@ -71,7 +65,7 @@ The generated PAK may contain these game paths:
 
 Another PAK editing the same tables conflicts at the file level; Unreal PAK load order does not merge individual rows. The built-in scanner lists likely PAKs and verifies their internal paths before warning.
 
-The table baseline was extracted from unmodified game version 1.0.5 and the release candidate has been tested against game version 1.0.8. The published 1.0.8 notes did not describe reward-table changes, but future game updates can still require a new baseline.
+The table baseline was extracted from unmodified game version 1.0.9, Steam build `24693558`. Automatic installation checks the local Steam manifest and refuses a different build because a game update can change these full reward tables. Building alone never modifies the game.
 
 ## Independent provenance
 

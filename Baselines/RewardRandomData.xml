@@ -226,140 +226,140 @@
 	<ns4:RewardRandomData ns4:ID="11105070" ns4:Memo="[훈련과제] 칼리엔 영웅 의뢰 완료하기_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="11105080" ns4:Memo="[훈련과제] 오네트 영웅 의뢰 완료하기_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12000000" ns4:Memo="와르그 동굴_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="200" ns4:Max_ItemCount="200" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12000001" ns4:Memo="와르그 동굴_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12000002" ns4:Memo="와르그 동굴_난이도1_던전 지정 보상" ns4:ItemID="1450016" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12000001" ns4:Memo="와르그 동굴_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12000002" ns4:Memo="와르그 동굴_난이도1_던전 지정 보상" ns4:ItemID="1450016" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12000010" ns4:Memo="와르그 동굴_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="500" ns4:Max_ItemCount="500" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12000011" ns4:Memo="와르그 동굴_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12000012" ns4:Memo="와르그 동굴_난이도2_던전 지정 보상" ns4:ItemID="1450017" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12000011" ns4:Memo="와르그 동굴_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12000012" ns4:Memo="와르그 동굴_난이도2_던전 지정 보상" ns4:ItemID="1450017" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12000020" ns4:Memo="와르그 동굴_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12000021" ns4:Memo="와르그 동굴_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12000022" ns4:Memo="와르그 동굴_난이도3_던전 지정 보상" ns4:ItemID="1450018" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12000021" ns4:Memo="와르그 동굴_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12000022" ns4:Memo="와르그 동굴_난이도3_던전 지정 보상" ns4:ItemID="1450018" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12007000" ns4:Memo="고블린 도적단 동굴_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="200" ns4:Max_ItemCount="200" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12007001" ns4:Memo="고블린 도적단 동굴_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12007002" ns4:Memo="고블린 도적단 동굴_난이도1_던전 지정 보상" ns4:ItemID="1450001" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12007001" ns4:Memo="고블린 도적단 동굴_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12007002" ns4:Memo="고블린 도적단 동굴_난이도1_던전 지정 보상" ns4:ItemID="1450001" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12007010" ns4:Memo="고블린 도적단 동굴_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="500" ns4:Max_ItemCount="500" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12007011" ns4:Memo="고블린 도적단 동굴_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12007012" ns4:Memo="고블린 도적단 동굴_난이도2_던전 지정 보상" ns4:ItemID="1450002" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12007011" ns4:Memo="고블린 도적단 동굴_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12007012" ns4:Memo="고블린 도적단 동굴_난이도2_던전 지정 보상" ns4:ItemID="1450002" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12007020" ns4:Memo="고블린 도적단 동굴_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12007021" ns4:Memo="고블린 도적단 동굴_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12007022" ns4:Memo="고블린 도적단 동굴_난이도3_던전 지정 보상" ns4:ItemID="1450003" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12007021" ns4:Memo="고블린 도적단 동굴_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12007022" ns4:Memo="고블린 도적단 동굴_난이도3_던전 지정 보상" ns4:ItemID="1450003" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12002000" ns4:Memo="오염된 침소_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="300" ns4:Max_ItemCount="300" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12002001" ns4:Memo="오염된 침소_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="2" ns4:Max_ItemCount="2" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12002002" ns4:Memo="오염된 침소_난이도1_던전 지정 보상" ns4:ItemID="1450007" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12002001" ns4:Memo="오염된 침소_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12002002" ns4:Memo="오염된 침소_난이도1_던전 지정 보상" ns4:ItemID="1450007" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12002010" ns4:Memo="오염된 침소_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12002011" ns4:Memo="오염된 침소_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12002012" ns4:Memo="오염된 침소_난이도2_던전 지정 보상" ns4:ItemID="1450008" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12002011" ns4:Memo="오염된 침소_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12002012" ns4:Memo="오염된 침소_난이도2_던전 지정 보상" ns4:ItemID="1450008" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12002020" ns4:Memo="오염된 침소_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12002021" ns4:Memo="오염된 침소_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12002022" ns4:Memo="오염된 침소_난이도3_던전 지정 보상" ns4:ItemID="1450009" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12002021" ns4:Memo="오염된 침소_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12002022" ns4:Memo="오염된 침소_난이도3_던전 지정 보상" ns4:ItemID="1450009" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12009000" ns4:Memo="지하 고블린 부락_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="300" ns4:Max_ItemCount="300" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12009001" ns4:Memo="지하 고블린 부락_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="2" ns4:Max_ItemCount="2" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12009002" ns4:Memo="지하 고블린 부락_난이도1_던전 지정 보상" ns4:ItemID="1450004" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12009001" ns4:Memo="지하 고블린 부락_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12009002" ns4:Memo="지하 고블린 부락_난이도1_던전 지정 보상" ns4:ItemID="1450004" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12009010" ns4:Memo="지하 고블린 부락_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12009011" ns4:Memo="지하 고블린 부락_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12009012" ns4:Memo="지하 고블린 부락_난이도2_던전 지정 보상" ns4:ItemID="1450005" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12009011" ns4:Memo="지하 고블린 부락_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12009012" ns4:Memo="지하 고블린 부락_난이도2_던전 지정 보상" ns4:ItemID="1450005" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12009020" ns4:Memo="지하 고블린 부락_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12009021" ns4:Memo="지하 고블린 부락_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12009022" ns4:Memo="지하 고블린 부락_난이도3_던전 지정 보상" ns4:ItemID="1450006" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12008000" ns4:Memo="와르그 사육장_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12008001" ns4:Memo="와르그 사육장_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12008002" ns4:Memo="와르그 사육장_난이도1_던전 지정 보상" ns4:ItemID="1450010" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12008010" ns4:Memo="와르그 사육장_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="700" ns4:Max_ItemCount="700" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12008011" ns4:Memo="와르그 사육장_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12008012" ns4:Memo="와르그 사육장_난이도2_던전 지정 보상" ns4:ItemID="1450011" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12008020" ns4:Memo="와르그 사육장_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12008021" ns4:Memo="와르그 사육장_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12008022" ns4:Memo="와르그 사육장_난이도3_던전 지정 보상" ns4:ItemID="1450012" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12004000" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12004001" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12004002" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_던전 지정 보상" ns4:ItemID="1450501" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12004010" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12004011" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12004012" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_던전 지정 보상" ns4:ItemID="1450501" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12004020" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12004021" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12004022" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도3_던전 지정 보상" ns4:ItemID="1450501" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12009021" ns4:Memo="지하 고블린 부락_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12009022" ns4:Memo="지하 고블린 부락_난이도3_던전 지정 보상" ns4:ItemID="1450006" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12008000" ns4:Memo="와르그 사육장_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12008001" ns4:Memo="와르그 사육장_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12008002" ns4:Memo="와르그 사육장_난이도1_던전 지정 보상" ns4:ItemID="1450501" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12008010" ns4:Memo="와르그 사육장_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12008011" ns4:Memo="와르그 사육장_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12008012" ns4:Memo="와르그 사육장_난이도2_던전 지정 보상" ns4:ItemID="1450501" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12008020" ns4:Memo="와르그 사육장_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12008021" ns4:Memo="와르그 사육장_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12008022" ns4:Memo="와르그 사육장_난이도3_던전 지정 보상" ns4:ItemID="1450501" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12004000" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="500" ns4:Max_ItemCount="500" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12004001" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12004002" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_던전 지정 보상" ns4:ItemID="1450010" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12004010" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="700" ns4:Max_ItemCount="700" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12004011" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12004012" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_던전 지정 보상" ns4:ItemID="1450011" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12004020" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12004021" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12004022" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도3_던전 지정 보상" ns4:ItemID="1450012" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12010000" ns4:Memo="해안 절벽 동굴 거점_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12010001" ns4:Memo="해안 절벽 동굴 거점_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12010002" ns4:Memo="해안 절벽 동굴 거점_난이도1_던전 지정 보상" ns4:ItemID="1450502" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12010001" ns4:Memo="해안 절벽 동굴 거점_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12010002" ns4:Memo="해안 절벽 동굴 거점_난이도1_던전 지정 보상" ns4:ItemID="1450502" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12010010" ns4:Memo="해안 절벽 동굴 거점_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12010011" ns4:Memo="해안 절벽 동굴 거점_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12010012" ns4:Memo="해안 절벽 동굴 거점_난이도2_던전 지정 보상" ns4:ItemID="1450502" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12010011" ns4:Memo="해안 절벽 동굴 거점_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12010012" ns4:Memo="해안 절벽 동굴 거점_난이도2_던전 지정 보상" ns4:ItemID="1450502" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12010020" ns4:Memo="해안 절벽 동굴 거점_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12010021" ns4:Memo="해안 절벽 동굴 거점_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12010022" ns4:Memo="해안 절벽 동굴 거점_난이도3_던전 지정 보상" ns4:ItemID="1450502" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12010021" ns4:Memo="해안 절벽 동굴 거점_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12010022" ns4:Memo="해안 절벽 동굴 거점_난이도3_던전 지정 보상" ns4:ItemID="1450502" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12006000" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="700" ns4:Max_ItemCount="700" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12006001" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12006002" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도1_던전 지정 보상" ns4:ItemID="1450504" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12006001" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12006002" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도1_던전 지정 보상" ns4:ItemID="1450504" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12006010" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12006011" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12006012" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도2_던전 지정 보상" ns4:ItemID="1450504" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12006011" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12006012" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도2_던전 지정 보상" ns4:ItemID="1450504" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12006020" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1100" ns4:Max_ItemCount="1100" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12006021" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12006022" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도3_던전 지정 보상" ns4:ItemID="1450504" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12006021" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12006022" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도3_던전 지정 보상" ns4:ItemID="1450504" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12005000" ns4:Memo="송곳니 도적단 투기장_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="700" ns4:Max_ItemCount="700" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12005001" ns4:Memo="송곳니 도적단 투기장_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12005002" ns4:Memo="송곳니 도적단 투기장_난이도1_던전 지정 보상" ns4:ItemID="1450503" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12005001" ns4:Memo="송곳니 도적단 투기장_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12005002" ns4:Memo="송곳니 도적단 투기장_난이도1_던전 지정 보상" ns4:ItemID="1450503" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12005010" ns4:Memo="송곳니 도적단 투기장_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12005011" ns4:Memo="송곳니 도적단 투기장_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12005012" ns4:Memo="송곳니 도적단 투기장_난이도2_던전 지정 보상" ns4:ItemID="1450503" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12005011" ns4:Memo="송곳니 도적단 투기장_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12005012" ns4:Memo="송곳니 도적단 투기장_난이도2_던전 지정 보상" ns4:ItemID="1450503" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12005020" ns4:Memo="송곳니 도적단 투기장_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1100" ns4:Max_ItemCount="1100" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12005021" ns4:Memo="송곳니 도적단 투기장_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12005022" ns4:Memo="송곳니 도적단 투기장_난이도3_던전 지정 보상" ns4:ItemID="1450503" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12005021" ns4:Memo="송곳니 도적단 투기장_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12005022" ns4:Memo="송곳니 도적단 투기장_난이도3_던전 지정 보상" ns4:ItemID="1450503" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12015000" ns4:Memo="어두운 늪지대_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12015001" ns4:Memo="어두운 늪지대_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12015002" ns4:Memo="어두운 늪지대_난이도1_던전 지정 보상" ns4:ItemID="1450603" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12015001" ns4:Memo="어두운 늪지대_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12015002" ns4:Memo="어두운 늪지대_난이도1_던전 지정 보상" ns4:ItemID="1450603" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12015010" ns4:Memo="어두운 늪지대_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12015011" ns4:Memo="어두운 늪지대_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12015012" ns4:Memo="어두운 늪지대_난이도2_던전 지정 보상" ns4:ItemID="1450603" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12015011" ns4:Memo="어두운 늪지대_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12015012" ns4:Memo="어두운 늪지대_난이도2_던전 지정 보상" ns4:ItemID="1450603" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12015020" ns4:Memo="어두운 늪지대_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1200" ns4:Max_ItemCount="1200" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12015021" ns4:Memo="어두운 늪지대_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12015022" ns4:Memo="어두운 늪지대_난이도3_던전 지정 보상" ns4:ItemID="1450603" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12015021" ns4:Memo="어두운 늪지대_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12015022" ns4:Memo="어두운 늪지대_난이도3_던전 지정 보상" ns4:ItemID="1450603" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12014000" ns4:Memo="뒤얽힌 뿌리의 숲_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12014001" ns4:Memo="뒤얽힌 뿌리의 숲_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12014002" ns4:Memo="뒤얽힌 뿌리의 숲_난이도1_던전 지정 보상" ns4:ItemID="1450604" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12014001" ns4:Memo="뒤얽힌 뿌리의 숲_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12014002" ns4:Memo="뒤얽힌 뿌리의 숲_난이도1_던전 지정 보상" ns4:ItemID="1450604" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12014010" ns4:Memo="뒤얽힌 뿌리의 숲_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12014011" ns4:Memo="뒤얽힌 뿌리의 숲_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12014012" ns4:Memo="뒤얽힌 뿌리의 숲_난이도2_던전 지정 보상" ns4:ItemID="1450604" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12014011" ns4:Memo="뒤얽힌 뿌리의 숲_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12014012" ns4:Memo="뒤얽힌 뿌리의 숲_난이도2_던전 지정 보상" ns4:ItemID="1450604" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12014020" ns4:Memo="뒤얽힌 뿌리의 숲_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1200" ns4:Max_ItemCount="1200" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12014021" ns4:Memo="뒤얽힌 뿌리의 숲_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12014022" ns4:Memo="뒤얽힌 뿌리의 숲_난이도3_던전 지정 보상" ns4:ItemID="1450604" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12014021" ns4:Memo="뒤얽힌 뿌리의 숲_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12014022" ns4:Memo="뒤얽힌 뿌리의 숲_난이도3_던전 지정 보상" ns4:ItemID="1450604" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12011000" ns4:Memo="바위 부족 기지_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12011001" ns4:Memo="바위 부족 기지_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12011002" ns4:Memo="바위 부족 기지_난이도1_던전 지정 보상" ns4:ItemID="1450602" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12011001" ns4:Memo="바위 부족 기지_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12011002" ns4:Memo="바위 부족 기지_난이도1_던전 지정 보상" ns4:ItemID="1450602" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12011010" ns4:Memo="바위 부족 기지_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1100" ns4:Max_ItemCount="1100" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12011011" ns4:Memo="바위 부족 기지_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12011012" ns4:Memo="바위 부족 기지_난이도2_던전 지정 보상" ns4:ItemID="1450602" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12011011" ns4:Memo="바위 부족 기지_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12011012" ns4:Memo="바위 부족 기지_난이도2_던전 지정 보상" ns4:ItemID="1450602" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12011020" ns4:Memo="바위 부족 기지_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1300" ns4:Max_ItemCount="1300" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12011021" ns4:Memo="바위 부족 기지_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="12" ns4:Max_ItemCount="12" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12011022" ns4:Memo="바위 부족 기지_난이도3_던전 지정 보상" ns4:ItemID="1450602" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12003000" ns4:Memo="무너진 성역_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1100" ns4:Max_ItemCount="1100" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12003001" ns4:Memo="무너진 성역_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12003002" ns4:Memo="무너진 성역_난이도1_던전 지정 보상" ns4:ItemID="1450601" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12003010" ns4:Memo="무너진 성역_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1300" ns4:Max_ItemCount="1300" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12003011" ns4:Memo="무너진 성역_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12003012" ns4:Memo="무너진 성역_난이도2_던전 지정 보상" ns4:ItemID="1450601" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12003020" ns4:Memo="무너진 성역_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1400" ns4:Max_ItemCount="1400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12003021" ns4:Memo="무너진 성역_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="12" ns4:Max_ItemCount="12" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12003022" ns4:Memo="무너진 성역_난이도3_던전 지정 보상" ns4:ItemID="1450601" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12011021" ns4:Memo="바위 부족 기지_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12011022" ns4:Memo="바위 부족 기지_난이도3_던전 지정 보상" ns4:ItemID="1450602" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12003000" ns4:Memo="무너진 성역_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12003001" ns4:Memo="무너진 성역_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12003002" ns4:Memo="무너진 성역_난이도1_던전 지정 보상" ns4:ItemID="1450601" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12003010" ns4:Memo="무너진 성역_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1100" ns4:Max_ItemCount="1100" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12003011" ns4:Memo="무너진 성역_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12003012" ns4:Memo="무너진 성역_난이도2_던전 지정 보상" ns4:ItemID="1450601" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12003020" ns4:Memo="무너진 성역_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1300" ns4:Max_ItemCount="1300" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12003021" ns4:Memo="무너진 성역_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="35" ns4:Max_ItemCount="35" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12003022" ns4:Memo="무너진 성역_난이도3_던전 지정 보상" ns4:ItemID="1450601" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12019000" ns4:Memo="비극이 잠든 묘역_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1200" ns4:Max_ItemCount="1200" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12019001" ns4:Memo="비극이 잠든 묘역_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12019001" ns4:Memo="비극이 잠든 묘역_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12019002" ns4:Memo="비극이 잠든 묘역_난이도1_던전 지정 보상" ns4:ItemID="1470201" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12019010" ns4:Memo="비극이 잠든 묘역_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1300" ns4:Max_ItemCount="1300" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12019011" ns4:Memo="비극이 잠든 묘역_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="12" ns4:Max_ItemCount="12" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12019012" ns4:Memo="비극이 잠든 묘역_난이도2_던전 지정 보상" ns4:ItemID="1470201" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12019011" ns4:Memo="비극이 잠든 묘역_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12019012" ns4:Memo="비극이 잠든 묘역_난이도2_던전 지정 보상" ns4:ItemID="1470201" ns4:Min_ItemCount="2" ns4:Max_ItemCount="2" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12019020" ns4:Memo="비극이 잠든 묘역_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1400" ns4:Max_ItemCount="1400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12019021" ns4:Memo="비극이 잠든 묘역_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="13" ns4:Max_ItemCount="13" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12019022" ns4:Memo="비극이 잠든 묘역_난이도3_던전 지정 보상" ns4:ItemID="1470201" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12019021" ns4:Memo="비극이 잠든 묘역_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="35" ns4:Max_ItemCount="35" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12019022" ns4:Memo="비극이 잠든 묘역_난이도3_던전 지정 보상" ns4:ItemID="1470201" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12016000" ns4:Memo="잿더미 성채_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1200" ns4:Max_ItemCount="1200" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12016001" ns4:Memo="잿더미 성채_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12016001" ns4:Memo="잿더미 성채_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12016002" ns4:Memo="잿더미 성채_난이도1_던전 지정 보상" ns4:ItemID="1450409" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12016010" ns4:Memo="잿더미 성채_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1300" ns4:Max_ItemCount="1300" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12016011" ns4:Memo="잿더미 성채_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="12" ns4:Max_ItemCount="12" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12016012" ns4:Memo="잿더미 성채_난이도2_던전 지정 보상" ns4:ItemID="1450409" ns4:Min_ItemCount="2" ns4:Max_ItemCount="2" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12016011" ns4:Memo="잿더미 성채_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12016012" ns4:Memo="잿더미 성채_난이도2_던전 지정 보상" ns4:ItemID="1450409" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12016020" ns4:Memo="잿더미 성채_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1400" ns4:Max_ItemCount="1400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12016021" ns4:Memo="잿더미 성채_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="13" ns4:Max_ItemCount="13" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12016022" ns4:Memo="잿더미 성채_난이도3_던전 지정 보상" ns4:ItemID="1450409" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12016021" ns4:Memo="잿더미 성채_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="35" ns4:Max_ItemCount="35" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12016022" ns4:Memo="잿더미 성채_난이도3_던전 지정 보상" ns4:ItemID="1450409" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12000003" ns4:Memo="와르그 동굴_난이도1_장비 1_생명의 연가_투구" ns4:ItemID="1370121" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
 	<ns4:RewardRandomData ns4:ID="12000003" ns4:Memo="와르그 동굴_난이도1_장비 1_생명의 연가_상의" ns4:ItemID="1370122" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
 	<ns4:RewardRandomData ns4:ID="12000003" ns4:Memo="와르그 동굴_난이도1_장비 1_생명의 연가_장갑" ns4:ItemID="1370124" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
@@ -405,39 +405,39 @@
 	<ns4:RewardRandomData ns4:ID="12009013" ns4:Memo="지하 고블린 부락_난이도2_장비 2_전투 의지_신발" ns4:ItemID="1370105" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
 	<ns4:RewardRandomData ns4:ID="12009023" ns4:Memo="지하 고블린 부락_난이도3_장비 1_전투 의지_하의" ns4:ItemID="1380103" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
 	<ns4:RewardRandomData ns4:ID="12009023" ns4:Memo="지하 고블린 부락_난이도3_장비 1_전투 의지_신발" ns4:ItemID="1380105" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
-	<ns4:RewardRandomData ns4:ID="12008003" ns4:Memo="와르그 사육장_난이도1_장비 1_침투하는 자_하의" ns4:ItemID="1370143" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
-	<ns4:RewardRandomData ns4:ID="12008003" ns4:Memo="와르그 사육장_난이도1_장비 1_침투하는 자_신발" ns4:ItemID="1370145" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
-	<ns4:RewardRandomData ns4:ID="12008013" ns4:Memo="와르그 사육장_난이도2_장비 1_침투하는 자_하의" ns4:ItemID="1380143" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
-	<ns4:RewardRandomData ns4:ID="12008013" ns4:Memo="와르그 사육장_난이도2_장비 2_침투하는 자_하의" ns4:ItemID="1370143" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
-	<ns4:RewardRandomData ns4:ID="12008013" ns4:Memo="와르그 사육장_난이도2_장비 1_침투하는 자_신발" ns4:ItemID="1380145" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
-	<ns4:RewardRandomData ns4:ID="12008013" ns4:Memo="와르그 사육장_난이도2_장비 2_침투하는 자_신발" ns4:ItemID="1370145" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
-	<ns4:RewardRandomData ns4:ID="12008023" ns4:Memo="와르그 사육장_난이도3_장비 1_침투하는 자_하의" ns4:ItemID="1380143" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
-	<ns4:RewardRandomData ns4:ID="12008023" ns4:Memo="와르그 사육장_난이도3_장비 1_침투하는 자_신발" ns4:ItemID="1380145" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
-	<ns4:RewardRandomData ns4:ID="12004003" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_장비 1_침투하는 자_투구" ns4:ItemID="1380141" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
-	<ns4:RewardRandomData ns4:ID="12004003" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_장비 2_침투하는 자_투구" ns4:ItemID="1370141" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
-	<ns4:RewardRandomData ns4:ID="12004003" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_장비 1_침투하는 자_상의" ns4:ItemID="1380142" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
-	<ns4:RewardRandomData ns4:ID="12004003" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_장비 2_침투하는 자_상의" ns4:ItemID="1370142" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
-	<ns4:RewardRandomData ns4:ID="12004003" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_장비 1_침투하는 자_장갑" ns4:ItemID="1380144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
-	<ns4:RewardRandomData ns4:ID="12004003" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_장비 2_침투하는 자_장갑" ns4:ItemID="1370144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
-	<ns4:RewardRandomData ns4:ID="12004013" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_장비 1_침투하는 자_투구" ns4:ItemID="1380141" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="80"/>
-	<ns4:RewardRandomData ns4:ID="12004013" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_장비 2_침투하는 자_투구" ns4:ItemID="1370141" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="20"/>
-	<ns4:RewardRandomData ns4:ID="12004013" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_장비 1_침투하는 자_상의" ns4:ItemID="1380142" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="80"/>
-	<ns4:RewardRandomData ns4:ID="12004013" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_장비 2_침투하는 자_상의" ns4:ItemID="1370142" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="20"/>
-	<ns4:RewardRandomData ns4:ID="12004013" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_장비 1_침투하는 자_장갑" ns4:ItemID="1380144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="80"/>
-	<ns4:RewardRandomData ns4:ID="12004013" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_장비 2_침투하는 자_장갑" ns4:ItemID="1370144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="20"/>
-	<ns4:RewardRandomData ns4:ID="12004023" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도3_장비 1_침투하는 자_투구" ns4:ItemID="1380141" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
-	<ns4:RewardRandomData ns4:ID="12004023" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도3_장비 1_침투하는 자_상의" ns4:ItemID="1380142" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
-	<ns4:RewardRandomData ns4:ID="12004023" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도3_장비 1_침투하는 자_장갑" ns4:ItemID="1380144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
-	<ns4:RewardRandomData ns4:ID="12010003" ns4:Memo="해안 절벽 동굴 거점_난이도1_장비 1_생명의 연가_하의" ns4:ItemID="1380123" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
-	<ns4:RewardRandomData ns4:ID="12010003" ns4:Memo="해안 절벽 동굴 거점_난이도1_장비 2_생명의 연가_하의" ns4:ItemID="1370123" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
-	<ns4:RewardRandomData ns4:ID="12010003" ns4:Memo="해안 절벽 동굴 거점_난이도1_장비 1_생명의 연가_신발" ns4:ItemID="1380125" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
-	<ns4:RewardRandomData ns4:ID="12010003" ns4:Memo="해안 절벽 동굴 거점_난이도1_장비 2_생명의 연가_신발" ns4:ItemID="1370125" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
-	<ns4:RewardRandomData ns4:ID="12010013" ns4:Memo="해안 절벽 동굴 거점_난이도2_장비 1_생명의 연가_하의" ns4:ItemID="1380123" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="80"/>
-	<ns4:RewardRandomData ns4:ID="12010013" ns4:Memo="해안 절벽 동굴 거점_난이도2_장비 2_생명의 연가_하의" ns4:ItemID="1370123" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="20"/>
-	<ns4:RewardRandomData ns4:ID="12010013" ns4:Memo="해안 절벽 동굴 거점_난이도2_장비 1_생명의 연가_신발" ns4:ItemID="1380125" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="80"/>
-	<ns4:RewardRandomData ns4:ID="12010013" ns4:Memo="해안 절벽 동굴 거점_난이도2_장비 2_생명의 연가_신발" ns4:ItemID="1370125" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="20"/>
-	<ns4:RewardRandomData ns4:ID="12010023" ns4:Memo="해안 절벽 동굴 거점_난이도3_장비 1_생명의 연가_하의" ns4:ItemID="1380123" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
-	<ns4:RewardRandomData ns4:ID="12010023" ns4:Memo="해안 절벽 동굴 거점_난이도3_장비 1_생명의 연가_신발" ns4:ItemID="1380125" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
+	<ns4:RewardRandomData ns4:ID="12004003" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_장비 1_침투하는 자_하의" ns4:ItemID="1370143" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
+	<ns4:RewardRandomData ns4:ID="12004003" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도1_장비 1_침투하는 자_신발" ns4:ItemID="1370145" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
+	<ns4:RewardRandomData ns4:ID="12004013" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_장비 1_침투하는 자_하의" ns4:ItemID="1380143" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
+	<ns4:RewardRandomData ns4:ID="12004013" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_장비 2_침투하는 자_하의" ns4:ItemID="1370143" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
+	<ns4:RewardRandomData ns4:ID="12004013" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_장비 1_침투하는 자_신발" ns4:ItemID="1380145" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
+	<ns4:RewardRandomData ns4:ID="12004013" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도2_장비 2_침투하는 자_신발" ns4:ItemID="1370145" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
+	<ns4:RewardRandomData ns4:ID="12004023" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도3_장비 1_침투하는 자_하의" ns4:ItemID="1380143" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
+	<ns4:RewardRandomData ns4:ID="12004023" ns4:Memo="은빛 엄니 도적단 물자 창고_난이도3_장비 1_침투하는 자_신발" ns4:ItemID="1380145" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
+	<ns4:RewardRandomData ns4:ID="12010003" ns4:Memo="해안 절벽 동굴 거점_난이도1_장비 1_침투하는 자_투구" ns4:ItemID="1380141" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
+	<ns4:RewardRandomData ns4:ID="12010003" ns4:Memo="해안 절벽 동굴 거점_난이도1_장비 2_침투하는 자_투구" ns4:ItemID="1370141" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
+	<ns4:RewardRandomData ns4:ID="12010003" ns4:Memo="해안 절벽 동굴 거점_난이도1_장비 1_침투하는 자_상의" ns4:ItemID="1380142" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
+	<ns4:RewardRandomData ns4:ID="12010003" ns4:Memo="해안 절벽 동굴 거점_난이도1_장비 2_침투하는 자_상의" ns4:ItemID="1370142" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
+	<ns4:RewardRandomData ns4:ID="12010003" ns4:Memo="해안 절벽 동굴 거점_난이도1_장비 1_침투하는 자_장갑" ns4:ItemID="1380144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
+	<ns4:RewardRandomData ns4:ID="12010003" ns4:Memo="해안 절벽 동굴 거점_난이도1_장비 2_침투하는 자_장갑" ns4:ItemID="1370144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
+	<ns4:RewardRandomData ns4:ID="12010013" ns4:Memo="해안 절벽 동굴 거점_난이도2_장비 1_침투하는 자_투구" ns4:ItemID="1380141" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="80"/>
+	<ns4:RewardRandomData ns4:ID="12010013" ns4:Memo="해안 절벽 동굴 거점_난이도2_장비 2_침투하는 자_투구" ns4:ItemID="1370141" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="20"/>
+	<ns4:RewardRandomData ns4:ID="12010013" ns4:Memo="해안 절벽 동굴 거점_난이도2_장비 1_침투하는 자_상의" ns4:ItemID="1380142" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="80"/>
+	<ns4:RewardRandomData ns4:ID="12010013" ns4:Memo="해안 절벽 동굴 거점_난이도2_장비 2_침투하는 자_상의" ns4:ItemID="1370142" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="20"/>
+	<ns4:RewardRandomData ns4:ID="12010013" ns4:Memo="해안 절벽 동굴 거점_난이도2_장비 1_침투하는 자_장갑" ns4:ItemID="1380144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="80"/>
+	<ns4:RewardRandomData ns4:ID="12010013" ns4:Memo="해안 절벽 동굴 거점_난이도2_장비 2_침투하는 자_장갑" ns4:ItemID="1370144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="20"/>
+	<ns4:RewardRandomData ns4:ID="12010023" ns4:Memo="해안 절벽 동굴 거점_난이도3_장비 1_침투하는 자_투구" ns4:ItemID="1380141" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
+	<ns4:RewardRandomData ns4:ID="12010023" ns4:Memo="해안 절벽 동굴 거점_난이도3_장비 1_침투하는 자_상의" ns4:ItemID="1380142" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
+	<ns4:RewardRandomData ns4:ID="12010023" ns4:Memo="해안 절벽 동굴 거점_난이도3_장비 1_침투하는 자_장갑" ns4:ItemID="1380144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
+	<ns4:RewardRandomData ns4:ID="12008003" ns4:Memo="와르그 사육장_난이도1_장비 1_생명의 연가_하의" ns4:ItemID="1380123" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
+	<ns4:RewardRandomData ns4:ID="12008003" ns4:Memo="와르그 사육장_난이도1_장비 2_생명의 연가_하의" ns4:ItemID="1370123" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
+	<ns4:RewardRandomData ns4:ID="12008003" ns4:Memo="와르그 사육장_난이도1_장비 1_생명의 연가_신발" ns4:ItemID="1380125" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
+	<ns4:RewardRandomData ns4:ID="12008003" ns4:Memo="와르그 사육장_난이도1_장비 2_생명의 연가_신발" ns4:ItemID="1370125" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
+	<ns4:RewardRandomData ns4:ID="12008013" ns4:Memo="와르그 사육장_난이도2_장비 1_생명의 연가_하의" ns4:ItemID="1380123" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="80"/>
+	<ns4:RewardRandomData ns4:ID="12008013" ns4:Memo="와르그 사육장_난이도2_장비 2_생명의 연가_하의" ns4:ItemID="1370123" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="20"/>
+	<ns4:RewardRandomData ns4:ID="12008013" ns4:Memo="와르그 사육장_난이도2_장비 1_생명의 연가_신발" ns4:ItemID="1380125" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="80"/>
+	<ns4:RewardRandomData ns4:ID="12008013" ns4:Memo="와르그 사육장_난이도2_장비 2_생명의 연가_신발" ns4:ItemID="1370125" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="20"/>
+	<ns4:RewardRandomData ns4:ID="12008023" ns4:Memo="와르그 사육장_난이도3_장비 1_생명의 연가_하의" ns4:ItemID="1380123" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
+	<ns4:RewardRandomData ns4:ID="12008023" ns4:Memo="와르그 사육장_난이도3_장비 1_생명의 연가_신발" ns4:ItemID="1380125" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
 	<ns4:RewardRandomData ns4:ID="12006003" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도1_장비 1_전투 의지_하의" ns4:ItemID="1380103" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
 	<ns4:RewardRandomData ns4:ID="12006003" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도1_장비 2_전투 의지_하의" ns4:ItemID="1370103" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="40"/>
 	<ns4:RewardRandomData ns4:ID="12006003" ns4:Memo="녹슨 엄니 도적단 보물 창고_난이도1_장비 1_전투 의지_신발" ns4:ItemID="1380105" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="60"/>
@@ -580,203 +580,203 @@
 	<ns4:RewardRandomData ns4:ID="12016023" ns4:Memo="잿더미 성채_난이도3_장비 1_침투하는 자_신발" ns4:ItemID="1390145" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="100"/>
 	<ns4:RewardRandomData ns4:ID="12099999" ns4:Memo="일반 던전_공통 더미 보상_빛의 파편" ns4:ItemID="1000501" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12100000" ns4:Memo="용 숭배자 폐허_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="300" ns4:Max_ItemCount="300" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12100001" ns4:Memo="용 숭배자 폐허_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="2" ns4:Max_ItemCount="2" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12100002" ns4:Memo="용 숭배자 폐허_난이도1_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="15000" ns4:Max_ItemCount="15000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12100001" ns4:Memo="용 숭배자 폐허_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12100002" ns4:Memo="용 숭배자 폐허_난이도1_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="40000" ns4:Max_ItemCount="40000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12100003" ns4:Memo="용 숭배자 폐허_난이도1_전투 기초 교본" ns4:ItemID="1410002" ns4:Min_ItemCount="100" ns4:Max_ItemCount="100" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12100010" ns4:Memo="용 숭배자 폐허_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12100011" ns4:Memo="용 숭배자 폐허_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12100012" ns4:Memo="용 숭배자 폐허_난이도2_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="45000" ns4:Max_ItemCount="45000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12100011" ns4:Memo="용 숭배자 폐허_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12100012" ns4:Memo="용 숭배자 폐허_난이도2_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="115000" ns4:Max_ItemCount="115000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12100013" ns4:Memo="용 숭배자 폐허_난이도2_전투 심화 교본" ns4:ItemID="1410003" ns4:Min_ItemCount="100" ns4:Max_ItemCount="100" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12100020" ns4:Memo="용 숭배자 폐허_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12100021" ns4:Memo="용 숭배자 폐허_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12100022" ns4:Memo="용 숭배자 폐허_난이도3_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="90000" ns4:Max_ItemCount="90000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12100021" ns4:Memo="용 숭배자 폐허_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12100022" ns4:Memo="용 숭배자 폐허_난이도3_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="225000" ns4:Max_ItemCount="225000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12100023" ns4:Memo="용 숭배자 폐허_난이도3_전투 핵심 교본" ns4:ItemID="1410004" ns4:Min_ItemCount="100" ns4:Max_ItemCount="100" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12101000" ns4:Memo="끝없는 소환지_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12101001" ns4:Memo="끝없는 소환지_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12101002" ns4:Memo="끝없는 소환지_난이도1_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="20000" ns4:Max_ItemCount="20000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12101001" ns4:Memo="끝없는 소환지_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12101002" ns4:Memo="끝없는 소환지_난이도1_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="50000" ns4:Max_ItemCount="50000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12101003" ns4:Memo="끝없는 소환지_난이도1_마력의 조각" ns4:ItemID="1410202" ns4:Min_ItemCount="100" ns4:Max_ItemCount="100" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12101010" ns4:Memo="끝없는 소환지_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="700" ns4:Max_ItemCount="700" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12101011" ns4:Memo="끝없는 소환지_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12101012" ns4:Memo="끝없는 소환지_난이도2_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="55000" ns4:Max_ItemCount="55000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12101011" ns4:Memo="끝없는 소환지_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12101012" ns4:Memo="끝없는 소환지_난이도2_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="140000" ns4:Max_ItemCount="140000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12101013" ns4:Memo="끝없는 소환지_난이도2_마력의 결정" ns4:ItemID="1410203" ns4:Min_ItemCount="100" ns4:Max_ItemCount="100" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12101020" ns4:Memo="끝없는 소환지_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12101021" ns4:Memo="끝없는 소환지_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12101022" ns4:Memo="끝없는 소환지_난이도3_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="100000" ns4:Max_ItemCount="100000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12101021" ns4:Memo="끝없는 소환지_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12101022" ns4:Memo="끝없는 소환지_난이도3_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="250000" ns4:Max_ItemCount="250000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12101023" ns4:Memo="끝없는 소환지_난이도3_마력의 광물" ns4:ItemID="1410204" ns4:Min_ItemCount="100" ns4:Max_ItemCount="100" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12102000" ns4:Memo="거인의 흔적_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12102001" ns4:Memo="거인의 흔적_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12102002" ns4:Memo="거인의 흔적_난이도1_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="30000" ns4:Max_ItemCount="30000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12102001" ns4:Memo="거인의 흔적_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12102002" ns4:Memo="거인의 흔적_난이도1_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="75000" ns4:Max_ItemCount="75000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12102003" ns4:Memo="거인의 흔적_난이도1_전란의 아르카나" ns4:ItemID="1410102" ns4:Min_ItemCount="100" ns4:Max_ItemCount="100" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12102010" ns4:Memo="거인의 흔적_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12102011" ns4:Memo="거인의 흔적_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12102012" ns4:Memo="거인의 흔적_난이도2_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="60000" ns4:Max_ItemCount="60000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12102011" ns4:Memo="거인의 흔적_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12102012" ns4:Memo="거인의 흔적_난이도2_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="150000" ns4:Max_ItemCount="150000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12102013" ns4:Memo="거인의 흔적_난이도2_시작의 아르카나" ns4:ItemID="1410103" ns4:Min_ItemCount="100" ns4:Max_ItemCount="100" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12102020" ns4:Memo="거인의 흔적_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12102021" ns4:Memo="거인의 흔적_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12102022" ns4:Memo="거인의 흔적_난이도3_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="100000" ns4:Max_ItemCount="100000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12102021" ns4:Memo="거인의 흔적_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12102022" ns4:Memo="거인의 흔적_난이도3_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="250000" ns4:Max_ItemCount="250000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12102023" ns4:Memo="거인의 흔적_난이도3_평화의 아르카나" ns4:ItemID="1410104" ns4:Min_ItemCount="100" ns4:Max_ItemCount="100" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12103000" ns4:Memo="침식된 지하 묘지_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12103001" ns4:Memo="침식된 지하 묘지_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12103002" ns4:Memo="침식된 지하 묘지_난이도1_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="200000" ns4:Max_ItemCount="200000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12103001" ns4:Memo="침식된 지하 묘지_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12103002" ns4:Memo="침식된 지하 묘지_난이도1_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="500000" ns4:Max_ItemCount="500000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12103010" ns4:Memo="침식된 지하 묘지_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12103011" ns4:Memo="침식된 지하 묘지_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12103012" ns4:Memo="침식된 지하 묘지_난이도2_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="375000" ns4:Max_ItemCount="375000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12103011" ns4:Memo="침식된 지하 묘지_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12103012" ns4:Memo="침식된 지하 묘지_난이도2_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="950000" ns4:Max_ItemCount="950000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12103020" ns4:Memo="침식된 지하 묘지_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1200" ns4:Max_ItemCount="1200" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12103021" ns4:Memo="침식된 지하 묘지_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12103022" ns4:Memo="침식된 지하 묘지_난이도3_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="600000" ns4:Max_ItemCount="600000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12103021" ns4:Memo="침식된 지하 묘지_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12103022" ns4:Memo="침식된 지하 묘지_난이도3_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="1500000" ns4:Max_ItemCount="1500000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12104000" ns4:Memo="잔류 웜 청소 구역_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12104001" ns4:Memo="잔류 웜 청소 구역_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12104002" ns4:Memo="잔류 웜 청소 구역_난이도1_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="70000" ns4:Max_ItemCount="70000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12104001" ns4:Memo="잔류 웜 청소 구역_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12104002" ns4:Memo="잔류 웜 청소 구역_난이도1_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="210000" ns4:Max_ItemCount="210000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12104003" ns4:Memo="잔류 웜 청소 구역_난이도1_전투 핵심 교본" ns4:ItemID="1410004" ns4:Min_ItemCount="60" ns4:Max_ItemCount="60" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12104004" ns4:Memo="잔류 웜 청소 구역_난이도1_마력의 광물" ns4:ItemID="1410204" ns4:Min_ItemCount="60" ns4:Max_ItemCount="60" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12104005" ns4:Memo="잔류 웜 청소 구역_난이도1_평화의 아르카나" ns4:ItemID="1410104" ns4:Min_ItemCount="80" ns4:Max_ItemCount="80" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12104010" ns4:Memo="잔류 웜 청소 구역_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1100" ns4:Max_ItemCount="1100" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12104011" ns4:Memo="잔류 웜 청소 구역_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12104012" ns4:Memo="잔류 웜 청소 구역_난이도2_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="110000" ns4:Max_ItemCount="110000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12104011" ns4:Memo="잔류 웜 청소 구역_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12104012" ns4:Memo="잔류 웜 청소 구역_난이도2_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="330000" ns4:Max_ItemCount="330000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12104013" ns4:Memo="잔류 웜 청소 구역_난이도2_전투 핵심 교본" ns4:ItemID="1410004" ns4:Min_ItemCount="90" ns4:Max_ItemCount="90" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12104014" ns4:Memo="잔류 웜 청소 구역_난이도2_마력의 광물" ns4:ItemID="1410204" ns4:Min_ItemCount="90" ns4:Max_ItemCount="90" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12104015" ns4:Memo="잔류 웜 청소 구역_난이도2_평화의 아르카나" ns4:ItemID="1410104" ns4:Min_ItemCount="120" ns4:Max_ItemCount="120" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12104020" ns4:Memo="잔류 웜 청소 구역_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1300" ns4:Max_ItemCount="1300" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12104021" ns4:Memo="잔류 웜 청소 구역_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="12" ns4:Max_ItemCount="12" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12104022" ns4:Memo="잔류 웜 청소 구역_난이도3_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="165000" ns4:Max_ItemCount="165000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12104021" ns4:Memo="잔류 웜 청소 구역_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12104022" ns4:Memo="잔류 웜 청소 구역_난이도3_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="500000" ns4:Max_ItemCount="500000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12104023" ns4:Memo="잔류 웜 청소 구역_난이도3_영웅의 서" ns4:ItemID="1410005" ns4:Min_ItemCount="45" ns4:Max_ItemCount="45" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12104024" ns4:Memo="잔류 웜 청소 구역_난이도3_마력의 원석" ns4:ItemID="1410205" ns4:Min_ItemCount="45" ns4:Max_ItemCount="45" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12104025" ns4:Memo="잔류 웜 청소 구역_난이도3_미래의 아르카나" ns4:ItemID="1410105" ns4:Min_ItemCount="60" ns4:Max_ItemCount="60" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12200000" ns4:Memo="진폭의 만티어스_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12200001" ns4:Memo="진폭의 만티어스_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12200004" ns4:Memo="진폭의 만티어스_난이도1_보상 1" ns4:ItemID="1450101" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12200001" ns4:Memo="진폭의 만티어스_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12200002" ns4:Memo="진폭의 만티어스_난이도1_보상 1" ns4:ItemID="1450101" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12200010" ns4:Memo="진폭의 만티어스_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12200011" ns4:Memo="진폭의 만티어스_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12200014" ns4:Memo="진폭의 만티어스_난이도2_보상 1" ns4:ItemID="1450101" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12200015" ns4:Memo="진폭의 만티어스_난이도2_보상 2" ns4:ItemID="1450102" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12200011" ns4:Memo="진폭의 만티어스_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12200012" ns4:Memo="진폭의 만티어스_난이도2_보상 1" ns4:ItemID="1450101" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12200013" ns4:Memo="진폭의 만티어스_난이도2_보상 2" ns4:ItemID="1450102" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12200020" ns4:Memo="진폭의 만티어스_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12200021" ns4:Memo="진폭의 만티어스_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12200024" ns4:Memo="진폭의 만티어스_난이도3_보상 1" ns4:ItemID="1450101" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12200025" ns4:Memo="진폭의 만티어스_난이도3_보상 2" ns4:ItemID="1450102" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12200021" ns4:Memo="진폭의 만티어스_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12200022" ns4:Memo="진폭의 만티어스_난이도3_보상 1" ns4:ItemID="1450101" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12200023" ns4:Memo="진폭의 만티어스_난이도3_보상 2" ns4:ItemID="1450102" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12200030" ns4:Memo="진폭의 만티어스_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12200031" ns4:Memo="진폭의 만티어스_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12200034" ns4:Memo="진폭의 만티어스_난이도4_보상 1" ns4:ItemID="1450102" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12200035" ns4:Memo="진폭의 만티어스_난이도4_보상 2" ns4:ItemID="1450103" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12200031" ns4:Memo="진폭의 만티어스_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12200032" ns4:Memo="진폭의 만티어스_난이도4_보상 1" ns4:ItemID="1450102" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12200033" ns4:Memo="진폭의 만티어스_난이도4_보상 2" ns4:ItemID="1450103" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12201000" ns4:Memo="압쇄의 만티어스_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12201001" ns4:Memo="압쇄의 만티어스_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12201004" ns4:Memo="압쇄의 만티어스_난이도1_보상 1" ns4:ItemID="1450104" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12201001" ns4:Memo="압쇄의 만티어스_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12201002" ns4:Memo="압쇄의 만티어스_난이도1_보상 1" ns4:ItemID="1450104" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12201010" ns4:Memo="압쇄의 만티어스_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12201011" ns4:Memo="압쇄의 만티어스_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12201014" ns4:Memo="압쇄의 만티어스_난이도2_보상 1" ns4:ItemID="1450104" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12201015" ns4:Memo="압쇄의 만티어스_난이도2_보상 2" ns4:ItemID="1450105" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12201011" ns4:Memo="압쇄의 만티어스_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12201012" ns4:Memo="압쇄의 만티어스_난이도2_보상 1" ns4:ItemID="1450104" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12201013" ns4:Memo="압쇄의 만티어스_난이도2_보상 2" ns4:ItemID="1450105" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12201020" ns4:Memo="압쇄의 만티어스_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12201021" ns4:Memo="압쇄의 만티어스_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12201024" ns4:Memo="압쇄의 만티어스_난이도3_보상 1" ns4:ItemID="1450104" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12201025" ns4:Memo="압쇄의 만티어스_난이도3_보상 2" ns4:ItemID="1450105" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12201021" ns4:Memo="압쇄의 만티어스_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12201022" ns4:Memo="압쇄의 만티어스_난이도3_보상 1" ns4:ItemID="1450104" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12201023" ns4:Memo="압쇄의 만티어스_난이도3_보상 2" ns4:ItemID="1450105" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12201030" ns4:Memo="압쇄의 만티어스_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12201031" ns4:Memo="압쇄의 만티어스_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12201034" ns4:Memo="압쇄의 만티어스_난이도4_보상 1" ns4:ItemID="1450105" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12201035" ns4:Memo="압쇄의 만티어스_난이도4_보상 2" ns4:ItemID="1450106" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12201031" ns4:Memo="압쇄의 만티어스_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12201032" ns4:Memo="압쇄의 만티어스_난이도4_보상 1" ns4:ItemID="1450105" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12201033" ns4:Memo="압쇄의 만티어스_난이도4_보상 2" ns4:ItemID="1450106" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12202000" ns4:Memo="돌풍의 만티어스_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12202001" ns4:Memo="돌풍의 만티어스_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12202004" ns4:Memo="돌풍의 만티어스_난이도1_보상 1" ns4:ItemID="1450107" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12202001" ns4:Memo="돌풍의 만티어스_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12202002" ns4:Memo="돌풍의 만티어스_난이도1_보상 1" ns4:ItemID="1450107" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12202010" ns4:Memo="돌풍의 만티어스_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12202011" ns4:Memo="돌풍의 만티어스_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12202014" ns4:Memo="돌풍의 만티어스_난이도2_보상 1" ns4:ItemID="1450107" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12202015" ns4:Memo="돌풍의 만티어스_난이도2_보상 2" ns4:ItemID="1450108" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12202011" ns4:Memo="돌풍의 만티어스_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12202012" ns4:Memo="돌풍의 만티어스_난이도2_보상 1" ns4:ItemID="1450107" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12202013" ns4:Memo="돌풍의 만티어스_난이도2_보상 2" ns4:ItemID="1450108" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12202020" ns4:Memo="돌풍의 만티어스_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12202021" ns4:Memo="돌풍의 만티어스_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12202024" ns4:Memo="돌풍의 만티어스_난이도3_보상 1" ns4:ItemID="1450107" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12202025" ns4:Memo="돌풍의 만티어스_난이도3_보상 2" ns4:ItemID="1450108" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12202021" ns4:Memo="돌풍의 만티어스_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12202022" ns4:Memo="돌풍의 만티어스_난이도3_보상 1" ns4:ItemID="1450107" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12202023" ns4:Memo="돌풍의 만티어스_난이도3_보상 2" ns4:ItemID="1450108" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12202030" ns4:Memo="돌풍의 만티어스_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12202031" ns4:Memo="돌풍의 만티어스_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12202034" ns4:Memo="돌풍의 만티어스_난이도4_보상 1" ns4:ItemID="1450108" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12202035" ns4:Memo="돌풍의 만티어스_난이도4_보상 2" ns4:ItemID="1450109" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12202031" ns4:Memo="돌풍의 만티어스_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12202032" ns4:Memo="돌풍의 만티어스_난이도4_보상 1" ns4:ItemID="1450108" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12202033" ns4:Memo="돌풍의 만티어스_난이도4_보상 2" ns4:ItemID="1450109" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12203000" ns4:Memo="충파의 드라소피아_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12203001" ns4:Memo="충파의 드라소피아_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12203004" ns4:Memo="충파의 드라소피아_난이도1_보상 1" ns4:ItemID="1450110" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12203001" ns4:Memo="충파의 드라소피아_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12203002" ns4:Memo="충파의 드라소피아_난이도1_보상 1" ns4:ItemID="1450110" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12203010" ns4:Memo="충파의 드라소피아_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12203011" ns4:Memo="충파의 드라소피아_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12203014" ns4:Memo="충파의 드라소피아_난이도2_보상 1" ns4:ItemID="1450110" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12203015" ns4:Memo="충파의 드라소피아_난이도2_보상 2" ns4:ItemID="1450111" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12203011" ns4:Memo="충파의 드라소피아_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12203012" ns4:Memo="충파의 드라소피아_난이도2_보상 1" ns4:ItemID="1450110" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12203013" ns4:Memo="충파의 드라소피아_난이도2_보상 2" ns4:ItemID="1450111" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12203020" ns4:Memo="충파의 드라소피아_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12203021" ns4:Memo="충파의 드라소피아_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12203024" ns4:Memo="충파의 드라소피아_난이도3_보상 1" ns4:ItemID="1450110" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12203025" ns4:Memo="충파의 드라소피아_난이도3_보상 2" ns4:ItemID="1450111" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12203021" ns4:Memo="충파의 드라소피아_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12203022" ns4:Memo="충파의 드라소피아_난이도3_보상 1" ns4:ItemID="1450110" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12203023" ns4:Memo="충파의 드라소피아_난이도3_보상 2" ns4:ItemID="1450111" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12203030" ns4:Memo="충파의 드라소피아_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12203031" ns4:Memo="충파의 드라소피아_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12203034" ns4:Memo="충파의 드라소피아_난이도4_보상 1" ns4:ItemID="1450111" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12203035" ns4:Memo="충파의 드라소피아_난이도4_보상 2" ns4:ItemID="1450112" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12203031" ns4:Memo="충파의 드라소피아_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12203032" ns4:Memo="충파의 드라소피아_난이도4_보상 1" ns4:ItemID="1450111" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12203033" ns4:Memo="충파의 드라소피아_난이도4_보상 2" ns4:ItemID="1450112" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12204000" ns4:Memo="혈기의 드라소피아_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12204001" ns4:Memo="혈기의 드라소피아_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12204004" ns4:Memo="혈기의 드라소피아_난이도1_보상 1" ns4:ItemID="1450113" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12204001" ns4:Memo="혈기의 드라소피아_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12204002" ns4:Memo="혈기의 드라소피아_난이도1_보상 1" ns4:ItemID="1450113" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12204010" ns4:Memo="혈기의 드라소피아_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12204011" ns4:Memo="혈기의 드라소피아_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12204014" ns4:Memo="혈기의 드라소피아_난이도2_보상 1" ns4:ItemID="1450113" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12204015" ns4:Memo="혈기의 드라소피아_난이도2_보상 2" ns4:ItemID="1450114" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12204011" ns4:Memo="혈기의 드라소피아_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12204012" ns4:Memo="혈기의 드라소피아_난이도2_보상 1" ns4:ItemID="1450113" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12204013" ns4:Memo="혈기의 드라소피아_난이도2_보상 2" ns4:ItemID="1450114" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12204020" ns4:Memo="혈기의 드라소피아_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12204021" ns4:Memo="혈기의 드라소피아_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12204024" ns4:Memo="혈기의 드라소피아_난이도3_보상 1" ns4:ItemID="1450113" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12204025" ns4:Memo="혈기의 드라소피아_난이도3_보상 2" ns4:ItemID="1450114" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12204021" ns4:Memo="혈기의 드라소피아_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12204022" ns4:Memo="혈기의 드라소피아_난이도3_보상 1" ns4:ItemID="1450113" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12204023" ns4:Memo="혈기의 드라소피아_난이도3_보상 2" ns4:ItemID="1450114" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12204030" ns4:Memo="혈기의 드라소피아_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12204031" ns4:Memo="혈기의 드라소피아_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12204034" ns4:Memo="혈기의 드라소피아_난이도4_보상 1" ns4:ItemID="1450114" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12204035" ns4:Memo="혈기의 드라소피아_난이도4_보상 2" ns4:ItemID="1450115" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12204031" ns4:Memo="혈기의 드라소피아_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12204032" ns4:Memo="혈기의 드라소피아_난이도4_보상 1" ns4:ItemID="1450114" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12204033" ns4:Memo="혈기의 드라소피아_난이도4_보상 2" ns4:ItemID="1450115" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12205000" ns4:Memo="홍염의 가가로치_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12205001" ns4:Memo="홍염의 가가로치_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12205004" ns4:Memo="홍염의 가가로치_난이도1_보상 1" ns4:ItemID="1450116" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12205001" ns4:Memo="홍염의 가가로치_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12205002" ns4:Memo="홍염의 가가로치_난이도1_보상 1" ns4:ItemID="1450116" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12205010" ns4:Memo="홍염의 가가로치_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12205011" ns4:Memo="홍염의 가가로치_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12205014" ns4:Memo="홍염의 가가로치_난이도2_보상 1" ns4:ItemID="1450116" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12205015" ns4:Memo="홍염의 가가로치_난이도2_보상 2" ns4:ItemID="1450117" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12205011" ns4:Memo="홍염의 가가로치_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12205012" ns4:Memo="홍염의 가가로치_난이도2_보상 1" ns4:ItemID="1450116" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12205013" ns4:Memo="홍염의 가가로치_난이도2_보상 2" ns4:ItemID="1450117" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12205020" ns4:Memo="홍염의 가가로치_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12205021" ns4:Memo="홍염의 가가로치_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12205024" ns4:Memo="홍염의 가가로치_난이도3_보상 1" ns4:ItemID="1450116" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12205025" ns4:Memo="홍염의 가가로치_난이도3_보상 2" ns4:ItemID="1450117" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12205021" ns4:Memo="홍염의 가가로치_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12205022" ns4:Memo="홍염의 가가로치_난이도3_보상 1" ns4:ItemID="1450116" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12205023" ns4:Memo="홍염의 가가로치_난이도3_보상 2" ns4:ItemID="1450117" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12205030" ns4:Memo="홍염의 가가로치_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12205031" ns4:Memo="홍염의 가가로치_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12205034" ns4:Memo="홍염의 가가로치_난이도4_보상 1" ns4:ItemID="1450117" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12205035" ns4:Memo="홍염의 가가로치_난이도4_보상 2" ns4:ItemID="1450118" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12205031" ns4:Memo="홍염의 가가로치_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12205032" ns4:Memo="홍염의 가가로치_난이도4_보상 1" ns4:ItemID="1450117" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12205033" ns4:Memo="홍염의 가가로치_난이도4_보상 2" ns4:ItemID="1450118" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12206000" ns4:Memo="설빙의 가가로치_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12206001" ns4:Memo="설빙의 가가로치_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12206004" ns4:Memo="설빙의 가가로치_난이도1_보상 1" ns4:ItemID="1450119" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12206001" ns4:Memo="설빙의 가가로치_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12206002" ns4:Memo="설빙의 가가로치_난이도1_보상 1" ns4:ItemID="1450119" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12206010" ns4:Memo="설빙의 가가로치_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12206011" ns4:Memo="설빙의 가가로치_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12206014" ns4:Memo="설빙의 가가로치_난이도2_보상 1" ns4:ItemID="1450119" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12206015" ns4:Memo="설빙의 가가로치_난이도2_보상 2" ns4:ItemID="1450120" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12206011" ns4:Memo="설빙의 가가로치_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12206012" ns4:Memo="설빙의 가가로치_난이도2_보상 1" ns4:ItemID="1450119" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12206013" ns4:Memo="설빙의 가가로치_난이도2_보상 2" ns4:ItemID="1450120" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12206020" ns4:Memo="설빙의 가가로치_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12206021" ns4:Memo="설빙의 가가로치_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12206024" ns4:Memo="설빙의 가가로치_난이도3_보상 1" ns4:ItemID="1450119" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12206025" ns4:Memo="설빙의 가가로치_난이도3_보상 2" ns4:ItemID="1450120" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12206021" ns4:Memo="설빙의 가가로치_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12206022" ns4:Memo="설빙의 가가로치_난이도3_보상 1" ns4:ItemID="1450119" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12206023" ns4:Memo="설빙의 가가로치_난이도3_보상 2" ns4:ItemID="1450120" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12206030" ns4:Memo="설빙의 가가로치_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12206031" ns4:Memo="설빙의 가가로치_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12206034" ns4:Memo="설빙의 가가로치_난이도4_보상 1" ns4:ItemID="1450120" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12206035" ns4:Memo="설빙의 가가로치_난이도4_보상 2" ns4:ItemID="1450121" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12206031" ns4:Memo="설빙의 가가로치_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12206032" ns4:Memo="설빙의 가가로치_난이도4_보상 1" ns4:ItemID="1450120" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12206033" ns4:Memo="설빙의 가가로치_난이도4_보상 2" ns4:ItemID="1450121" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12207000" ns4:Memo="뇌격의 가가로치_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12207001" ns4:Memo="뇌격의 가가로치_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12207004" ns4:Memo="뇌격의 가가로치_난이도1_보상 1" ns4:ItemID="1450122" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12207001" ns4:Memo="뇌격의 가가로치_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12207002" ns4:Memo="뇌격의 가가로치_난이도1_보상 1" ns4:ItemID="1450122" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12207010" ns4:Memo="뇌격의 가가로치_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12207011" ns4:Memo="뇌격의 가가로치_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12207014" ns4:Memo="뇌격의 가가로치_난이도2_보상 1" ns4:ItemID="1450122" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12207015" ns4:Memo="뇌격의 가가로치_난이도2_보상 2" ns4:ItemID="1450123" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12207011" ns4:Memo="뇌격의 가가로치_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12207012" ns4:Memo="뇌격의 가가로치_난이도2_보상 1" ns4:ItemID="1450122" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12207013" ns4:Memo="뇌격의 가가로치_난이도2_보상 2" ns4:ItemID="1450123" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12207020" ns4:Memo="뇌격의 가가로치_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12207021" ns4:Memo="뇌격의 가가로치_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12207024" ns4:Memo="뇌격의 가가로치_난이도3_보상 1" ns4:ItemID="1450122" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12207025" ns4:Memo="뇌격의 가가로치_난이도3_보상 2" ns4:ItemID="1450123" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12207021" ns4:Memo="뇌격의 가가로치_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12207022" ns4:Memo="뇌격의 가가로치_난이도3_보상 1" ns4:ItemID="1450122" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12207023" ns4:Memo="뇌격의 가가로치_난이도3_보상 2" ns4:ItemID="1450123" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12207030" ns4:Memo="뇌격의 가가로치_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12207031" ns4:Memo="뇌격의 가가로치_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12207034" ns4:Memo="뇌격의 가가로치_난이도4_보상 1" ns4:ItemID="1450123" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12207035" ns4:Memo="뇌격의 가가로치_난이도4_보상 2" ns4:ItemID="1450124" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12207031" ns4:Memo="뇌격의 가가로치_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12207032" ns4:Memo="뇌격의 가가로치_난이도4_보상 1" ns4:ItemID="1450123" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12207033" ns4:Memo="뇌격의 가가로치_난이도4_보상 2" ns4:ItemID="1450124" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12208000" ns4:Memo="혼탁의 가가로치_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12208001" ns4:Memo="혼탁의 가가로치_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12208004" ns4:Memo="혼탁의 가가로치_난이도1_보상 1" ns4:ItemID="1450125" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12208001" ns4:Memo="혼탁의 가가로치_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12208002" ns4:Memo="혼탁의 가가로치_난이도1_보상 1" ns4:ItemID="1450125" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12208010" ns4:Memo="혼탁의 가가로치_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12208011" ns4:Memo="혼탁의 가가로치_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12208014" ns4:Memo="혼탁의 가가로치_난이도2_보상 1" ns4:ItemID="1450125" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12208015" ns4:Memo="혼탁의 가가로치_난이도2_보상 2" ns4:ItemID="1450126" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12208011" ns4:Memo="혼탁의 가가로치_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12208012" ns4:Memo="혼탁의 가가로치_난이도2_보상 1" ns4:ItemID="1450125" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12208013" ns4:Memo="혼탁의 가가로치_난이도2_보상 2" ns4:ItemID="1450126" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12208020" ns4:Memo="혼탁의 가가로치_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12208021" ns4:Memo="혼탁의 가가로치_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12208024" ns4:Memo="혼탁의 가가로치_난이도3_보상 1" ns4:ItemID="1450125" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12208025" ns4:Memo="혼탁의 가가로치_난이도3_보상 2" ns4:ItemID="1450126" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12208021" ns4:Memo="혼탁의 가가로치_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12208022" ns4:Memo="혼탁의 가가로치_난이도3_보상 1" ns4:ItemID="1450125" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12208023" ns4:Memo="혼탁의 가가로치_난이도3_보상 2" ns4:ItemID="1450126" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12208030" ns4:Memo="혼탁의 가가로치_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12208031" ns4:Memo="혼탁의 가가로치_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12208034" ns4:Memo="혼탁의 가가로치_난이도4_보상 1" ns4:ItemID="1450126" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="12208035" ns4:Memo="혼탁의 가가로치_난이도4_보상 2" ns4:ItemID="1450127" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12208031" ns4:Memo="혼탁의 가가로치_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12208032" ns4:Memo="혼탁의 가가로치_난이도4_보상 1" ns4:ItemID="1450126" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="12208033" ns4:Memo="혼탁의 가가로치_난이도4_보상 2" ns4:ItemID="1450127" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12300000" ns4:Memo="운무의 시련 '외길'_용병단 등급 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12300001" ns4:Memo="운무의 시련 '외길'_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="25000" ns4:Max_ItemCount="25000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12300002" ns4:Memo="운무의 시련 '외길'_시간의 도표" ns4:ItemID="1450801" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
@@ -846,117 +846,139 @@
 	<ns4:RewardRandomData ns4:ID="12600021" ns4:Memo="승급 퀘스트 던전 (지하 묘역)_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="12600022" ns4:Memo="승급 퀘스트 던전 (지하 묘역)_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13000000" ns4:Memo="부식 아귀 푸르카스_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="400" ns4:Max_ItemCount="400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000001" ns4:Memo="부식 아귀 푸르카스_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000002" ns4:Memo="부식 아귀 푸르카스_난이도1_토벌 특수 보상" ns4:ItemID="1450815" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000003" ns4:Memo="부식 아귀 푸르카스_난이도1_스킬 레벨업 재료" ns4:ItemID="1450811" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000001" ns4:Memo="부식 아귀 푸르카스_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000002" ns4:Memo="부식 아귀 푸르카스_난이도1_스킬 레벨업 재료" ns4:ItemID="1450811" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000004" ns4:Memo="부식 아귀 푸르카스_난이도1_토벌 특수 보상" ns4:ItemID="1450815" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13000100" ns4:Memo="부식 아귀 푸르카스_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="700" ns4:Max_ItemCount="700" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000101" ns4:Memo="부식 아귀 푸르카스_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000102" ns4:Memo="부식 아귀 푸르카스_난이도2_토벌 특수 보상" ns4:ItemID="1450815" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000103" ns4:Memo="부식 아귀 푸르카스_난이도2_스킬 레벨업 재료" ns4:ItemID="1450811" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000101" ns4:Memo="부식 아귀 푸르카스_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000102" ns4:Memo="부식 아귀 푸르카스_난이도2_스킬 레벨업 재료" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000104" ns4:Memo="부식 아귀 푸르카스_난이도2_토벌 특수 보상" ns4:ItemID="1450815" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13000200" ns4:Memo="부식 아귀 푸르카스_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000201" ns4:Memo="부식 아귀 푸르카스_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000202" ns4:Memo="부식 아귀 푸르카스_난이도3_토벌 특수 보상" ns4:ItemID="1450815" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000203" ns4:Memo="부식 아귀 푸르카스_난이도3_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000201" ns4:Memo="부식 아귀 푸르카스_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000202" ns4:Memo="부식 아귀 푸르카스_난이도3_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000203" ns4:Memo="부식 아귀 푸르카스_난이도3_스킬 레벨업 재료 2" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000204" ns4:Memo="부식 아귀 푸르카스_난이도3_토벌 특수 보상" ns4:ItemID="1450815" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13000300" ns4:Memo="부식 아귀 푸르카스_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1300" ns4:Max_ItemCount="1300" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000301" ns4:Memo="부식 아귀 푸르카스_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="12" ns4:Max_ItemCount="12" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000302" ns4:Memo="부식 아귀 푸르카스_난이도4_토벌 특수 보상" ns4:ItemID="1450815" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000303" ns4:Memo="부식 아귀 푸르카스_난이도4_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000301" ns4:Memo="부식 아귀 푸르카스_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000302" ns4:Memo="부식 아귀 푸르카스_난이도4_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000303" ns4:Memo="부식 아귀 푸르카스_난이도4_스킬 레벨업 재료 2" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000304" ns4:Memo="부식 아귀 푸르카스_난이도4_토벌 특수 보상" ns4:ItemID="1450815" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13000400" ns4:Memo="부식 아귀 푸르카스_난이도5_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="3000" ns4:Max_ItemCount="3000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13000401" ns4:Memo="부식 아귀 푸르카스_난이도5_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13000401" ns4:Memo="부식 아귀 푸르카스_난이도5_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="60" ns4:Max_ItemCount="60" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13001000" ns4:Memo="선혈 갈고리 바나크_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="500" ns4:Max_ItemCount="500" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001001" ns4:Memo="선혈 갈고리 바나크_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001002" ns4:Memo="선혈 갈고리 바나크_난이도1_토벌 특수 보상" ns4:ItemID="1450816" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001003" ns4:Memo="선혈 갈고리 바나크_난이도1_스킬 레벨업 재료" ns4:ItemID="1450811" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001001" ns4:Memo="선혈 갈고리 바나크_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001002" ns4:Memo="선혈 갈고리 바나크_난이도1_스킬 레벨업 재료" ns4:ItemID="1450811" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001004" ns4:Memo="선혈 갈고리 바나크_난이도1_토벌 특수 보상" ns4:ItemID="1450816" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13001100" ns4:Memo="선혈 갈고리 바나크_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001101" ns4:Memo="선혈 갈고리 바나크_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001102" ns4:Memo="선혈 갈고리 바나크_난이도2_토벌 특수 보상" ns4:ItemID="1450816" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001103" ns4:Memo="선혈 갈고리 바나크_난이도2_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001101" ns4:Memo="선혈 갈고리 바나크_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001102" ns4:Memo="선혈 갈고리 바나크_난이도2_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001103" ns4:Memo="선혈 갈고리 바나크_난이도2_스킬 레벨업 재료 2" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001104" ns4:Memo="선혈 갈고리 바나크_난이도2_토벌 특수 보상" ns4:ItemID="1450816" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13001200" ns4:Memo="선혈 갈고리 바나크_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1100" ns4:Max_ItemCount="1100" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001201" ns4:Memo="선혈 갈고리 바나크_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001202" ns4:Memo="선혈 갈고리 바나크_난이도3_토벌 특수 보상" ns4:ItemID="1450816" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001203" ns4:Memo="선혈 갈고리 바나크_난이도3_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001201" ns4:Memo="선혈 갈고리 바나크_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001202" ns4:Memo="선혈 갈고리 바나크_난이도3_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001203" ns4:Memo="선혈 갈고리 바나크_난이도3_스킬 레벨업 재료 2" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001204" ns4:Memo="선혈 갈고리 바나크_난이도3_토벌 특수 보상" ns4:ItemID="1450816" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13001300" ns4:Memo="선혈 갈고리 바나크_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1400" ns4:Max_ItemCount="1400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001301" ns4:Memo="선혈 갈고리 바나크_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="13" ns4:Max_ItemCount="13" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001302" ns4:Memo="선혈 갈고리 바나크_난이도4_토벌 특수 보상" ns4:ItemID="1450816" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001303" ns4:Memo="선혈 갈고리 바나크_난이도4_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001301" ns4:Memo="선혈 갈고리 바나크_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001302" ns4:Memo="선혈 갈고리 바나크_난이도4_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001303" ns4:Memo="선혈 갈고리 바나크_난이도4_스킬 레벨업 재료 2" ns4:ItemID="1450812" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001304" ns4:Memo="선혈 갈고리 바나크_난이도4_토벌 특수 보상" ns4:ItemID="1450816" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13001400" ns4:Memo="선혈 갈고리 바나크_난이도5_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="3000" ns4:Max_ItemCount="3000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13001401" ns4:Memo="선혈 갈고리 바나크_난이도5_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13001401" ns4:Memo="선혈 갈고리 바나크_난이도5_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="60" ns4:Max_ItemCount="60" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13002000" ns4:Memo="붕괴의 갈로르_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="700" ns4:Max_ItemCount="700" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002001" ns4:Memo="붕괴의 갈로르_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002002" ns4:Memo="붕괴의 갈로르_난이도1_토벌 특수 보상" ns4:ItemID="1450817" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002003" ns4:Memo="붕괴의 갈로르_난이도1_스킬 레벨업 재료" ns4:ItemID="1450811" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002001" ns4:Memo="붕괴의 갈로르_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002002" ns4:Memo="붕괴의 갈로르_난이도1_스킬 레벨업 재료" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002004" ns4:Memo="붕괴의 갈로르_난이도1_토벌 특수 보상" ns4:ItemID="1450817" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13002100" ns4:Memo="붕괴의 갈로르_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002101" ns4:Memo="붕괴의 갈로르_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002102" ns4:Memo="붕괴의 갈로르_난이도2_토벌 특수 보상" ns4:ItemID="1450817" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002103" ns4:Memo="붕괴의 갈로르_난이도2_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002101" ns4:Memo="붕괴의 갈로르_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002102" ns4:Memo="붕괴의 갈로르_난이도2_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002103" ns4:Memo="붕괴의 갈로르_난이도2_스킬 레벨업 재료 2" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002104" ns4:Memo="붕괴의 갈로르_난이도2_토벌 특수 보상" ns4:ItemID="1450817" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13002200" ns4:Memo="붕괴의 갈로르_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1300" ns4:Max_ItemCount="1300" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002201" ns4:Memo="붕괴의 갈로르_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="12" ns4:Max_ItemCount="12" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002202" ns4:Memo="붕괴의 갈로르_난이도3_토벌 특수 보상" ns4:ItemID="1450817" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002203" ns4:Memo="붕괴의 갈로르_난이도3_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002201" ns4:Memo="붕괴의 갈로르_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002202" ns4:Memo="붕괴의 갈로르_난이도3_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002203" ns4:Memo="붕괴의 갈로르_난이도3_스킬 레벨업 재료 2" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002204" ns4:Memo="붕괴의 갈로르_난이도3_토벌 특수 보상" ns4:ItemID="1450817" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13002300" ns4:Memo="붕괴의 갈로르_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1500" ns4:Max_ItemCount="1500" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002301" ns4:Memo="붕괴의 갈로르_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="14" ns4:Max_ItemCount="14" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002302" ns4:Memo="붕괴의 갈로르_난이도4_토벌 특수 보상" ns4:ItemID="1450817" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002303" ns4:Memo="붕괴의 갈로르_난이도4_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002301" ns4:Memo="붕괴의 갈로르_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002302" ns4:Memo="붕괴의 갈로르_난이도4_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002303" ns4:Memo="붕괴의 갈로르_난이도4_스킬 레벨업 재료 2" ns4:ItemID="1450812" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002304" ns4:Memo="붕괴의 갈로르_난이도4_토벌 특수 보상" ns4:ItemID="1450817" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13002400" ns4:Memo="붕괴의 갈로르_난이도5_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="3000" ns4:Max_ItemCount="3000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13002401" ns4:Memo="붕괴의 갈로르_난이도5_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13002401" ns4:Memo="붕괴의 갈로르_난이도5_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="60" ns4:Max_ItemCount="60" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13003000" ns4:Memo="탐욕의 구울_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003001" ns4:Memo="탐욕의 구울_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003002" ns4:Memo="탐욕의 구울_난이도1_토벌 특수 보상" ns4:ItemID="1450818" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003003" ns4:Memo="탐욕의 구울_난이도1_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003001" ns4:Memo="탐욕의 구울_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003002" ns4:Memo="탐욕의 구울_난이도1_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003003" ns4:Memo="탐욕의 구울_난이도1_스킬 레벨업 재료 2" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003004" ns4:Memo="탐욕의 구울_난이도1_토벌 특수 보상" ns4:ItemID="1450818" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13003100" ns4:Memo="탐욕의 구울_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1100" ns4:Max_ItemCount="1100" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003101" ns4:Memo="탐욕의 구울_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003102" ns4:Memo="탐욕의 구울_난이도2_토벌 특수 보상" ns4:ItemID="1450818" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003103" ns4:Memo="탐욕의 구울_난이도2_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="7" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003101" ns4:Memo="탐욕의 구울_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003102" ns4:Memo="탐욕의 구울_난이도2_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003103" ns4:Memo="탐욕의 구울_난이도2_스킬 레벨업 재료 2" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003104" ns4:Memo="탐욕의 구울_난이도2_토벌 특수 보상" ns4:ItemID="1450818" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13003200" ns4:Memo="탐욕의 구울_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1300" ns4:Max_ItemCount="1300" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003201" ns4:Memo="탐욕의 구울_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="12" ns4:Max_ItemCount="12" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003202" ns4:Memo="탐욕의 구울_난이도3_토벌 특수 보상" ns4:ItemID="1450818" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003203" ns4:Memo="탐욕의 구울_난이도3_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003201" ns4:Memo="탐욕의 구울_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003202" ns4:Memo="탐욕의 구울_난이도3_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003203" ns4:Memo="탐욕의 구울_난이도3_스킬 레벨업 재료 2" ns4:ItemID="1450812" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003204" ns4:Memo="탐욕의 구울_난이도3_토벌 특수 보상" ns4:ItemID="1450818" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13003300" ns4:Memo="탐욕의 구울_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1600" ns4:Max_ItemCount="1600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003301" ns4:Memo="탐욕의 구울_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003302" ns4:Memo="탐욕의 구울_난이도4_토벌 특수 보상" ns4:ItemID="1450818" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003303" ns4:Memo="탐욕의 구울_난이도4_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003301" ns4:Memo="탐욕의 구울_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003302" ns4:Memo="탐욕의 구울_난이도4_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003303" ns4:Memo="탐욕의 구울_난이도4_스킬 레벨업 재료 2" ns4:ItemID="1450812" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003304" ns4:Memo="탐욕의 구울_난이도4_토벌 특수 보상" ns4:ItemID="1450818" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13003400" ns4:Memo="탐욕의 구울_난이도5_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="3000" ns4:Max_ItemCount="3000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13003401" ns4:Memo="탐욕의 구울_난이도5_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13003401" ns4:Memo="탐욕의 구울_난이도5_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="60" ns4:Max_ItemCount="60" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13004000" ns4:Memo="프레바르 웜_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1000" ns4:Max_ItemCount="1000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004001" ns4:Memo="프레바르 웜_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004002" ns4:Memo="프레바르 웜_난이도1_토벌 특수 보상" ns4:ItemID="1450819" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004003" ns4:Memo="프레바르 웜_난이도1_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004001" ns4:Memo="프레바르 웜_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004002" ns4:Memo="프레바르 웜_난이도1_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004003" ns4:Memo="프레바르 웜_난이도1_스킬 레벨업 재료 2" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004004" ns4:Memo="프레바르 웜_난이도1_토벌 특수 보상" ns4:ItemID="1450819" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13004100" ns4:Memo="프레바르 웜_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1200" ns4:Max_ItemCount="1200" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004101" ns4:Memo="프레바르 웜_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004102" ns4:Memo="프레바르 웜_난이도2_토벌 특수 보상" ns4:ItemID="1450819" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004103" ns4:Memo="프레바르 웜_난이도2_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004101" ns4:Memo="프레바르 웜_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004102" ns4:Memo="프레바르 웜_난이도2_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004103" ns4:Memo="프레바르 웜_난이도2_스킬 레벨업 재료 2" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004104" ns4:Memo="프레바르 웜_난이도2_토벌 특수 보상" ns4:ItemID="1450819" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13004200" ns4:Memo="프레바르 웜_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1400" ns4:Max_ItemCount="1400" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004201" ns4:Memo="프레바르 웜_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="13" ns4:Max_ItemCount="13" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004202" ns4:Memo="프레바르 웜_난이도3_토벌 특수 보상" ns4:ItemID="1450819" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004203" ns4:Memo="프레바르 웜_난이도3_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004201" ns4:Memo="프레바르 웜_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004202" ns4:Memo="프레바르 웜_난이도3_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004203" ns4:Memo="프레바르 웜_난이도3_스킬 레벨업 재료 2" ns4:ItemID="1450812" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004204" ns4:Memo="프레바르 웜_난이도3_토벌 특수 보상" ns4:ItemID="1450819" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13004300" ns4:Memo="프레바르 웜_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1600" ns4:Max_ItemCount="1600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004301" ns4:Memo="프레바르 웜_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004302" ns4:Memo="프레바르 웜_난이도4_토벌 특수 보상" ns4:ItemID="1450819" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004303" ns4:Memo="프레바르 웜_난이도4_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="6" ns4:Max_ItemCount="6" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004301" ns4:Memo="프레바르 웜_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004302" ns4:Memo="프레바르 웜_난이도4_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004303" ns4:Memo="프레바르 웜_난이도4_스킬 레벨업 재료 2" ns4:ItemID="1450812" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004304" ns4:Memo="프레바르 웜_난이도4_토벌 특수 보상" ns4:ItemID="1450819" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13004400" ns4:Memo="프레바르 웜_난이도5_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="3000" ns4:Max_ItemCount="3000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13004401" ns4:Memo="프레바르 웜_난이도5_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13004401" ns4:Memo="프레바르 웜_난이도5_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="60" ns4:Max_ItemCount="60" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13005000" ns4:Memo="타락한 바르두크_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="600" ns4:Max_ItemCount="600" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005001" ns4:Memo="타락한 바르두크_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005002" ns4:Memo="타락한 바르두크_난이도1_토벌 특수 보상" ns4:ItemID="1450823" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005003" ns4:Memo="타락한 바르두크_난이도1_스킬 레벨업 재료" ns4:ItemID="1450811" ns4:Min_ItemCount="9" ns4:Max_ItemCount="9" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005001" ns4:Memo="타락한 바르두크_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005002" ns4:Memo="타락한 바르두크_난이도1_스킬 레벨업 재료" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005004" ns4:Memo="타락한 바르두크_난이도1_토벌 특수 보상" ns4:ItemID="1450823" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13005100" ns4:Memo="타락한 바르두크_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="900" ns4:Max_ItemCount="900" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005101" ns4:Memo="타락한 바르두크_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005102" ns4:Memo="타락한 바르두크_난이도2_토벌 특수 보상" ns4:ItemID="1450823" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005103" ns4:Memo="타락한 바르두크_난이도2_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005101" ns4:Memo="타락한 바르두크_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005102" ns4:Memo="타락한 바르두크_난이도2_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005103" ns4:Memo="타락한 바르두크_난이도2_스킬 레벨업 재료 2" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005104" ns4:Memo="타락한 바르두크_난이도2_토벌 특수 보상" ns4:ItemID="1450823" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13005200" ns4:Memo="타락한 바르두크_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1200" ns4:Max_ItemCount="1200" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005201" ns4:Memo="타락한 바르두크_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="11" ns4:Max_ItemCount="11" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005202" ns4:Memo="타락한 바르두크_난이도3_토벌 특수 보상" ns4:ItemID="1450823" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005203" ns4:Memo="타락한 바르두크_난이도3_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="8" ns4:Max_ItemCount="8" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005201" ns4:Memo="타락한 바르두크_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005202" ns4:Memo="타락한 바르두크_난이도3_스킬 레벨업 재료" ns4:ItemID="1450812" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005203" ns4:Memo="타락한 바르두크_난이도3_스킬 레벨업 재료 2" ns4:ItemID="1450811" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005204" ns4:Memo="타락한 바르두크_난이도3_토벌 특수 보상" ns4:ItemID="1450823" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13005300" ns4:Memo="타락한 바르두크_난이도4_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1500" ns4:Max_ItemCount="1500" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005301" ns4:Memo="타락한 바르두크_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="14" ns4:Max_ItemCount="14" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005302" ns4:Memo="타락한 바르두크_난이도4_토벌 특수 보상" ns4:ItemID="1450823" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005303" ns4:Memo="타락한 바르두크_난이도4_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005301" ns4:Memo="타락한 바르두크_난이도4_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005302" ns4:Memo="타락한 바르두크_난이도4_스킬 레벨업 재료" ns4:ItemID="1450402" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005303" ns4:Memo="타락한 바르두크_난이도4_스킬 레벨업 재료 2" ns4:ItemID="1450812" ns4:Min_ItemCount="20" ns4:Max_ItemCount="20" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005304" ns4:Memo="타락한 바르두크_난이도4_토벌 특수 보상" ns4:ItemID="1450823" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="13005400" ns4:Memo="타락한 바르두크_난이도5_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="3000" ns4:Max_ItemCount="3000" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="13005401" ns4:Memo="타락한 바르두크_난이도5_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="13005401" ns4:Memo="타락한 바르두크_난이도5_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="60" ns4:Max_ItemCount="60" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000000" ns4:Memo="가우론 레이드_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="14000001" ns4:Memo="가우론 레이드_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="14000001" ns4:Memo="가우론 레이드_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000002" ns4:Memo="가우론 레이드_난이도1_무명 장인의 가공 도구" ns4:ItemID="1450408" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000003" ns4:Memo="가우론 레이드_난이도1_형상 연마기" ns4:ItemID="1450409" ns4:Min_ItemCount="1" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="14000006" ns4:Memo="가우론 레이드_난이도1_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="150000" ns4:Max_ItemCount="150000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="14000106" ns4:Memo="가우론 레이드_난이도2_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="250000" ns4:Max_ItemCount="250000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="14000206" ns4:Memo="가우론 레이드_난이도3_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="350000" ns4:Max_ItemCount="350000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000004" ns4:Memo="가우론 레이드_난이도1_룬" ns4:ItemID="1310001" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="3"/>
 	<ns4:RewardRandomData ns4:ID="14000004" ns4:Memo="가우론 레이드_난이도1_룬" ns4:ItemID="1310002" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="3"/>
 	<ns4:RewardRandomData ns4:ID="14000004" ns4:Memo="가우론 레이드_난이도1_룬" ns4:ItemID="1310003" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="3"/>
@@ -983,7 +1005,7 @@
 	<ns4:RewardRandomData ns4:ID="14000005" ns4:Memo="가우론 레이드_난이도1_장비" ns4:ItemID="1390144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000005" ns4:Memo="가우론 레이드_난이도1_장비" ns4:ItemID="1390145" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000100" ns4:Memo="가우론 레이드_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1500" ns4:Max_ItemCount="1500" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="14000101" ns4:Memo="가우론 레이드_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="14000101" ns4:Memo="가우론 레이드_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="50" ns4:Max_ItemCount="50" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000102" ns4:Memo="가우론 레이드_난이도2_무명 장인의 가공 도구" ns4:ItemID="1450408" ns4:Min_ItemCount="2" ns4:Max_ItemCount="2" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000103" ns4:Memo="가우론 레이드_난이도2_형상 연마기" ns4:ItemID="1450409" ns4:Min_ItemCount="3" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000104" ns4:Memo="가우론 레이드_난이도2_룬" ns4:ItemID="1310201" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="3"/>
@@ -1012,7 +1034,7 @@
 	<ns4:RewardRandomData ns4:ID="14000105" ns4:Memo="가우론 레이드_난이도2_장비" ns4:ItemID="1390144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="2" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000105" ns4:Memo="가우론 레이드_난이도2_장비" ns4:ItemID="1390145" ns4:Min_ItemCount="1" ns4:Max_ItemCount="2" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000200" ns4:Memo="가우론 레이드_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="2500" ns4:Max_ItemCount="2500" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="14000201" ns4:Memo="가우론 레이드_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="50" ns4:Max_ItemCount="50" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="14000201" ns4:Memo="가우론 레이드_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="70" ns4:Max_ItemCount="70" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000202" ns4:Memo="가우론 레이드_난이도3_무명 장인의 가공 도구" ns4:ItemID="1450408" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000203" ns4:Memo="가우론 레이드_난이도3_형상 연마기" ns4:ItemID="1450409" ns4:Min_ItemCount="5" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000204" ns4:Memo="가우론 레이드_난이도3_룬" ns4:ItemID="1310401" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
@@ -1036,9 +1058,12 @@
 	<ns4:RewardRandomData ns4:ID="14000205" ns4:Memo="가우론 레이드_난이도3_장비" ns4:ItemID="1390144" ns4:Min_ItemCount="1" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14000205" ns4:Memo="가우론 레이드_난이도3_장비" ns4:ItemID="1390145" ns4:Min_ItemCount="1" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001000" ns4:Memo="우르슬라 레이드_난이도1_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="800" ns4:Max_ItemCount="800" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="14001001" ns4:Memo="우르슬라 레이드_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="15" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="14001001" ns4:Memo="우르슬라 레이드_난이도1_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="40" ns4:Max_ItemCount="40" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001002" ns4:Memo="우르슬라 레이드_난이도1_무명 장인의 가공 도구" ns4:ItemID="1450408" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001003" ns4:Memo="우르슬라 레이드_난이도1_형상 연마기" ns4:ItemID="1450409" ns4:Min_ItemCount="1" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="14001005" ns4:Memo="우르슬라 레이드_난이도1_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="200000" ns4:Max_ItemCount="200000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="14001105" ns4:Memo="우르슬라 레이드_난이도2_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="300000" ns4:Max_ItemCount="300000" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="14001205" ns4:Memo="우르슬라 레이드_난이도3_골드" ns4:ItemID="1000001" ns4:Min_ItemCount="350000" ns4:Max_ItemCount="350000" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001004" ns4:Memo="우르슬라 레이드_난이도1_룬" ns4:ItemID="1310101" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="3"/>
 	<ns4:RewardRandomData ns4:ID="14001004" ns4:Memo="우르슬라 레이드_난이도1_룬" ns4:ItemID="1310102" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="3"/>
 	<ns4:RewardRandomData ns4:ID="14001004" ns4:Memo="우르슬라 레이드_난이도1_룬" ns4:ItemID="1310103" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="3"/>
@@ -1050,7 +1075,7 @@
 	<ns4:RewardRandomData ns4:ID="14001004" ns4:Memo="우르슬라 레이드_난이도1_룬" ns4:ItemID="1310204" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001004" ns4:Memo="우르슬라 레이드_난이도1_룬" ns4:ItemID="1310205" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001100" ns4:Memo="우르슬라 레이드_난이도2_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="1500" ns4:Max_ItemCount="1500" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="14001101" ns4:Memo="우르슬라 레이드_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="30" ns4:Max_ItemCount="30" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="14001101" ns4:Memo="우르슬라 레이드_난이도2_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="60" ns4:Max_ItemCount="60" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001102" ns4:Memo="우르슬라 레이드_난이도2_무명 장인의 가공 도구" ns4:ItemID="1450408" ns4:Min_ItemCount="2" ns4:Max_ItemCount="2" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001103" ns4:Memo="우르슬라 레이드_난이도2_형상 연마기" ns4:ItemID="1450409" ns4:Min_ItemCount="3" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001104" ns4:Memo="우르슬라 레이드_난이도2_룬" ns4:ItemID="1310201" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="3"/>
@@ -1064,7 +1089,7 @@
 	<ns4:RewardRandomData ns4:ID="14001104" ns4:Memo="우르슬라 레이드_난이도2_룬" ns4:ItemID="1310304" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001104" ns4:Memo="우르슬라 레이드_난이도2_룬" ns4:ItemID="1310305" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001200" ns4:Memo="우르슬라 레이드_난이도3_용병단 경험치" ns4:ItemID="1000201" ns4:Min_ItemCount="2500" ns4:Max_ItemCount="2500" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="14001201" ns4:Memo="우르슬라 레이드_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="50" ns4:Max_ItemCount="50" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="14001201" ns4:Memo="우르슬라 레이드_난이도3_모험가의 인장" ns4:ItemID="1450701" ns4:Min_ItemCount="70" ns4:Max_ItemCount="70" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001202" ns4:Memo="우르슬라 레이드_난이도3_무명 장인의 가공 도구" ns4:ItemID="1450408" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001203" ns4:Memo="우르슬라 레이드_난이도3_형상 연마기" ns4:ItemID="1450409" ns4:Min_ItemCount="5" ns4:Max_ItemCount="7" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="14001204" ns4:Memo="우르슬라 레이드_난이도3_룬" ns4:ItemID="1310401" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
@@ -2515,25 +2540,19 @@
 	<ns4:RewardRandomData ns4:ID="19199000" ns4:Memo="최하급 마물 뼛조각" ns4:ItemID="1450007" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="19199000" ns4:Memo="최하급 마물 갑각" ns4:ItemID="1450010" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="19199000" ns4:Memo="최하급 마물 발톱" ns4:ItemID="1450016" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000000" ns4:Memo="기억의 결정_기억의 결정" ns4:ItemID="1450601" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000001" ns4:Memo="추억의 결정_추억의 결정" ns4:ItemID="1450602" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000002" ns4:Memo="회상의 결정_회상의 결정" ns4:ItemID="1450603" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000003" ns4:Memo="망각의 결정_망각의 결정" ns4:ItemID="1450604" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000004" ns4:Memo="결속 수정_결속 수정" ns4:ItemID="1460101" ns4:Min_ItemCount="1" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000005" ns4:Memo="쐐기 수정_쐐기 수정" ns4:ItemID="1460102" ns4:Min_ItemCount="1" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000006" ns4:Memo="풍부한 결속 수정_결속 수정" ns4:ItemID="1460101" ns4:Min_ItemCount="5" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000007" ns4:Memo="풍부한 쐐기 수정_쐐기 수정" ns4:ItemID="1460102" ns4:Min_ItemCount="5" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000008" ns4:Memo="채광물_밀_밀" ns4:ItemID="1430603" ns4:Min_ItemCount="2" ns4:Max_ItemCount="2" ns4:ItemWeight="2"/>
-	<ns4:RewardRandomData ns4:ID="20000008" ns4:Memo="채광물_밀_밀" ns4:ItemID="1430603" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="5"/>
-	<ns4:RewardRandomData ns4:ID="20000008" ns4:Memo="채광물_밀_밀" ns4:ItemID="1430603" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="2"/>
-	<ns4:RewardRandomData ns4:ID="20000008" ns4:Memo="채광물_밀_밀" ns4:ItemID="1430603" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000009" ns4:Memo="고블린 바비큐_숙성된 짐승 고기" ns4:ItemID="1440802" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000010" ns4:Memo="지맥 수정_지맥 수정" ns4:ItemID="1460103" ns4:Min_ItemCount="1" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000011" ns4:Memo="풍부한 지맥 수정_지맥 수정" ns4:ItemID="1460103" ns4:Min_ItemCount="5" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
-	<ns4:RewardRandomData ns4:ID="20000012" ns4:Memo="채광물_쌀_쌀" ns4:ItemID="1430602" ns4:Min_ItemCount="2" ns4:Max_ItemCount="2" ns4:ItemWeight="2"/>
-	<ns4:RewardRandomData ns4:ID="20000012" ns4:Memo="채광물_쌀_쌀" ns4:ItemID="1430602" ns4:Min_ItemCount="3" ns4:Max_ItemCount="3" ns4:ItemWeight="5"/>
-	<ns4:RewardRandomData ns4:ID="20000012" ns4:Memo="채광물_쌀_쌀" ns4:ItemID="1430602" ns4:Min_ItemCount="4" ns4:Max_ItemCount="4" ns4:ItemWeight="2"/>
-	<ns4:RewardRandomData ns4:ID="20000012" ns4:Memo="채광물_쌀_쌀" ns4:ItemID="1430602" ns4:Min_ItemCount="5" ns4:Max_ItemCount="5" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="20000000" ns4:Memo="기억의 결정_기억의 결정" ns4:ItemID="1450601" ns4:Min_ItemCount="2" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="20000001" ns4:Memo="추억의 결정_추억의 결정" ns4:ItemID="1450602" ns4:Min_ItemCount="2" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="20000002" ns4:Memo="회상의 결정_회상의 결정" ns4:ItemID="1450603" ns4:Min_ItemCount="2" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="20000003" ns4:Memo="망각의 결정_망각의 결정" ns4:ItemID="1450604" ns4:Min_ItemCount="2" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="20000004" ns4:Memo="결속 수정_결속 수정" ns4:ItemID="1460101" ns4:Min_ItemCount="2" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="20000005" ns4:Memo="쐐기 수정_쐐기 수정" ns4:ItemID="1460102" ns4:Min_ItemCount="2" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="20000006" ns4:Memo="풍부한 결속 수정_결속 수정" ns4:ItemID="1460101" ns4:Min_ItemCount="10" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="20000007" ns4:Memo="풍부한 쐐기 수정_쐐기 수정" ns4:ItemID="1460102" ns4:Min_ItemCount="10" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="20000008" ns4:Memo="채광물_밀_밀" ns4:ItemID="1430603" ns4:Min_ItemCount="4" ns4:Max_ItemCount="10" ns4:ItemWeight="2"/>
+	<ns4:RewardRandomData ns4:ID="20000009" ns4:Memo="고블린 바비큐_숙성된 짐승 고기" ns4:ItemID="1440802" ns4:Min_ItemCount="2" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="20000010" ns4:Memo="지맥 수정_지맥 수정" ns4:ItemID="1460103" ns4:Min_ItemCount="2" ns4:Max_ItemCount="3" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="20000011" ns4:Memo="풍부한 지맥 수정_지맥 수정" ns4:ItemID="1460103" ns4:Min_ItemCount="10" ns4:Max_ItemCount="15" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="20000012" ns4:Memo="채광물_쌀_쌀" ns4:ItemID="1430602" ns4:Min_ItemCount="4" ns4:Max_ItemCount="10" ns4:ItemWeight="2"/>
 	<ns4:RewardRandomData ns4:ID="20000090" ns4:Memo="채광물_철광석_결속 수정" ns4:ItemID="1460101" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="20000091" ns4:Memo="채광물_금광석_결속 수정" ns4:ItemID="1460101" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="20000092" ns4:Memo="채광물_은광석_결속 수정" ns4:ItemID="1460101" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
@@ -2862,6 +2881,8 @@
 	<ns4:RewardRandomData ns4:ID="26108092" ns4:Memo="[레이드][매우 어려움] 우르슬라 처치_1단계 보상_우르슬라 처치(가칭)" ns4:ItemID="2103019" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="26108101" ns4:Memo="로그몰의 공격으로 브라하임 처치_1단계 보상_업적 점수" ns4:ItemID="1000804" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="26108102" ns4:Memo="로그몰의 공격으로 브라하임 처치_1단계 보상_엣? 로그몰님?" ns4:ItemID="2104000" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="26108111" ns4:Memo="[토벌][악몽] 난이도 타락한 바르두크 처치_1단계 보상_업적 점수" ns4:ItemID="1000803" ns4:Min_ItemCount="10" ns4:Max_ItemCount="10" ns4:ItemWeight="1"/>
+	<ns4:RewardRandomData ns4:ID="26108112" ns4:Memo="[토벌][악몽] 난이도 타락한 바르두크 처치_1단계 보상_칭호" ns4:ItemID="2103020" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="26109011" ns4:Memo="갈로르의 팔 파괴_1단계 보상_업적 점수" ns4:ItemID="1000804" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="26109012" ns4:Memo="갈로르의 팔 파괴_1단계 보상_내 팔이 이래가" ns4:ItemID="2104001" ns4:Min_ItemCount="1" ns4:Max_ItemCount="1" ns4:ItemWeight="1"/>
 	<ns4:RewardRandomData ns4:ID="26109021" ns4:Memo="구울 기습 잡기로 처치하기_1단계 보상_업적 점수" ns4:ItemID="1000804" ns4:Min_ItemCount="25" ns4:Max_ItemCount="25" ns4:ItemWeight="1"/>

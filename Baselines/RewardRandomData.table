@@ -2718,8 +2718,8 @@
         {
           "ID": 12000001,
           "ItemID": 1450701,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -2730,8 +2730,8 @@
         {
           "ID": 12000002,
           "ItemID": 1450016,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -2754,8 +2754,8 @@
         {
           "ID": 12000011,
           "ItemID": 1450701,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -2766,8 +2766,8 @@
         {
           "ID": 12000012,
           "ItemID": 1450017,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -2790,8 +2790,8 @@
         {
           "ID": 12000021,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -2802,8 +2802,8 @@
         {
           "ID": 12000022,
           "ItemID": 1450018,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -2826,8 +2826,8 @@
         {
           "ID": 12007001,
           "ItemID": 1450701,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -2838,8 +2838,8 @@
         {
           "ID": 12007002,
           "ItemID": 1450001,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -2862,8 +2862,8 @@
         {
           "ID": 12007011,
           "ItemID": 1450701,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -2874,8 +2874,8 @@
         {
           "ID": 12007012,
           "ItemID": 1450002,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -2898,8 +2898,8 @@
         {
           "ID": 12007021,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -2910,8 +2910,8 @@
         {
           "ID": 12007022,
           "ItemID": 1450003,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -2934,8 +2934,8 @@
         {
           "ID": 12002001,
           "ItemID": 1450701,
-          "Min_ItemCount": 2,
-          "Max_ItemCount": 2,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -2946,8 +2946,8 @@
         {
           "ID": 12002002,
           "ItemID": 1450007,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -2970,8 +2970,8 @@
         {
           "ID": 12002011,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -2982,8 +2982,8 @@
         {
           "ID": 12002012,
           "ItemID": 1450008,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3006,8 +3006,8 @@
         {
           "ID": 12002021,
           "ItemID": 1450701,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3018,8 +3018,8 @@
         {
           "ID": 12002022,
           "ItemID": 1450009,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3042,8 +3042,8 @@
         {
           "ID": 12009001,
           "ItemID": 1450701,
-          "Min_ItemCount": 2,
-          "Max_ItemCount": 2,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -3054,8 +3054,8 @@
         {
           "ID": 12009002,
           "ItemID": 1450004,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3078,8 +3078,8 @@
         {
           "ID": 12009011,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3090,8 +3090,8 @@
         {
           "ID": 12009012,
           "ItemID": 1450005,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3114,8 +3114,8 @@
         {
           "ID": 12009021,
           "ItemID": 1450701,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3126,8 +3126,8 @@
         {
           "ID": 12009022,
           "ItemID": 1450006,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3138,8 +3138,8 @@
         {
           "ID": 12008000,
           "ItemID": 1000201,
-          "Min_ItemCount": 400,
-          "Max_ItemCount": 400,
+          "Min_ItemCount": 600,
+          "Max_ItemCount": 600,
           "ItemWeight": 1
         }
       ]
@@ -3150,8 +3150,8 @@
         {
           "ID": 12008001,
           "ItemID": 1450701,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3161,9 +3161,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 12008002,
-          "ItemID": 1450010,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450501,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3174,8 +3174,8 @@
         {
           "ID": 12008010,
           "ItemID": 1000201,
-          "Min_ItemCount": 700,
-          "Max_ItemCount": 700,
+          "Min_ItemCount": 800,
+          "Max_ItemCount": 800,
           "ItemWeight": 1
         }
       ]
@@ -3186,8 +3186,8 @@
         {
           "ID": 12008011,
           "ItemID": 1450701,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3197,9 +3197,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 12008012,
-          "ItemID": 1450011,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450501,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3210,8 +3210,8 @@
         {
           "ID": 12008020,
           "ItemID": 1000201,
-          "Min_ItemCount": 900,
-          "Max_ItemCount": 900,
+          "Min_ItemCount": 1000,
+          "Max_ItemCount": 1000,
           "ItemWeight": 1
         }
       ]
@@ -3222,8 +3222,8 @@
         {
           "ID": 12008021,
           "ItemID": 1450701,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -3233,9 +3233,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 12008022,
-          "ItemID": 1450012,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450501,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3246,8 +3246,8 @@
         {
           "ID": 12004000,
           "ItemID": 1000201,
-          "Min_ItemCount": 600,
-          "Max_ItemCount": 600,
+          "Min_ItemCount": 500,
+          "Max_ItemCount": 500,
           "ItemWeight": 1
         }
       ]
@@ -3258,8 +3258,8 @@
         {
           "ID": 12004001,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3269,9 +3269,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 12004002,
-          "ItemID": 1450501,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "ItemID": 1450010,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3282,8 +3282,8 @@
         {
           "ID": 12004010,
           "ItemID": 1000201,
-          "Min_ItemCount": 800,
-          "Max_ItemCount": 800,
+          "Min_ItemCount": 700,
+          "Max_ItemCount": 700,
           "ItemWeight": 1
         }
       ]
@@ -3294,8 +3294,8 @@
         {
           "ID": 12004011,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3305,9 +3305,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 12004012,
-          "ItemID": 1450501,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "ItemID": 1450011,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3318,8 +3318,8 @@
         {
           "ID": 12004020,
           "ItemID": 1000201,
-          "Min_ItemCount": 1000,
-          "Max_ItemCount": 1000,
+          "Min_ItemCount": 900,
+          "Max_ItemCount": 900,
           "ItemWeight": 1
         }
       ]
@@ -3330,8 +3330,8 @@
         {
           "ID": 12004021,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3341,7 +3341,7 @@
       "RewardRandomDataArray": [
         {
           "ID": 12004022,
-          "ItemID": 1450501,
+          "ItemID": 1450012,
           "Min_ItemCount": 10,
           "Max_ItemCount": 10,
           "ItemWeight": 1
@@ -3366,8 +3366,8 @@
         {
           "ID": 12010001,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3378,8 +3378,8 @@
         {
           "ID": 12010002,
           "ItemID": 1450502,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3402,8 +3402,8 @@
         {
           "ID": 12010011,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3414,8 +3414,8 @@
         {
           "ID": 12010012,
           "ItemID": 1450502,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3438,8 +3438,8 @@
         {
           "ID": 12010021,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -3450,8 +3450,8 @@
         {
           "ID": 12010022,
           "ItemID": 1450502,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3474,8 +3474,8 @@
         {
           "ID": 12006001,
           "ItemID": 1450701,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3486,8 +3486,8 @@
         {
           "ID": 12006002,
           "ItemID": 1450504,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3510,8 +3510,8 @@
         {
           "ID": 12006011,
           "ItemID": 1450701,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3522,8 +3522,8 @@
         {
           "ID": 12006012,
           "ItemID": 1450504,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3546,8 +3546,8 @@
         {
           "ID": 12006021,
           "ItemID": 1450701,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -3558,8 +3558,8 @@
         {
           "ID": 12006022,
           "ItemID": 1450504,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3582,8 +3582,8 @@
         {
           "ID": 12005001,
           "ItemID": 1450701,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3594,8 +3594,8 @@
         {
           "ID": 12005002,
           "ItemID": 1450503,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3618,8 +3618,8 @@
         {
           "ID": 12005011,
           "ItemID": 1450701,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3630,8 +3630,8 @@
         {
           "ID": 12005012,
           "ItemID": 1450503,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3654,8 +3654,8 @@
         {
           "ID": 12005021,
           "ItemID": 1450701,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -3666,8 +3666,8 @@
         {
           "ID": 12005022,
           "ItemID": 1450503,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3690,8 +3690,8 @@
         {
           "ID": 12015001,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3702,8 +3702,8 @@
         {
           "ID": 12015002,
           "ItemID": 1450603,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3726,8 +3726,8 @@
         {
           "ID": 12015011,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -3738,8 +3738,8 @@
         {
           "ID": 12015012,
           "ItemID": 1450603,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3762,8 +3762,8 @@
         {
           "ID": 12015021,
           "ItemID": 1450701,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -3774,8 +3774,8 @@
         {
           "ID": 12015022,
           "ItemID": 1450603,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3798,8 +3798,8 @@
         {
           "ID": 12014001,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3810,8 +3810,8 @@
         {
           "ID": 12014002,
           "ItemID": 1450604,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3834,8 +3834,8 @@
         {
           "ID": 12014011,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -3846,8 +3846,8 @@
         {
           "ID": 12014012,
           "ItemID": 1450604,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3870,8 +3870,8 @@
         {
           "ID": 12014021,
           "ItemID": 1450701,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -3882,8 +3882,8 @@
         {
           "ID": 12014022,
           "ItemID": 1450604,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3906,8 +3906,8 @@
         {
           "ID": 12011001,
           "ItemID": 1450701,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -3918,8 +3918,8 @@
         {
           "ID": 12011002,
           "ItemID": 1450602,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -3942,8 +3942,8 @@
         {
           "ID": 12011011,
           "ItemID": 1450701,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -3954,8 +3954,8 @@
         {
           "ID": 12011012,
           "ItemID": 1450602,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -3978,8 +3978,8 @@
         {
           "ID": 12011021,
           "ItemID": 1450701,
-          "Min_ItemCount": 12,
-          "Max_ItemCount": 12,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -3990,8 +3990,8 @@
         {
           "ID": 12011022,
           "ItemID": 1450602,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -4002,8 +4002,8 @@
         {
           "ID": 12003000,
           "ItemID": 1000201,
-          "Min_ItemCount": 1100,
-          "Max_ItemCount": 1100,
+          "Min_ItemCount": 900,
+          "Max_ItemCount": 900,
           "ItemWeight": 1
         }
       ]
@@ -4014,8 +4014,8 @@
         {
           "ID": 12003001,
           "ItemID": 1450701,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -4026,8 +4026,8 @@
         {
           "ID": 12003002,
           "ItemID": 1450601,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -4038,8 +4038,8 @@
         {
           "ID": 12003010,
           "ItemID": 1000201,
-          "Min_ItemCount": 1300,
-          "Max_ItemCount": 1300,
+          "Min_ItemCount": 1100,
+          "Max_ItemCount": 1100,
           "ItemWeight": 1
         }
       ]
@@ -4050,8 +4050,8 @@
         {
           "ID": 12003011,
           "ItemID": 1450701,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -4062,8 +4062,8 @@
         {
           "ID": 12003012,
           "ItemID": 1450601,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -4074,8 +4074,8 @@
         {
           "ID": 12003020,
           "ItemID": 1000201,
-          "Min_ItemCount": 1400,
-          "Max_ItemCount": 1400,
+          "Min_ItemCount": 1300,
+          "Max_ItemCount": 1300,
           "ItemWeight": 1
         }
       ]
@@ -4086,8 +4086,8 @@
         {
           "ID": 12003021,
           "ItemID": 1450701,
-          "Min_ItemCount": 12,
-          "Max_ItemCount": 12,
+          "Min_ItemCount": 35,
+          "Max_ItemCount": 35,
           "ItemWeight": 1
         }
       ]
@@ -4098,8 +4098,8 @@
         {
           "ID": 12003022,
           "ItemID": 1450601,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -4122,8 +4122,8 @@
         {
           "ID": 12019001,
           "ItemID": 1450701,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -4158,8 +4158,8 @@
         {
           "ID": 12019011,
           "ItemID": 1450701,
-          "Min_ItemCount": 12,
-          "Max_ItemCount": 12,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -4170,8 +4170,8 @@
         {
           "ID": 12019012,
           "ItemID": 1470201,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "Min_ItemCount": 2,
+          "Max_ItemCount": 2,
           "ItemWeight": 1
         }
       ]
@@ -4194,8 +4194,8 @@
         {
           "ID": 12019021,
           "ItemID": 1450701,
-          "Min_ItemCount": 13,
-          "Max_ItemCount": 13,
+          "Min_ItemCount": 35,
+          "Max_ItemCount": 35,
           "ItemWeight": 1
         }
       ]
@@ -4206,8 +4206,8 @@
         {
           "ID": 12019022,
           "ItemID": 1470201,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "Min_ItemCount": 3,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -4230,8 +4230,8 @@
         {
           "ID": 12016001,
           "ItemID": 1450701,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -4266,8 +4266,8 @@
         {
           "ID": 12016011,
           "ItemID": 1450701,
-          "Min_ItemCount": 12,
-          "Max_ItemCount": 12,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -4278,8 +4278,8 @@
         {
           "ID": 12016012,
           "ItemID": 1450409,
-          "Min_ItemCount": 2,
-          "Max_ItemCount": 2,
+          "Min_ItemCount": 3,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -4302,8 +4302,8 @@
         {
           "ID": 12016021,
           "ItemID": 1450701,
-          "Min_ItemCount": 13,
-          "Max_ItemCount": 13,
+          "Min_ItemCount": 35,
+          "Max_ItemCount": 35,
           "ItemWeight": 1
         }
       ]
@@ -4314,8 +4314,8 @@
         {
           "ID": 12016022,
           "ItemID": 1450409,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -4695,121 +4695,22 @@
         }
       ]
     },
-    "12008003": {
-      "ID": 12008003,
-      "RewardRandomDataArray": [
-        {
-          "ID": 12008003,
-          "ItemID": 1370143,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 100
-        },
-        {
-          "ID": 12008003,
-          "ItemID": 1370145,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 100
-        }
-      ]
-    },
-    "12008013": {
-      "ID": 12008013,
-      "RewardRandomDataArray": [
-        {
-          "ID": 12008013,
-          "ItemID": 1380143,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 60
-        },
-        {
-          "ID": 12008013,
-          "ItemID": 1370143,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 40
-        },
-        {
-          "ID": 12008013,
-          "ItemID": 1380145,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 60
-        },
-        {
-          "ID": 12008013,
-          "ItemID": 1370145,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 40
-        }
-      ]
-    },
-    "12008023": {
-      "ID": 12008023,
-      "RewardRandomDataArray": [
-        {
-          "ID": 12008023,
-          "ItemID": 1380143,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 100
-        },
-        {
-          "ID": 12008023,
-          "ItemID": 1380145,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 100
-        }
-      ]
-    },
     "12004003": {
       "ID": 12004003,
       "RewardRandomDataArray": [
         {
           "ID": 12004003,
-          "ItemID": 1380141,
+          "ItemID": 1370143,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
-          "ItemWeight": 40
+          "ItemWeight": 100
         },
         {
           "ID": 12004003,
-          "ItemID": 1370141,
+          "ItemID": 1370145,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
-          "ItemWeight": 60
-        },
-        {
-          "ID": 12004003,
-          "ItemID": 1380142,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 40
-        },
-        {
-          "ID": 12004003,
-          "ItemID": 1370142,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 60
-        },
-        {
-          "ID": 12004003,
-          "ItemID": 1380144,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 40
-        },
-        {
-          "ID": 12004003,
-          "ItemID": 1370144,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 60
+          "ItemWeight": 100
         }
       ]
     },
@@ -4818,45 +4719,31 @@
       "RewardRandomDataArray": [
         {
           "ID": 12004013,
-          "ItemID": 1380141,
+          "ItemID": 1380143,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
-          "ItemWeight": 80
+          "ItemWeight": 60
         },
         {
           "ID": 12004013,
-          "ItemID": 1370141,
+          "ItemID": 1370143,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
-          "ItemWeight": 20
+          "ItemWeight": 40
         },
         {
           "ID": 12004013,
-          "ItemID": 1380142,
+          "ItemID": 1380145,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
-          "ItemWeight": 80
+          "ItemWeight": 60
         },
         {
           "ID": 12004013,
-          "ItemID": 1370142,
+          "ItemID": 1370145,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
-          "ItemWeight": 20
-        },
-        {
-          "ID": 12004013,
-          "ItemID": 1380144,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 80
-        },
-        {
-          "ID": 12004013,
-          "ItemID": 1370144,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 20
+          "ItemWeight": 40
         }
       ]
     },
@@ -4865,21 +4752,14 @@
       "RewardRandomDataArray": [
         {
           "ID": 12004023,
-          "ItemID": 1380141,
+          "ItemID": 1380143,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 100
         },
         {
           "ID": 12004023,
-          "ItemID": 1380142,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
-          "ItemWeight": 100
-        },
-        {
-          "ID": 12004023,
-          "ItemID": 1380144,
+          "ItemID": 1380145,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 100
@@ -4891,28 +4771,42 @@
       "RewardRandomDataArray": [
         {
           "ID": 12010003,
-          "ItemID": 1380123,
+          "ItemID": 1380141,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 40
         },
         {
           "ID": 12010003,
-          "ItemID": 1370123,
+          "ItemID": 1370141,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 60
         },
         {
           "ID": 12010003,
-          "ItemID": 1380125,
+          "ItemID": 1380142,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 40
         },
         {
           "ID": 12010003,
-          "ItemID": 1370125,
+          "ItemID": 1370142,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 60
+        },
+        {
+          "ID": 12010003,
+          "ItemID": 1380144,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 40
+        },
+        {
+          "ID": 12010003,
+          "ItemID": 1370144,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 60
@@ -4924,28 +4818,42 @@
       "RewardRandomDataArray": [
         {
           "ID": 12010013,
-          "ItemID": 1380123,
+          "ItemID": 1380141,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 80
         },
         {
           "ID": 12010013,
-          "ItemID": 1370123,
+          "ItemID": 1370141,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 20
         },
         {
           "ID": 12010013,
-          "ItemID": 1380125,
+          "ItemID": 1380142,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 80
         },
         {
           "ID": 12010013,
-          "ItemID": 1370125,
+          "ItemID": 1370142,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 20
+        },
+        {
+          "ID": 12010013,
+          "ItemID": 1380144,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 80
+        },
+        {
+          "ID": 12010013,
+          "ItemID": 1370144,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 20
@@ -4957,13 +4865,105 @@
       "RewardRandomDataArray": [
         {
           "ID": 12010023,
-          "ItemID": 1380123,
+          "ItemID": 1380141,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 100
         },
         {
           "ID": 12010023,
+          "ItemID": 1380142,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 100
+        },
+        {
+          "ID": 12010023,
+          "ItemID": 1380144,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 100
+        }
+      ]
+    },
+    "12008003": {
+      "ID": 12008003,
+      "RewardRandomDataArray": [
+        {
+          "ID": 12008003,
+          "ItemID": 1380123,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 40
+        },
+        {
+          "ID": 12008003,
+          "ItemID": 1370123,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 60
+        },
+        {
+          "ID": 12008003,
+          "ItemID": 1380125,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 40
+        },
+        {
+          "ID": 12008003,
+          "ItemID": 1370125,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 60
+        }
+      ]
+    },
+    "12008013": {
+      "ID": 12008013,
+      "RewardRandomDataArray": [
+        {
+          "ID": 12008013,
+          "ItemID": 1380123,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 80
+        },
+        {
+          "ID": 12008013,
+          "ItemID": 1370123,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 20
+        },
+        {
+          "ID": 12008013,
+          "ItemID": 1380125,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 80
+        },
+        {
+          "ID": 12008013,
+          "ItemID": 1370125,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 20
+        }
+      ]
+    },
+    "12008023": {
+      "ID": 12008023,
+      "RewardRandomDataArray": [
+        {
+          "ID": 12008023,
+          "ItemID": 1380123,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 100
+        },
+        {
+          "ID": 12008023,
           "ItemID": 1380125,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
@@ -6101,8 +6101,8 @@
         {
           "ID": 12100001,
           "ItemID": 1450701,
-          "Min_ItemCount": 2,
-          "Max_ItemCount": 2,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -6113,8 +6113,8 @@
         {
           "ID": 12100002,
           "ItemID": 1000001,
-          "Min_ItemCount": 15000,
-          "Max_ItemCount": 15000,
+          "Min_ItemCount": 40000,
+          "Max_ItemCount": 40000,
           "ItemWeight": 1
         }
       ]
@@ -6149,8 +6149,8 @@
         {
           "ID": 12100011,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -6161,8 +6161,8 @@
         {
           "ID": 12100012,
           "ItemID": 1000001,
-          "Min_ItemCount": 45000,
-          "Max_ItemCount": 45000,
+          "Min_ItemCount": 115000,
+          "Max_ItemCount": 115000,
           "ItemWeight": 1
         }
       ]
@@ -6197,8 +6197,8 @@
         {
           "ID": 12100021,
           "ItemID": 1450701,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -6209,8 +6209,8 @@
         {
           "ID": 12100022,
           "ItemID": 1000001,
-          "Min_ItemCount": 90000,
-          "Max_ItemCount": 90000,
+          "Min_ItemCount": 225000,
+          "Max_ItemCount": 225000,
           "ItemWeight": 1
         }
       ]
@@ -6245,8 +6245,8 @@
         {
           "ID": 12101001,
           "ItemID": 1450701,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -6257,8 +6257,8 @@
         {
           "ID": 12101002,
           "ItemID": 1000001,
-          "Min_ItemCount": 20000,
-          "Max_ItemCount": 20000,
+          "Min_ItemCount": 50000,
+          "Max_ItemCount": 50000,
           "ItemWeight": 1
         }
       ]
@@ -6293,8 +6293,8 @@
         {
           "ID": 12101011,
           "ItemID": 1450701,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -6305,8 +6305,8 @@
         {
           "ID": 12101012,
           "ItemID": 1000001,
-          "Min_ItemCount": 55000,
-          "Max_ItemCount": 55000,
+          "Min_ItemCount": 140000,
+          "Max_ItemCount": 140000,
           "ItemWeight": 1
         }
       ]
@@ -6341,8 +6341,8 @@
         {
           "ID": 12101021,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -6353,8 +6353,8 @@
         {
           "ID": 12101022,
           "ItemID": 1000001,
-          "Min_ItemCount": 100000,
-          "Max_ItemCount": 100000,
+          "Min_ItemCount": 250000,
+          "Max_ItemCount": 250000,
           "ItemWeight": 1
         }
       ]
@@ -6389,8 +6389,8 @@
         {
           "ID": 12102001,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -6401,8 +6401,8 @@
         {
           "ID": 12102002,
           "ItemID": 1000001,
-          "Min_ItemCount": 30000,
-          "Max_ItemCount": 30000,
+          "Min_ItemCount": 75000,
+          "Max_ItemCount": 75000,
           "ItemWeight": 1
         }
       ]
@@ -6437,8 +6437,8 @@
         {
           "ID": 12102011,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -6449,8 +6449,8 @@
         {
           "ID": 12102012,
           "ItemID": 1000001,
-          "Min_ItemCount": 60000,
-          "Max_ItemCount": 60000,
+          "Min_ItemCount": 150000,
+          "Max_ItemCount": 150000,
           "ItemWeight": 1
         }
       ]
@@ -6485,8 +6485,8 @@
         {
           "ID": 12102021,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -6497,8 +6497,8 @@
         {
           "ID": 12102022,
           "ItemID": 1000001,
-          "Min_ItemCount": 100000,
-          "Max_ItemCount": 100000,
+          "Min_ItemCount": 250000,
+          "Max_ItemCount": 250000,
           "ItemWeight": 1
         }
       ]
@@ -6533,8 +6533,8 @@
         {
           "ID": 12103001,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -6545,8 +6545,8 @@
         {
           "ID": 12103002,
           "ItemID": 1000001,
-          "Min_ItemCount": 200000,
-          "Max_ItemCount": 200000,
+          "Min_ItemCount": 500000,
+          "Max_ItemCount": 500000,
           "ItemWeight": 1
         }
       ]
@@ -6569,8 +6569,8 @@
         {
           "ID": 12103011,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -6581,8 +6581,8 @@
         {
           "ID": 12103012,
           "ItemID": 1000001,
-          "Min_ItemCount": 375000,
-          "Max_ItemCount": 375000,
+          "Min_ItemCount": 950000,
+          "Max_ItemCount": 950000,
           "ItemWeight": 1
         }
       ]
@@ -6605,8 +6605,8 @@
         {
           "ID": 12103021,
           "ItemID": 1450701,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -6617,8 +6617,8 @@
         {
           "ID": 12103022,
           "ItemID": 1000001,
-          "Min_ItemCount": 600000,
-          "Max_ItemCount": 600000,
+          "Min_ItemCount": 1500000,
+          "Max_ItemCount": 1500000,
           "ItemWeight": 1
         }
       ]
@@ -6641,8 +6641,8 @@
         {
           "ID": 12104001,
           "ItemID": 1450701,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -6653,8 +6653,8 @@
         {
           "ID": 12104002,
           "ItemID": 1000001,
-          "Min_ItemCount": 70000,
-          "Max_ItemCount": 70000,
+          "Min_ItemCount": 210000,
+          "Max_ItemCount": 210000,
           "ItemWeight": 1
         }
       ]
@@ -6713,8 +6713,8 @@
         {
           "ID": 12104011,
           "ItemID": 1450701,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -6725,8 +6725,8 @@
         {
           "ID": 12104012,
           "ItemID": 1000001,
-          "Min_ItemCount": 110000,
-          "Max_ItemCount": 110000,
+          "Min_ItemCount": 330000,
+          "Max_ItemCount": 330000,
           "ItemWeight": 1
         }
       ]
@@ -6785,8 +6785,8 @@
         {
           "ID": 12104021,
           "ItemID": 1450701,
-          "Min_ItemCount": 12,
-          "Max_ItemCount": 12,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -6797,8 +6797,8 @@
         {
           "ID": 12104022,
           "ItemID": 1000001,
-          "Min_ItemCount": 165000,
-          "Max_ItemCount": 165000,
+          "Min_ItemCount": 500000,
+          "Max_ItemCount": 500000,
           "ItemWeight": 1
         }
       ]
@@ -6857,20 +6857,20 @@
         {
           "ID": 12200001,
           "ItemID": 1450701,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
     },
-    "12200004": {
-      "ID": 12200004,
+    "12200002": {
+      "ID": 12200002,
       "RewardRandomDataArray": [
         {
-          "ID": 12200004,
+          "ID": 12200002,
           "ItemID": 1450101,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -6893,32 +6893,32 @@
         {
           "ID": 12200011,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
     },
-    "12200014": {
-      "ID": 12200014,
+    "12200012": {
+      "ID": 12200012,
       "RewardRandomDataArray": [
         {
-          "ID": 12200014,
+          "ID": 12200012,
           "ItemID": 1450101,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12200015": {
-      "ID": 12200015,
+    "12200013": {
+      "ID": 12200013,
       "RewardRandomDataArray": [
         {
-          "ID": 12200015,
+          "ID": 12200013,
           "ItemID": 1450102,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -6941,32 +6941,32 @@
         {
           "ID": 12200021,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12200024": {
-      "ID": 12200024,
+    "12200022": {
+      "ID": 12200022,
       "RewardRandomDataArray": [
         {
-          "ID": 12200024,
+          "ID": 12200022,
           "ItemID": 1450101,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12200025": {
-      "ID": 12200025,
+    "12200023": {
+      "ID": 12200023,
       "RewardRandomDataArray": [
         {
-          "ID": 12200025,
+          "ID": 12200023,
           "ItemID": 1450102,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -6989,32 +6989,32 @@
         {
           "ID": 12200031,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12200034": {
-      "ID": 12200034,
+    "12200032": {
+      "ID": 12200032,
       "RewardRandomDataArray": [
         {
-          "ID": 12200034,
+          "ID": 12200032,
           "ItemID": 1450102,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12200035": {
-      "ID": 12200035,
+    "12200033": {
+      "ID": 12200033,
       "RewardRandomDataArray": [
         {
-          "ID": 12200035,
+          "ID": 12200033,
           "ItemID": 1450103,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7037,20 +7037,20 @@
         {
           "ID": 12201001,
           "ItemID": 1450701,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
     },
-    "12201004": {
-      "ID": 12201004,
+    "12201002": {
+      "ID": 12201002,
       "RewardRandomDataArray": [
         {
-          "ID": 12201004,
+          "ID": 12201002,
           "ItemID": 1450104,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7073,32 +7073,32 @@
         {
           "ID": 12201011,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
     },
-    "12201014": {
-      "ID": 12201014,
+    "12201012": {
+      "ID": 12201012,
       "RewardRandomDataArray": [
         {
-          "ID": 12201014,
+          "ID": 12201012,
           "ItemID": 1450104,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12201015": {
-      "ID": 12201015,
+    "12201013": {
+      "ID": 12201013,
       "RewardRandomDataArray": [
         {
-          "ID": 12201015,
+          "ID": 12201013,
           "ItemID": 1450105,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7121,32 +7121,32 @@
         {
           "ID": 12201021,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12201024": {
-      "ID": 12201024,
+    "12201022": {
+      "ID": 12201022,
       "RewardRandomDataArray": [
         {
-          "ID": 12201024,
+          "ID": 12201022,
           "ItemID": 1450104,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12201025": {
-      "ID": 12201025,
+    "12201023": {
+      "ID": 12201023,
       "RewardRandomDataArray": [
         {
-          "ID": 12201025,
+          "ID": 12201023,
           "ItemID": 1450105,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -7169,32 +7169,32 @@
         {
           "ID": 12201031,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12201034": {
-      "ID": 12201034,
+    "12201032": {
+      "ID": 12201032,
       "RewardRandomDataArray": [
         {
-          "ID": 12201034,
+          "ID": 12201032,
           "ItemID": 1450105,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12201035": {
-      "ID": 12201035,
+    "12201033": {
+      "ID": 12201033,
       "RewardRandomDataArray": [
         {
-          "ID": 12201035,
+          "ID": 12201033,
           "ItemID": 1450106,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7217,20 +7217,20 @@
         {
           "ID": 12202001,
           "ItemID": 1450701,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
     },
-    "12202004": {
-      "ID": 12202004,
+    "12202002": {
+      "ID": 12202002,
       "RewardRandomDataArray": [
         {
-          "ID": 12202004,
+          "ID": 12202002,
           "ItemID": 1450107,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7253,32 +7253,32 @@
         {
           "ID": 12202011,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
     },
-    "12202014": {
-      "ID": 12202014,
+    "12202012": {
+      "ID": 12202012,
       "RewardRandomDataArray": [
         {
-          "ID": 12202014,
+          "ID": 12202012,
           "ItemID": 1450107,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12202015": {
-      "ID": 12202015,
+    "12202013": {
+      "ID": 12202013,
       "RewardRandomDataArray": [
         {
-          "ID": 12202015,
+          "ID": 12202013,
           "ItemID": 1450108,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7301,32 +7301,32 @@
         {
           "ID": 12202021,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12202024": {
-      "ID": 12202024,
+    "12202022": {
+      "ID": 12202022,
       "RewardRandomDataArray": [
         {
-          "ID": 12202024,
+          "ID": 12202022,
           "ItemID": 1450107,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12202025": {
-      "ID": 12202025,
+    "12202023": {
+      "ID": 12202023,
       "RewardRandomDataArray": [
         {
-          "ID": 12202025,
+          "ID": 12202023,
           "ItemID": 1450108,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -7349,32 +7349,32 @@
         {
           "ID": 12202031,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12202034": {
-      "ID": 12202034,
+    "12202032": {
+      "ID": 12202032,
       "RewardRandomDataArray": [
         {
-          "ID": 12202034,
+          "ID": 12202032,
           "ItemID": 1450108,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12202035": {
-      "ID": 12202035,
+    "12202033": {
+      "ID": 12202033,
       "RewardRandomDataArray": [
         {
-          "ID": 12202035,
+          "ID": 12202033,
           "ItemID": 1450109,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7397,20 +7397,20 @@
         {
           "ID": 12203001,
           "ItemID": 1450701,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
     },
-    "12203004": {
-      "ID": 12203004,
+    "12203002": {
+      "ID": 12203002,
       "RewardRandomDataArray": [
         {
-          "ID": 12203004,
+          "ID": 12203002,
           "ItemID": 1450110,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7433,32 +7433,32 @@
         {
           "ID": 12203011,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
     },
-    "12203014": {
-      "ID": 12203014,
+    "12203012": {
+      "ID": 12203012,
       "RewardRandomDataArray": [
         {
-          "ID": 12203014,
+          "ID": 12203012,
           "ItemID": 1450110,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12203015": {
-      "ID": 12203015,
+    "12203013": {
+      "ID": 12203013,
       "RewardRandomDataArray": [
         {
-          "ID": 12203015,
+          "ID": 12203013,
           "ItemID": 1450111,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7481,32 +7481,32 @@
         {
           "ID": 12203021,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12203024": {
-      "ID": 12203024,
+    "12203022": {
+      "ID": 12203022,
       "RewardRandomDataArray": [
         {
-          "ID": 12203024,
+          "ID": 12203022,
           "ItemID": 1450110,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12203025": {
-      "ID": 12203025,
+    "12203023": {
+      "ID": 12203023,
       "RewardRandomDataArray": [
         {
-          "ID": 12203025,
+          "ID": 12203023,
           "ItemID": 1450111,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -7529,32 +7529,32 @@
         {
           "ID": 12203031,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12203034": {
-      "ID": 12203034,
+    "12203032": {
+      "ID": 12203032,
       "RewardRandomDataArray": [
         {
-          "ID": 12203034,
+          "ID": 12203032,
           "ItemID": 1450111,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12203035": {
-      "ID": 12203035,
+    "12203033": {
+      "ID": 12203033,
       "RewardRandomDataArray": [
         {
-          "ID": 12203035,
+          "ID": 12203033,
           "ItemID": 1450112,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7577,20 +7577,20 @@
         {
           "ID": 12204001,
           "ItemID": 1450701,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
     },
-    "12204004": {
-      "ID": 12204004,
+    "12204002": {
+      "ID": 12204002,
       "RewardRandomDataArray": [
         {
-          "ID": 12204004,
+          "ID": 12204002,
           "ItemID": 1450113,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7613,32 +7613,32 @@
         {
           "ID": 12204011,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
     },
-    "12204014": {
-      "ID": 12204014,
+    "12204012": {
+      "ID": 12204012,
       "RewardRandomDataArray": [
         {
-          "ID": 12204014,
+          "ID": 12204012,
           "ItemID": 1450113,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12204015": {
-      "ID": 12204015,
+    "12204013": {
+      "ID": 12204013,
       "RewardRandomDataArray": [
         {
-          "ID": 12204015,
+          "ID": 12204013,
           "ItemID": 1450114,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7661,32 +7661,32 @@
         {
           "ID": 12204021,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12204024": {
-      "ID": 12204024,
+    "12204022": {
+      "ID": 12204022,
       "RewardRandomDataArray": [
         {
-          "ID": 12204024,
+          "ID": 12204022,
           "ItemID": 1450113,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12204025": {
-      "ID": 12204025,
+    "12204023": {
+      "ID": 12204023,
       "RewardRandomDataArray": [
         {
-          "ID": 12204025,
+          "ID": 12204023,
           "ItemID": 1450114,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -7709,32 +7709,32 @@
         {
           "ID": 12204031,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12204034": {
-      "ID": 12204034,
+    "12204032": {
+      "ID": 12204032,
       "RewardRandomDataArray": [
         {
-          "ID": 12204034,
+          "ID": 12204032,
           "ItemID": 1450114,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12204035": {
-      "ID": 12204035,
+    "12204033": {
+      "ID": 12204033,
       "RewardRandomDataArray": [
         {
-          "ID": 12204035,
+          "ID": 12204033,
           "ItemID": 1450115,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7757,20 +7757,20 @@
         {
           "ID": 12205001,
           "ItemID": 1450701,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
     },
-    "12205004": {
-      "ID": 12205004,
+    "12205002": {
+      "ID": 12205002,
       "RewardRandomDataArray": [
         {
-          "ID": 12205004,
+          "ID": 12205002,
           "ItemID": 1450116,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7793,32 +7793,32 @@
         {
           "ID": 12205011,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
     },
-    "12205014": {
-      "ID": 12205014,
+    "12205012": {
+      "ID": 12205012,
       "RewardRandomDataArray": [
         {
-          "ID": 12205014,
+          "ID": 12205012,
           "ItemID": 1450116,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12205015": {
-      "ID": 12205015,
+    "12205013": {
+      "ID": 12205013,
       "RewardRandomDataArray": [
         {
-          "ID": 12205015,
+          "ID": 12205013,
           "ItemID": 1450117,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7841,32 +7841,32 @@
         {
           "ID": 12205021,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12205024": {
-      "ID": 12205024,
+    "12205022": {
+      "ID": 12205022,
       "RewardRandomDataArray": [
         {
-          "ID": 12205024,
+          "ID": 12205022,
           "ItemID": 1450116,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12205025": {
-      "ID": 12205025,
+    "12205023": {
+      "ID": 12205023,
       "RewardRandomDataArray": [
         {
-          "ID": 12205025,
+          "ID": 12205023,
           "ItemID": 1450117,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -7889,32 +7889,32 @@
         {
           "ID": 12205031,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12205034": {
-      "ID": 12205034,
+    "12205032": {
+      "ID": 12205032,
       "RewardRandomDataArray": [
         {
-          "ID": 12205034,
+          "ID": 12205032,
           "ItemID": 1450117,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12205035": {
-      "ID": 12205035,
+    "12205033": {
+      "ID": 12205033,
       "RewardRandomDataArray": [
         {
-          "ID": 12205035,
+          "ID": 12205033,
           "ItemID": 1450118,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7937,20 +7937,20 @@
         {
           "ID": 12206001,
           "ItemID": 1450701,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
     },
-    "12206004": {
-      "ID": 12206004,
+    "12206002": {
+      "ID": 12206002,
       "RewardRandomDataArray": [
         {
-          "ID": 12206004,
+          "ID": 12206002,
           "ItemID": 1450119,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -7973,32 +7973,32 @@
         {
           "ID": 12206011,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
     },
-    "12206014": {
-      "ID": 12206014,
+    "12206012": {
+      "ID": 12206012,
       "RewardRandomDataArray": [
         {
-          "ID": 12206014,
+          "ID": 12206012,
           "ItemID": 1450119,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12206015": {
-      "ID": 12206015,
+    "12206013": {
+      "ID": 12206013,
       "RewardRandomDataArray": [
         {
-          "ID": 12206015,
+          "ID": 12206013,
           "ItemID": 1450120,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -8021,32 +8021,32 @@
         {
           "ID": 12206021,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12206024": {
-      "ID": 12206024,
+    "12206022": {
+      "ID": 12206022,
       "RewardRandomDataArray": [
         {
-          "ID": 12206024,
+          "ID": 12206022,
           "ItemID": 1450119,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12206025": {
-      "ID": 12206025,
+    "12206023": {
+      "ID": 12206023,
       "RewardRandomDataArray": [
         {
-          "ID": 12206025,
+          "ID": 12206023,
           "ItemID": 1450120,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -8069,32 +8069,32 @@
         {
           "ID": 12206031,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12206034": {
-      "ID": 12206034,
+    "12206032": {
+      "ID": 12206032,
       "RewardRandomDataArray": [
         {
-          "ID": 12206034,
+          "ID": 12206032,
           "ItemID": 1450120,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12206035": {
-      "ID": 12206035,
+    "12206033": {
+      "ID": 12206033,
       "RewardRandomDataArray": [
         {
-          "ID": 12206035,
+          "ID": 12206033,
           "ItemID": 1450121,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -8117,20 +8117,20 @@
         {
           "ID": 12207001,
           "ItemID": 1450701,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
     },
-    "12207004": {
-      "ID": 12207004,
+    "12207002": {
+      "ID": 12207002,
       "RewardRandomDataArray": [
         {
-          "ID": 12207004,
+          "ID": 12207002,
           "ItemID": 1450122,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -8153,32 +8153,32 @@
         {
           "ID": 12207011,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
     },
-    "12207014": {
-      "ID": 12207014,
+    "12207012": {
+      "ID": 12207012,
       "RewardRandomDataArray": [
         {
-          "ID": 12207014,
+          "ID": 12207012,
           "ItemID": 1450122,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12207015": {
-      "ID": 12207015,
+    "12207013": {
+      "ID": 12207013,
       "RewardRandomDataArray": [
         {
-          "ID": 12207015,
+          "ID": 12207013,
           "ItemID": 1450123,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -8201,32 +8201,32 @@
         {
           "ID": 12207021,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12207024": {
-      "ID": 12207024,
+    "12207022": {
+      "ID": 12207022,
       "RewardRandomDataArray": [
         {
-          "ID": 12207024,
+          "ID": 12207022,
           "ItemID": 1450122,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12207025": {
-      "ID": 12207025,
+    "12207023": {
+      "ID": 12207023,
       "RewardRandomDataArray": [
         {
-          "ID": 12207025,
+          "ID": 12207023,
           "ItemID": 1450123,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -8249,32 +8249,32 @@
         {
           "ID": 12207031,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12207034": {
-      "ID": 12207034,
+    "12207032": {
+      "ID": 12207032,
       "RewardRandomDataArray": [
         {
-          "ID": 12207034,
+          "ID": 12207032,
           "ItemID": 1450123,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12207035": {
-      "ID": 12207035,
+    "12207033": {
+      "ID": 12207033,
       "RewardRandomDataArray": [
         {
-          "ID": 12207035,
+          "ID": 12207033,
           "ItemID": 1450124,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -8297,20 +8297,20 @@
         {
           "ID": 12208001,
           "ItemID": 1450701,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
     },
-    "12208004": {
-      "ID": 12208004,
+    "12208002": {
+      "ID": 12208002,
       "RewardRandomDataArray": [
         {
-          "ID": 12208004,
+          "ID": 12208002,
           "ItemID": 1450125,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -8333,32 +8333,32 @@
         {
           "ID": 12208011,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
     },
-    "12208014": {
-      "ID": 12208014,
+    "12208012": {
+      "ID": 12208012,
       "RewardRandomDataArray": [
         {
-          "ID": 12208014,
+          "ID": 12208012,
           "ItemID": 1450125,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12208015": {
-      "ID": 12208015,
+    "12208013": {
+      "ID": 12208013,
       "RewardRandomDataArray": [
         {
-          "ID": 12208015,
+          "ID": 12208013,
           "ItemID": 1450126,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -8381,32 +8381,32 @@
         {
           "ID": 12208021,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "12208024": {
-      "ID": 12208024,
+    "12208022": {
+      "ID": 12208022,
       "RewardRandomDataArray": [
         {
-          "ID": 12208024,
+          "ID": 12208022,
           "ItemID": 1450125,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12208025": {
-      "ID": 12208025,
+    "12208023": {
+      "ID": 12208023,
       "RewardRandomDataArray": [
         {
-          "ID": 12208025,
+          "ID": 12208023,
           "ItemID": 1450126,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -8429,32 +8429,32 @@
         {
           "ID": 12208031,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12208034": {
-      "ID": 12208034,
+    "12208032": {
+      "ID": 12208032,
       "RewardRandomDataArray": [
         {
-          "ID": 12208034,
+          "ID": 12208032,
           "ItemID": 1450126,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "12208035": {
-      "ID": 12208035,
+    "12208033": {
+      "ID": 12208033,
       "RewardRandomDataArray": [
         {
-          "ID": 12208035,
+          "ID": 12208033,
           "ItemID": 1450127,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -9293,8 +9293,8 @@
         {
           "ID": 13000001,
           "ItemID": 1450701,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -9304,21 +9304,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13000002,
-          "ItemID": 1450815,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "ItemID": 1450811,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
     },
-    "13000003": {
-      "ID": 13000003,
+    "13000004": {
+      "ID": 13000004,
       "RewardRandomDataArray": [
         {
-          "ID": 13000003,
-          "ItemID": 1450811,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "ID": 13000004,
+          "ItemID": 1450815,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
           "ItemWeight": 1
         }
       ]
@@ -9341,8 +9341,8 @@
         {
           "ID": 13000101,
           "ItemID": 1450701,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -9352,21 +9352,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13000102,
-          "ItemID": 1450815,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "13000103": {
-      "ID": 13000103,
+    "13000104": {
+      "ID": 13000104,
       "RewardRandomDataArray": [
         {
-          "ID": 13000103,
-          "ItemID": 1450811,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "ID": 13000104,
+          "ItemID": 1450815,
+          "Min_ItemCount": 3,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -9389,8 +9389,8 @@
         {
           "ID": 13000201,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -9400,9 +9400,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13000202,
-          "ItemID": 1450815,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450812,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -9412,9 +9412,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13000203,
-          "ItemID": 1450812,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13000204": {
+      "ID": 13000204,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13000204,
+          "ItemID": 1450815,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -9437,8 +9449,8 @@
         {
           "ID": 13000301,
           "ItemID": 1450701,
-          "Min_ItemCount": 12,
-          "Max_ItemCount": 12,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -9448,9 +9460,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13000302,
-          "ItemID": 1450815,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "ItemID": 1450812,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -9460,9 +9472,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13000303,
-          "ItemID": 1450812,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13000304": {
+      "ID": 13000304,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13000304,
+          "ItemID": 1450815,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -9485,8 +9509,8 @@
         {
           "ID": 13000401,
           "ItemID": 1450701,
-          "Min_ItemCount": 30,
-          "Max_ItemCount": 30,
+          "Min_ItemCount": 60,
+          "Max_ItemCount": 60,
           "ItemWeight": 1
         }
       ]
@@ -9509,8 +9533,8 @@
         {
           "ID": 13001001,
           "ItemID": 1450701,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -9520,21 +9544,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13001002,
-          "ItemID": 1450816,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "ItemID": 1450811,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
     },
-    "13001003": {
-      "ID": 13001003,
+    "13001004": {
+      "ID": 13001004,
       "RewardRandomDataArray": [
         {
-          "ID": 13001003,
-          "ItemID": 1450811,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "ID": 13001004,
+          "ItemID": 1450816,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
           "ItemWeight": 1
         }
       ]
@@ -9557,8 +9581,8 @@
         {
           "ID": 13001101,
           "ItemID": 1450701,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -9568,9 +9592,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13001102,
-          "ItemID": 1450816,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "ItemID": 1450812,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -9580,9 +9604,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13001103,
-          "ItemID": 1450812,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13001104": {
+      "ID": 13001104,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13001104,
+          "ItemID": 1450816,
+          "Min_ItemCount": 3,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -9605,8 +9641,8 @@
         {
           "ID": 13001201,
           "ItemID": 1450701,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -9616,9 +9652,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13001202,
-          "ItemID": 1450816,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450812,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -9628,9 +9664,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13001203,
-          "ItemID": 1450812,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13001204": {
+      "ID": 13001204,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13001204,
+          "ItemID": 1450816,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -9653,8 +9701,8 @@
         {
           "ID": 13001301,
           "ItemID": 1450701,
-          "Min_ItemCount": 13,
-          "Max_ItemCount": 13,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -9664,7 +9712,7 @@
       "RewardRandomDataArray": [
         {
           "ID": 13001302,
-          "ItemID": 1450816,
+          "ItemID": 1450402,
           "Min_ItemCount": 10,
           "Max_ItemCount": 10,
           "ItemWeight": 1
@@ -9676,9 +9724,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13001303,
-          "ItemID": 1450402,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450812,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13001304": {
+      "ID": 13001304,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13001304,
+          "ItemID": 1450816,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -9701,8 +9761,8 @@
         {
           "ID": 13001401,
           "ItemID": 1450701,
-          "Min_ItemCount": 30,
-          "Max_ItemCount": 30,
+          "Min_ItemCount": 60,
+          "Max_ItemCount": 60,
           "ItemWeight": 1
         }
       ]
@@ -9725,8 +9785,8 @@
         {
           "ID": 13002001,
           "ItemID": 1450701,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -9736,21 +9796,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13002002,
-          "ItemID": 1450817,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "13002003": {
-      "ID": 13002003,
+    "13002004": {
+      "ID": 13002004,
       "RewardRandomDataArray": [
         {
-          "ID": 13002003,
-          "ItemID": 1450811,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "ID": 13002004,
+          "ItemID": 1450817,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
           "ItemWeight": 1
         }
       ]
@@ -9773,8 +9833,8 @@
         {
           "ID": 13002101,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -9784,9 +9844,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13002102,
-          "ItemID": 1450817,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "ItemID": 1450812,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -9796,9 +9856,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13002103,
-          "ItemID": 1450812,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13002104": {
+      "ID": 13002104,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13002104,
+          "ItemID": 1450817,
+          "Min_ItemCount": 3,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -9821,8 +9893,8 @@
         {
           "ID": 13002201,
           "ItemID": 1450701,
-          "Min_ItemCount": 12,
-          "Max_ItemCount": 12,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -9832,9 +9904,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13002202,
-          "ItemID": 1450817,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450812,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -9844,9 +9916,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13002203,
-          "ItemID": 1450812,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13002204": {
+      "ID": 13002204,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13002204,
+          "ItemID": 1450817,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -9869,8 +9953,8 @@
         {
           "ID": 13002301,
           "ItemID": 1450701,
-          "Min_ItemCount": 14,
-          "Max_ItemCount": 14,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -9880,7 +9964,7 @@
       "RewardRandomDataArray": [
         {
           "ID": 13002302,
-          "ItemID": 1450817,
+          "ItemID": 1450402,
           "Min_ItemCount": 10,
           "Max_ItemCount": 10,
           "ItemWeight": 1
@@ -9892,9 +9976,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13002303,
-          "ItemID": 1450402,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450812,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13002304": {
+      "ID": 13002304,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13002304,
+          "ItemID": 1450817,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -9917,8 +10013,8 @@
         {
           "ID": 13002401,
           "ItemID": 1450701,
-          "Min_ItemCount": 30,
-          "Max_ItemCount": 30,
+          "Min_ItemCount": 60,
+          "Max_ItemCount": 60,
           "ItemWeight": 1
         }
       ]
@@ -9941,8 +10037,8 @@
         {
           "ID": 13003001,
           "ItemID": 1450701,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -9952,9 +10048,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13003002,
-          "ItemID": 1450818,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "ItemID": 1450812,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -9964,9 +10060,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13003003,
-          "ItemID": 1450812,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13003004": {
+      "ID": 13003004,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13003004,
+          "ItemID": 1450818,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
           "ItemWeight": 1
         }
       ]
@@ -9989,8 +10097,8 @@
         {
           "ID": 13003101,
           "ItemID": 1450701,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -10000,9 +10108,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13003102,
-          "ItemID": 1450818,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "ItemID": 1450812,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -10012,9 +10120,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13003103,
-          "ItemID": 1450812,
-          "Min_ItemCount": 7,
-          "Max_ItemCount": 7,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13003104": {
+      "ID": 13003104,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13003104,
+          "ItemID": 1450818,
+          "Min_ItemCount": 3,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -10037,8 +10157,8 @@
         {
           "ID": 13003201,
           "ItemID": 1450701,
-          "Min_ItemCount": 12,
-          "Max_ItemCount": 12,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -10048,9 +10168,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13003202,
-          "ItemID": 1450818,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450402,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -10060,9 +10180,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13003203,
-          "ItemID": 1450402,
-          "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "ItemID": 1450812,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13003204": {
+      "ID": 13003204,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13003204,
+          "ItemID": 1450818,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -10085,8 +10217,8 @@
         {
           "ID": 13003301,
           "ItemID": 1450701,
-          "Min_ItemCount": 15,
-          "Max_ItemCount": 15,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -10096,9 +10228,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13003302,
-          "ItemID": 1450818,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "ItemID": 1450402,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -10108,9 +10240,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13003303,
-          "ItemID": 1450402,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "ItemID": 1450812,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13003304": {
+      "ID": 13003304,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13003304,
+          "ItemID": 1450818,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -10133,8 +10277,8 @@
         {
           "ID": 13003401,
           "ItemID": 1450701,
-          "Min_ItemCount": 30,
-          "Max_ItemCount": 30,
+          "Min_ItemCount": 60,
+          "Max_ItemCount": 60,
           "ItemWeight": 1
         }
       ]
@@ -10157,8 +10301,8 @@
         {
           "ID": 13004001,
           "ItemID": 1450701,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -10168,9 +10312,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13004002,
-          "ItemID": 1450819,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "ItemID": 1450812,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -10180,9 +10324,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13004003,
-          "ItemID": 1450812,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13004004": {
+      "ID": 13004004,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13004004,
+          "ItemID": 1450819,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
           "ItemWeight": 1
         }
       ]
@@ -10205,8 +10361,8 @@
         {
           "ID": 13004101,
           "ItemID": 1450701,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -10216,9 +10372,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13004102,
-          "ItemID": 1450819,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "ItemID": 1450812,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -10228,9 +10384,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13004103,
-          "ItemID": 1450812,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13004104": {
+      "ID": 13004104,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13004104,
+          "ItemID": 1450819,
+          "Min_ItemCount": 3,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -10253,8 +10421,8 @@
         {
           "ID": 13004201,
           "ItemID": 1450701,
-          "Min_ItemCount": 13,
-          "Max_ItemCount": 13,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
           "ItemWeight": 1
         }
       ]
@@ -10264,9 +10432,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13004202,
-          "ItemID": 1450819,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450402,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -10276,7 +10444,19 @@
       "RewardRandomDataArray": [
         {
           "ID": 13004203,
-          "ItemID": 1450402,
+          "ItemID": 1450812,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13004204": {
+      "ID": 13004204,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13004204,
+          "ItemID": 1450819,
           "Min_ItemCount": 5,
           "Max_ItemCount": 5,
           "ItemWeight": 1
@@ -10301,8 +10481,8 @@
         {
           "ID": 13004301,
           "ItemID": 1450701,
-          "Min_ItemCount": 15,
-          "Max_ItemCount": 15,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -10312,9 +10492,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13004302,
-          "ItemID": 1450819,
-          "Min_ItemCount": 10,
-          "Max_ItemCount": 10,
+          "ItemID": 1450402,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -10324,9 +10504,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13004303,
-          "ItemID": 1450402,
-          "Min_ItemCount": 6,
-          "Max_ItemCount": 6,
+          "ItemID": 1450812,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13004304": {
+      "ID": 13004304,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13004304,
+          "ItemID": 1450819,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -10349,8 +10541,8 @@
         {
           "ID": 13004401,
           "ItemID": 1450701,
-          "Min_ItemCount": 30,
-          "Max_ItemCount": 30,
+          "Min_ItemCount": 60,
+          "Max_ItemCount": 60,
           "ItemWeight": 1
         }
       ]
@@ -10373,8 +10565,8 @@
         {
           "ID": 13005001,
           "ItemID": 1450701,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -10384,21 +10576,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13005002,
-          "ItemID": 1450823,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
     },
-    "13005003": {
-      "ID": 13005003,
+    "13005004": {
+      "ID": 13005004,
       "RewardRandomDataArray": [
         {
-          "ID": 13005003,
-          "ItemID": 1450811,
-          "Min_ItemCount": 9,
-          "Max_ItemCount": 9,
+          "ID": 13005004,
+          "ItemID": 1450823,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
           "ItemWeight": 1
         }
       ]
@@ -10421,8 +10613,8 @@
         {
           "ID": 13005101,
           "ItemID": 1450701,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -10432,9 +10624,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13005102,
-          "ItemID": 1450823,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
+          "ItemID": 1450812,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -10444,9 +10636,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13005103,
-          "ItemID": 1450812,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13005104": {
+      "ID": 13005104,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13005104,
+          "ItemID": 1450823,
+          "Min_ItemCount": 3,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -10469,8 +10673,8 @@
         {
           "ID": 13005201,
           "ItemID": 1450701,
-          "Min_ItemCount": 11,
-          "Max_ItemCount": 11,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
           "ItemWeight": 1
         }
       ]
@@ -10480,9 +10684,9 @@
       "RewardRandomDataArray": [
         {
           "ID": 13005202,
-          "ItemID": 1450823,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450812,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -10492,9 +10696,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13005203,
-          "ItemID": 1450812,
-          "Min_ItemCount": 8,
-          "Max_ItemCount": 8,
+          "ItemID": 1450811,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13005204": {
+      "ID": 13005204,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13005204,
+          "ItemID": 1450823,
+          "Min_ItemCount": 5,
+          "Max_ItemCount": 5,
           "ItemWeight": 1
         }
       ]
@@ -10517,8 +10733,8 @@
         {
           "ID": 13005301,
           "ItemID": 1450701,
-          "Min_ItemCount": 14,
-          "Max_ItemCount": 14,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -10528,7 +10744,7 @@
       "RewardRandomDataArray": [
         {
           "ID": 13005302,
-          "ItemID": 1450823,
+          "ItemID": 1450402,
           "Min_ItemCount": 10,
           "Max_ItemCount": 10,
           "ItemWeight": 1
@@ -10540,9 +10756,21 @@
       "RewardRandomDataArray": [
         {
           "ID": 13005303,
-          "ItemID": 1450402,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
+          "ItemID": 1450812,
+          "Min_ItemCount": 20,
+          "Max_ItemCount": 20,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13005304": {
+      "ID": 13005304,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13005304,
+          "ItemID": 1450823,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
           "ItemWeight": 1
         }
       ]
@@ -10565,8 +10793,8 @@
         {
           "ID": 13005401,
           "ItemID": 1450701,
-          "Min_ItemCount": 30,
-          "Max_ItemCount": 30,
+          "Min_ItemCount": 60,
+          "Max_ItemCount": 60,
           "ItemWeight": 1
         }
       ]
@@ -10589,8 +10817,8 @@
         {
           "ID": 14000001,
           "ItemID": 1450701,
-          "Min_ItemCount": 15,
-          "Max_ItemCount": 15,
+          "Min_ItemCount": 30,
+          "Max_ItemCount": 30,
           "ItemWeight": 1
         }
       ]
@@ -10615,6 +10843,42 @@
           "ItemID": 1450409,
           "Min_ItemCount": 1,
           "Max_ItemCount": 3,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "14000006": {
+      "ID": 14000006,
+      "RewardRandomDataArray": [
+        {
+          "ID": 14000006,
+          "ItemID": 1000001,
+          "Min_ItemCount": 150000,
+          "Max_ItemCount": 150000,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "14000106": {
+      "ID": 14000106,
+      "RewardRandomDataArray": [
+        {
+          "ID": 14000106,
+          "ItemID": 1000001,
+          "Min_ItemCount": 250000,
+          "Max_ItemCount": 250000,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "14000206": {
+      "ID": 14000206,
+      "RewardRandomDataArray": [
+        {
+          "ID": 14000206,
+          "ItemID": 1000001,
+          "Min_ItemCount": 350000,
+          "Max_ItemCount": 350000,
           "ItemWeight": 1
         }
       ]
@@ -10822,8 +11086,8 @@
         {
           "ID": 14000101,
           "ItemID": 1450701,
-          "Min_ItemCount": 30,
-          "Max_ItemCount": 30,
+          "Min_ItemCount": 50,
+          "Max_ItemCount": 50,
           "ItemWeight": 1
         }
       ]
@@ -11055,8 +11319,8 @@
         {
           "ID": 14000201,
           "ItemID": 1450701,
-          "Min_ItemCount": 50,
-          "Max_ItemCount": 50,
+          "Min_ItemCount": 70,
+          "Max_ItemCount": 70,
           "ItemWeight": 1
         }
       ]
@@ -11253,8 +11517,8 @@
         {
           "ID": 14001001,
           "ItemID": 1450701,
-          "Min_ItemCount": 15,
-          "Max_ItemCount": 15,
+          "Min_ItemCount": 40,
+          "Max_ItemCount": 40,
           "ItemWeight": 1
         }
       ]
@@ -11279,6 +11543,42 @@
           "ItemID": 1450409,
           "Min_ItemCount": 1,
           "Max_ItemCount": 3,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "14001005": {
+      "ID": 14001005,
+      "RewardRandomDataArray": [
+        {
+          "ID": 14001005,
+          "ItemID": 1000001,
+          "Min_ItemCount": 200000,
+          "Max_ItemCount": 200000,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "14001105": {
+      "ID": 14001105,
+      "RewardRandomDataArray": [
+        {
+          "ID": 14001105,
+          "ItemID": 1000001,
+          "Min_ItemCount": 300000,
+          "Max_ItemCount": 300000,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "14001205": {
+      "ID": 14001205,
+      "RewardRandomDataArray": [
+        {
+          "ID": 14001205,
+          "ItemID": 1000001,
+          "Min_ItemCount": 350000,
+          "Max_ItemCount": 350000,
           "ItemWeight": 1
         }
       ]
@@ -11376,8 +11676,8 @@
         {
           "ID": 14001101,
           "ItemID": 1450701,
-          "Min_ItemCount": 30,
-          "Max_ItemCount": 30,
+          "Min_ItemCount": 60,
+          "Max_ItemCount": 60,
           "ItemWeight": 1
         }
       ]
@@ -11499,8 +11799,8 @@
         {
           "ID": 14001201,
           "ItemID": 1450701,
-          "Min_ItemCount": 50,
-          "Max_ItemCount": 50,
+          "Min_ItemCount": 70,
+          "Max_ItemCount": 70,
           "ItemWeight": 1
         }
       ]
@@ -25956,8 +26256,8 @@
         {
           "ID": 20000000,
           "ItemID": 1450601,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "Min_ItemCount": 2,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -25968,8 +26268,8 @@
         {
           "ID": 20000001,
           "ItemID": 1450602,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "Min_ItemCount": 2,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -25980,8 +26280,8 @@
         {
           "ID": 20000002,
           "ItemID": 1450603,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "Min_ItemCount": 2,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -25992,8 +26292,8 @@
         {
           "ID": 20000003,
           "ItemID": 1450604,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "Min_ItemCount": 2,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -26004,7 +26304,7 @@
         {
           "ID": 20000004,
           "ItemID": 1460101,
-          "Min_ItemCount": 1,
+          "Min_ItemCount": 2,
           "Max_ItemCount": 3,
           "ItemWeight": 1
         }
@@ -26016,7 +26316,7 @@
         {
           "ID": 20000005,
           "ItemID": 1460102,
-          "Min_ItemCount": 1,
+          "Min_ItemCount": 2,
           "Max_ItemCount": 3,
           "ItemWeight": 1
         }
@@ -26028,8 +26328,8 @@
         {
           "ID": 20000006,
           "ItemID": 1460101,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -26040,8 +26340,8 @@
         {
           "ID": 20000007,
           "ItemID": 1460102,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -26052,30 +26352,9 @@
         {
           "ID": 20000008,
           "ItemID": 1430603,
-          "Min_ItemCount": 2,
-          "Max_ItemCount": 2,
-          "ItemWeight": 2
-        },
-        {
-          "ID": 20000008,
-          "ItemID": 1430603,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
-          "ItemWeight": 5
-        },
-        {
-          "ID": 20000008,
-          "ItemID": 1430603,
           "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Max_ItemCount": 10,
           "ItemWeight": 2
-        },
-        {
-          "ID": 20000008,
-          "ItemID": 1430603,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
-          "ItemWeight": 1
         }
       ]
     },
@@ -26085,8 +26364,8 @@
         {
           "ID": 20000009,
           "ItemID": 1440802,
-          "Min_ItemCount": 1,
-          "Max_ItemCount": 1,
+          "Min_ItemCount": 2,
+          "Max_ItemCount": 3,
           "ItemWeight": 1
         }
       ]
@@ -26097,7 +26376,7 @@
         {
           "ID": 20000010,
           "ItemID": 1460103,
-          "Min_ItemCount": 1,
+          "Min_ItemCount": 2,
           "Max_ItemCount": 3,
           "ItemWeight": 1
         }
@@ -26109,8 +26388,8 @@
         {
           "ID": 20000011,
           "ItemID": 1460103,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 10,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 15,
           "ItemWeight": 1
         }
       ]
@@ -26121,30 +26400,9 @@
         {
           "ID": 20000012,
           "ItemID": 1430602,
-          "Min_ItemCount": 2,
-          "Max_ItemCount": 2,
-          "ItemWeight": 2
-        },
-        {
-          "ID": 20000012,
-          "ItemID": 1430602,
-          "Min_ItemCount": 3,
-          "Max_ItemCount": 3,
-          "ItemWeight": 5
-        },
-        {
-          "ID": 20000012,
-          "ItemID": 1430602,
           "Min_ItemCount": 4,
-          "Max_ItemCount": 4,
+          "Max_ItemCount": 10,
           "ItemWeight": 2
-        },
-        {
-          "ID": 20000012,
-          "ItemID": 1430602,
-          "Min_ItemCount": 5,
-          "Max_ItemCount": 5,
-          "ItemWeight": 1
         }
       ]
     },
@@ -30038,6 +30296,30 @@
         {
           "ID": 26108102,
           "ItemID": 2104000,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "26108111": {
+      "ID": 26108111,
+      "RewardRandomDataArray": [
+        {
+          "ID": 26108111,
+          "ItemID": 1000803,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "26108112": {
+      "ID": 26108112,
+      "RewardRandomDataArray": [
+        {
+          "ID": 26108112,
+          "ItemID": 2103020,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 1

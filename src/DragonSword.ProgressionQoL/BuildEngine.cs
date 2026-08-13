@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using System.Globalization;
 using System.IO.Compression;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
@@ -12,6 +13,8 @@ namespace DragonSword.ProgressionQoL;
 internal sealed class BuildEngine
 {
     private const string PakName = "DS_ZZZ_ProgressionQoL_Configured_P.pak";
+    public const string SupportedGameVersion = "1.0.9";
+    public const string SupportedSteamBuildId = "24693558";
     private static readonly CultureInfo Invariant = CultureInfo.InvariantCulture;
     private static readonly Regex XmlId = new("\\b(?:\\w+:)?ID=\"(\\d+)\"", RegexOptions.Compiled);
 
@@ -109,7 +112,7 @@ internal sealed class BuildEngine
             ApplyRarity(modifiedRandom, targets["rarity_groups"] as JsonArray ?? [], config.HighGradeChance);
 
         var spread = config.SpreadRolls && config.EquipmentMultiplier > 1
-            ? ApplySpreadRolls(vanillaRandom, modifiedRandom, modifiedRewardData, activityTargets, config.EquipmentMultiplier)
+            ? ApplySpreadRolls(modifiedRandom, modifiedRewardData, activityTargets, config.EquipmentMultiplier)
             : new SpreadResult(0, []);
 
         var rewardChanged = activityChanged > 0 || enemyChanged > 0 || chestChanged > 0 || config.EnhancedRarity || spread.GeneratedGroups.Count > 0;
@@ -162,8 +165,8 @@ internal sealed class BuildEngine
         var sha = Convert.ToHexString(SHA256.HashData(await File.ReadAllBytesAsync(pakPath)));
         var report = new JsonObject
         {
-            ["application_version"] = "0.9.0-rc.1",
-            ["baseline"] = "Verified unmodified game 1.0.5 tables; application functions tested with game 1.0.8",
+            ["application_version"] = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? "unknown",
+            ["baseline"] = $"Verified unmodified game {SupportedGameVersion} tables (Steam build {SupportedSteamBuildId})",
             ["generated_at"] = DateTimeOffset.Now.ToString("O", Invariant),
             ["pak_sha256"] = sha,
             ["configuration"] = JsonSerializer.SerializeToNode(config),
@@ -195,6 +198,11 @@ internal sealed class BuildEngine
         if (!File.Exists(executable)) throw new DirectoryNotFoundException("That folder does not contain DSClient-Win64-Shipping.exe.");
         if (Process.GetProcessesByName("DSClient-Win64-Shipping").Length > 0 || Process.GetProcessesByName("DSClient").Length > 0)
             throw new InvalidOperationException("Close DragonSword before installing the PAK.");
+        var installedBuild = ReadInstalledSteamBuildId(fullRoot);
+        if (installedBuild is null)
+            throw new InvalidOperationException($"Steam build could not be verified. This release only installs automatically on DragonSword {SupportedGameVersion} (Steam build {SupportedSteamBuildId}).");
+        if (!installedBuild.Equals(SupportedSteamBuildId, StringComparison.Ordinal))
+            throw new InvalidOperationException($"Unsupported DragonSword build {installedBuild}. This release requires game {SupportedGameVersion} (Steam build {SupportedSteamBuildId}); update the game or use the matching configurator release.");
 
         var modDirectory = Path.Combine(fullRoot, "DS", "Content", "Paks");
         Directory.CreateDirectory(modDirectory);
@@ -223,6 +231,49 @@ internal sealed class BuildEngine
         if (!installedSha.Equals(result.Sha256, StringComparison.OrdinalIgnoreCase))
             throw new InvalidDataException("The installed PAK failed SHA-256 verification. Do not launch the game with this file.");
         return destination;
+    }
+
+    public string? DisableInstalledPakForVanilla(string gameRoot)
+    {
+        var fullRoot = ResolveGameRoot(gameRoot) ?? throw new DirectoryNotFoundException("DragonSword could not be found from that selection. Select the game folder, DS, Paks, ~mods, Win64, or DSClient-Win64-Shipping.exe.");
+        var executable = Path.Combine(fullRoot, "DS", "Binaries", "Win64", "DSClient-Win64-Shipping.exe");
+        if (!File.Exists(executable)) throw new DirectoryNotFoundException("That folder does not contain DSClient-Win64-Shipping.exe.");
+        if (Process.GetProcessesByName("DSClient-Win64-Shipping").Length > 0 || Process.GetProcessesByName("DSClient").Length > 0)
+            throw new InvalidOperationException("Close DragonSword before restoring vanilla rewards.");
+
+        var pakDirectory = Path.Combine(fullRoot, "DS", "Content", "Paks");
+        var installedPak = Path.Combine(pakDirectory, PakName);
+        if (!File.Exists(installedPak)) return null;
+
+        var backupDirectory = Path.Combine(pakDirectory, "ProgressionQoL-Backups");
+        Directory.CreateDirectory(backupDirectory);
+        var backupStem = Path.Combine(backupDirectory, $"{Path.GetFileNameWithoutExtension(PakName)}-{DateTime.Now:yyyyMMdd-HHmmss}-vanilla-restore.pak");
+        var backup = UniqueDisabledBackupPath(backupStem);
+        File.Move(installedPak, backup);
+        return backup;
+    }
+
+    public static string? FindInstalledPak(string gameRoot)
+    {
+        var fullRoot = ResolveGameRoot(gameRoot);
+        if (fullRoot is null) return null;
+        var path = Path.Combine(fullRoot, "DS", "Content", "Paks", PakName);
+        return File.Exists(path) ? path : null;
+    }
+
+    public static string? ReadInstalledSteamBuildId(string gameRoot)
+    {
+        var fullRoot = ResolveGameRoot(gameRoot);
+        if (fullRoot is null) return null;
+        var common = Directory.GetParent(fullRoot);
+        var steamApps = common?.Parent;
+        if (common is null || steamApps is null ||
+            !common.Name.Equals("common", StringComparison.OrdinalIgnoreCase) ||
+            !steamApps.Name.Equals("steamapps", StringComparison.OrdinalIgnoreCase)) return null;
+        var manifest = Path.Combine(steamApps.FullName, "appmanifest_4570720.acf");
+        if (!File.Exists(manifest)) return null;
+        var match = Regex.Match(File.ReadAllText(manifest), "\\\"buildid\\\"\\s+\\\"(?<id>\\d+)\\\"", RegexOptions.IgnoreCase);
+        return match.Success ? match.Groups["id"].Value : null;
     }
 
     private static string UniqueDisabledBackupPath(string pakPath)
@@ -399,7 +450,7 @@ internal sealed class BuildEngine
         }
     }
 
-    private static SpreadResult ApplySpreadRolls(JsonObject vanillaRandom, JsonObject modifiedRandom, JsonObject modifiedRewardData, List<RowTarget> activityTargets, int multiplier)
+    private static SpreadResult ApplySpreadRolls(JsonObject modifiedRandom, JsonObject modifiedRewardData, List<RowTarget> activityTargets, int multiplier)
     {
         var equipmentGroups = activityTargets.Where(x => x.Bucket == "equipment").Select(x => x.GroupId).ToHashSet();
         var clones = new Dictionary<(long Group, long Quantity), long>();
@@ -440,7 +491,9 @@ internal sealed class BuildEngine
             {
                 if (clones.TryGetValue((groupId, quantity), out var existing)) return existing;
                 while (modifiedRandom["Data"]![nextId.ToString(Invariant)] is not null) nextId++;
-                var source = vanillaRandom["Data"]![groupId.ToString(Invariant)]!.AsObject();
+                // Clone the already-modified group so Spread composes with
+                // Favor Better Rarity instead of restoring vanilla weights.
+                var source = modifiedRandom["Data"]![groupId.ToString(Invariant)]!.AsObject();
                 var clone = (JsonObject)source.DeepClone();
                 clone["ID"] = nextId;
                 foreach (var cloneRow in clone["RewardRandomDataArray"]!.AsArray().Select(x => x!.AsObject()))

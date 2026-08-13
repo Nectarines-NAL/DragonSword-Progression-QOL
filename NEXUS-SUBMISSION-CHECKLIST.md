@@ -3,7 +3,7 @@
 Reference reviewed: Nexus Mods File Submission Guidelines, live review 2026-08-06.
 
 - [ ] Upload to the correct game and utility/mod category.
-- [ ] Describe this as a 1.08 **test candidate**, not confirmed native 1.08 support.
+- [ ] Describe this as a 1.09 **test candidate** for Steam build `24693558`, pending gameplay validation.
 - [ ] Apply `AI-Generated Content` and `AI Media` tags.
 - [ ] State that code, UI, and documentation were AI-assisted and that the original fantasy reward-forge artwork was AI-generated for this project.
 - [ ] Include the matching source archive, SHA-256 file, and third-party notices.
@@ -11,6 +11,7 @@ Reference reviewed: Nexus Mods File Submission Guidelines, live review 2026-08-0
 - [ ] Explain that the executable is unobfuscated .NET 8 and inspectable with ILSpy/dnSpy.
 - [ ] Explain the second executable: open-source `repak.exe`, local-only PAK pack/list/unpack operations.
 - [ ] State: no network, telemetry, auto-update, admin request, DLL injection, or game executable modification.
+- [ ] Explain that optional saved profiles are readable JSON settings in per-user Local AppData, persist between releases, and are never auto-loaded into the controls.
 - [ ] Do not claim ownership of or redistribute another author's modified files.
 - [ ] Confirm that the release uses only the new original project artwork; do not package older reference or promotional images.
 - [ ] List exact table conflicts and state that Treasure Respawn has no file-path overlap.

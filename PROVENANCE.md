@@ -20,5 +20,6 @@ The project does not use, copy, patch, redistribute, inspect at runtime, or depe
 - Gathering targets are selected from positive unmodified collection-node item/count rows with supported stackable material types.
 - Safe chest targets are limited by allowlisted vanilla relationships, while unique and progression rewards are excluded.
 - Activity targets are categorized into equipment, materials, emblem currency, gold, and rank experience.
+- Game 1.0.9 activity targets are derived through visible `MapDungeonData` clear rewards into `RewardData` and `RewardRandomData`, with first-clear and externally shared groups rejected.
 
 Builds transform only the selected vanilla-derived targets. The configurator never asks for another mod archive as input.
