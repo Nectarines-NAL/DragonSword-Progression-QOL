@@ -11,12 +11,14 @@ Automated validation completed:
 - Nightmare Barduk achievement reward `2610811` is preserved through a Spread build;
 - x20 world gathering changes all 48 supported gathering rows by exactly 20x;
 - the maximum-multiplier build produced zero target quantity mismatches;
+- the Currency EXP Items isolation build changes only the 18 verified Character, Equipment, and Karma EXP reward rows used by repeatable Currency Dungeons;
 - generated PAKs were listed, unpacked, and hash-verified.
 
 Gameplay validation still required:
 
 - one Normal dungeon at each difficulty;
 - each Currency dungeon type;
+- each repeatable Currency Dungeon at Currency EXP Items x2, confirming only its Character, Equipment, or Karma EXP item doubles while Gold, Emblems, Rank EXP, and other materials remain vanilla;
 - one Trait dungeon, confirming Trait stones remain listed and awarded;
 - one low and one high Hunt;
 - one Raid, checking equipment, runes, Gold, and materials separately;

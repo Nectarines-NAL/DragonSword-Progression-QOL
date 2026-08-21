@@ -5,6 +5,7 @@ internal sealed record BuildConfig(
     int EnemyMaterialMultiplier,
     int EquipmentMultiplier,
     int ActivityMaterialMultiplier,
+    int CurrencyExperienceItemMultiplier,
     int AdventurerEmblemMultiplier,
     int GoldMultiplier,
     int RankExperienceMultiplier,

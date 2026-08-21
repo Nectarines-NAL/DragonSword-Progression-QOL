@@ -1,8 +1,8 @@
 {
-  "schema_version": 2,
-  "provenance": "Independently derived from unmodified DragonSword: Awakening 1.0.9 Steam build 24693558 tables and nectarines' Dungeon QOL Sudden Mission research.",
-  "game_version": "1.0.9",
-  "steam_build_id": "24693558",
+  "schema_version": 4,
+  "provenance": "Independently derived from unmodified DragonSword: Awakening 1.0.10 Steam build 24831799 tables and nectarines' Dungeon QOL Sudden Mission research.",
+  "game_version": "1.0.10",
+  "steam_build_id": "24831799",
   "baseline_sha256": {
     "reward_random_client": "CBB0902F0ADD5F503400C121A31C3AE1643C064DDCFD6ADDE93429D9A620724C",
     "reward_data_client": "3FF0A68F5D7BA0742F87A4A3C4E9963512A8E055C67DC2ED39745FD548A6F758",
@@ -15,4885 +15,6577 @@
       "group_id": 12000000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12000001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12000002,
       "row_index": 0,
       "item_id": 1450016,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12000003,
       "row_index": 0,
       "item_id": 1370121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000003,
       "row_index": 1,
       "item_id": 1370122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000003,
       "row_index": 2,
       "item_id": 1370124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12000011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12000012,
       "row_index": 0,
       "item_id": 1450017,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12000013,
       "row_index": 0,
       "item_id": 1380121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000013,
       "row_index": 1,
       "item_id": 1370121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000013,
       "row_index": 2,
       "item_id": 1380122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000013,
       "row_index": 3,
       "item_id": 1370122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000013,
       "row_index": 4,
       "item_id": 1380124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000013,
       "row_index": 5,
       "item_id": 1370124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12000021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12000022,
       "row_index": 0,
       "item_id": 1450018,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12000023,
       "row_index": 0,
       "item_id": 1380121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000023,
       "row_index": 1,
       "item_id": 1370121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000023,
       "row_index": 2,
       "item_id": 1380122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000023,
       "row_index": 3,
       "item_id": 1370122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000023,
       "row_index": 4,
       "item_id": 1380124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12000023,
       "row_index": 5,
       "item_id": 1370124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12002000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12002001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12002002,
       "row_index": 0,
       "item_id": 1450007,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12002003,
       "row_index": 0,
       "item_id": 1370101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12002003,
       "row_index": 1,
       "item_id": 1370102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12002003,
       "row_index": 2,
       "item_id": 1370104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12002010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12002011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12002012,
       "row_index": 0,
       "item_id": 1450008,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12002013,
       "row_index": 0,
       "item_id": 1380101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12002013,
       "row_index": 1,
       "item_id": 1370101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12002013,
       "row_index": 2,
       "item_id": 1380102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12002013,
       "row_index": 3,
       "item_id": 1370102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12002013,
       "row_index": 4,
       "item_id": 1380104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12002013,
       "row_index": 5,
       "item_id": 1370104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12002020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12002021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12002022,
       "row_index": 0,
       "item_id": 1450009,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12002023,
       "row_index": 0,
       "item_id": 1380101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12002023,
       "row_index": 1,
       "item_id": 1380102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12002023,
       "row_index": 2,
       "item_id": 1380104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12003001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12003002,
       "row_index": 0,
       "item_id": 1450601,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12003003,
       "row_index": 0,
       "item_id": 1390121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003003,
       "row_index": 1,
       "item_id": 1380121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003003,
       "row_index": 2,
       "item_id": 1390122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003003,
       "row_index": 3,
       "item_id": 1380122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003003,
       "row_index": 4,
       "item_id": 1390123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003003,
       "row_index": 5,
       "item_id": 1380123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003003,
       "row_index": 6,
       "item_id": 1390124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003003,
       "row_index": 7,
       "item_id": 1380124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003003,
       "row_index": 8,
       "item_id": 1390125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003003,
       "row_index": 9,
       "item_id": 1380125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12003011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12003012,
       "row_index": 0,
       "item_id": 1450601,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12003013,
       "row_index": 0,
       "item_id": 1390121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003013,
       "row_index": 1,
       "item_id": 1380121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003013,
       "row_index": 2,
       "item_id": 1390122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003013,
       "row_index": 3,
       "item_id": 1380122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003013,
       "row_index": 4,
       "item_id": 1390123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003013,
       "row_index": 5,
       "item_id": 1380123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003013,
       "row_index": 6,
       "item_id": 1390124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003013,
       "row_index": 7,
       "item_id": 1380124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003013,
       "row_index": 8,
       "item_id": 1390125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003013,
       "row_index": 9,
       "item_id": 1380125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12003021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12003022,
       "row_index": 0,
       "item_id": 1450601,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12003023,
       "row_index": 0,
       "item_id": 1390121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003023,
       "row_index": 1,
       "item_id": 1390122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003023,
       "row_index": 2,
       "item_id": 1390123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003023,
       "row_index": 3,
       "item_id": 1390124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12003023,
       "row_index": 4,
       "item_id": 1390125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12004000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12004001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12004002,
       "row_index": 0,
       "item_id": 1450010,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12004003,
       "row_index": 0,
       "item_id": 1370143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12004003,
       "row_index": 1,
       "item_id": 1370145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12004010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12004011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12004012,
       "row_index": 0,
       "item_id": 1450011,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12004013,
       "row_index": 0,
       "item_id": 1380143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12004013,
       "row_index": 1,
       "item_id": 1370143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12004013,
       "row_index": 2,
       "item_id": 1380145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12004013,
       "row_index": 3,
       "item_id": 1370145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12004020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12004021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12004022,
       "row_index": 0,
       "item_id": 1450012,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12004023,
       "row_index": 0,
       "item_id": 1380143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12004023,
       "row_index": 1,
       "item_id": 1380145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12005000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12005001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12005002,
       "row_index": 0,
       "item_id": 1450503,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12005003,
       "row_index": 0,
       "item_id": 1380143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12005003,
       "row_index": 1,
       "item_id": 1370143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12005003,
       "row_index": 2,
       "item_id": 1380145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12005003,
       "row_index": 3,
       "item_id": 1370145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12005010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12005011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12005012,
       "row_index": 0,
       "item_id": 1450503,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12005013,
       "row_index": 0,
       "item_id": 1380143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12005013,
       "row_index": 1,
       "item_id": 1380145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12005020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12005021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12005022,
       "row_index": 0,
       "item_id": 1450503,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12005023,
       "row_index": 0,
       "item_id": 1390143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12005023,
       "row_index": 1,
       "item_id": 1380143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12005023,
       "row_index": 2,
       "item_id": 1390145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12005023,
       "row_index": 3,
       "item_id": 1380145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12006000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12006001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12006002,
       "row_index": 0,
       "item_id": 1450504,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12006003,
       "row_index": 0,
       "item_id": 1380103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12006003,
       "row_index": 1,
       "item_id": 1370103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12006003,
       "row_index": 2,
       "item_id": 1380105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12006003,
       "row_index": 3,
       "item_id": 1370105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12006010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12006011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12006012,
       "row_index": 0,
       "item_id": 1450504,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12006013,
       "row_index": 0,
       "item_id": 1380103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12006013,
       "row_index": 1,
       "item_id": 1380105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12006020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12006021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12006022,
       "row_index": 0,
       "item_id": 1450504,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12006023,
       "row_index": 0,
       "item_id": 1390103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12006023,
       "row_index": 1,
       "item_id": 1380103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12006023,
       "row_index": 2,
       "item_id": 1390105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12006023,
       "row_index": 3,
       "item_id": 1380105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12007000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12007001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12007002,
       "row_index": 0,
       "item_id": 1450001,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12007003,
       "row_index": 0,
       "item_id": 1370123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12007003,
       "row_index": 1,
       "item_id": 1370125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12007010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12007011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12007012,
       "row_index": 0,
       "item_id": 1450002,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12007013,
       "row_index": 0,
       "item_id": 1380123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12007013,
       "row_index": 1,
       "item_id": 1370123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12007013,
       "row_index": 2,
       "item_id": 1380125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12007013,
       "row_index": 3,
       "item_id": 1370125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12007020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12007021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12007022,
       "row_index": 0,
       "item_id": 1450003,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12007023,
       "row_index": 0,
       "item_id": 1380123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12007023,
       "row_index": 1,
       "item_id": 1370123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12007023,
       "row_index": 2,
       "item_id": 1380125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12007023,
       "row_index": 3,
       "item_id": 1370125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12008000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12008001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12008002,
       "row_index": 0,
       "item_id": 1450501,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12008003,
       "row_index": 0,
       "item_id": 1380123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12008003,
       "row_index": 1,
       "item_id": 1370123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12008003,
       "row_index": 2,
       "item_id": 1380125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12008003,
       "row_index": 3,
       "item_id": 1370125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12008010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12008011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12008012,
       "row_index": 0,
       "item_id": 1450501,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12008013,
       "row_index": 0,
       "item_id": 1380123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12008013,
       "row_index": 1,
       "item_id": 1370123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12008013,
       "row_index": 2,
       "item_id": 1380125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12008013,
       "row_index": 3,
       "item_id": 1370125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12008020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12008021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12008022,
       "row_index": 0,
       "item_id": 1450501,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12008023,
       "row_index": 0,
       "item_id": 1380123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12008023,
       "row_index": 1,
       "item_id": 1380125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12009000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12009001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12009002,
       "row_index": 0,
       "item_id": 1450004,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12009003,
       "row_index": 0,
       "item_id": 1370103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12009003,
       "row_index": 1,
       "item_id": 1370105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12009010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12009011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12009012,
       "row_index": 0,
       "item_id": 1450005,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12009013,
       "row_index": 0,
       "item_id": 1380103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12009013,
       "row_index": 1,
       "item_id": 1370103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12009013,
       "row_index": 2,
       "item_id": 1380105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12009013,
       "row_index": 3,
       "item_id": 1370105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12009020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12009021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12009022,
       "row_index": 0,
       "item_id": 1450006,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12009023,
       "row_index": 0,
       "item_id": 1380103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12009023,
       "row_index": 1,
       "item_id": 1380105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12010001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12010002,
       "row_index": 0,
       "item_id": 1450502,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12010003,
       "row_index": 0,
       "item_id": 1380141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010003,
       "row_index": 1,
       "item_id": 1370141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010003,
       "row_index": 2,
       "item_id": 1380142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010003,
       "row_index": 3,
       "item_id": 1370142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010003,
       "row_index": 4,
       "item_id": 1380144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010003,
       "row_index": 5,
       "item_id": 1370144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12010011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12010012,
       "row_index": 0,
       "item_id": 1450502,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12010013,
       "row_index": 0,
       "item_id": 1380141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010013,
       "row_index": 1,
       "item_id": 1370141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010013,
       "row_index": 2,
       "item_id": 1380142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010013,
       "row_index": 3,
       "item_id": 1370142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010013,
       "row_index": 4,
       "item_id": 1380144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010013,
       "row_index": 5,
       "item_id": 1370144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12010021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12010022,
       "row_index": 0,
       "item_id": 1450502,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12010023,
       "row_index": 0,
       "item_id": 1380141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010023,
       "row_index": 1,
       "item_id": 1380142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12010023,
       "row_index": 2,
       "item_id": 1380144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12011001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12011002,
       "row_index": 0,
       "item_id": 1450602,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12011003,
       "row_index": 0,
       "item_id": 1380141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011003,
       "row_index": 1,
       "item_id": 1380142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011003,
       "row_index": 2,
       "item_id": 1380144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12011011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12011012,
       "row_index": 0,
       "item_id": 1450602,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12011013,
       "row_index": 0,
       "item_id": 1390141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011013,
       "row_index": 1,
       "item_id": 1380141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011013,
       "row_index": 2,
       "item_id": 1390142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011013,
       "row_index": 3,
       "item_id": 1380142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011013,
       "row_index": 4,
       "item_id": 1390144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011013,
       "row_index": 5,
       "item_id": 1380144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12011021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12011022,
       "row_index": 0,
       "item_id": 1450602,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12011023,
       "row_index": 0,
       "item_id": 1390141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011023,
       "row_index": 1,
       "item_id": 1380141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011023,
       "row_index": 2,
       "item_id": 1390142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011023,
       "row_index": 3,
       "item_id": 1380142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011023,
       "row_index": 4,
       "item_id": 1390144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12011023,
       "row_index": 5,
       "item_id": 1380144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12014001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12014002,
       "row_index": 0,
       "item_id": 1450604,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12014003,
       "row_index": 0,
       "item_id": 1380101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014003,
       "row_index": 1,
       "item_id": 1370101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014003,
       "row_index": 2,
       "item_id": 1380102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014003,
       "row_index": 3,
       "item_id": 1370102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014003,
       "row_index": 4,
       "item_id": 1380104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014003,
       "row_index": 5,
       "item_id": 1370104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12014011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12014012,
       "row_index": 0,
       "item_id": 1450604,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12014013,
       "row_index": 0,
       "item_id": 1380101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014013,
       "row_index": 1,
       "item_id": 1380102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014013,
       "row_index": 2,
       "item_id": 1380104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12014021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12014022,
       "row_index": 0,
       "item_id": 1450604,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12014023,
       "row_index": 0,
       "item_id": 1390101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014023,
       "row_index": 1,
       "item_id": 1380101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014023,
       "row_index": 2,
       "item_id": 1390102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014023,
       "row_index": 3,
       "item_id": 1380102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014023,
       "row_index": 4,
       "item_id": 1390104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12014023,
       "row_index": 5,
       "item_id": 1380104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12015001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12015002,
       "row_index": 0,
       "item_id": 1450603,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12015003,
       "row_index": 0,
       "item_id": 1380121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015003,
       "row_index": 1,
       "item_id": 1370121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015003,
       "row_index": 2,
       "item_id": 1380122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015003,
       "row_index": 3,
       "item_id": 1370122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015003,
       "row_index": 4,
       "item_id": 1380124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015003,
       "row_index": 5,
       "item_id": 1370124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12015011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12015012,
       "row_index": 0,
       "item_id": 1450603,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12015013,
       "row_index": 0,
       "item_id": 1380121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015013,
       "row_index": 1,
       "item_id": 1380122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015013,
       "row_index": 2,
       "item_id": 1380124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12015021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12015022,
       "row_index": 0,
       "item_id": 1450603,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12015023,
       "row_index": 0,
       "item_id": 1390121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015023,
       "row_index": 1,
       "item_id": 1380121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015023,
       "row_index": 2,
       "item_id": 1390122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015023,
       "row_index": 3,
       "item_id": 1380122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015023,
       "row_index": 4,
       "item_id": 1390124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12015023,
       "row_index": 5,
       "item_id": 1380124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12016001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12016002,
       "row_index": 0,
       "item_id": 1450409,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "CHANGE_EQUIPMENT_SUB_STAT"
     },
     {
       "group_id": 12016003,
       "row_index": 0,
       "item_id": 1390141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016003,
       "row_index": 1,
       "item_id": 1380141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016003,
       "row_index": 2,
       "item_id": 1390142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016003,
       "row_index": 3,
       "item_id": 1380142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016003,
       "row_index": 4,
       "item_id": 1390143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016003,
       "row_index": 5,
       "item_id": 1380143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016003,
       "row_index": 6,
       "item_id": 1390144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016003,
       "row_index": 7,
       "item_id": 1380144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016003,
       "row_index": 8,
       "item_id": 1390145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016003,
       "row_index": 9,
       "item_id": 1380145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12016011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12016012,
       "row_index": 0,
       "item_id": 1450409,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "CHANGE_EQUIPMENT_SUB_STAT"
     },
     {
       "group_id": 12016013,
       "row_index": 0,
       "item_id": 1390141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016013,
       "row_index": 1,
       "item_id": 1380141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016013,
       "row_index": 2,
       "item_id": 1390142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016013,
       "row_index": 3,
       "item_id": 1380142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016013,
       "row_index": 4,
       "item_id": 1390143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016013,
       "row_index": 5,
       "item_id": 1380143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016013,
       "row_index": 6,
       "item_id": 1390144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016013,
       "row_index": 7,
       "item_id": 1380144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016013,
       "row_index": 8,
       "item_id": 1390145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016013,
       "row_index": 9,
       "item_id": 1380145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12016021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12016022,
       "row_index": 0,
       "item_id": 1450409,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "CHANGE_EQUIPMENT_SUB_STAT"
     },
     {
       "group_id": 12016023,
       "row_index": 0,
       "item_id": 1390141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016023,
       "row_index": 1,
       "item_id": 1390142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016023,
       "row_index": 2,
       "item_id": 1390143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016023,
       "row_index": 3,
       "item_id": 1390144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12016023,
       "row_index": 4,
       "item_id": 1390145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12019001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12019002,
       "row_index": 0,
       "item_id": 1470201,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12019003,
       "row_index": 0,
       "item_id": 1390101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019003,
       "row_index": 1,
       "item_id": 1380101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019003,
       "row_index": 2,
       "item_id": 1390102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019003,
       "row_index": 3,
       "item_id": 1380102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019003,
       "row_index": 4,
       "item_id": 1390103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019003,
       "row_index": 5,
       "item_id": 1380103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019003,
       "row_index": 6,
       "item_id": 1390104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019003,
       "row_index": 7,
       "item_id": 1380104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019003,
       "row_index": 8,
       "item_id": 1390105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019003,
       "row_index": 9,
       "item_id": 1380105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12019011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12019012,
       "row_index": 0,
       "item_id": 1470201,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12019013,
       "row_index": 0,
       "item_id": 1390101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019013,
       "row_index": 1,
       "item_id": 1380101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019013,
       "row_index": 2,
       "item_id": 1390102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019013,
       "row_index": 3,
       "item_id": 1380102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019013,
       "row_index": 4,
       "item_id": 1390103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019013,
       "row_index": 5,
       "item_id": 1380103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019013,
       "row_index": 6,
       "item_id": 1390104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019013,
       "row_index": 7,
       "item_id": 1380104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019013,
       "row_index": 8,
       "item_id": 1390105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019013,
       "row_index": 9,
       "item_id": 1380105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Normal",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12019021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12019022,
       "row_index": 0,
       "item_id": 1470201,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Normal",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12019023,
       "row_index": 0,
       "item_id": 1390101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019023,
       "row_index": 1,
       "item_id": 1390102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019023,
       "row_index": 2,
       "item_id": 1390103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019023,
       "row_index": 3,
       "item_id": 1390104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12019023,
       "row_index": 4,
       "item_id": 1390105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Normal",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 12100000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12100001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12100002,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12100003,
       "row_index": 0,
       "item_id": 1410002,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "CHARACTER_EXP"
     },
     {
       "group_id": 12100010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12100011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12100012,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12100013,
       "row_index": 0,
       "item_id": 1410003,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "CHARACTER_EXP"
     },
     {
       "group_id": 12100020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12100021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12100022,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12100023,
       "row_index": 0,
       "item_id": 1410004,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "CHARACTER_EXP"
     },
     {
       "group_id": 12101000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12101001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12101002,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12101003,
       "row_index": 0,
       "item_id": 1410202,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "EQUIPMENT_EXP"
     },
     {
       "group_id": 12101010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12101011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12101012,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12101013,
       "row_index": 0,
       "item_id": 1410203,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "EQUIPMENT_EXP"
     },
     {
       "group_id": 12101020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12101021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12101022,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12101023,
       "row_index": 0,
       "item_id": 1410204,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "EQUIPMENT_EXP"
     },
     {
       "group_id": 12102000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12102001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12102002,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12102003,
       "row_index": 0,
       "item_id": 1410102,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "KARMA_EXP"
     },
     {
       "group_id": 12102010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12102011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12102012,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12102013,
       "row_index": 0,
       "item_id": 1410103,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "KARMA_EXP"
     },
     {
       "group_id": 12102020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12102021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12102022,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12102023,
       "row_index": 0,
       "item_id": 1410104,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "KARMA_EXP"
     },
     {
       "group_id": 12103000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12103001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12103002,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12103010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12103011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12103012,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12103020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12103021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12103022,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12104000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12104001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12104002,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12104003,
       "row_index": 0,
       "item_id": 1410004,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "CHARACTER_EXP"
     },
     {
       "group_id": 12104004,
       "row_index": 0,
       "item_id": 1410204,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "EQUIPMENT_EXP"
     },
     {
       "group_id": 12104005,
       "row_index": 0,
       "item_id": 1410104,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "KARMA_EXP"
     },
     {
       "group_id": 12104010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12104011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12104012,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12104013,
       "row_index": 0,
       "item_id": 1410004,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "CHARACTER_EXP"
     },
     {
       "group_id": 12104014,
       "row_index": 0,
       "item_id": 1410204,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "EQUIPMENT_EXP"
     },
     {
       "group_id": 12104015,
       "row_index": 0,
       "item_id": 1410104,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "KARMA_EXP"
     },
     {
       "group_id": 12104020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Currency",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12104021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12104022,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Currency",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 12104023,
       "row_index": 0,
       "item_id": 1410005,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "CHARACTER_EXP"
     },
     {
       "group_id": 12104024,
       "row_index": 0,
       "item_id": 1410205,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "EQUIPMENT_EXP"
     },
     {
       "group_id": 12104025,
       "row_index": 0,
       "item_id": 1410105,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Currency",
+      "item_type": "KARMA_EXP"
     },
     {
       "group_id": 12200000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12200001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12200002,
       "row_index": 0,
       "item_id": 1450101,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12200010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12200011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12200012,
       "row_index": 0,
       "item_id": 1450101,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12200013,
       "row_index": 0,
       "item_id": 1450102,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12200020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12200021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12200022,
       "row_index": 0,
       "item_id": 1450101,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12200023,
       "row_index": 0,
       "item_id": 1450102,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12200030,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12200031,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12200032,
       "row_index": 0,
       "item_id": 1450102,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12200033,
       "row_index": 0,
       "item_id": 1450103,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12201000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12201001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12201002,
       "row_index": 0,
       "item_id": 1450104,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12201010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12201011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12201012,
       "row_index": 0,
       "item_id": 1450104,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12201013,
       "row_index": 0,
       "item_id": 1450105,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12201020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12201021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12201022,
       "row_index": 0,
       "item_id": 1450104,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12201023,
       "row_index": 0,
       "item_id": 1450105,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12201030,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12201031,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12201032,
       "row_index": 0,
       "item_id": 1450105,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12201033,
       "row_index": 0,
       "item_id": 1450106,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12202000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12202001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12202002,
       "row_index": 0,
       "item_id": 1450107,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12202010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12202011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12202012,
       "row_index": 0,
       "item_id": 1450107,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12202013,
       "row_index": 0,
       "item_id": 1450108,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12202020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12202021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12202022,
       "row_index": 0,
       "item_id": 1450107,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12202023,
       "row_index": 0,
       "item_id": 1450108,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12202030,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12202031,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12202032,
       "row_index": 0,
       "item_id": 1450108,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12202033,
       "row_index": 0,
       "item_id": 1450109,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12203000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12203001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12203002,
       "row_index": 0,
       "item_id": 1450110,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12203010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12203011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12203012,
       "row_index": 0,
       "item_id": 1450110,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12203013,
       "row_index": 0,
       "item_id": 1450111,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12203020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12203021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12203022,
       "row_index": 0,
       "item_id": 1450110,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12203023,
       "row_index": 0,
       "item_id": 1450111,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12203030,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12203031,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12203032,
       "row_index": 0,
       "item_id": 1450111,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12203033,
       "row_index": 0,
       "item_id": 1450112,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12204000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12204001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12204002,
       "row_index": 0,
       "item_id": 1450113,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12204010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12204011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12204012,
       "row_index": 0,
       "item_id": 1450113,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12204013,
       "row_index": 0,
       "item_id": 1450114,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12204020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12204021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12204022,
       "row_index": 0,
       "item_id": 1450113,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12204023,
       "row_index": 0,
       "item_id": 1450114,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12204030,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12204031,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12204032,
       "row_index": 0,
       "item_id": 1450114,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12204033,
       "row_index": 0,
       "item_id": 1450115,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12205000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12205001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12205002,
       "row_index": 0,
       "item_id": 1450116,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12205010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12205011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12205012,
       "row_index": 0,
       "item_id": 1450116,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12205013,
       "row_index": 0,
       "item_id": 1450117,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12205020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12205021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12205022,
       "row_index": 0,
       "item_id": 1450116,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12205023,
       "row_index": 0,
       "item_id": 1450117,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12205030,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12205031,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12205032,
       "row_index": 0,
       "item_id": 1450117,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12205033,
       "row_index": 0,
       "item_id": 1450118,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12206000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12206001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12206002,
       "row_index": 0,
       "item_id": 1450119,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12206010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12206011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12206012,
       "row_index": 0,
       "item_id": 1450119,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12206013,
       "row_index": 0,
       "item_id": 1450120,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12206020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12206021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12206022,
       "row_index": 0,
       "item_id": 1450119,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12206023,
       "row_index": 0,
       "item_id": 1450120,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12206030,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12206031,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12206032,
       "row_index": 0,
       "item_id": 1450120,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12206033,
       "row_index": 0,
       "item_id": 1450121,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12207000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12207001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12207002,
       "row_index": 0,
       "item_id": 1450122,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12207010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12207011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12207012,
       "row_index": 0,
       "item_id": 1450122,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12207013,
       "row_index": 0,
       "item_id": 1450123,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12207020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12207021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12207022,
       "row_index": 0,
       "item_id": 1450122,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12207023,
       "row_index": 0,
       "item_id": 1450123,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12207030,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12207031,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12207032,
       "row_index": 0,
       "item_id": 1450123,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12207033,
       "row_index": 0,
       "item_id": 1450124,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12208000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12208001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12208002,
       "row_index": 0,
       "item_id": 1450125,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12208010,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12208011,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12208012,
       "row_index": 0,
       "item_id": 1450125,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12208013,
       "row_index": 0,
       "item_id": 1450126,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12208020,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12208021,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12208022,
       "row_index": 0,
       "item_id": 1450125,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12208023,
       "row_index": 0,
       "item_id": 1450126,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12208030,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Trait",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 12208031,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12208032,
       "row_index": 0,
       "item_id": 1450126,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
     },
     {
       "group_id": 12208033,
       "row_index": 0,
       "item_id": 1450127,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Trait",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 12500000,
+      "row_index": 0,
+      "item_id": 1000001,
+      "bucket": "gold",
+      "activity_category": "Underwater",
+      "item_type": "PAY_GOLD"
+    },
+    {
+      "group_id": 12500001,
+      "row_index": 0,
+      "item_id": 1460103,
+      "bucket": "materials",
+      "activity_category": "Underwater",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 12500002,
+      "row_index": 0,
+      "item_id": 1450601,
+      "bucket": "materials",
+      "activity_category": "Underwater",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 12500003,
+      "row_index": 0,
+      "item_id": 1450602,
+      "bucket": "materials",
+      "activity_category": "Underwater",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 12500010,
+      "row_index": 0,
+      "item_id": 1000001,
+      "bucket": "gold",
+      "activity_category": "Underwater",
+      "item_type": "PAY_GOLD"
+    },
+    {
+      "group_id": 12500011,
+      "row_index": 0,
+      "item_id": 1460103,
+      "bucket": "materials",
+      "activity_category": "Underwater",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 12500012,
+      "row_index": 0,
+      "item_id": 1450603,
+      "bucket": "materials",
+      "activity_category": "Underwater",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 12500013,
+      "row_index": 0,
+      "item_id": 1450604,
+      "bucket": "materials",
+      "activity_category": "Underwater",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13000001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000002,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000004,
       "row_index": 0,
       "item_id": 1450815,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000100,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13000101,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000102,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000104,
       "row_index": 0,
       "item_id": 1450815,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000200,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13000201,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000202,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000203,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000204,
       "row_index": 0,
       "item_id": 1450815,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000300,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13000301,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000302,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000303,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000304,
       "row_index": 0,
       "item_id": 1450815,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13000400,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13000401,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13001001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001002,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001004,
       "row_index": 0,
       "item_id": 1450816,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001100,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13001101,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001102,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001103,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001104,
       "row_index": 0,
       "item_id": 1450816,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001200,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13001201,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001202,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001203,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001204,
       "row_index": 0,
       "item_id": 1450816,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001300,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13001301,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001302,
       "row_index": 0,
       "item_id": 1450402,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001303,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001304,
       "row_index": 0,
       "item_id": 1450816,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13001400,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13001401,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13002001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002002,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002004,
       "row_index": 0,
       "item_id": 1450817,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002100,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13002101,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002102,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002103,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002104,
       "row_index": 0,
       "item_id": 1450817,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002200,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13002201,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002202,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002203,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002204,
       "row_index": 0,
       "item_id": 1450817,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002300,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13002301,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002302,
       "row_index": 0,
       "item_id": 1450402,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002303,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002304,
       "row_index": 0,
       "item_id": 1450817,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13002400,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13002401,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13003001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003002,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003003,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003004,
       "row_index": 0,
       "item_id": 1450818,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003100,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13003101,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003102,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003103,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003104,
       "row_index": 0,
       "item_id": 1450818,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003200,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13003201,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003202,
       "row_index": 0,
       "item_id": 1450402,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003203,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003204,
       "row_index": 0,
       "item_id": 1450818,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003300,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13003301,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003302,
       "row_index": 0,
       "item_id": 1450402,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003303,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003304,
       "row_index": 0,
       "item_id": 1450818,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13003400,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13003401,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13004001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004002,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004003,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004004,
       "row_index": 0,
       "item_id": 1450819,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004100,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13004101,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004102,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004103,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004104,
       "row_index": 0,
       "item_id": 1450819,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004200,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13004201,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004202,
       "row_index": 0,
       "item_id": 1450402,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004203,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004204,
       "row_index": 0,
       "item_id": 1450819,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004300,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13004301,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004302,
       "row_index": 0,
       "item_id": 1450402,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004303,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004304,
       "row_index": 0,
       "item_id": 1450819,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13004400,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13004401,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13005001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005002,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005004,
       "row_index": 0,
       "item_id": 1450823,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005100,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13005101,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005102,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005103,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005104,
       "row_index": 0,
       "item_id": 1450823,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005200,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13005201,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005202,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005203,
       "row_index": 0,
       "item_id": 1450811,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005204,
       "row_index": 0,
       "item_id": 1450823,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005300,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13005301,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005302,
       "row_index": 0,
       "item_id": 1450402,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005303,
       "row_index": 0,
       "item_id": 1450812,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005304,
       "row_index": 0,
       "item_id": 1450823,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 13005400,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 13005401,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
     },
     {
       "group_id": 14000000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Raid",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 14000001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "COMMON"
     },
     {
       "group_id": 14000002,
       "row_index": 0,
       "item_id": 1450408,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM_SOCKET_MATERIAL"
     },
     {
       "group_id": 14000003,
       "row_index": 0,
       "item_id": 1450409,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "CHANGE_EQUIPMENT_SUB_STAT"
     },
     {
       "group_id": 14000004,
       "row_index": 0,
       "item_id": 1310001,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000004,
       "row_index": 1,
       "item_id": 1310002,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000004,
       "row_index": 2,
       "item_id": 1310003,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000004,
       "row_index": 3,
       "item_id": 1310004,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000004,
       "row_index": 4,
       "item_id": 1310005,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000004,
       "row_index": 5,
       "item_id": 1310101,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000004,
       "row_index": 6,
       "item_id": 1310102,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000004,
       "row_index": 7,
       "item_id": 1310103,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000004,
       "row_index": 8,
       "item_id": 1310104,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000004,
       "row_index": 9,
       "item_id": 1310105,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000005,
       "row_index": 0,
       "item_id": 1390101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 1,
       "item_id": 1390102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 2,
       "item_id": 1390103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 3,
       "item_id": 1390104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 4,
       "item_id": 1390105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 5,
       "item_id": 1390121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 6,
       "item_id": 1390122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 7,
       "item_id": 1390123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 8,
       "item_id": 1390124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 9,
       "item_id": 1390125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 10,
       "item_id": 1390141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 11,
       "item_id": 1390142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 12,
       "item_id": 1390143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 13,
       "item_id": 1390144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000005,
       "row_index": 14,
       "item_id": 1390145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000006,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Raid",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 14000100,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Raid",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 14000101,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "COMMON"
     },
     {
       "group_id": 14000102,
       "row_index": 0,
       "item_id": 1450408,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM_SOCKET_MATERIAL"
     },
     {
       "group_id": 14000103,
       "row_index": 0,
       "item_id": 1450409,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "CHANGE_EQUIPMENT_SUB_STAT"
     },
     {
       "group_id": 14000104,
       "row_index": 0,
       "item_id": 1310201,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000104,
       "row_index": 1,
       "item_id": 1310202,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000104,
       "row_index": 2,
       "item_id": 1310203,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000104,
       "row_index": 3,
       "item_id": 1310204,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000104,
       "row_index": 4,
       "item_id": 1310205,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000104,
       "row_index": 5,
       "item_id": 1310301,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000104,
       "row_index": 6,
       "item_id": 1310302,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000104,
       "row_index": 7,
       "item_id": 1310303,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000104,
       "row_index": 8,
       "item_id": 1310304,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000104,
       "row_index": 9,
       "item_id": 1310305,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000105,
       "row_index": 0,
       "item_id": 1390101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 1,
       "item_id": 1390102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 2,
       "item_id": 1390103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 3,
       "item_id": 1390104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 4,
       "item_id": 1390105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 5,
       "item_id": 1390121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 6,
       "item_id": 1390122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 7,
       "item_id": 1390123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 8,
       "item_id": 1390124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 9,
       "item_id": 1390125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 10,
       "item_id": 1390141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 11,
       "item_id": 1390142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 12,
       "item_id": 1390143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 13,
       "item_id": 1390144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000105,
       "row_index": 14,
       "item_id": 1390145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000106,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Raid",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 14000200,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Raid",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 14000201,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "COMMON"
     },
     {
       "group_id": 14000202,
       "row_index": 0,
       "item_id": 1450408,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM_SOCKET_MATERIAL"
     },
     {
       "group_id": 14000203,
       "row_index": 0,
       "item_id": 1450409,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "CHANGE_EQUIPMENT_SUB_STAT"
     },
     {
       "group_id": 14000204,
       "row_index": 0,
       "item_id": 1310401,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000204,
       "row_index": 1,
       "item_id": 1310402,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000204,
       "row_index": 2,
       "item_id": 1310403,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000204,
       "row_index": 3,
       "item_id": 1310404,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000204,
       "row_index": 4,
       "item_id": 1310405,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14000205,
       "row_index": 0,
       "item_id": 1390101,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 1,
       "item_id": 1390102,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 2,
       "item_id": 1390103,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 3,
       "item_id": 1390104,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 4,
       "item_id": 1390105,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 5,
       "item_id": 1390121,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 6,
       "item_id": 1390122,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 7,
       "item_id": 1390123,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 8,
       "item_id": 1390124,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 9,
       "item_id": 1390125,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 10,
       "item_id": 1390141,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 11,
       "item_id": 1390142,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 12,
       "item_id": 1390143,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 13,
       "item_id": 1390144,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000205,
       "row_index": 14,
       "item_id": 1390145,
-      "bucket": "equipment"
+      "bucket": "equipment",
+      "activity_category": "Raid",
+      "item_type": "EQUIPMENT"
     },
     {
       "group_id": 14000206,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Raid",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 14001000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Raid",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 14001001,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "COMMON"
     },
     {
       "group_id": 14001002,
       "row_index": 0,
       "item_id": 1450408,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM_SOCKET_MATERIAL"
     },
     {
       "group_id": 14001003,
       "row_index": 0,
       "item_id": 1450409,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "CHANGE_EQUIPMENT_SUB_STAT"
     },
     {
       "group_id": 14001004,
       "row_index": 0,
       "item_id": 1310101,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001004,
       "row_index": 1,
       "item_id": 1310102,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001004,
       "row_index": 2,
       "item_id": 1310103,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001004,
       "row_index": 3,
       "item_id": 1310104,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001004,
       "row_index": 4,
       "item_id": 1310105,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001004,
       "row_index": 5,
       "item_id": 1310201,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001004,
       "row_index": 6,
       "item_id": 1310202,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001004,
       "row_index": 7,
       "item_id": 1310203,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001004,
       "row_index": 8,
       "item_id": 1310204,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001004,
       "row_index": 9,
       "item_id": 1310205,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001005,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Raid",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 14001100,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Raid",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 14001101,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "COMMON"
     },
     {
       "group_id": 14001102,
       "row_index": 0,
       "item_id": 1450408,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM_SOCKET_MATERIAL"
     },
     {
       "group_id": 14001103,
       "row_index": 0,
       "item_id": 1450409,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "CHANGE_EQUIPMENT_SUB_STAT"
     },
     {
       "group_id": 14001104,
       "row_index": 0,
       "item_id": 1310201,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001104,
       "row_index": 1,
       "item_id": 1310202,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001104,
       "row_index": 2,
       "item_id": 1310203,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001104,
       "row_index": 3,
       "item_id": 1310204,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001104,
       "row_index": 4,
       "item_id": 1310205,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001104,
       "row_index": 5,
       "item_id": 1310301,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001104,
       "row_index": 6,
       "item_id": 1310302,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001104,
       "row_index": 7,
       "item_id": 1310303,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001104,
       "row_index": 8,
       "item_id": 1310304,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001104,
       "row_index": 9,
       "item_id": 1310305,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001105,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Raid",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 14001200,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Raid",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 14001201,
       "row_index": 0,
       "item_id": 1450701,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "COMMON"
     },
     {
       "group_id": 14001202,
       "row_index": 0,
       "item_id": 1450408,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM_SOCKET_MATERIAL"
     },
     {
       "group_id": 14001203,
       "row_index": 0,
       "item_id": 1450409,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "CHANGE_EQUIPMENT_SUB_STAT"
     },
     {
       "group_id": 14001204,
       "row_index": 0,
       "item_id": 1310401,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001204,
       "row_index": 1,
       "item_id": 1310402,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001204,
       "row_index": 2,
       "item_id": 1310403,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001204,
       "row_index": 3,
       "item_id": 1310404,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001204,
       "row_index": 4,
       "item_id": 1310405,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Raid",
+      "item_type": "GEM"
     },
     {
       "group_id": 14001205,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Raid",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 21000000,
       "row_index": 0,
       "item_id": 1000201,
-      "bucket": "rank_experience"
+      "bucket": "rank_experience",
+      "activity_category": "Sudden",
+      "item_type": "PAY_ADV_EXP"
     },
     {
       "group_id": 21000001,
       "row_index": 0,
       "item_id": 1000001,
-      "bucket": "gold"
+      "bucket": "gold",
+      "activity_category": "Sudden",
+      "item_type": "PAY_GOLD"
     },
     {
       "group_id": 21000002,
       "row_index": 0,
       "item_id": 1000501,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Sudden",
+      "item_type": "COMMON"
     },
     {
       "group_id": 21000003,
       "row_index": 0,
       "item_id": 1450401,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Sudden",
+      "item_type": "COMMON"
     },
     {
       "group_id": 21000004,
       "row_index": 0,
       "item_id": 1450408,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Sudden",
+      "item_type": "GEM_SOCKET_MATERIAL"
     },
     {
       "group_id": 21000005,
       "row_index": 0,
       "item_id": 1450409,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Sudden",
+      "item_type": "CHANGE_EQUIPMENT_SUB_STAT"
     },
     {
       "group_id": 21000006,
       "row_index": 0,
       "item_id": 1470201,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Sudden",
+      "item_type": "COMMON"
     },
     {
       "group_id": 21000007,
       "row_index": 0,
       "item_id": 1450601,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Sudden",
+      "item_type": "COMMON"
     },
     {
       "group_id": 21000008,
       "row_index": 0,
       "item_id": 1450602,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Sudden",
+      "item_type": "COMMON"
     },
     {
       "group_id": 21000009,
       "row_index": 0,
       "item_id": 1450603,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Sudden",
+      "item_type": "COMMON"
     },
     {
       "group_id": 21000010,
       "row_index": 0,
       "item_id": 1450604,
-      "bucket": "materials"
+      "bucket": "materials",
+      "activity_category": "Sudden",
+      "item_type": "COMMON"
     }
   ],
   "rarity_groups": [
@@ -8346,8 +10038,9 @@
     "visible_trait_maps": 36,
     "visible_hunt_maps": 30,
     "visible_raid_maps": 6,
-    "activity_random_groups": 555,
-    "activity_reward_rows": 814,
+    "supported_underwater_maps": 2,
+    "activity_random_groups": 563,
+    "activity_reward_rows": 822,
     "sudden_mission_groups": 11,
     "rarity_groups": 31,
     "safe_world_chest_rows": 431,

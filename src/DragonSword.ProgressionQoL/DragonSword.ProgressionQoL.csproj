@@ -7,8 +7,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>DragonSword.ProgressionQoL</AssemblyName>
     <RootNamespace>DragonSword.ProgressionQoL</RootNamespace>
-    <Version>0.9.2</Version>
-    <InformationalVersion>0.9.2-rc.3</InformationalVersion>
+    <Version>0.9.4</Version>
+    <InformationalVersion>0.9.4-rc.1</InformationalVersion>
     <Authors>nectarines</Authors>
     <Company>nectarines</Company>
     <Copyright>Copyright © 2026 nectarines</Copyright>

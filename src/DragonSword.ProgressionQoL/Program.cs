@@ -15,6 +15,16 @@ internal static class Program
             RunBuildTest(args[1], maximums: true);
             return;
         }
+        if (args.Length == 2 && args[0].Equals("--build-test-currency-xp", StringComparison.OrdinalIgnoreCase))
+        {
+            RunBuildTest(args[1], maximums: false, currencyExperienceOnly: true);
+            return;
+        }
+        if (args.Length == 2 && args[0].Equals("--build-test-underwater", StringComparison.OrdinalIgnoreCase))
+        {
+            RunBuildTest(args[1], maximums: false, underwaterRewardsOnly: true);
+            return;
+        }
         if (args.Length == 2 && args[0].Equals("--ui-snapshot", StringComparison.OrdinalIgnoreCase))
         {
             RunUiSnapshot(args[1], false);
@@ -48,14 +58,22 @@ internal static class Program
         Application.Run(new MainForm());
     }
 
-    private static void RunBuildTest(string outputDirectory, bool maximums)
+    private static void RunBuildTest(
+        string outputDirectory,
+        bool maximums,
+        bool currencyExperienceOnly = false,
+        bool underwaterRewardsOnly = false)
     {
         try
         {
             var engine = new BuildEngine(AppContext.BaseDirectory);
-            var config = maximums
-                ? new BuildConfig(20, 20, 10, 20, 20, 20, 20, 10, true, true, 90m)
-                : new BuildConfig(2, 2, 5, 5, 5, 10, 10, 2, true, true, 90m);
+            var config = underwaterRewardsOnly
+                ? new BuildConfig(1, 1, 1, 2, 1, 1, 2, 1, 1, false, false, 90m)
+                : currencyExperienceOnly
+                ? new BuildConfig(1, 1, 1, 1, 2, 1, 1, 1, 1, false, false, 90m)
+                : maximums
+                    ? new BuildConfig(20, 20, 10, 20, 20, 20, 20, 20, 10, true, true, 90m)
+                    : new BuildConfig(2, 2, 5, 5, 5, 5, 10, 10, 2, true, true, 90m);
             var progress = new Progress<string>(Console.WriteLine);
             var result = engine.BuildAsync(config, outputDirectory, progress).GetAwaiter().GetResult();
             Console.WriteLine($"TEST_BUILD_OK|{result.PakPath}|{result.Sha256}|{result.FilesPacked}");

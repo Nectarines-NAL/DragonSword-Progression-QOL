@@ -2,13 +2,15 @@
 
 An offline reward configurator for **DragonSword: Awakening**, created by **nectarines**.
 
-Version `0.9.2-rc.3` is a test candidate rebuilt from unmodified game version 1.0.9, Steam build `24693558`. It builds one custom Unreal PAK from independently maintained targets and official game-table baselines. Every multiplier starts at vanilla `x1`; both optional loot-shape features start off.
+Version `0.9.4-rc.1` is a release candidate validated against unmodified game version 1.0.10, Steam build `24831799`. It builds one custom Unreal PAK from independently maintained targets and official game-table baselines. Every multiplier starts at vanilla `x1`; both optional loot-shape features start off.
 
 ## Features
 
 - World gathering and ordinary enemy materials: x1–x20.
 - Safe stackable world-chest rewards: x1–x10. Known unique and progression rewards remain unchanged.
 - Dungeon, hunt, raid, and Sudden Mission equipment, crafting materials, Adventurer's Emblems, gold, and Mercenary Corps Rank EXP.
+- Verified Gold and Crafting Materials from Sunken Ruins and Ruins Beneath the Waves.
+- Independent Currency EXP Items control for Character, Equipment, and Karma EXP items from the three repeatable Currency Dungeons.
 - Equipment is capped at x10 because the equipment inventory holds 500 items.
 - Optional Spread Equipment Rolls turns a multiplied equipment stack into several independent selections from the same pool, allowing more variety without forcing unique item types.
 - Optional Favor Better Rarity shifts supported mixed pools toward their better available tier without adding quantity.
@@ -65,7 +67,7 @@ The generated PAK may contain these game paths:
 
 Another PAK editing the same tables conflicts at the file level; Unreal PAK load order does not merge individual rows. The built-in scanner lists likely PAKs and verifies their internal paths before warning.
 
-The table baseline was extracted from unmodified game version 1.0.9, Steam build `24693558`. Automatic installation checks the local Steam manifest and refuses a different build because a game update can change these full reward tables. Building alone never modifies the game.
+The table baseline was extracted from unmodified game version 1.0.10, Steam build `24831799`. Every managed reward-system table was confirmed byte-identical to the validated 1.0.9 baseline; only the English localization table changed. Automatic installation checks the local Steam manifest and refuses a different build because a game update can change these full reward tables. Building alone never modifies the game.
 
 ## Independent provenance
 

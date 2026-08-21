@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.9.4-rc.1 — 2026-08-20
+
+- Revalidated the project against unmodified DragonSword: Awakening 1.0.10, Steam build 24831799.
+- Confirmed that every managed reward, dungeon, item, gathering, and chest table is byte-identical to the validated 1.0.9 baseline; only the English localization table changed.
+- Added Sunken Ruins and Ruins Beneath the Waves to the existing Activity Gold and Crafting Materials controls.
+- Added exactly eight independently verified underwater reward rows: two Gold rows and six material rows. Hidden content is still excluded unless explicitly allowlisted.
+- Added the independent Currency EXP Items control developed in 0.9.3 RC1 to the public 1.0.10 candidate.
+- Updated the automatic Steam build gate, application branding, manifest provenance, command-line validation, and release documentation for 1.0.10.
+- Retained saved-profile compatibility. Existing profiles continue to load; underwater rewards follow their existing Gold and Crafting Materials values.
+- Kept fragment handling conservative: verified Sudden Mission Sacred Light and safe world-chest Memory sources remain covered by their existing controls, while unverified or one-time fragment routes are not broadly multiplied.
+
+## 0.9.3-rc.1 — 2026-08-14
+
+- Added an independent Currency EXP Items multiplier for Character, Equipment, and Karma EXP items from repeatable Currency Dungeons.
+- Kept Currency EXP items separate from Crafting Materials so the two controls never multiply the same reward row.
+- Added explicit activity-category and item-type metadata to the verified 1.09 target manifest.
+- Preserved older saved-profile behavior by inheriting the previous Crafting Materials value when an older profile has no Currency EXP Items field.
+- Added a focused currency-EXP-only build test and row-isolation validation.
+
 ## 0.9.2-rc.3 — 2026-08-13
 
 - Moved saved profiles to version-independent, per-user Local AppData so future application releases retain them automatically on any Windows installation.

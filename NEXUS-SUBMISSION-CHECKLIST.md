@@ -3,7 +3,7 @@
 Reference reviewed: Nexus Mods File Submission Guidelines, live review 2026-08-06.
 
 - [ ] Upload to the correct game and utility/mod category.
-- [ ] Describe this as a 1.09 **test candidate** for Steam build `24693558`, pending gameplay validation.
+- [ ] Describe this as a 1.0.10 **release candidate** for Steam build `24831799`, pending final gameplay smoke validation.
 - [ ] Apply `AI-Generated Content` and `AI Media` tags.
 - [ ] State that code, UI, and documentation were AI-assisted and that the original fantasy reward-forge artwork was AI-generated for this project.
 - [ ] Include the matching source archive, SHA-256 file, and third-party notices.

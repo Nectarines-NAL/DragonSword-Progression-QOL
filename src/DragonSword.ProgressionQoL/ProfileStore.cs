@@ -80,6 +80,8 @@ internal sealed class ProfileStore
     {
         var document = JsonSerializer.Deserialize<ProfileDocument>(File.ReadAllText(path, Encoding.UTF8), _jsonOptions)
             ?? throw new InvalidDataException("The selected profile is empty or invalid.");
+        if (document.Settings.CurrencyExperienceItemMultiplier == 0)
+            document = document with { Settings = document.Settings with { CurrencyExperienceItemMultiplier = document.Settings.ActivityMaterialMultiplier } };
         if (document.SchemaVersion != CurrentSchemaVersion)
             throw new InvalidDataException($"Profile schema {document.SchemaVersion} is unsupported. Expected {CurrentSchemaVersion}.");
         ValidateName(document.Name);
@@ -225,6 +227,7 @@ internal sealed class ProfileStore
         RequireChoice(nameof(settings.EnemyMaterialMultiplier), settings.EnemyMaterialMultiplier, GeneralMultipliers);
         RequireChoice(nameof(settings.EquipmentMultiplier), settings.EquipmentMultiplier, LimitedMultipliers);
         RequireChoice(nameof(settings.ActivityMaterialMultiplier), settings.ActivityMaterialMultiplier, GeneralMultipliers);
+        RequireChoice(nameof(settings.CurrencyExperienceItemMultiplier), settings.CurrencyExperienceItemMultiplier, GeneralMultipliers);
         RequireChoice(nameof(settings.AdventurerEmblemMultiplier), settings.AdventurerEmblemMultiplier, GeneralMultipliers);
         RequireChoice(nameof(settings.GoldMultiplier), settings.GoldMultiplier, GeneralMultipliers);
         RequireChoice(nameof(settings.RankExperienceMultiplier), settings.RankExperienceMultiplier, GeneralMultipliers);

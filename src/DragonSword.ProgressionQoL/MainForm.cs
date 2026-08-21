@@ -37,7 +37,7 @@ internal sealed class MainForm : Form
 
     public MainForm(bool startMaximized = false)
     {
-        Text = "DragonSword Progression QOL — 1.09 Release Candidate";
+        Text = "DragonSword Progression QOL — 1.0.10 Release Candidate";
         MinimumSize = new Size(1000, 700);
         var working = Screen.PrimaryScreen?.WorkingArea ?? new Rectangle(0, 0, 1600, 1000);
         Size = new Size(Math.Min(1480, working.Width - 96), Math.Min(1000, working.Height - 72));
@@ -146,14 +146,15 @@ internal sealed class MainForm : Form
             ]), 0, 0);
         layout.Controls.Add(BuildSection(
             "ACTIVITIES",
-            "Dungeons, hunts, raids, and Sudden Missions. Each setting multiplies its original 1.09 reward.",
+            "Dungeons, hunts, raids, and Sudden Missions. Gold and Crafting Materials include the two underwater dungeons.",
             RewardGlyph.Activities,
             [
                 AddMultiplier("Equipment", "equipment", 1, 10, "Activity gear. x10 max. Inventory: 500 items.", RewardGlyph.Equipment),
-                AddMultiplier("Crafting materials", "activityMaterials", 1, 20, "Trait stones, boss parts, Raid runes, upgrades, and character, equipment, or Karma XP items.", RewardGlyph.Material),
+                AddMultiplier("Crafting materials", "activityMaterials", 1, 20, "Trait stones, boss parts, Raid runes, upgrades, and underwater loot.", RewardGlyph.Material),
                 AddMultiplier("Emblems", "emblems", 1, 20, "Exchange Shop currency; Sudden Missions included.", RewardGlyph.Emblem),
                 AddMultiplier("Gold", "gold", 1, 20, "Gold from activity completions.", RewardGlyph.Gold),
-                AddMultiplier("Experience", "rankXp", 1, 20, "Mercenary Corps Rank EXP.", RewardGlyph.Experience)
+                AddMultiplier("Experience", "rankXp", 1, 20, "Mercenary Corps Rank EXP.", RewardGlyph.Experience),
+                AddMultiplier("Currency EXP items", "currencyXpItems", 1, 20, "Character, Equipment, and Karma EXP items from Currency Dungeons only.", RewardGlyph.Experience)
             ], 2), 1, 0);
 
         _spread.Checked = false;
@@ -418,7 +419,7 @@ internal sealed class MainForm : Form
 
     private BuildConfig ReadConfig() => new(
         SelectedValue("gathering"), SelectedValue("enemy"), SelectedValue("equipment"),
-        SelectedValue("activityMaterials"), SelectedValue("emblems"), SelectedValue("gold"), SelectedValue("rankXp"),
+        SelectedValue("activityMaterials"), SelectedValue("currencyXpItems"), SelectedValue("emblems"), SelectedValue("gold"), SelectedValue("rankXp"),
         SelectedValue("chests"), _spread.Checked, _rarity.Checked, SelectedValue("rarityChance"));
 
     private int SelectedValue(string key) => _multipliers[key].Value;
@@ -432,6 +433,7 @@ internal sealed class MainForm : Form
             _multipliers["enemy"].SetValue(config.EnemyMaterialMultiplier);
             _multipliers["equipment"].SetValue(config.EquipmentMultiplier);
             _multipliers["activityMaterials"].SetValue(config.ActivityMaterialMultiplier);
+            _multipliers["currencyXpItems"].SetValue(config.CurrencyExperienceItemMultiplier);
             _multipliers["emblems"].SetValue(config.AdventurerEmblemMultiplier);
             _multipliers["gold"].SetValue(config.GoldMultiplier);
             _multipliers["rankXp"].SetValue(config.RankExperienceMultiplier);
@@ -602,7 +604,7 @@ internal sealed class MainForm : Form
 
     private void ResetToDefaults()
     {
-        ApplyConfig(new BuildConfig(1, 1, 1, 1, 1, 1, 1, 1, false, false, 90m));
+        ApplyConfig(new BuildConfig(1, 1, 1, 1, 1, 1, 1, 1, 1, false, false, 90m));
         _currentProfileName = "Default";
         _configurationDirty = false;
         UpdateProfileStatus();
@@ -714,6 +716,7 @@ internal sealed class MainForm : Form
         config.EnemyMaterialMultiplier == 1 &&
         config.EquipmentMultiplier == 1 &&
         config.ActivityMaterialMultiplier == 1 &&
+        config.CurrencyExperienceItemMultiplier == 1 &&
         config.AdventurerEmblemMultiplier == 1 &&
         config.GoldMultiplier == 1 &&
         config.RankExperienceMultiplier == 1 &&
@@ -813,6 +816,7 @@ internal sealed class MainForm : Form
         SetScreenshotValue("chests", 5);
         SetScreenshotValue("equipment", 5);
         SetScreenshotValue("activityMaterials", 10);
+        SetScreenshotValue("currencyXpItems", 2);
         SetScreenshotValue("emblems", 5);
         SetScreenshotValue("gold", 10);
         SetScreenshotValue("rankXp", 5);
@@ -1172,7 +1176,7 @@ internal sealed class MainForm : Form
             var buildY = creditY + creditFont.GetHeight(e.Graphics) + 3f;
             e.Graphics.DrawString("PROGRESSION QOL", titleFont, titleBrush, 34f, titleY);
             e.Graphics.DrawString("DRAGONSWORD REWARD CONFIGURATOR  •  CREATED BY NECTARINES", creditFont, creditBrush, 38f, creditY);
-            e.Graphics.DrawString("VERSION 0.9.2 RC3  •  BUILT FOR GAME 1.0.9  •  ONE CUSTOM PAK  •  OFFLINE", buildFont, titleBrush, 39f, buildY);
+            e.Graphics.DrawString("VERSION 0.9.4 RC1  •  BUILT FOR GAME 1.0.10  •  ONE CUSTOM PAK  •  OFFLINE", buildFont, titleBrush, 39f, buildY);
         }
     }
 }

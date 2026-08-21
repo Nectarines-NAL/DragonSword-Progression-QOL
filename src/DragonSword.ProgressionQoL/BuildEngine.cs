@@ -13,8 +13,8 @@ namespace DragonSword.ProgressionQoL;
 internal sealed class BuildEngine
 {
     private const string PakName = "DS_ZZZ_ProgressionQoL_Configured_P.pak";
-    public const string SupportedGameVersion = "1.0.9";
-    public const string SupportedSteamBuildId = "24693558";
+    public const string SupportedGameVersion = "1.0.10";
+    public const string SupportedSteamBuildId = "24831799";
     private static readonly CultureInfo Invariant = CultureInfo.InvariantCulture;
     private static readonly Regex XmlId = new("\\b(?:\\w+:)?ID=\"(\\d+)\"", RegexOptions.Compiled);
 
@@ -75,6 +75,7 @@ internal sealed class BuildEngine
             {
                 "equipment" => config.SpreadRolls ? 1 : config.EquipmentMultiplier,
                 "materials" when target.ItemId == 1450701 => config.AdventurerEmblemMultiplier,
+                "materials" when target.Category == "Currency" && target.ItemType is "CHARACTER_EXP" or "EQUIPMENT_EXP" or "KARMA_EXP" => config.CurrencyExperienceItemMultiplier,
                 "materials" => config.ActivityMaterialMultiplier,
                 "gold" => config.GoldMultiplier,
                 "rank_experience" => config.RankExperienceMultiplier,
@@ -365,7 +366,7 @@ internal sealed class BuildEngine
             {
                 var itemId = rows[i]!["ItemID"]!.GetValue<long>();
                 if (itemTypes.TryGetValue(itemId, out var type) && type is "COMMON" or "COOKING_INGREDIENT")
-                    result.Add(new RowTarget(groupId, i, itemId, "enemy_material"));
+                    result.Add(new RowTarget(groupId, i, itemId, "enemy_material", "", type));
             }
         }
         return result;
@@ -391,7 +392,13 @@ internal sealed class BuildEngine
         foreach (var entry in node?.AsArray() ?? [])
         {
             var obj = entry!.AsObject();
-            result.Add(new RowTarget(obj["group_id"]!.GetValue<long>(), obj["row_index"]!.GetValue<int>(), obj["item_id"]!.GetValue<long>(), obj["bucket"]?.GetValue<string>() ?? ""));
+            result.Add(new RowTarget(
+                obj["group_id"]!.GetValue<long>(),
+                obj["row_index"]!.GetValue<int>(),
+                obj["item_id"]!.GetValue<long>(),
+                obj["bucket"]?.GetValue<string>() ?? "",
+                obj["activity_category"]?.GetValue<string>() ?? "",
+                obj["item_type"]?.GetValue<string>() ?? ""));
         }
         return result;
     }
@@ -443,7 +450,7 @@ internal sealed class BuildEngine
             foreach (var targetNode in rows)
             {
                 var targetObject = targetNode!.AsObject();
-                var target = new RowTarget(groupId, targetObject["row_index"]!.GetValue<int>(), targetObject["item_id"]!.GetValue<long>(), "rarity");
+                var target = new RowTarget(groupId, targetObject["row_index"]!.GetValue<int>(), targetObject["item_id"]!.GetValue<long>(), "rarity", "", "");
                 var isHigh = targetObject["tier"]!.GetValue<string>() == "higher";
                 RewardRow(random, target)["ItemWeight"] = isHigh ? highPercent / high : (100m - highPercent) / low;
             }
@@ -631,7 +638,7 @@ internal sealed class BuildEngine
 
     private static void Validate(BuildConfig c)
     {
-        foreach (var value in new[] { c.WorldGatheringMultiplier, c.EnemyMaterialMultiplier, c.EquipmentMultiplier, c.ActivityMaterialMultiplier, c.AdventurerEmblemMultiplier, c.GoldMultiplier, c.RankExperienceMultiplier, c.WorldChestMultiplier })
+        foreach (var value in new[] { c.WorldGatheringMultiplier, c.EnemyMaterialMultiplier, c.EquipmentMultiplier, c.ActivityMaterialMultiplier, c.CurrencyExperienceItemMultiplier, c.AdventurerEmblemMultiplier, c.GoldMultiplier, c.RankExperienceMultiplier, c.WorldChestMultiplier })
             if (value is < 1 or > 100) throw new ArgumentOutOfRangeException(nameof(c), "Multipliers must be between 1 and 100.");
         if (c.EquipmentMultiplier > 10)
             throw new ArgumentOutOfRangeException(nameof(c), "Equipment is capped at x10 to protect the game's 500-slot equipment inventory.");
@@ -640,7 +647,7 @@ internal sealed class BuildEngine
 
     private static void RequireFile(string path) { if (!File.Exists(path)) throw new FileNotFoundException("A required, auditable application file is missing. Antivirus quarantine may be responsible.", path); }
 
-    private sealed record RowTarget(long GroupId, int RowIndex, long ItemId, string Bucket);
+    private sealed record RowTarget(long GroupId, int RowIndex, long ItemId, string Bucket, string Category, string ItemType);
     private sealed record CloneDefinition(long SourceGroupId, long CloneGroupId, long Quantity);
     private sealed record SpreadResult(int TransformedRows, List<CloneDefinition> GeneratedGroups);
 }

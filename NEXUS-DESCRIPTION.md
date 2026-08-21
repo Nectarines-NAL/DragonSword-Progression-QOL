@@ -4,19 +4,18 @@ Created by **nectarines**
 
 Progression QOL lets you build one custom reward PAK instead of choosing between a pile of fixed multiplier files. Every setting starts at vanilla behavior, so you decide exactly what changes.
 
-**Current release:** Progression QOL 0.9.2 RC3 for DragonSword: Awakening 1.0.9, Steam build 24693558.
+**Current release candidate:** Progression QOL 0.9.4 RC1 for DragonSword: Awakening 1.0.10, Steam build 24831799.
 
-## Updated for DragonSword 1.0.9
+## Updated for DragonSword 1.0.10
 
-- Rebuilt from the unmodified 1.0.9 game tables
-- Updated dungeon, hunt, raid, Trait, Currency, and Sudden Mission reward routes
-- Fixed activity equipment, materials, Emblems, Gold, EXP, and Trait stone multipliers
-- Fixed World Gathering x20
-- Fixed Favor Better Rarity when used with Spread Equipment Rolls
-- Preserved the new Nightmare Barduk achievement reward
+- Revalidated against the unmodified 1.0.10 game tables
+- Confirmed every managed reward-system table is unchanged from the validated 1.0.9 baseline
+- Added Sunken Ruins and Ruins Beneath the Waves to Activity Gold and Crafting Materials
+- Added a separate Currency EXP Items control for Character, Equipment, and Karma EXP items
+- Retains the 1.0.9 fixes for activity rewards, World Gathering x20, Favor Better Rarity with Spread, and the Nightmare Barduk achievement
 - Added named profiles that remain available after updating or moving the app
-- Added a confirmed one-click return to vanilla behavior
-- Improved layout behavior on Windows display scaling
+- Added a guided, confirmed return to vanilla behavior
+- Retained DPI-aware layout and scroll fallback for scaled displays
 
 ## What you can configure
 
@@ -24,7 +23,8 @@ Progression QOL lets you build one custom reward PAK instead of choosing between
 - Enemy materials: ordinary and field-enemy material drops
 - Safe chest stacks: stackable rewards from one-time world exploration chests; dungeon chests, unique items, and progression items remain unchanged
 - Equipment from dungeons, hunts, raids, and Sudden Missions
-- Activity crafting materials, including boss parts, runes, upgrades, and XP items
+- Activity crafting materials, including boss parts, runes, upgrades, Trait stones, and the two hidden underwater dungeons
+- Currency EXP Items: Character, Equipment, and Karma EXP items from the three repeatable Currency Dungeons, independently configurable from other crafting materials
 - Adventurer's Emblems for the Exchange Shop
 - Gold and Mercenary Corps Rank EXP
 - Spread Equipment Rolls for more variety within the same total equipment quantity
@@ -68,7 +68,11 @@ To change settings later, open the app and use **Build + Install** again. The pr
 
 ## Compatibility
 
-This release was rebuilt from DragonSword: Awakening 1.0.9, Steam build 24693558. Automatic installation refuses a different game build. Because two PAKs that replace the same Unreal reward tables cannot be row-merged at load time, disable any file identified by the built-in conflict scan before playing.
+This release was validated against DragonSword: Awakening 1.0.10, Steam build 24831799. Automatic installation refuses a different game build. Because two PAKs that replace the same Unreal reward tables cannot be row-merged at load time, disable any file identified by the built-in conflict scan before playing.
+
+## Fragment reward scope
+
+Fragment rewards are included only where their repeatable source is verified. Fragment of Sacred Light from supported Sudden Missions follows Crafting Materials, and verified Fragment of Memory rows in one-time world exploration chests follow Safe Chest Stacks. One-time, story, unknown, and unverified fragment routes—including Whirling Thoughts—are intentionally not multiplied.
 
 ## Transparent and offline
 
@@ -88,6 +92,8 @@ The archive includes the open-source `repak` utility for local PAK creation and 
 Progression QOL is independently authored from unmodified game-table baselines and nectarines' own Dungeon QOL target work. It does not require, ingest, copy, or redistribute another mod. It includes no third-party mod files, settings, branding, descriptions, screenshots, or artwork.
 
 The original fantasy reward-forge artwork was AI-generated specifically for this project and contains no game characters or logos. OpenAI Codex assisted with code, UI implementation, test tooling, and documentation. The application is unobfuscated and the matching source release is available for inspection.
+
+Source and issue tracker: https://github.com/Nectarines-NAL/DragonSword-Progression-QOL
 
 ## Uninstall
 

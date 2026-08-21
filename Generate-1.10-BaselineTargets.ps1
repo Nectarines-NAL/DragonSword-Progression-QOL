@@ -10,7 +10,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $utf8WithoutBom = [Text.UTF8Encoding]::new($false)
-$supportedBuildID = '24693558'
+$supportedBuildID = '24831799'
 
 function Read-Table {
     param([Parameter(Mandatory)][string]$Name)
@@ -26,6 +26,7 @@ function Get-ActivityCategory {
     param([long]$MapID)
 
     if ($MapID -ge 10101 -and $MapID -le 11803) { return 'Normal' }
+    if ($MapID -in 11901, 11902) { return 'Underwater' }
     if ($MapID -ge 20001 -and $MapID -le 20043) { return 'Currency' }
     if ($MapID -ge 400001 -and $MapID -le 400084) { return 'Trait' }
     if ($MapID -ge 100001 -and $MapID -le 100055) { return 'Hunt' }
@@ -69,7 +70,9 @@ function New-RowIdentity {
         [long]$GroupID,
         [int]$RowIndex,
         $Row,
-        [string]$Bucket = ''
+        [string]$Bucket = '',
+        [string]$Category = '',
+        [string]$ItemType = ''
     )
 
     $result = [ordered]@{
@@ -79,6 +82,12 @@ function New-RowIdentity {
     }
     if (-not [string]::IsNullOrWhiteSpace($Bucket)) {
         $result.bucket = $Bucket
+    }
+    if (-not [string]::IsNullOrWhiteSpace($Category)) {
+        $result.activity_category = $Category
+    }
+    if (-not [string]::IsNullOrWhiteSpace($ItemType)) {
+        $result.item_type = $ItemType
     }
     return $result
 }
@@ -101,6 +110,7 @@ $allowedTypes = @{
     Trait = @('PAY_ADV_EXP', 'COMMON')
     Hunt = @('PAY_ADV_EXP', 'COMMON')
     Raid = @('PAY_ADV_EXP', 'COMMON', 'PAY_GOLD', 'GEM_SOCKET_MATERIAL', 'CHANGE_EQUIPMENT_SUB_STAT', 'GEM', 'EQUIPMENT')
+    Underwater = @('PAY_GOLD', 'COMMON')
     Sudden = @(
         'PAY_ADV_EXP', 'PAY_GOLD', 'COMMON', 'GEM_SOCKET_MATERIAL',
         'CHANGE_EQUIPMENT_SUB_STAT'
@@ -111,18 +121,18 @@ $firstClearRewardIDs = [Collections.Generic.HashSet[long]]::new()
 $targetRewardIDs = [Collections.Generic.HashSet[long]]::new()
 $groupCategories = @{}
 $groupRarityMetadata = @{}
-$visibleMapCounts = @{}
+$supportedMapCounts = @{}
 
 foreach ($map in $maps.PSObject.Properties.Value) {
     Add-PositiveIDs -Set $firstClearRewardIDs -Values $map.First_Reward_ID
     $category = Get-ActivityCategory -MapID ([long]$map.ID)
-    if ($null -eq $category -or [bool]$map.IsHide) { continue }
+    if ($null -eq $category -or ([bool]$map.IsHide -and $category -ne 'Underwater')) { continue }
     if ([long]$map.Reward_ID -le 0) {
-        throw "$category map $($map.ID) has no direct clear reward in game 1.0.9."
+        throw "$category map $($map.ID) has no direct clear reward in game 1.0.10."
     }
 
-    if (-not $visibleMapCounts.ContainsKey($category)) { $visibleMapCounts[$category] = 0 }
-    $visibleMapCounts[$category]++
+    if (-not $supportedMapCounts.ContainsKey($category)) { $supportedMapCounts[$category] = 0 }
+    $supportedMapCounts[$category]++
     [void]$targetRewardIDs.Add([long]$map.Reward_ID)
 
     foreach ($groupID in (Get-RandomIDsForReward -RewardData $rewardData -RewardID ([long]$map.Reward_ID))) {
@@ -153,13 +163,13 @@ foreach ($map in $maps.PSObject.Properties.Value) {
 # Sudden Missions use seven RewardData entries which converge on these eleven
 # repeat-reward groups. These identities come from the independently authored
 # Dungeon QOL v1.3 work in this repository, and are revalidated below against
-# the unmodified 1.0.9 tables before inclusion.
+# the unmodified 1.0.10 tables before inclusion.
 $suddenMissionGroups = 21000000..21000010
 $suddenRewardIDs = 2100000..2100006
 foreach ($rewardID in $suddenRewardIDs) { [void]$targetRewardIDs.Add([long]$rewardID) }
 foreach ($groupID in $suddenMissionGroups) {
     if ($null -eq $rewardRandom.PSObject.Properties["$groupID"]) {
-        throw "Game 1.0.9 is missing known Sudden Mission group $groupID."
+        throw "Game 1.0.10 is missing known Sudden Mission group $groupID."
     }
     $groupCategories[[long]$groupID] = 'Sudden'
 }
@@ -226,7 +236,7 @@ foreach ($entry in ($groupCategories.GetEnumerator() | Sort-Object Key)) {
             'PAY_ADV_EXP' { 'rank_experience'; break }
             default { 'materials' }
         }
-        $activityRows.Add((New-RowIdentity -GroupID $groupID -RowIndex $index -Row $row -Bucket $bucket))
+        $activityRows.Add((New-RowIdentity -GroupID $groupID -RowIndex $index -Row $row -Bucket $bucket -Category $category -ItemType $itemType))
         [void]$activityKeys.Add("$groupID`:$index")
     }
 }
@@ -310,9 +320,9 @@ foreach ($groupID in ($chestRandomIDs | Sort-Object)) {
 }
 
 $manifest = [ordered]@{
-    schema_version = 2
-    provenance = "Independently derived from unmodified DragonSword: Awakening 1.0.9 Steam build $supportedBuildID tables and nectarines' Dungeon QOL Sudden Mission research."
-    game_version = '1.0.9'
+    schema_version = 4
+    provenance = "Independently derived from unmodified DragonSword: Awakening 1.0.10 Steam build $supportedBuildID tables and nectarines' Dungeon QOL Sudden Mission research."
+    game_version = '1.0.10'
     steam_build_id = $supportedBuildID
     baseline_sha256 = [ordered]@{
         reward_random_client = (Get-FileHash -LiteralPath (Join-Path $OfficialGameDataRoot 'RewardRandomData.table') -Algorithm SHA256).Hash
@@ -334,11 +344,12 @@ $manifest = [ordered]@{
         }
     )
     counts = [ordered]@{
-        visible_normal_maps = [int]$visibleMapCounts.Normal
-        visible_currency_maps = [int]$visibleMapCounts.Currency
-        visible_trait_maps = [int]$visibleMapCounts.Trait
-        visible_hunt_maps = [int]$visibleMapCounts.Hunt
-        visible_raid_maps = [int]$visibleMapCounts.Raid
+        visible_normal_maps = [int]$supportedMapCounts.Normal
+        visible_currency_maps = [int]$supportedMapCounts.Currency
+        visible_trait_maps = [int]$supportedMapCounts.Trait
+        visible_hunt_maps = [int]$supportedMapCounts.Hunt
+        visible_raid_maps = [int]$supportedMapCounts.Raid
+        supported_underwater_maps = [int]$supportedMapCounts.Underwater
         activity_random_groups = $groupCategories.Count
         activity_reward_rows = $activityRows.Count
         sudden_mission_groups = $suddenMissionGroups.Count
@@ -354,5 +365,5 @@ if (-not (Test-Path -LiteralPath $outputDirectory -PathType Container)) {
 }
 [IO.File]::WriteAllText($OutputPath, ($manifest | ConvertTo-Json -Depth 40), $utf8WithoutBom)
 
-Write-Output "BASELINE_TARGETS_109_COMPLETE $OutputPath"
+Write-Output "BASELINE_TARGETS_110_COMPLETE $OutputPath"
 $manifest.counts | Format-List
