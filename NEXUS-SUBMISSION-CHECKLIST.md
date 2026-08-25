@@ -12,6 +12,10 @@ Reference reviewed: Nexus Mods File Submission Guidelines, live review 2026-08-0
 - [ ] Explain the second executable: open-source `repak.exe`, local-only PAK pack/list/unpack operations.
 - [ ] State: no network, telemetry, auto-update, admin request, DLL injection, or game executable modification.
 - [ ] Explain that optional saved profiles are readable JSON settings in per-user Local AppData, persist between releases, and are never auto-loaded into the controls.
+- [ ] Explain that editable UTF-8 JSON language packs sit beside the executable, use an embedded English fallback, and never change the game's own language.
+- [ ] State that newer or unverifiable game builds receive a compatibility warning and may continue; known older builds remain blocked to prevent installing newer tables into an older game.
+- [ ] State that automatic installation targets `DS\Content\Paks\~mods`, verifies a temporary copy before replacing this app's prior PAK, and preserves disabled backups.
+- [ ] Disclose that temporary pack/unpack work uses per-user Local AppData or Temp when available, with the selected writable build folder as a fallback; verified output remains in the selected build folder.
 - [ ] Do not claim ownership of or redistribute another author's modified files.
 - [ ] Confirm that the release uses only the new original project artwork; do not package older reference or promotional images.
 - [ ] List exact table conflicts and state that Treasure Respawn has no file-path overlap.

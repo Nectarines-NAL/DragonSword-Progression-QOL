@@ -2,7 +2,7 @@
 
 An offline reward configurator for **DragonSword: Awakening**, created by **nectarines**.
 
-Version `0.9.4-rc.1` is a release candidate validated against unmodified game version 1.0.10, Steam build `24831799`. It builds one custom Unreal PAK from independently maintained targets and official game-table baselines. Every multiplier starts at vanilla `x1`; both optional loot-shape features start off.
+Version `0.9.5-rc.1` is a release candidate validated against unmodified game version 1.0.10, Steam build `24831799`. It builds one custom Unreal PAK from independently maintained targets and official game-table baselines. Every multiplier starts at vanilla `x1`; both optional loot-shape features start off.
 
 ## Features
 
@@ -16,13 +16,14 @@ Version `0.9.4-rc.1` is a release candidate validated against unmodified game ve
 - Optional Favor Better Rarity shifts supported mixed pools toward their better available tier without adding quantity.
 - One generated PAK for any supported configuration.
 - Named configuration profiles stored as plain, readable JSON in the current Windows user's persistent Local AppData folder.
+- Editable UTF-8 interface language files matching all eleven languages supported by DragonSword on Steam, with automatic Windows-locale detection, a manual selector, and per-string English fallback.
 - PAK contents and SHA-256 are verified before installation.
 - The app owns one installed file: `DS_ZZZ_ProgressionQoL_Configured_P.pak`.
 
 ## Install and use
 
 1. Install the Microsoft [.NET 8 Desktop Runtime (x64)](https://dotnet.microsoft.com/download/dotnet/8.0) if it is not already present.
-2. Extract the complete download to a normal folder. Do not run the app inside the ZIP.
+2. Extract the complete download to a normal folder. Keep `Languages` beside the application and do not run the app inside the ZIP.
 3. Close DragonSword: Awakening.
 4. Run `DragonSword.ProgressionQoL.exe`.
 5. Confirm the detected game location or browse to the game root, `DS`, `Paks`, `~mods`, `Win64`, or the game executable.
@@ -32,11 +33,13 @@ Version `0.9.4-rc.1` is a release candidate validated against unmodified game ve
 
 Use **Profiles** to save the current reward settings under a custom name, load a saved profile, delete a profile, reset to vanilla defaults, import profiles from an older extracted release, or open the profile folder. Profiles are stored under `%LOCALAPPDATA%\nectarines\DragonSword Progression QOL\Profiles`, resolved separately for each Windows user and retained when the application folder is replaced or moved. The app always starts at vanilla defaults and never auto-loads a saved profile. Loading or deleting a profile does not build, install, or remove a PAK; only **Build + Install** changes the app's owned game file.
 
+Use the **Language** tab to choose the interface language for the next launch or open the editable language files. The first launch follows the current Windows interface language when a matching pack exists. Language choice is stored per Windows user and does not affect reward profiles or generated PAKs. See [TRANSLATING.md](TRANSLATING.md) before editing or contributing a translation.
+
 On first launch after upgrading from the portable profile format, the app safely copies validated JSON profiles found in a `Profiles` folder beside that executable into persistent storage. Old files are preserved and existing persistent profiles are never overwritten. If the older release is in another folder, use **Profiles → Import from Older Version** and select either its application folder or its `Profiles` folder.
 
 **Reset to Vanilla Defaults** resets the visible controls only. After resetting, use **Build + Install**: if this application's PAK is installed, the app asks whether to disable it and return this mod's rewards to vanilla behavior. The PAK is preserved as a non-loadable backup. Other mods are never changed.
 
-The PAK is installed to `DS\Content\Paks`. Reconfiguring does not require manual deletion: the current owned PAK is moved to `DS\Content\Paks\ProgressionQoL-Backups` with a non-loadable `.pak.disabled` extension, then the new PAK is installed and hash-verified.
+The PAK is installed to `DS\Content\Paks\~mods`. Reconfiguring does not require manual deletion: the replacement is first written under a non-loadable temporary name and hash-verified, then any current owned copy in either `Paks` or `Paks\~mods` is moved to `DS\Content\Paks\ProgressionQoL-Backups` with a non-loadable `.pak.disabled` extension. The final installed copy is hash-verified again.
 
 See [INSTALLATION.md](INSTALLATION.md) for troubleshooting and [UNINSTALL.md](UNINSTALL.md) for complete removal.
 
@@ -51,6 +54,7 @@ The application:
 - uses no installer service and makes no registry changes;
 - never downloads a dependency;
 - stores optional profiles as unobfuscated JSON in the visible per-user `%LOCALAPPDATA%\nectarines\DragonSword Progression QOL\Profiles` folder;
+- reads text-only language packs from the visible `Languages` folder, limits each file to 512 KiB, ignores invalid files, and never interprets their contents as code;
 - scans other PAKs read-only and never disables, deletes, or moves them;
 - installs only after explicit confirmation.
 
@@ -65,9 +69,9 @@ The generated PAK may contain these game paths:
 - `DS/Content/Design/GameData/PropCollectData.table` when gathering is changed
 - matching generated server XML files
 
-Another PAK editing the same tables conflicts at the file level; Unreal PAK load order does not merge individual rows. The built-in scanner lists likely PAKs and verifies their internal paths before warning.
+Another PAK editing the same tables conflicts at the file level; Unreal PAK load order does not merge individual rows. The built-in scanner checks every non-official PAK in `Paks` and `Paks\~mods`—including Treasure Respawn by contents—and verifies its internal paths before warning.
 
-The table baseline was extracted from unmodified game version 1.0.10, Steam build `24831799`. Every managed reward-system table was confirmed byte-identical to the validated 1.0.9 baseline; only the English localization table changed. Automatic installation checks the local Steam manifest and refuses a different build because a game update can change these full reward tables. Building alone never modifies the game.
+The table baseline was extracted from unmodified game version 1.0.10, Steam build `24831799`. Every managed reward-system table was confirmed byte-identical to the validated 1.0.9 baseline; only the English localization table changed. Automatic installation checks the local Steam manifest. A newer or unverifiable build receives a clear compatibility warning but may continue; a known older build remains blocked until the game is updated. Because a game update can change these full reward tables, restore vanilla behavior and watch the mod page for an update if rewards behave unexpectedly. Building alone never modifies the game.
 
 ## Independent provenance
 

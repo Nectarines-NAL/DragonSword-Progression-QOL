@@ -7,8 +7,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>DragonSword.ProgressionQoL</AssemblyName>
     <RootNamespace>DragonSword.ProgressionQoL</RootNamespace>
-    <Version>0.9.4</Version>
-    <InformationalVersion>0.9.4-rc.1</InformationalVersion>
+    <Version>0.9.5</Version>
+    <InformationalVersion>0.9.5-rc.1</InformationalVersion>
     <Authors>nectarines</Authors>
     <Company>nectarines</Company>
     <Copyright>Copyright © 2026 nectarines</Copyright>
@@ -16,4 +16,8 @@
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
   </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Languages\en-US.json" LogicalName="DragonSword.ProgressionQoL.Languages.en-US.json" />
+    <Content Include="Languages\*.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>

@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.9.5-rc.1 — 2026-08-21
+
+- Added editable UTF-8 JSON interface language packs and an embedded English fallback.
+- Matched DragonSword's eleven Steam interface languages: English, Japanese, Korean, Simplified Chinese, Traditional Chinese, French, German, Spanish (Spain), Russian, Thai, and Portuguese (Brazil).
+- Added automatic Windows-language detection, a manual Language tab, and persistent per-user language selection.
+- Added initial project translations. Japanese, both Chinese scripts, Spanish, and Russian cover the complete string catalog; the additional language packs cover the main interface and safely fall back to English for remaining dialogs pending native review.
+- Added safe custom-pack discovery, schema and size validation, duplicate-locale detection, and a `--validate-languages` audit command.
+- Expanded translated titles, dropdowns, and footer buttons responsively to reduce clipping across scripts and DPI scales.
+- Replaced the hard block on newer or unverifiable Steam builds with a clear compatibility warning and user confirmation. Known older builds remain blocked until the game is updated.
+- Changed automatic installation to `DS\Content\Paks\~mods` and safely migrates this application's older root-level PAK into its disabled backup folder.
+- Expanded conflict detection to inspect every non-official PAK in `Paks` and `Paks\~mods`, regardless of filename.
+- Made replacement installation transactional: the copied PAK is hash-verified before the existing Progression QOL PAK is disabled.
+- Inspect Treasure Respawn PAK contents instead of granting compatibility solely from the filename; the verified release remains non-overlapping.
+- Moved temporary packing and verification work out of Documents when possible, with a writable build-folder fallback for restricted systems.
+- Added a mandatory build-time check for all 135 verified Trait Dungeon reward rows and all 36 Trait completion routes.
+- Confirmed the localization update does not alter reward generation: the focused Currency EXP Items PAK retains verified SHA-256 `CE5CCFAAAFFBE8B54E20E824B8C9BF91D83EF66931944D0A95B6D776BA7C4A13`.
+
 ## 0.9.4-rc.1 — 2026-08-20
 
 - Revalidated the project against unmodified DragonSword: Awakening 1.0.10, Steam build 24831799.

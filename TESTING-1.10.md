@@ -18,6 +18,17 @@ Baseline: unmodified Steam build `24831799`.
 - Default, showcase, and Build & Install UI snapshots render successfully at the 1920×1120 test size with no observed clipping.
 - Vanilla world-chest data references absent random group `15001003`. The configurator records this source defect and intentionally does not invent an unknown reward.
 
+## 0.9.5 release hardening
+
+- Rebuilt the published 0.9.4 validation profile and inspected all 135 Trait-category targets: 99 material/Emblem rows and 36 Rank EXP rows. No row was missing, zero-valued, negatively weighted, or incorrectly multiplied.
+- Confirmed all 36 Trait Dungeon completion routes remain byte-equivalent after applying Equipment x5, Crafting Materials x5, Emblems x5, Rank EXP x10, Spread Equipment Rolls, and Favor Better Rarity together.
+- Added the same Trait-row and completion-route assertions to every generated build. The checked counts are written to `BUILD-REPORT.json`.
+- Confirmed the generated six client/server files are byte-identical to the previously audited 0.9.4 validation output; localization, installation, and staging changes do not alter reward-table output.
+- Tested installation policy in isolated fake Steam layouts: exact build installs normally; newer and unknown builds require confirmation; a known older build remains blocked; root-level owned PAKs migrate to disabled backups; the active PAK is installed to `Paks\~mods`; and vanilla restore disables it successfully.
+- Installation now verifies a non-loadable temporary copy before disabling the currently installed PAK, then verifies the final destination again.
+- Confirmed temporary work falls back safely to the selected output folder when Local AppData is not writable, then removes the temporary cache after successful verification.
+- Audited every currently installed non-official PAK without filename filtering, including Treasure Respawn; none besides Progression QOL contained a managed reward/material table.
+
 ## Required gameplay smoke test
 
 Before promoting RC1 to a final release, verify on a clean mod stack:

@@ -41,7 +41,11 @@ internal sealed class BuildEngine
         if (Directory.Exists(buildRoot))
             throw new IOException($"Build directory already exists: {buildRoot}");
 
-        var stagingContent = Path.Combine(buildRoot, "Staging", "DS", "Content");
+        // Keep transient pack/unpack work out of Documents. Cloud sync,
+        // Controlled Folder Access, and aggressive security tools can remove
+        // short-lived table folders while repak is reading them.
+        var workRoot = CreateBuildWorkspace(buildRoot);
+        var stagingContent = Path.Combine(workRoot, "Staging", "DS", "Content");
         var clientDirectory = Path.Combine(stagingContent, "Design", "GameData");
         var serverDirectory = Path.Combine(stagingContent, "__GeneratedGameData__", "Server", "XML", "GameData");
         var packageDirectory = Path.Combine(buildRoot, "Package", "DS", "Content", "Paks");
@@ -143,6 +147,10 @@ internal sealed class BuildEngine
             packedFiles.Add("__GeneratedGameData__/Server/XML/GameData/RewardData.xml");
         }
 
+        var traitValidation = ValidateTraitRewards(vanillaRandom, modifiedRandom, vanillaRewardData, modifiedRewardData, activityTargets, config);
+        foreach (var expected in packedFiles)
+            RequireStagedFile(Path.Combine(stagingContent, expected.Replace('/', Path.DirectorySeparatorChar)));
+
         progress?.Report("Packing and verifying the Unreal PAK...");
         var pakPath = Path.Combine(packageDirectory, PakName);
         await RunAsync(_repakPath, ["pack", "--version", "V11", "--compression", "Zlib", "--mount-point", "../../../DS/Content/", "--path-hash-seed", "0", "-q", stagingContent, pakPath]);
@@ -151,7 +159,7 @@ internal sealed class BuildEngine
             if (!listing.Contains(expected, StringComparison.OrdinalIgnoreCase))
                 throw new InvalidDataException($"PAK verification failed: {expected} is missing.");
 
-        var verifyDirectory = Path.Combine(buildRoot, "VerifiedUnpack");
+        var verifyDirectory = Path.Combine(workRoot, "VerifiedUnpack");
         Directory.CreateDirectory(verifyDirectory);
         await RunAsync(_repakPath, ["unpack", "-q", "-o", verifyDirectory, pakPath]);
         foreach (var expected in packedFiles)
@@ -180,58 +188,84 @@ internal sealed class BuildEngine
                 ["spread_reward_rows"] = spread.TransformedRows,
                 ["generated_random_groups"] = spread.GeneratedGroups.Count
             },
+            ["validation"] = new JsonObject
+            {
+                ["trait_reward_rows_checked"] = traitValidation.RewardRows,
+                ["trait_completion_routes_checked"] = traitValidation.CompletionRoutes
+            },
             ["packed_files"] = new JsonArray(packedFiles.Select(x => JsonValue.Create(x)).ToArray())
         };
         WriteJson(Path.Combine(buildRoot, "BUILD-REPORT.json"), report);
         File.WriteAllText(Path.Combine(buildRoot, "INSTALL.txt"),
-            $"Copy Package\\DS\\Content\\Paks\\{PakName} to your game's DS\\Content\\Paks folder.\r\n" +
+            $"Copy Package\\DS\\Content\\Paks\\{PakName} to your game's DS\\Content\\Paks\\~mods folder.\r\n" +
             "Disable other mods that edit RewardRandomData, RewardData, or PropCollectData. DS_TreasureRespawn.pak does not overlap these paths.\r\n", new UTF8Encoding(false));
 
-        try { Directory.Delete(Path.Combine(buildRoot, "Staging"), true); Directory.Delete(verifyDirectory, true); } catch { /* Build remains valid if cleanup is blocked. */ }
+        TryDeleteBuildWorkspace(workRoot, buildRoot);
         progress?.Report("Build complete and hash-verified.");
         return new BuildResult(pakPath, sha, packedFiles.Count, gatheringChanged, enemyChanged, activityChanged, chestChanged, spread.TransformedRows, spread.GeneratedGroups.Count, packedFiles);
     }
 
-    public string Install(BuildResult result, string gameRoot)
+    public string Install(BuildResult result, string gameRoot, bool allowUnvalidatedBuild = false)
     {
         var fullRoot = ResolveGameRoot(gameRoot) ?? throw new DirectoryNotFoundException("DragonSword could not be found from that selection. Select the game folder, DS, Paks, ~mods, Win64, or DSClient-Win64-Shipping.exe.");
         var executable = Path.Combine(fullRoot, "DS", "Binaries", "Win64", "DSClient-Win64-Shipping.exe");
         if (!File.Exists(executable)) throw new DirectoryNotFoundException("That folder does not contain DSClient-Win64-Shipping.exe.");
         if (Process.GetProcessesByName("DSClient-Win64-Shipping").Length > 0 || Process.GetProcessesByName("DSClient").Length > 0)
             throw new InvalidOperationException("Close DragonSword before installing the PAK.");
-        var installedBuild = ReadInstalledSteamBuildId(fullRoot);
-        if (installedBuild is null)
-            throw new InvalidOperationException($"Steam build could not be verified. This release only installs automatically on DragonSword {SupportedGameVersion} (Steam build {SupportedSteamBuildId}).");
-        if (!installedBuild.Equals(SupportedSteamBuildId, StringComparison.Ordinal))
-            throw new InvalidOperationException($"Unsupported DragonSword build {installedBuild}. This release requires game {SupportedGameVersion} (Steam build {SupportedSteamBuildId}); update the game or use the matching configurator release.");
+        var compatibility = CheckGameBuild(fullRoot);
+        if (compatibility.Kind == GameBuildCompatibilityKind.Older)
+            throw new InvalidOperationException($"DragonSword build {compatibility.DetectedBuildId} is older than the validated build {SupportedSteamBuildId}. Update the game before installing this configurator's tables.");
+        if (compatibility.Kind is GameBuildCompatibilityKind.Newer or GameBuildCompatibilityKind.Unknown && !allowUnvalidatedBuild)
+            throw new InvalidOperationException("The installed game build is newer than, or could not be matched to, this configurator's validated build. Confirm the compatibility warning before installation.");
 
-        var modDirectory = Path.Combine(fullRoot, "DS", "Content", "Paks");
+        var paksDirectory = Path.Combine(fullRoot, "DS", "Content", "Paks");
+        var modDirectory = Path.Combine(paksDirectory, "~mods");
         Directory.CreateDirectory(modDirectory);
         var destination = Path.Combine(modDirectory, PakName);
-        var backupDirectory = Path.Combine(modDirectory, "ProgressionQoL-Backups");
+        var backupDirectory = Path.Combine(paksDirectory, "ProgressionQoL-Backups");
         Directory.CreateDirectory(backupDirectory);
 
-        // Backups must not retain a loadable .pak extension. This also safely
-        // migrates backups produced by early prototypes of this configurator.
-        foreach (var legacyBackup in Directory.EnumerateFiles(
-                     backupDirectory,
-                     $"{Path.GetFileNameWithoutExtension(PakName)}-*.pak",
-                     SearchOption.TopDirectoryOnly))
+        // Verify a non-loadable temporary copy before disabling the currently
+        // installed PAK. This keeps an interrupted or blocked copy operation
+        // from needlessly taking the user's working configuration offline.
+        var pendingInstall = Path.Combine(modDirectory, $"{PakName}.{Guid.NewGuid():N}.installing");
+        try
         {
-            File.Move(legacyBackup, UniqueDisabledBackupPath(legacyBackup));
-        }
+            File.Copy(result.PakPath, pendingInstall, overwrite: false);
+            var pendingSha = Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(pendingInstall)));
+            if (!pendingSha.Equals(result.Sha256, StringComparison.OrdinalIgnoreCase))
+                throw new InvalidDataException("The copied PAK failed SHA-256 verification. The existing installed PAK was not changed.");
 
-        if (File.Exists(destination))
-        {
-            var backupStem = Path.Combine(backupDirectory, $"{Path.GetFileNameWithoutExtension(PakName)}-{DateTime.Now:yyyyMMdd-HHmmss}.pak");
-            var backup = UniqueDisabledBackupPath(backupStem);
-            File.Move(destination, backup);
+            // Backups must not retain a loadable .pak extension. This also safely
+            // migrates backups produced by early prototypes of this configurator.
+            foreach (var legacyBackup in Directory.EnumerateFiles(
+                         backupDirectory,
+                         $"{Path.GetFileNameWithoutExtension(PakName)}-*.pak",
+                         SearchOption.TopDirectoryOnly))
+            {
+                File.Move(legacyBackup, UniqueDisabledBackupPath(legacyBackup));
+            }
+
+            foreach (var installedPak in FindInstalledPaks(fullRoot))
+            {
+                var backupStem = Path.Combine(backupDirectory, $"{Path.GetFileNameWithoutExtension(PakName)}-{DateTime.Now:yyyyMMdd-HHmmss}.pak");
+                var backup = UniqueDisabledBackupPath(backupStem);
+                File.Move(installedPak, backup);
+            }
+
+            File.Move(pendingInstall, destination);
+            var installedSha = Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(destination)));
+            if (!installedSha.Equals(result.Sha256, StringComparison.OrdinalIgnoreCase))
+            {
+                File.Move(destination, UniqueDisabledBackupPath(destination));
+                throw new InvalidDataException("The installed PAK failed SHA-256 verification and was disabled. Do not launch until installation succeeds.");
+            }
+            return destination;
         }
-        File.Copy(result.PakPath, destination, overwrite: false);
-        var installedSha = Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(destination)));
-        if (!installedSha.Equals(result.Sha256, StringComparison.OrdinalIgnoreCase))
-            throw new InvalidDataException("The installed PAK failed SHA-256 verification. Do not launch the game with this file.");
-        return destination;
+        finally
+        {
+            if (File.Exists(pendingInstall)) File.Delete(pendingInstall);
+        }
     }
 
     public string? DisableInstalledPakForVanilla(string gameRoot)
@@ -243,23 +277,40 @@ internal sealed class BuildEngine
             throw new InvalidOperationException("Close DragonSword before restoring vanilla rewards.");
 
         var pakDirectory = Path.Combine(fullRoot, "DS", "Content", "Paks");
-        var installedPak = Path.Combine(pakDirectory, PakName);
-        if (!File.Exists(installedPak)) return null;
+        var installedPaks = FindInstalledPaks(fullRoot);
+        if (installedPaks.Count == 0) return null;
 
         var backupDirectory = Path.Combine(pakDirectory, "ProgressionQoL-Backups");
         Directory.CreateDirectory(backupDirectory);
-        var backupStem = Path.Combine(backupDirectory, $"{Path.GetFileNameWithoutExtension(PakName)}-{DateTime.Now:yyyyMMdd-HHmmss}-vanilla-restore.pak");
-        var backup = UniqueDisabledBackupPath(backupStem);
-        File.Move(installedPak, backup);
-        return backup;
+        var backups = new List<string>();
+        foreach (var installedPak in installedPaks)
+        {
+            var backupStem = Path.Combine(backupDirectory, $"{Path.GetFileNameWithoutExtension(PakName)}-{DateTime.Now:yyyyMMdd-HHmmss}-vanilla-restore.pak");
+            var backup = UniqueDisabledBackupPath(backupStem);
+            File.Move(installedPak, backup);
+            backups.Add(backup);
+        }
+        return string.Join("; ", backups);
     }
 
     public static string? FindInstalledPak(string gameRoot)
     {
         var fullRoot = ResolveGameRoot(gameRoot);
         if (fullRoot is null) return null;
-        var path = Path.Combine(fullRoot, "DS", "Content", "Paks", PakName);
-        return File.Exists(path) ? path : null;
+        return FindInstalledPaks(fullRoot).FirstOrDefault();
+    }
+
+    private static List<string> FindInstalledPaks(string fullRoot)
+    {
+        var paksDirectory = Path.Combine(fullRoot, "DS", "Content", "Paks");
+        return new[]
+            {
+                Path.Combine(paksDirectory, "~mods", PakName),
+                Path.Combine(paksDirectory, PakName)
+            }
+            .Where(File.Exists)
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToList();
     }
 
     public static string? ReadInstalledSteamBuildId(string gameRoot)
@@ -275,6 +326,20 @@ internal sealed class BuildEngine
         if (!File.Exists(manifest)) return null;
         var match = Regex.Match(File.ReadAllText(manifest), "\\\"buildid\\\"\\s+\\\"(?<id>\\d+)\\\"", RegexOptions.IgnoreCase);
         return match.Success ? match.Groups["id"].Value : null;
+    }
+
+    public static GameBuildCompatibility CheckGameBuild(string gameRoot)
+    {
+        var detected = ReadInstalledSteamBuildId(gameRoot);
+        if (detected is null) return new GameBuildCompatibility(GameBuildCompatibilityKind.Unknown, null);
+        if (detected.Equals(SupportedSteamBuildId, StringComparison.Ordinal))
+            return new GameBuildCompatibility(GameBuildCompatibilityKind.Exact, detected);
+        if (ulong.TryParse(detected, NumberStyles.None, Invariant, out var detectedNumber) &&
+            ulong.TryParse(SupportedSteamBuildId, NumberStyles.None, Invariant, out var supportedNumber))
+            return new GameBuildCompatibility(
+                detectedNumber > supportedNumber ? GameBuildCompatibilityKind.Newer : GameBuildCompatibilityKind.Older,
+                detected);
+        return new GameBuildCompatibility(GameBuildCompatibilityKind.Unknown, detected);
     }
 
     private static string UniqueDisabledBackupPath(string pakPath)
@@ -599,6 +664,62 @@ internal sealed class BuildEngine
         WriteLines(outputPath, lines);
     }
 
+    private static TraitValidationResult ValidateTraitRewards(
+        JsonObject vanillaRandom,
+        JsonObject modifiedRandom,
+        JsonObject vanillaRewardData,
+        JsonObject modifiedRewardData,
+        IReadOnlyList<RowTarget> activityTargets,
+        BuildConfig config)
+    {
+        var traitTargets = activityTargets
+            .Where(x => x.Category.Equals("Trait", StringComparison.Ordinal))
+            .ToList();
+        if (traitTargets.Count == 0)
+            throw new InvalidDataException("The verified baseline contains no Trait Dungeon reward targets.");
+
+        foreach (var target in traitTargets)
+        {
+            var source = RewardRow(vanillaRandom, target);
+            var destination = RewardRow(modifiedRandom, target);
+            var multiplier = target.Bucket switch
+            {
+                "materials" when target.ItemId == 1450701 => config.AdventurerEmblemMultiplier,
+                "materials" => config.ActivityMaterialMultiplier,
+                "rank_experience" => config.RankExperienceMultiplier,
+                _ => 1
+            };
+            var expectedMin = checked(source["Min_ItemCount"]!.GetValue<long>() * multiplier);
+            var expectedMax = checked(source["Max_ItemCount"]!.GetValue<long>() * multiplier);
+            if (destination["Min_ItemCount"]!.GetValue<long>() != expectedMin ||
+                destination["Max_ItemCount"]!.GetValue<long>() != expectedMax ||
+                destination["ItemWeight"]!.GetValue<decimal>() <= 0)
+                throw new InvalidDataException($"Trait Dungeon reward validation failed at {RowKey(target)}.");
+        }
+
+        var traitGroups = traitTargets.Select(x => x.GroupId).ToHashSet();
+        var routeCount = 0;
+        foreach (var pair in vanillaRewardData["Data"]!.AsObject())
+        {
+            var sourceRows = pair.Value!["RewardDatas"]!.AsArray();
+            var destinationRows = modifiedRewardData["Data"]![pair.Key]!["RewardDatas"]!.AsArray();
+            if (sourceRows.Count != destinationRows.Count)
+                throw new InvalidDataException($"Trait Dungeon route topology changed for reward {pair.Key}.");
+            for (var index = 0; index < sourceRows.Count; index++)
+            {
+                var referencesTrait = sourceRows[index]!["RandomID"]!.AsArray()
+                    .Any(x => x is not null && traitGroups.Contains(x.GetValue<long>()));
+                if (!referencesTrait) continue;
+                routeCount++;
+                if (!JsonNode.DeepEquals(sourceRows[index], destinationRows[index]))
+                    throw new InvalidDataException($"Trait Dungeon completion route {pair.Key}:{index} was changed unexpectedly.");
+            }
+        }
+        if (routeCount == 0)
+            throw new InvalidDataException("No Trait Dungeon completion routes reference the verified Trait reward targets.");
+        return new TraitValidationResult(traitTargets.Count, routeCount);
+    }
+
     private static Dictionary<long, List<int>> MapXmlLines(List<string> lines)
     {
         var result = new Dictionary<long, List<int>>();
@@ -645,9 +766,66 @@ internal sealed class BuildEngine
         if (c.HighGradeChance is < 0 or > 100) throw new ArgumentOutOfRangeException(nameof(c), "High-grade chance must be between 0 and 100 percent.");
     }
 
+    private static string CreateBuildWorkspace(string buildRoot)
+    {
+        var localData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        var roots = new[]
+        {
+            string.IsNullOrWhiteSpace(localData) ? null : Path.Combine(localData, "nectarines", "DragonSword Progression QOL", "BuildCache"),
+            Path.Combine(Path.GetTempPath(), "nectarines", "DragonSword Progression QOL", "BuildCache"),
+            Path.Combine(buildRoot, "BuildCache")
+        }.Where(x => !string.IsNullOrWhiteSpace(x)).Distinct(StringComparer.OrdinalIgnoreCase);
+        Exception? lastError = null;
+        foreach (var cacheRoot in roots)
+        {
+            try
+            {
+                Directory.CreateDirectory(cacheRoot!);
+                var workRoot = Path.Combine(cacheRoot!, Guid.NewGuid().ToString("N"));
+                Directory.CreateDirectory(workRoot);
+                return workRoot;
+            }
+            catch (Exception ex) when (ex is UnauthorizedAccessException or IOException)
+            {
+                lastError = ex;
+            }
+        }
+        throw new IOException("No writable temporary build workspace is available. Choose a writable build output folder or allow Progression QOL through protected-folder security.", lastError);
+    }
+
+    private static void TryDeleteBuildWorkspace(string workRoot, string buildRoot)
+    {
+        try
+        {
+            var localData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            var fullWorkRoot = Path.GetFullPath(workRoot);
+            var parent = Directory.GetParent(fullWorkRoot)?.FullName;
+            var allowedParents = new[]
+            {
+                string.IsNullOrWhiteSpace(localData) ? null : Path.GetFullPath(Path.Combine(localData, "nectarines", "DragonSword Progression QOL", "BuildCache")),
+                Path.GetFullPath(Path.Combine(Path.GetTempPath(), "nectarines", "DragonSword Progression QOL", "BuildCache")),
+                Path.GetFullPath(Path.Combine(buildRoot, "BuildCache"))
+            }.Where(x => !string.IsNullOrWhiteSpace(x));
+            if (!allowedParents.Any(x => string.Equals(parent, x, StringComparison.OrdinalIgnoreCase))) return;
+            if (Path.GetFileName(fullWorkRoot).Length != 32 || !Path.GetFileName(fullWorkRoot).All(Uri.IsHexDigit)) return;
+            if ((File.GetAttributes(fullWorkRoot) & FileAttributes.ReparsePoint) != 0) return;
+            Directory.Delete(fullWorkRoot, true);
+            var outputCache = Path.GetFullPath(Path.Combine(buildRoot, "BuildCache"));
+            if (string.Equals(parent, outputCache, StringComparison.OrdinalIgnoreCase) &&
+                Directory.Exists(outputCache) && !Directory.EnumerateFileSystemEntries(outputCache).Any())
+                Directory.Delete(outputCache);
+        }
+        catch
+        {
+            // A completed, verified build remains valid if temporary cleanup is blocked.
+        }
+    }
+
     private static void RequireFile(string path) { if (!File.Exists(path)) throw new FileNotFoundException("A required, auditable application file is missing. Antivirus quarantine may be responsible.", path); }
+    private static void RequireStagedFile(string path) { if (!File.Exists(path)) throw new FileNotFoundException("A temporary build file disappeared before packing. Security software or folder synchronization may be responsible. Try again after allowing Progression QOL through your security software.", path); }
 
     private sealed record RowTarget(long GroupId, int RowIndex, long ItemId, string Bucket, string Category, string ItemType);
     private sealed record CloneDefinition(long SourceGroupId, long CloneGroupId, long Quantity);
     private sealed record SpreadResult(int TransformedRows, List<CloneDefinition> GeneratedGroups);
+    private sealed record TraitValidationResult(int RewardRows, int CompletionRoutes);
 }

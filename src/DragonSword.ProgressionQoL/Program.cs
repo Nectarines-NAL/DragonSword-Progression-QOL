@@ -5,6 +5,21 @@ internal static class Program
     [STAThread]
     private static void Main(string[] args)
     {
+        if (args.Length == 1 && args[0].Equals("--validate-languages", StringComparison.OrdinalIgnoreCase))
+        {
+            ValidateLanguages();
+            return;
+        }
+        if (args.Length == 3 && args[0].Equals("--ui-snapshot-locale", StringComparison.OrdinalIgnoreCase))
+        {
+            RunUiSnapshot(args[2], true, 0, false, args[1]);
+            return;
+        }
+        if (args.Length == 4 && args[0].Equals("--ui-snapshot-locale-tab", StringComparison.OrdinalIgnoreCase) && int.TryParse(args[2], out var localizedTab))
+        {
+            RunUiSnapshot(args[3], true, localizedTab, false, args[1]);
+            return;
+        }
         if (args.Length == 2 && args[0].Equals("--build-test", StringComparison.OrdinalIgnoreCase))
         {
             RunBuildTest(args[1], maximums: false);
@@ -47,14 +62,15 @@ internal static class Program
         }
         if (args.Length == 2 && args[0].Equals("--ui-snapshot-audit", StringComparison.OrdinalIgnoreCase))
         {
-            RunUiSnapshot(args[1], true, 2);
+            RunUiSnapshot(args[1], true, 3);
             return;
         }
 
         ApplicationConfiguration.Initialize();
         Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+        var text = new LocalizationService(AppContext.BaseDirectory);
         Application.ThreadException += (_, e) =>
-            MessageBox.Show(e.Exception.Message, "Progression QOL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(e.Exception.Message, text.Text("app.errorTitle", "Progression QOL"), MessageBoxButtons.OK, MessageBoxIcon.Error);
         Application.Run(new MainForm());
     }
 
@@ -85,10 +101,10 @@ internal static class Program
         }
     }
 
-    private static void RunUiSnapshot(string outputPath, bool wide, int tabIndex = 0, bool showcase = false)
+    private static void RunUiSnapshot(string outputPath, bool wide, int tabIndex = 0, bool showcase = false, string? localeOverride = null)
     {
         ApplicationConfiguration.Initialize();
-        using var form = new MainForm(false) { StartPosition = FormStartPosition.Manual, Location = new Point(-32000, -32000) };
+        using var form = new MainForm(false, localeOverride, false) { StartPosition = FormStartPosition.Manual, Location = new Point(-32000, -32000) };
         if (wide) form.Size = new Size(1920, 1120);
         form.Show();
         form.PrepareScreenshot(tabIndex, showcase);
@@ -98,5 +114,21 @@ internal static class Program
         bitmap.Save(Path.GetFullPath(outputPath), System.Drawing.Imaging.ImageFormat.Png);
         form.Hide();
         Console.WriteLine("UI_SNAPSHOT_OK|" + Path.GetFullPath(outputPath));
+    }
+
+    private static void ValidateLanguages()
+    {
+        try
+        {
+            var localization = new LocalizationService(AppContext.BaseDirectory, "en-US");
+            var issues = localization.ValidateLanguageFiles();
+            foreach (var issue in issues) Console.WriteLine("LANGUAGE_WARNING|" + issue);
+            Console.WriteLine($"LANGUAGE_VALIDATION_OK|{localization.AvailableLanguages.Count}|{issues.Count}");
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine("LANGUAGE_VALIDATION_FAILED|" + ex);
+            Environment.ExitCode = 1;
+        }
     }
 }

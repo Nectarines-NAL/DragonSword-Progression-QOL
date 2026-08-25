@@ -4,7 +4,7 @@ Created by **nectarines**
 
 Progression QOL lets you build one custom reward PAK instead of choosing between a pile of fixed multiplier files. Every setting starts at vanilla behavior, so you decide exactly what changes.
 
-**Current release candidate:** Progression QOL 0.9.4 RC1 for DragonSword: Awakening 1.0.10, Steam build 24831799.
+**Current release candidate:** Progression QOL 0.9.5 RC1, validated for DragonSword: Awakening 1.0.10, Steam build 24831799.
 
 ## Updated for DragonSword 1.0.10
 
@@ -16,6 +16,13 @@ Progression QOL lets you build one custom reward PAK instead of choosing between
 - Added named profiles that remain available after updating or moving the app
 - Added a guided, confirmed return to vanilla behavior
 - Retained DPI-aware layout and scroll fallback for scaled displays
+- Added eleven editable interface languages with automatic English fallback
+- Added direct validation of every supported Trait Dungeon reward row and completion route during each build
+- Moved temporary pack/unpack work away from Documents when possible, with a writable-folder fallback
+- Expanded conflict detection to inspect every non-official PAK instead of relying on filenames
+- Changed automatic installation to `DS\Content\Paks\~mods` and safely migrates this app's older root-level PAK
+- Verifies a non-loadable temporary copy before disabling the currently installed Progression QOL PAK, then verifies the final destination again
+- Inspects Treasure Respawn by its internal file paths; the verified release remains compatible
 
 ## What you can configure
 
@@ -60,7 +67,7 @@ All multipliers open at `x1 — Default`. Spread Equipment Rolls and Favor Bette
 5. Confirm the game folder and choose your settings.
 6. Select **Build + Install**, review any conflict warning, and confirm.
 
-The app installs one file to `DS\Content\Paks`:
+The app installs one file to `DS\Content\Paks\~mods`:
 
 `DS_ZZZ_ProgressionQoL_Configured_P.pak`
 
@@ -68,7 +75,9 @@ To change settings later, open the app and use **Build + Install** again. The pr
 
 ## Compatibility
 
-This release was validated against DragonSword: Awakening 1.0.10, Steam build 24831799. Automatic installation refuses a different game build. Because two PAKs that replace the same Unreal reward tables cannot be row-merged at load time, disable any file identified by the built-in conflict scan before playing.
+This release was validated against DragonSword: Awakening 1.0.10, Steam build 24831799. A newer or unverifiable build receives a compatibility warning but may continue; a known older build must be updated first. The warning exists because game updates can change complete reward tables. If rewards behave unexpectedly on a newer build, restore vanilla behavior and watch this page for an update.
+
+Because two PAKs that replace the same Unreal reward tables cannot be row-merged at load time, disable any file identified by the built-in conflict scan before playing.
 
 ## Fragment reward scope
 
@@ -97,6 +106,6 @@ Source and issue tracker: https://github.com/Nectarines-NAL/DragonSword-Progress
 
 ## Uninstall
 
-Close the game and remove `DS_ZZZ_ProgressionQoL_Configured_P.pak` from `DS\Content\Paks`. Disabled backups are optional and stored in `DS\Content\Paks\ProgressionQoL-Backups`.
+Close the game and remove `DS_ZZZ_ProgressionQoL_Configured_P.pak` from `DS\Content\Paks\~mods`. If an older release left the same filename directly in `DS\Content\Paks`, remove that copy too. Disabled backups are optional and stored in `DS\Content\Paks\ProgressionQoL-Backups`.
 
-Please include `BUILD-REPORT.json`, the Audit Log, game version, and selected settings with bug reports.
+If something looks wrong, tell us the activity or dungeon and what you expected versus what happened. We are happy to look into it and will ask for a build report only if it is actually needed.

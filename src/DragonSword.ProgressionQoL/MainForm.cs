@@ -16,6 +16,8 @@ internal sealed class MainForm : Form
 
     private readonly BuildEngine _engine;
     private readonly ProfileStore _profiles;
+    private readonly LocalizationService _text;
+    private readonly string _uiFontFamily;
     private readonly Dictionary<string, MultiplierDropDown> _multipliers = [];
     private readonly ToolTip _toolTips = new() { AutoPopDelay = 12000, InitialDelay = 350, ReshowDelay = 100 };
     private readonly CheckBox _spread = new();
@@ -30,21 +32,24 @@ internal sealed class MainForm : Form
     private readonly CrispBorderButton _profileButton = new();
     private readonly Label _profileStatus = new();
     private readonly ContextMenuStrip _profileMenu = new();
+    private readonly ComboBox _languageChoice = new();
     private BuildResult? _latestBuild;
     private string _currentProfileName = "Default";
     private bool _configurationDirty;
     private bool _applyingProfile;
 
-    public MainForm(bool startMaximized = false)
+    public MainForm(bool startMaximized = false, string? localeOverride = null, bool scanOnStart = true)
     {
-        Text = "DragonSword Progression QOL — 1.0.10 Release Candidate";
+        _text = new LocalizationService(AppContext.BaseDirectory, localeOverride);
+        _uiFontFamily = _text.CurrentLanguage.FontFamily;
+        Text = _text.Text("app.windowTitle", "DragonSword Progression QOL — 1.0.10 Release Candidate");
         MinimumSize = new Size(1000, 700);
         var working = Screen.PrimaryScreen?.WorkingArea ?? new Rectangle(0, 0, 1600, 1000);
         Size = new Size(Math.Min(1480, working.Width - 96), Math.Min(1000, working.Height - 72));
         StartPosition = FormStartPosition.CenterScreen;
         BackColor = Ink;
         ForeColor = TextMain;
-        Font = new Font("Segoe UI", 10f);
+        Font = UiFont(10f);
         AutoScaleDimensions = new SizeF(96f, 96f);
         AutoScaleMode = AutoScaleMode.Dpi;
         if (startMaximized) WindowState = FormWindowState.Maximized;
@@ -53,7 +58,7 @@ internal sealed class MainForm : Form
         BuildLayout();
         SetDefaults();
         MigrateLegacyProfiles();
-        ScanConflicts();
+        if (scanOnStart) ScanConflicts();
     }
 
     private void BuildLayout()
@@ -70,35 +75,36 @@ internal sealed class MainForm : Form
         _tabs.Padding = new Point(18, 8);
         _tabs.TabPages.Add(BuildRewardsTab());
         _tabs.TabPages.Add(BuildPathsTab());
+        _tabs.TabPages.Add(BuildLanguageTab());
         _tabs.TabPages.Add(BuildAuditTab());
         shell.Controls.Add(_tabs, 0, 1);
 
         var footer = new Panel { Dock = DockStyle.Fill, BackColor = Ink };
-        _status.Text = "Ready — builds are local, offline, and reversible.";
+        _status.Text = _text.Text("status.ready", "Ready — builds are local, offline, and reversible.");
         _status.ForeColor = TextMuted;
         _status.AutoSize = true;
         _status.Location = new Point(4, 20);
         footer.Controls.Add(_status);
 
-        _build.Text = "BUILD + INSTALL";
+        _build.Text = _text.Text("footer.build", "BUILD + INSTALL");
         StyleButton(_build, Ember, TextMain);
-        _build.Size = new Size(180, 42);
+        _build.Size = new Size(Math.Max(180, TextRenderer.MeasureText(_build.Text, _build.Font).Width + 38), 42);
         _build.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         _build.Location = new Point(footer.Width - 170, 8);
         _build.Click += async (_, _) => await BuildAsync();
         footer.Controls.Add(_build);
 
-        _profileButton.Text = "PROFILES";
+        _profileButton.Text = _text.Text("footer.profiles", "PROFILES");
         StyleButton(_profileButton, Ink, Teal);
         _profileButton.FlatAppearance.BorderSize = 0;
         _profileButton.BorderColor = Teal;
-        _profileButton.Size = new Size(126, 42);
+        _profileButton.Size = new Size(Math.Max(126, TextRenderer.MeasureText(_profileButton.Text, _profileButton.Font).Width + 38), 42);
         _profileButton.Top = 8;
         _profileButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         _profileButton.Click += (_, _) => ShowProfileMenu();
         footer.Controls.Add(_profileButton);
 
-        _profileStatus.Text = "Settings: Default";
+        _profileStatus.Text = _text.Text("settings.default", "Settings: Default");
         _profileStatus.ForeColor = Teal;
         _profileStatus.AutoSize = true;
         _profileStatus.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -117,7 +123,7 @@ internal sealed class MainForm : Form
 
     private Control BuildBanner()
     {
-        var banner = new BannerPanel { Dock = DockStyle.Fill, BackColor = PanelColor, BackgroundImageLayout = ImageLayout.Zoom };
+        var banner = new BannerPanel(_text, _uiFontFamily) { Dock = DockStyle.Fill, BackColor = PanelColor, BackgroundImageLayout = ImageLayout.Zoom };
         var imagePath = Path.Combine(AppContext.BaseDirectory, "Assets", "progression-qol-original-key-art-v1.png");
         if (File.Exists(imagePath))
         {
@@ -129,48 +135,48 @@ internal sealed class MainForm : Form
 
     private TabPage BuildRewardsTab()
     {
-        var tab = NewTab("Rewards");
+        var tab = NewTab(_text.Text("tab.rewards", "Rewards"));
         tab.AutoScroll = true;
         var layout = new TableLayoutPanel { Dock = DockStyle.Fill, MinimumSize = new Size(900, 680), ColumnCount = 3, RowCount = 1, Padding = new Padding(8), BackColor = PanelColor };
         layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30f));
         layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40f));
         layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30f));
         layout.Controls.Add(BuildSection(
-            "WORLD",
-            "Exploration rewards. x1 is vanilla; x5 gives five times the amount.",
+            _text.Text("section.world.title", "WORLD"),
+            _text.Text("section.world.description", "Exploration rewards. x1 is vanilla; x5 gives five times the amount."),
             RewardGlyph.World,
             [
-                AddMultiplier("World gathering", "gathering", 1, 20, "Plants, ore, and cooking-ingredient nodes.", RewardGlyph.Gathering),
-                AddMultiplier("Enemy materials", "enemy", 1, 20, "Material drops from ordinary and field enemies.", RewardGlyph.Enemy),
-                AddMultiplier("Safe chest stacks", "chests", 1, 10, "Stackable loot from one-time world exploration chests. Dungeon chests, unique items, and progression items stay unchanged.", RewardGlyph.Chest)
+                AddMultiplier(_text.Text("reward.gathering.title", "World gathering"), "gathering", 1, 20, _text.Text("reward.gathering.description", "Plants, ore, and cooking-ingredient nodes."), RewardGlyph.Gathering),
+                AddMultiplier(_text.Text("reward.enemy.title", "Enemy materials"), "enemy", 1, 20, _text.Text("reward.enemy.description", "Material drops from ordinary and field enemies."), RewardGlyph.Enemy),
+                AddMultiplier(_text.Text("reward.chests.title", "Safe chest stacks"), "chests", 1, 10, _text.Text("reward.chests.description", "Stackable loot from one-time world exploration chests. Dungeon chests, unique items, and progression items stay unchanged."), RewardGlyph.Chest)
             ]), 0, 0);
         layout.Controls.Add(BuildSection(
-            "ACTIVITIES",
-            "Dungeons, hunts, raids, and Sudden Missions. Gold and Crafting Materials include the two underwater dungeons.",
+            _text.Text("section.activities.title", "ACTIVITIES"),
+            _text.Text("section.activities.description", "Dungeons, hunts, raids, and Sudden Missions. Gold and Crafting Materials include the two underwater dungeons."),
             RewardGlyph.Activities,
             [
-                AddMultiplier("Equipment", "equipment", 1, 10, "Activity gear. x10 max. Inventory: 500 items.", RewardGlyph.Equipment),
-                AddMultiplier("Crafting materials", "activityMaterials", 1, 20, "Trait stones, boss parts, Raid runes, upgrades, and underwater loot.", RewardGlyph.Material),
-                AddMultiplier("Emblems", "emblems", 1, 20, "Exchange Shop currency; Sudden Missions included.", RewardGlyph.Emblem),
-                AddMultiplier("Gold", "gold", 1, 20, "Gold from activity completions.", RewardGlyph.Gold),
-                AddMultiplier("Experience", "rankXp", 1, 20, "Mercenary Corps Rank EXP.", RewardGlyph.Experience),
-                AddMultiplier("Currency EXP items", "currencyXpItems", 1, 20, "Character, Equipment, and Karma EXP items from Currency Dungeons only.", RewardGlyph.Experience)
+                AddMultiplier(_text.Text("reward.equipment.title", "Equipment"), "equipment", 1, 10, _text.Text("reward.equipment.description", "Activity gear. x10 max. Inventory: 500 items."), RewardGlyph.Equipment),
+                AddMultiplier(_text.Text("reward.materials.title", "Crafting materials"), "activityMaterials", 1, 20, _text.Text("reward.materials.description", "Trait stones, boss parts, Raid runes, upgrades, and underwater loot."), RewardGlyph.Material),
+                AddMultiplier(_text.Text("reward.emblems.title", "Emblems"), "emblems", 1, 20, _text.Text("reward.emblems.description", "Exchange Shop currency; Sudden Missions included."), RewardGlyph.Emblem),
+                AddMultiplier(_text.Text("reward.gold.title", "Gold"), "gold", 1, 20, _text.Text("reward.gold.description", "Gold from activity completions."), RewardGlyph.Gold),
+                AddMultiplier(_text.Text("reward.experience.title", "Experience"), "rankXp", 1, 20, _text.Text("reward.experience.description", "Mercenary Corps Rank EXP."), RewardGlyph.Experience),
+                AddMultiplier(_text.Text("reward.currencyXp.title", "Currency EXP items"), "currencyXpItems", 1, 20, _text.Text("reward.currencyXp.description", "Character, Equipment, and Karma EXP items from Currency Dungeons only."), RewardGlyph.Experience)
             ], 2), 1, 0);
 
         _spread.Checked = false;
         _rarity.Checked = false;
-        var rarityChance = AddPercent("Better-tier chance", "rarityChance", 90, "When enabled, about 9 of 10 supported rolls select the better tier.", RewardGlyph.Rarity);
+        var rarityChance = AddPercent(_text.Text("loot.chance.title", "Better-tier chance"), "rarityChance", 90, _text.Text("loot.chance.description", "When enabled, about 9 of 10 supported rolls select the better tier."), RewardGlyph.Rarity);
         _rarity.CheckedChanged += (_, _) => rarityChance.Enabled = _rarity.Checked;
         _rarity.CheckedChanged += (_, _) => MarkConfigurationEdited();
         _spread.CheckedChanged += (_, _) => MarkConfigurationEdited();
         rarityChance.Enabled = false;
         layout.Controls.Add(BuildSection(
-            "LOOT SHAPE",
-            "Changes equipment rolls; neither option adds rewards by itself.",
+            _text.Text("section.lootShape.title", "LOOT SHAPE"),
+            _text.Text("section.lootShape.description", "Changes equipment rolls; neither option adds rewards by itself."),
             RewardGlyph.LootShape,
             [
-                AddToggle(_spread, "Spread equipment rolls", "Off (vanilla): multiplied gear stays stacked. On: the same total is split into independent equipment selections for more variety. Equipment only; Raid runes and item stats are unchanged.", RewardGlyph.Spread),
-                AddToggle(_rarity, "Favor better rarity", "Off (vanilla): original rarity odds. On: supported mixed-tier equipment and Raid rune pools favor their better listed tier. Quantity and item stats are unchanged.", RewardGlyph.Rarity),
+                AddToggle(_spread, _text.Text("loot.spread.title", "Spread equipment rolls"), _text.Text("loot.spread.description", "Off (vanilla): multiplied gear stays stacked. On: the same total is split into independent equipment selections for more variety. Equipment only; Raid runes and item stats are unchanged."), RewardGlyph.Spread),
+                AddToggle(_rarity, _text.Text("loot.rarity.title", "Favor better rarity"), _text.Text("loot.rarity.description", "Off (vanilla): original rarity odds. On: supported mixed-tier equipment and Raid rune pools favor their better listed tier. Quantity and item stats are unchanged."), RewardGlyph.Rarity),
                 rarityChance
             ]), 2, 0);
         tab.Controls.Add(layout);
@@ -179,7 +185,7 @@ internal sealed class MainForm : Form
 
     private TabPage BuildPathsTab()
     {
-        var tab = NewTab("Build & Install");
+        var tab = NewTab(_text.Text("tab.build", "Build & Install"));
         var layout = new TableLayoutPanel { Dock = DockStyle.Fill, BackColor = PanelColor, Padding = new Padding(22), ColumnCount = 1, RowCount = 5 };
         layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
         layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 92));
@@ -188,21 +194,21 @@ internal sealed class MainForm : Form
         layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 178));
         layout.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
         layout.Controls.Add(BuildPageHeader(), 0, 0);
-        layout.Controls.Add(BuildPathCard("DragonSword installation", "Select the game folder—or DS, Paks, ~mods, Win64, or the game EXE. It is normalized automatically; installation goes to DS\\Content\\Paks.", _gamePath, BrowseGame, RewardGlyph.GameFolder), 0, 1);
-        layout.Controls.Add(BuildPathCard("Build output folder", "Defaults to this Windows user's Documents folder. Verified PAKs and reports are created here; any writable folder can be selected.", _outputPath, BrowseOutput, RewardGlyph.OutputFolder), 0, 2);
+        layout.Controls.Add(BuildPathCard(_text.Text("build.gamePath.title", "DragonSword installation"), _text.Text("build.gamePath.description", "Select the game folder—or DS, Paks, ~mods, Win64, or the game EXE. It is normalized automatically; installation goes to DS\\Content\\Paks\\~mods."), _gamePath, BrowseGame, RewardGlyph.GameFolder), 0, 1);
+        layout.Controls.Add(BuildPathCard(_text.Text("build.outputPath.title", "Build output folder"), _text.Text("build.outputPath.description", "Defaults to this Windows user's Documents folder. Verified PAKs and reports are created here; any writable folder can be selected."), _outputPath, BrowseOutput, RewardGlyph.OutputFolder), 0, 2);
         layout.Controls.Add(BuildScanCard(), 0, 3);
         tab.Controls.Add(layout);
         return tab;
     }
 
-    private static Control BuildPageHeader()
+    private Control BuildPageHeader()
     {
         var host = new Panel { Dock = DockStyle.Fill, BackColor = PanelColor, Padding = new Padding(6) };
         var icon = new RewardIcon(RewardGlyph.Build) { Location = new Point(8, 12), Size = new Size(42, 42), BackColor = PanelColor };
-        var title = new Label { Text = "BUILD & INSTALL", UseMnemonic = false, ForeColor = Gold, Font = new Font("Segoe UI Semibold", 13f), AutoSize = true, Location = new Point(62, 8) };
+        var title = new Label { Text = _text.Text("build.header.title", "BUILD & INSTALL"), UseMnemonic = false, ForeColor = Gold, Font = UiFont(13f, FontStyle.Bold), AutoSize = true, Location = new Point(62, 8) };
         var detail = new Label
         {
-            Text = "Choose settings, then use Build + Install. The verified PAK replaces only this app's previous PAK after confirmation; other mods are never changed.",
+            Text = _text.Text("build.header.description", "Choose settings, then use Build + Install. The verified PAK replaces only this app's previous PAK after confirmation; other mods are never changed."),
             ForeColor = TextMuted,
             AutoSize = false,
             Location = new Point(62, 37),
@@ -214,7 +220,7 @@ internal sealed class MainForm : Form
         return host;
     }
 
-    private static Control BuildPathCard(string titleText, string description, TextBox box, Action browse, RewardGlyph glyph)
+    private Control BuildPathCard(string titleText, string description, TextBox box, Action browse, RewardGlyph glyph)
     {
         var card = new TableLayoutPanel { Dock = DockStyle.Fill, BackColor = PanelRaised, Margin = new Padding(4, 5, 4, 5), Padding = new Padding(12), ColumnCount = 2, RowCount = 1 };
         card.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 52));
@@ -224,7 +230,7 @@ internal sealed class MainForm : Form
         content.RowStyles.Add(new RowStyle(SizeType.Absolute, 28));
         content.RowStyles.Add(new RowStyle(SizeType.Absolute, 38));
         content.RowStyles.Add(new RowStyle(SizeType.Absolute, 38));
-        var title = new Label { Text = titleText, ForeColor = Gold, Font = new Font("Segoe UI Semibold", 10f), Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleLeft };
+        var title = new Label { Text = titleText, ForeColor = Gold, Font = UiFont(10f, FontStyle.Bold), Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleLeft };
         var detail = new Label { Text = description, ForeColor = TextMuted, Dock = DockStyle.Fill, UseCompatibleTextRendering = true };
         var pathRow = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, RowCount = 1, BackColor = PanelRaised };
         pathRow.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
@@ -233,9 +239,9 @@ internal sealed class MainForm : Form
         box.BackColor = Ink;
         box.ForeColor = TextMain;
         box.BorderStyle = BorderStyle.FixedSingle;
-        box.Font = new Font("Segoe UI", 9.5f);
+        box.Font = UiFont(9.5f);
         box.Margin = new Padding(0, 2, 10, 2);
-        var button = new Button { Text = "BROWSE", Dock = DockStyle.Fill, Margin = new Padding(0) };
+        var button = new Button { Text = _text.Text("build.browse", "BROWSE"), Dock = DockStyle.Fill, Margin = new Padding(0) };
         StyleButton(button, Ink, Teal);
         button.Click += (_, _) => browse();
         pathRow.Controls.Add(box, 0, 0);
@@ -260,12 +266,12 @@ internal sealed class MainForm : Form
         content.RowStyles.Add(new RowStyle(SizeType.Absolute, 28));
         content.RowStyles.Add(new RowStyle(SizeType.Absolute, 48));
         content.RowStyles.Add(new RowStyle(SizeType.Absolute, 54));
-        var title = new Label { Text = "Installed mod check", ForeColor = Gold, Font = new Font("Segoe UI Semibold", 10f), Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleLeft };
-        var detail = new Label { Text = "Scans likely mod PAKs in DS\\Content\\Paks and ~mods, then verifies their internal table paths. It never disables, deletes, or moves another mod.", ForeColor = TextMuted, Dock = DockStyle.Fill, UseCompatibleTextRendering = true };
-        var scan = new Button { Text = "SCAN INSTALLED MODS", Dock = DockStyle.Fill, Margin = new Padding(0, 6, 14, 6) };
+        var title = new Label { Text = _text.Text("scan.title", "Installed mod check"), ForeColor = Gold, Font = UiFont(10f, FontStyle.Bold), Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleLeft };
+        var detail = new Label { Text = _text.Text("scan.description", "Scans mod PAKs in DS\\Content\\Paks and ~mods, then verifies their internal table paths. It never disables, deletes, or moves another mod."), ForeColor = TextMuted, Dock = DockStyle.Fill, UseCompatibleTextRendering = true };
+        var scan = new Button { Text = _text.Text("scan.button", "SCAN INSTALLED MODS"), Dock = DockStyle.Fill, Margin = new Padding(0, 6, 14, 6) };
         StyleButton(scan, Ink, Teal);
         scan.Click += (_, _) => ScanConflicts();
-        _conflictSummary.Text = "Not scanned yet.";
+        _conflictSummary.Text = _text.Text("scan.notScanned", "Not scanned yet.");
         _conflictSummary.ForeColor = TextMuted;
         _conflictSummary.Dock = DockStyle.Fill;
         _conflictSummary.TextAlign = ContentAlignment.MiddleLeft;
@@ -281,16 +287,112 @@ internal sealed class MainForm : Form
         return card;
     }
 
+    private TabPage BuildLanguageTab()
+    {
+        var tab = NewTab(_text.Text("tab.language", "Language"));
+        var page = new TableLayoutPanel
+        {
+            Dock = DockStyle.Fill,
+            BackColor = PanelColor,
+            Padding = new Padding(28),
+            ColumnCount = 1,
+            RowCount = 4
+        };
+        page.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+        page.RowStyles.Add(new RowStyle(SizeType.Absolute, 100));
+        page.RowStyles.Add(new RowStyle(SizeType.Absolute, 190));
+        page.RowStyles.Add(new RowStyle(SizeType.Absolute, 100));
+        page.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
+
+        var header = new Panel { Dock = DockStyle.Fill, BackColor = PanelColor };
+        var icon = new RewardIcon(RewardGlyph.World) { Location = new Point(6, 11), Size = new Size(42, 42), BackColor = PanelColor };
+        var title = new Label { Text = _text.Text("language.header.title", "INTERFACE LANGUAGE"), ForeColor = Gold, Font = UiFont(13f, FontStyle.Bold), AutoSize = true, Location = new Point(62, 8) };
+        var description = new Label
+        {
+            Text = _text.Text("language.header.description", "Choose the language used by the configurator. Language files are plain UTF-8 JSON and can be edited or shared without recompiling the application."),
+            ForeColor = TextMuted,
+            Location = new Point(62, 38),
+            Height = 54,
+            AutoSize = false,
+            UseCompatibleTextRendering = true
+        };
+        header.Controls.Add(icon); header.Controls.Add(title); header.Controls.Add(description);
+        header.Resize += (_, _) => description.Width = Math.Max(300, header.ClientSize.Width - description.Left - 12);
+
+        var card = new TableLayoutPanel { Dock = DockStyle.Fill, BackColor = PanelRaised, Margin = new Padding(4, 6, 4, 6), Padding = new Padding(20), ColumnCount = 2, RowCount = 3 };
+        card.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+        card.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 220));
+        card.RowStyles.Add(new RowStyle(SizeType.Absolute, 32));
+        card.RowStyles.Add(new RowStyle(SizeType.Absolute, 58));
+        card.RowStyles.Add(new RowStyle(SizeType.Absolute, 58));
+        var currentTitle = new Label { Text = _text.Text("language.current.title", "Language for next launch"), ForeColor = Gold, Font = UiFont(10f, FontStyle.Bold), Dock = DockStyle.Fill };
+        var currentDescription = new Label { Text = _text.Text("language.current.description", "English is the fallback for missing text. Initial translations are community-editable and may be improved over time."), ForeColor = TextMuted, Dock = DockStyle.Fill, UseCompatibleTextRendering = true };
+        _languageChoice.DropDownStyle = ComboBoxStyle.DropDownList;
+        _languageChoice.BackColor = Ink;
+        _languageChoice.ForeColor = TextMain;
+        _languageChoice.Font = UiFont(10f);
+        _languageChoice.Dock = DockStyle.Fill;
+        _languageChoice.Margin = new Padding(0, 6, 12, 8);
+        foreach (var language in _text.AvailableLanguages) _languageChoice.Items.Add(language);
+        _languageChoice.SelectedItem = _languageChoice.Items.Cast<LanguageOption>().First(x => x.Locale.Equals(_text.CurrentLocale, StringComparison.OrdinalIgnoreCase));
+        var save = new Button { Text = _text.Text("language.save", "SAVE LANGUAGE"), Dock = DockStyle.Fill, Margin = new Padding(0, 6, 0, 8) };
+        StyleButton(save, Ember, TextMain);
+        save.Click += (_, _) => SaveLanguageSelection();
+        card.Controls.Add(currentTitle, 0, 0); card.SetColumnSpan(currentTitle, 2);
+        card.Controls.Add(currentDescription, 0, 1); card.SetColumnSpan(currentDescription, 2);
+        card.Controls.Add(_languageChoice, 0, 2);
+        card.Controls.Add(save, 1, 2);
+
+        var openFiles = new Button { Text = _text.Text("language.openFolder", "OPEN LANGUAGE FILES"), Height = 42, Anchor = AnchorStyles.Left | AnchorStyles.Top, Margin = new Padding(4, 10, 0, 0) };
+        StyleButton(openFiles, Ink, Teal);
+        openFiles.Width = Math.Max(220, TextRenderer.MeasureText(openFiles.Text, openFiles.Font).Width + 42);
+        openFiles.Click += (_, _) => OpenLanguagesFolder();
+        var note = new Label { Text = _text.Text("language.fileNote", "To improve a translation, edit its JSON file in the Languages folder using a UTF-8 text editor. Keep the keys unchanged; only edit values inside strings."), ForeColor = TextMuted, Dock = DockStyle.Fill, Padding = new Padding(4, 4, 4, 4), UseCompatibleTextRendering = true };
+
+        page.Controls.Add(header, 0, 0);
+        page.Controls.Add(card, 0, 1);
+        page.Controls.Add(openFiles, 0, 2);
+        page.Controls.Add(note, 0, 3);
+        tab.Controls.Add(page);
+        return tab;
+    }
+
+    private void SaveLanguageSelection()
+    {
+        if (_languageChoice.SelectedItem is not LanguageOption language) return;
+        _text.SaveLocale(language.Locale);
+        MessageBox.Show(this,
+            _text.Format("language.savedMessage", "{language} will be used the next time Progression QOL starts. Close and reopen the application to apply it.", ("language", language.NativeName)),
+            _text.Text("language.savedTitle", "Language saved"),
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+    }
+
+    private void OpenLanguagesFolder()
+    {
+        try
+        {
+            Directory.CreateDirectory(_text.LanguagesDirectory);
+            var start = new ProcessStartInfo { FileName = "explorer.exe", UseShellExecute = true };
+            start.ArgumentList.Add(_text.LanguagesDirectory);
+            Process.Start(start);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(this, ex.Message, _text.Text("language.folderErrorTitle", "Language folder could not be opened"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+
     private TabPage BuildAuditTab()
     {
-        var tab = NewTab("Audit Log");
+        var tab = NewTab(_text.Text("tab.audit", "Audit Log"));
         _log.Dock = DockStyle.Fill;
         _log.ReadOnly = true;
         _log.BorderStyle = BorderStyle.None;
         _log.BackColor = Color.FromArgb(16, 20, 23);
         _log.ForeColor = Color.FromArgb(188, 202, 204);
         _log.Font = new Font("Cascadia Mono", 9.25f);
-        _log.Text = "Progression QOL audit log\n─────────────────────────\n";
+        _log.Text = _text.Text("audit.heading", "Progression QOL audit log\n─────────────────────────\n");
         tab.Controls.Add(_log);
         return tab;
     }
@@ -298,24 +400,24 @@ internal sealed class MainForm : Form
     private Control AddMultiplier(string title, string key, int selectedValue, int maximum, string description, RewardGlyph glyph)
     {
         var options = new[] { 1, 2, 3, 5, 7, 10, 15, 20 }.Where(x => x <= maximum)
-            .Select(x => new Choice(x, x == 1 ? "x1 — Default" : $"x{x}" )).ToArray();
-        return AddChoice(title, key, selectedValue, description, glyph, options, 170);
+            .Select(x => new Choice(x, x == 1 ? _text.Text("choice.default", "x1 — Default") : $"x{x}" )).ToArray();
+        return AddChoice(title, key, selectedValue, description, glyph, options, 230);
     }
 
     private Control AddPercent(string title, string key, int selectedValue, string description, RewardGlyph glyph)
     {
         var options = new[] { 25, 50, 75, 90, 95, 99 }
-            .Select(x => new Choice(x, x == 90 ? "90% — Recommended" : $"{x}%" )).ToArray();
+            .Select(x => new Choice(x, x == 90 ? _text.Text("choice.recommended", "90% — Recommended") : $"{x}%" )).ToArray();
         return AddChoice(title, key, selectedValue, description, glyph, options, 240);
     }
 
     private Control AddChoice(string title, string key, int selectedValue, string description, RewardGlyph glyph, IReadOnlyList<Choice> options, int buttonWidth)
     {
-        var host = new Panel { Height = 141, MinimumSize = new Size(190, 141), BackColor = PanelRaised, Margin = new Padding(3) };
+        var host = new Panel { Height = 159, MinimumSize = new Size(190, 159), BackColor = PanelRaised, Margin = new Padding(3) };
         var icon = new RewardIcon(glyph) { Location = new Point(8, 13), Size = new Size(36, 36) };
-        var label = new Label { Text = title, ForeColor = TextMain, AutoSize = false, Font = new Font("Segoe UI Semibold", 9.5f), Location = new Point(54, 3), Height = 23 };
-        var help = new Label { Text = description, ForeColor = TextMuted, AutoEllipsis = false, AutoSize = false, Location = new Point(54, 63), Height = 76, UseCompatibleTextRendering = true };
-        var combo = new MultiplierDropDown(options, selectedValue) { Width = buttonWidth, Height = 32, Location = new Point(54, 27) };
+        var label = new Label { Text = title, ForeColor = TextMain, AutoSize = false, Font = UiFont(9.5f, FontStyle.Bold), Location = new Point(54, 3), Height = 41, UseCompatibleTextRendering = true };
+        var help = new Label { Text = description, ForeColor = TextMuted, AutoEllipsis = false, AutoSize = false, Location = new Point(54, 81), Height = 76, UseCompatibleTextRendering = true };
+        var combo = new MultiplierDropDown(options, selectedValue, _uiFontFamily) { Width = buttonWidth, Height = 32, Location = new Point(54, 45) };
         combo.ValueChanged += (_, _) => MarkConfigurationEdited();
         _multipliers[key] = combo;
         _toolTips.SetToolTip(host, description);
@@ -324,7 +426,8 @@ internal sealed class MainForm : Form
         host.Resize += (_, _) =>
         {
             combo.Left = label.Left;
-            combo.Top = 27;
+            combo.Top = 45;
+            combo.Width = Math.Max(120, Math.Min(buttonWidth, host.ClientSize.Width - combo.Left - 8));
             label.Width = Math.Max(120, host.ClientSize.Width - label.Left - 8);
             help.Width = Math.Max(120, host.ClientSize.Width - help.Left - 8);
         };
@@ -333,16 +436,16 @@ internal sealed class MainForm : Form
 
     private Control AddToggle(CheckBox checkBox, string title, string description, RewardGlyph glyph)
     {
-        var host = new Panel { Height = 145, MinimumSize = new Size(230, 145), BackColor = PanelRaised };
+        var host = new Panel { Height = 165, MinimumSize = new Size(230, 165), BackColor = PanelRaised };
         var icon = new RewardIcon(glyph) { Location = new Point(8, 12), Size = new Size(36, 36) };
         checkBox.Text = title;
         checkBox.AutoSize = false;
-        checkBox.Height = 30;
+        checkBox.Height = 48;
         checkBox.Location = new Point(54, 8);
         checkBox.ForeColor = TextMain;
         checkBox.BackColor = PanelRaised;
-        checkBox.Font = new Font("Segoe UI Semibold", 9.5f);
-        var help = new Label { Text = description, ForeColor = TextMuted, AutoEllipsis = false, AutoSize = false, Location = new Point(58, 35), Height = 106, UseCompatibleTextRendering = true };
+        checkBox.Font = UiFont(9.5f, FontStyle.Bold);
+        var help = new Label { Text = description, ForeColor = TextMuted, AutoEllipsis = false, AutoSize = false, Location = new Point(58, 55), Height = 106, UseCompatibleTextRendering = true };
         host.Controls.Add(icon); host.Controls.Add(checkBox); host.Controls.Add(help);
         host.Resize += (_, _) => { checkBox.Width = Math.Max(120, host.ClientSize.Width - 62); help.Width = Math.Max(120, host.ClientSize.Width - 66); };
         _toolTips.SetToolTip(host, description);
@@ -350,7 +453,7 @@ internal sealed class MainForm : Form
         return host;
     }
 
-    private static Control BuildSection(string title, string description, RewardGlyph glyph, IEnumerable<Control> controls, int columns = 1)
+    private Control BuildSection(string title, string description, RewardGlyph glyph, IEnumerable<Control> controls, int columns = 1)
     {
         var items = controls.ToList();
         var host = new Panel { Dock = DockStyle.Fill, BackColor = PanelRaised, Padding = new Padding(10), Margin = new Padding(6) };
@@ -360,7 +463,7 @@ internal sealed class MainForm : Form
         section.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
         var header = new Panel { Dock = DockStyle.Fill, BackColor = PanelRaised };
         var headerIcon = new RewardIcon(glyph) { Location = new Point(3, 8), Size = new Size(38, 38) };
-        var label = new Label { Text = title, ForeColor = Gold, Font = new Font("Segoe UI Semibold", 11f), Location = new Point(50, 4), Height = 27, AutoSize = true };
+        var label = new Label { Text = title, ForeColor = Gold, Font = UiFont(11f, FontStyle.Bold), Location = new Point(50, 4), Height = 27, AutoSize = true };
         var detail = new Label { Text = description, ForeColor = TextMuted, Location = new Point(50, 31), AutoSize = false, Height = 55, UseCompatibleTextRendering = true };
         header.Controls.Add(headerIcon); header.Controls.Add(label); header.Controls.Add(detail);
         header.Resize += (_, _) => detail.Width = Math.Max(120, header.ClientSize.Width - detail.Left - 4);
@@ -396,14 +499,14 @@ internal sealed class MainForm : Form
     }
 
     private static Label Info(string text) => new() { Text = text, ForeColor = TextMuted, BackColor = PanelRaised, AutoEllipsis = false, Height = 68, Padding = new Padding(5, 7, 5, 5), UseCompatibleTextRendering = true };
-    private static TabPage NewTab(string text) => new(text) { BackColor = PanelColor, ForeColor = TextMain, Padding = new Padding(5) };
+    private TabPage NewTab(string text) => new(text) { BackColor = PanelColor, ForeColor = TextMain, Padding = new Padding(5) };
 
     private Control PathRow(string labelText, TextBox box, int top, Action browse)
     {
         var host = new Panel { Left = 24, Top = top, Height = 76, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right, Width = 940, BackColor = PanelRaised };
         var label = new Label { Text = labelText, ForeColor = Gold, AutoSize = true, Location = new Point(12, 8) };
         box.Location = new Point(12, 36); box.Width = 810; box.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right; box.BackColor = Ink; box.ForeColor = TextMain; box.BorderStyle = BorderStyle.FixedSingle;
-        var button = new Button { Text = "BROWSE", Width = 90, Height = 28, Top = 34, Anchor = AnchorStyles.Top | AnchorStyles.Right };
+        var button = new Button { Text = _text.Text("build.browse", "BROWSE"), Width = 90, Height = 28, Top = 34, Anchor = AnchorStyles.Top | AnchorStyles.Right };
         button.Left = host.Width - button.Width - 12; StyleButton(button, Ink, Teal); button.Click += (_, _) => browse();
         host.Controls.Add(label); host.Controls.Add(box); host.Controls.Add(button);
         return host;
@@ -411,10 +514,12 @@ internal sealed class MainForm : Form
 
     private void SetDefaults()
     {
-        _gamePath.Text = BuildEngine.DetectGameRoot() ?? "Select your DragonSword installation";
+        _gamePath.Text = BuildEngine.DetectGameRoot() ?? _text.Text("build.gamePath.placeholder", "Select your DragonSword installation");
         _outputPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "DragonSword Progression QOL Builds");
         Append($"Baseline: verified unmodified game {BuildEngine.SupportedGameVersion} tables (Steam build {BuildEngine.SupportedSteamBuildId}).", Gold);
         Append("Network, telemetry, auto-update, DLL injection, and elevation: none.", Teal);
+        foreach (var warning in _text.LoadWarnings)
+            Append("LANGUAGE WARNING: " + warning, Gold);
     }
 
     private BuildConfig ReadConfig() => new(
@@ -455,8 +560,9 @@ internal sealed class MainForm : Form
     private void UpdateProfileStatus()
     {
         _profileStatus.Text = _currentProfileName == "Default" && _configurationDirty
-            ? "Settings: Custom (unsaved)"
-            : $"Settings: {_currentProfileName}{(_configurationDirty ? " (edited)" : "")}";
+            ? _text.Text("settings.custom", "Settings: Custom (unsaved)")
+            : _text.Format("settings.named", "Settings: {name}", ("name", _currentProfileName == "Default" ? _text.Text("profile.defaultName", "Default") : _currentProfileName))
+              + (_configurationDirty ? _text.Text("settings.editedSuffix", " (edited)") : "");
         _profileStatus.Left = Math.Max(4, _profileButton.Left - _profileStatus.Width - 16);
     }
 
@@ -466,14 +572,14 @@ internal sealed class MainForm : Form
         _profileMenu.BackColor = PanelRaised;
         _profileMenu.ForeColor = TextMain;
 
-        var save = NewProfileMenuItem("SAVE CURRENT SETTINGS AS…", (_, _) => SaveProfile());
-        var load = NewProfileMenuItem("LOAD PROFILE");
-        var delete = NewProfileMenuItem("DELETE PROFILE");
+        var save = NewProfileMenuItem(_text.Text("profile.menu.save", "SAVE CURRENT SETTINGS AS…"), (_, _) => SaveProfile());
+        var load = NewProfileMenuItem(_text.Text("profile.menu.load", "LOAD PROFILE"));
+        var delete = NewProfileMenuItem(_text.Text("profile.menu.delete", "DELETE PROFILE"));
         var profiles = _profiles.List();
         if (profiles.Count == 0)
         {
-            load.DropDownItems.Add(new ToolStripMenuItem("No saved profiles") { Enabled = false });
-            delete.DropDownItems.Add(new ToolStripMenuItem("No saved profiles") { Enabled = false });
+            load.DropDownItems.Add(new ToolStripMenuItem(_text.Text("profile.menu.none", "No saved profiles")) { Enabled = false });
+            delete.DropDownItems.Add(new ToolStripMenuItem(_text.Text("profile.menu.none", "No saved profiles")) { Enabled = false });
         }
         else
         {
@@ -483,9 +589,9 @@ internal sealed class MainForm : Form
                 delete.DropDownItems.Add(NewProfileMenuItem(profile.Name, (_, _) => DeleteProfile(profile.Name)));
             }
         }
-        var open = NewProfileMenuItem("OPEN PROFILES FOLDER", (_, _) => OpenProfilesFolder());
-        var import = NewProfileMenuItem("IMPORT FROM OLDER VERSION…", (_, _) => ImportProfilesFromOlderVersion());
-        var reset = NewProfileMenuItem("RESET TO VANILLA DEFAULTS", (_, _) => ResetToDefaults());
+        var open = NewProfileMenuItem(_text.Text("profile.menu.open", "OPEN PROFILES FOLDER"), (_, _) => OpenProfilesFolder());
+        var import = NewProfileMenuItem(_text.Text("profile.menu.import", "IMPORT FROM OLDER VERSION…"), (_, _) => ImportProfilesFromOlderVersion());
+        var reset = NewProfileMenuItem(_text.Text("profile.menu.reset", "RESET TO VANILLA DEFAULTS"), (_, _) => ResetToDefaults());
         _profileMenu.Items.Add(save);
         _profileMenu.Items.Add(load);
         _profileMenu.Items.Add(delete);
@@ -496,7 +602,7 @@ internal sealed class MainForm : Form
         _profileMenu.Show(_profileButton, new Point(0, -_profileMenu.PreferredSize.Height));
     }
 
-    private static ToolStripMenuItem NewProfileMenuItem(string text, EventHandler? click = null)
+    private ToolStripMenuItem NewProfileMenuItem(string text, EventHandler? click = null)
     {
         var item = new ToolStripMenuItem(text) { BackColor = PanelRaised, ForeColor = TextMain };
         if (click is not null) item.Click += click;
@@ -505,20 +611,22 @@ internal sealed class MainForm : Form
 
     private void SaveProfile()
     {
-        var suggested = _currentProfileName == "Default" ? "My Settings" : _currentProfileName;
+        var suggested = _currentProfileName == "Default" ? _text.Text("profile.suggestedName", "My Settings") : _currentProfileName;
         var name = PromptForProfileName(suggested);
         if (name is null) return;
         try
         {
             var path = _profiles.GetManagedPath(name);
-            if (File.Exists(path) && MessageBox.Show(this, $"Replace the saved profile ‘{name}’?", "Replace profile", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (File.Exists(path) && MessageBox.Show(this,
+                    _text.Format("profile.replacePrompt", "Replace the saved profile ‘{name}’?", ("name", name)),
+                    _text.Text("profile.replaceTitle", "Replace profile"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
             path = _profiles.Save(name, ReadConfig());
             _currentProfileName = name.Trim();
             _configurationDirty = false;
             UpdateProfileStatus();
             Append($"Profile saved: {_currentProfileName} ({path})", Teal);
         }
-        catch (Exception ex) { ShowProfileError("Profile could not be saved", ex); }
+        catch (Exception ex) { ShowProfileError(_text.Text("profile.error.save", "Profile could not be saved"), ex); }
     }
 
     private void LoadProfile(string name)
@@ -532,12 +640,14 @@ internal sealed class MainForm : Form
             UpdateProfileStatus();
             Append($"Profile loaded: {_currentProfileName}. No PAK was built or installed.", Teal);
         }
-        catch (Exception ex) { ShowProfileError("Profile could not be loaded", ex); }
+        catch (Exception ex) { ShowProfileError(_text.Text("profile.error.load", "Profile could not be loaded"), ex); }
     }
 
     private void DeleteProfile(string name)
     {
-        if (MessageBox.Show(this, $"Delete the saved profile ‘{name}’?\n\nThis deletes only its JSON settings file. It does not change any PAK.", "Delete profile", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes) return;
+        if (MessageBox.Show(this,
+                _text.Format("profile.deletePrompt", "Delete the saved profile ‘{name}’?\n\nThis deletes only its JSON settings file. It does not change any PAK.", ("name", name)),
+                _text.Text("profile.deleteTitle", "Delete profile"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes) return;
         try
         {
             _profiles.Delete(name);
@@ -549,7 +659,7 @@ internal sealed class MainForm : Form
             }
             Append($"Profile deleted: {name}. Current settings and installed PAK were not changed.", Gold);
         }
-        catch (Exception ex) { ShowProfileError("Profile could not be deleted", ex); }
+        catch (Exception ex) { ShowProfileError(_text.Text("profile.error.delete", "Profile could not be deleted"), ex); }
     }
 
     private void OpenProfilesFolder()
@@ -561,7 +671,7 @@ internal sealed class MainForm : Form
             start.ArgumentList.Add(_profiles.ProfilesDirectory);
             Process.Start(start);
         }
-        catch (Exception ex) { ShowProfileError("Profiles folder could not be opened", ex); }
+        catch (Exception ex) { ShowProfileError(_text.Text("profile.error.open", "Profiles folder could not be opened"), ex); }
     }
 
     private void MigrateLegacyProfiles()
@@ -584,7 +694,7 @@ internal sealed class MainForm : Form
     {
         using var dialog = new FolderBrowserDialog
         {
-            Description = "Select an older Progression QOL application folder or its Profiles folder",
+            Description = _text.Text("profile.importDescription", "Select an older Progression QOL application folder or its Profiles folder"),
             UseDescriptionForTitle = true
         };
         if (dialog.ShowDialog(this) != DialogResult.OK) return;
@@ -594,12 +704,13 @@ internal sealed class MainForm : Form
             var result = _profiles.ImportFromDirectory(dialog.SelectedPath);
             Append($"Profile import: {result.Imported} imported, {result.Skipped} already present, {result.Invalid} invalid. Source files were preserved.", result.Invalid > 0 ? Gold : Teal);
             MessageBox.Show(this,
-                $"Imported: {result.Imported}\nAlready present: {result.Skipped}\nInvalid files skipped: {result.Invalid}\n\nOlder profile files were not deleted.",
-                "Profile import complete",
+                _text.Format("profile.importComplete", "Imported: {imported}\nAlready present: {skipped}\nInvalid files skipped: {invalid}\n\nOlder profile files were not deleted.",
+                    ("imported", result.Imported), ("skipped", result.Skipped), ("invalid", result.Invalid)),
+                _text.Text("profile.importCompleteTitle", "Profile import complete"),
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
-        catch (Exception ex) { ShowProfileError("Profiles could not be imported", ex); }
+        catch (Exception ex) { ShowProfileError(_text.Text("profile.error.import", "Profiles could not be imported"), ex); }
     }
 
     private void ResetToDefaults()
@@ -615,7 +726,7 @@ internal sealed class MainForm : Form
     {
         using var dialog = new Form
         {
-            Text = "Save configuration profile",
+            Text = _text.Text("profile.saveDialogTitle", "Save configuration profile"),
             StartPosition = FormStartPosition.CenterParent,
             FormBorderStyle = FormBorderStyle.FixedDialog,
             MinimizeBox = false,
@@ -627,10 +738,10 @@ internal sealed class MainForm : Form
             Font = Font,
             AutoScaleMode = AutoScaleMode.Dpi
         };
-        var label = new Label { Text = "Profile name", AutoSize = true, ForeColor = Gold, Location = new Point(18, 16) };
+        var label = new Label { Text = _text.Text("profile.name", "Profile name"), AutoSize = true, ForeColor = Gold, Location = new Point(18, 16) };
         var box = new TextBox { Text = suggested, Location = new Point(18, 43), Width = 434, BackColor = Ink, ForeColor = TextMain, BorderStyle = BorderStyle.FixedSingle };
-        var save = new Button { Text = "SAVE PROFILE", DialogResult = DialogResult.OK, Size = new Size(132, 38), Location = new Point(320, 92) };
-        var cancel = new Button { Text = "CANCEL", DialogResult = DialogResult.Cancel, Size = new Size(105, 38), Location = new Point(205, 92) };
+        var save = new Button { Text = _text.Text("profile.saveButton", "SAVE PROFILE"), DialogResult = DialogResult.OK, Size = new Size(132, 38), Location = new Point(320, 92) };
+        var cancel = new Button { Text = _text.Text("common.cancel", "CANCEL"), DialogResult = DialogResult.Cancel, Size = new Size(105, 38), Location = new Point(205, 92) };
         StyleButton(save, Ember, TextMain);
         StyleButton(cancel, Ink, TextMuted);
         dialog.Controls.Add(label); dialog.Controls.Add(box); dialog.Controls.Add(save); dialog.Controls.Add(cancel);
@@ -650,7 +761,7 @@ internal sealed class MainForm : Form
     {
         try
         {
-            _build.Enabled = false; _status.Text = "Building and verifying...";
+            _build.Enabled = false; _status.Text = _text.Text("build.status.building", "Building and verifying...");
             var config = ReadConfig();
             if (IsVanillaConfig(config))
             {
@@ -662,14 +773,14 @@ internal sealed class MainForm : Form
             Append($"PAK: {_latestBuild.PakPath}", TextMain);
             Append($"SHA256: {_latestBuild.Sha256}", Teal);
             Append($"Rows — gathering {_latestBuild.GatheringRows}, enemies {_latestBuild.EnemyMaterialRows}, activities {_latestBuild.ActivityRows}, chests {_latestBuild.ChestRows}, spread rewards {_latestBuild.SpreadRewardRows}.", Gold);
-            _status.Text = "Build verified — not installed yet.";
+            _status.Text = _text.Text("build.status.verified", "Build verified — not installed yet.");
             Append("BUILD VERIFIED — NOT INSTALLED YET.", Gold);
             InstallLatest();
         }
         catch (Exception ex)
         {
-            Append("ERROR: " + ex.Message, Ember); _status.Text = "Build failed safely; no game files were changed.";
-            MessageBox.Show(ex.Message, "Build failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Append("ERROR: " + ex.Message, Ember); _status.Text = _text.Text("build.status.failed", "Build failed safely; no game files were changed.");
+            MessageBox.Show(ex.Message, _text.Text("build.failedTitle", "Build failed"), MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         finally { _build.Enabled = true; }
     }
@@ -681,20 +792,20 @@ internal sealed class MainForm : Form
         var installedPak = BuildEngine.FindInstalledPak(gameRoot);
         if (installedPak is null)
         {
-            _status.Text = "Vanilla defaults selected — no Progression QOL PAK is installed.";
+            _status.Text = _text.Text("vanilla.status.noPak", "Vanilla defaults selected — no Progression QOL PAK is installed.");
             Append("Vanilla defaults confirmed. No installed Progression QOL PAK was found, so the game was not changed.", Teal);
-            MessageBox.Show(this, "All settings are already at vanilla defaults, and no Progression QOL PAK is installed.\n\nNothing needs to be removed.", "Already using vanilla defaults", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(this, _text.Text("vanilla.noPakMessage", "All settings are already at vanilla defaults, and no Progression QOL PAK is installed.\n\nNothing needs to be removed."), _text.Text("vanilla.noPakTitle", "Already using vanilla defaults"), MessageBoxButtons.OK, MessageBoxIcon.Information);
             return;
         }
 
         var answer = MessageBox.Show(this,
-            "Every reward setting is at its vanilla default.\n\nDisable the installed Progression QOL PAK and return this mod's rewards to vanilla behavior?\n\nThe PAK will be preserved as a disabled backup. Other mods will not be changed.",
-            "Restore vanilla rewards?",
+            _text.Text("vanilla.restorePrompt", "Every reward setting is at its vanilla default.\n\nDisable the installed Progression QOL PAK and return this mod's rewards to vanilla behavior?\n\nThe PAK will be preserved as a disabled backup. Other mods will not be changed."),
+            _text.Text("vanilla.restoreTitle", "Restore vanilla rewards?"),
             MessageBoxButtons.YesNo,
             MessageBoxIcon.Question);
         if (answer != DialogResult.Yes)
         {
-            _status.Text = "Vanilla restore cancelled — the installed PAK was not changed.";
+            _status.Text = _text.Text("vanilla.status.cancelled", "Vanilla restore cancelled — the installed PAK was not changed.");
             Append("Vanilla restore cancelled. The installed PAK was not changed.", Gold);
             return;
         }
@@ -702,11 +813,11 @@ internal sealed class MainForm : Form
         var backup = _engine.DisableInstalledPakForVanilla(gameRoot);
         if (backup is null) throw new IOException("The installed Progression QOL PAK disappeared before it could be disabled.");
         _latestBuild = null;
-        _status.Text = "Progression QOL disabled — vanilla rewards restored for this mod.";
+        _status.Text = _text.Text("vanilla.status.restored", "Progression QOL disabled — vanilla rewards restored for this mod.");
         Append($"Vanilla restored: disabled the installed Progression QOL PAK and preserved it at {backup}", Teal);
         MessageBox.Show(this,
-            "Progression QOL has been disabled and its PAK was preserved as a non-loadable backup.\n\nThis restores vanilla reward behavior for this mod. Any other installed reward mod may still affect the game.",
-            "Vanilla rewards restored",
+            _text.Text("vanilla.restoredMessage", "Progression QOL has been disabled and its PAK was preserved as a non-loadable backup.\n\nThis restores vanilla reward behavior for this mod. Any other installed reward mod may still affect the game."),
+            _text.Text("vanilla.restoredTitle", "Vanilla rewards restored"),
             MessageBoxButtons.OK,
             MessageBoxIcon.Information);
     }
@@ -728,7 +839,7 @@ internal sealed class MainForm : Form
     {
         if (_latestBuild is null)
         {
-            MessageBox.Show("Build a PAK before installing.", "No verified build", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(_text.Text("build.noPak", "Build a PAK before installing."), _text.Text("build.noPakTitle", "No verified build"), MessageBoxButtons.OK, MessageBoxIcon.Information);
             return;
         }
         try
@@ -736,19 +847,32 @@ internal sealed class MainForm : Form
             var gameRoot = BuildEngine.ResolveGameRoot(_gamePath.Text) ?? throw new DirectoryNotFoundException("DragonSword could not be found from the selected path.");
             _gamePath.Text = gameRoot;
             var conflicts = FindKnownConflicts(gameRoot);
-            var warning = conflicts.Count == 0 ? "" : "\n\nConflicting reward/material PAKs detected:\n" + string.Join("\n", conflicts.Select(Path.GetFileName)) + "\n\nThe installer will NOT remove them. Disable those PAKs before launching the game.";
-            if (MessageBox.Show("The new PAK is built and verified, but it is not installed yet.\n\nInstall it now? The existing Progression QOL PAK will be disabled and backed up." + warning, "Install verified build", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+            var basePrompt = _text.Text("install.prompt", "The new PAK is built and verified, but it is not installed yet.\n\nInstall it now? The existing Progression QOL PAK will be disabled and backed up.");
+            var compatibility = BuildEngine.CheckGameBuild(gameRoot);
+            if (compatibility.Kind == GameBuildCompatibilityKind.Older)
+                throw new InvalidOperationException(_text.Format("install.olderBuildBlocked", "DragonSword build {detected} is older than this configurator's validated build {required}. Update the game before installing.", ("detected", compatibility.DetectedBuildId ?? "unknown"), ("required", BuildEngine.SupportedSteamBuildId)));
+            var compatibilityWarning = compatibility.Kind switch
+            {
+                GameBuildCompatibilityKind.Newer => _text.Format("install.newerBuildWarning", "Newer DragonSword build {detected} detected. This configurator was validated on build {required}. You can continue, but it may be out of date and rewards may not work as intended. Restore vanilla if anything looks wrong and watch the mod page for an update.", ("detected", compatibility.DetectedBuildId ?? "unknown"), ("required", BuildEngine.SupportedSteamBuildId)),
+                GameBuildCompatibilityKind.Unknown => _text.Format("install.unknownBuildWarning", "The Steam build could not be verified. You can continue, but this configurator may be out of date and rewards may not work as intended. Restore vanilla if anything looks wrong and watch the mod page for an update.", ("required", BuildEngine.SupportedSteamBuildId)),
+                _ => ""
+            };
+            var prompt = basePrompt;
+            if (!string.IsNullOrWhiteSpace(compatibilityWarning)) prompt += "\n\n" + compatibilityWarning;
+            if (conflicts.Count > 0)
+                prompt = _text.Format("install.promptWithConflicts", "{base}\n\nConflicting reward/material PAKs detected:\n{conflicts}\n\nThe installer will NOT remove them. Disable those PAKs before launching the game.", ("base", prompt), ("conflicts", string.Join("\n", conflicts.Select(Path.GetFileName))));
+            if (MessageBox.Show(prompt, _text.Text("install.promptTitle", "Install verified build"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
             {
                 Append("Installation skipped. The installed PAK was not changed.", Gold);
-                _status.Text = "Build verified — installation was skipped.";
+                _status.Text = _text.Text("install.status.skipped", "Build verified — installation was skipped.");
                 return;
             }
-            var destination = _engine.Install(_latestBuild, gameRoot);
+            var destination = _engine.Install(_latestBuild, gameRoot, compatibility.Kind is GameBuildCompatibilityKind.Newer or GameBuildCompatibilityKind.Unknown);
             Append("Installed: " + destination, Teal);
             Append("Installed SHA256 verified: " + _latestBuild.Sha256, Teal);
-            _status.Text = "Installed and hash-verified. Resolve any logged conflicts before launch.";
+            _status.Text = _text.Text("install.status.success", "Installed and hash-verified. Resolve any logged conflicts before launch.");
         }
-        catch (Exception ex) { Append("INSTALL ERROR: " + ex.Message, Ember); MessageBox.Show(ex.Message, "Install failed", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        catch (Exception ex) { Append("INSTALL ERROR: " + ex.Message, Ember); MessageBox.Show(ex.Message, _text.Text("install.failedTitle", "Install failed"), MessageBoxButtons.OK, MessageBoxIcon.Error); }
     }
 
     private void ScanConflicts()
@@ -756,49 +880,56 @@ internal sealed class MainForm : Form
         var gameRoot = BuildEngine.ResolveGameRoot(_gamePath.Text);
         if (gameRoot is null)
         {
-            _conflictSummary.Text = "DragonSword installation not found from the selected path.";
+            _conflictSummary.Text = _text.Text("scan.gameNotFound", "DragonSword installation not found from the selected path.");
             _conflictSummary.ForeColor = Ember;
             Append("Conflict scan stopped: the selected path could not be resolved to DragonSword.", Ember);
             return;
         }
         _gamePath.Text = gameRoot;
-        var buildId = BuildEngine.ReadInstalledSteamBuildId(gameRoot);
-        if (buildId is null)
+        var compatibility = BuildEngine.CheckGameBuild(gameRoot);
+        var buildSummary = compatibility.Kind switch
         {
-            _conflictSummary.Text = "Steam build could not be verified; automatic installation will stay blocked.";
-            _conflictSummary.ForeColor = Ember;
-            Append("Game detected, but Steam build ID could not be verified.", Ember);
-            return;
-        }
-        else if (!buildId.Equals(BuildEngine.SupportedSteamBuildId, StringComparison.Ordinal))
-        {
-            _conflictSummary.Text = $"Game build {buildId} is unsupported. Required: {BuildEngine.SupportedSteamBuildId}.";
-            _conflictSummary.ForeColor = Ember;
-            Append($"Unsupported game build {buildId}; automatic installation requires {BuildEngine.SupportedSteamBuildId}.", Ember);
-            return;
-        }
+            GameBuildCompatibilityKind.Exact => "",
+            GameBuildCompatibilityKind.Newer => _text.Format("scan.newerBuild", "Newer game build {detected} detected. Validated build: {required}. Installation is available with a compatibility warning.", ("detected", compatibility.DetectedBuildId ?? "unknown"), ("required", BuildEngine.SupportedSteamBuildId)),
+            GameBuildCompatibilityKind.Older => _text.Format("scan.olderBuild", "Older game build {detected} detected. Update the game before installation.", ("detected", compatibility.DetectedBuildId ?? "unknown")),
+            _ => _text.Text("scan.buildUnknown", "Steam build could not be verified. Installation is available with a compatibility warning.")
+        };
+        if (!string.IsNullOrWhiteSpace(buildSummary))
+            Append(buildSummary, compatibility.Kind == GameBuildCompatibilityKind.Older ? Ember : Gold);
         var conflicts = FindKnownConflicts(gameRoot);
         if (conflicts.Count == 0)
         {
-            _conflictSummary.Text = "No known reward or material conflicts found.";
-            _conflictSummary.ForeColor = Teal;
+            _conflictSummary.Text = string.IsNullOrWhiteSpace(buildSummary) ? _text.Text("scan.clear", "No known reward or material conflicts found.") : buildSummary;
+            _conflictSummary.ForeColor = compatibility.Kind == GameBuildCompatibilityKind.Exact ? Teal : compatibility.Kind == GameBuildCompatibilityKind.Older ? Ember : Gold;
             Append("Conflict scan: no installed PAK contains a managed reward/material table.", Teal);
         }
         else
         {
-            _conflictSummary.Text = $"{conflicts.Count} possible reward/material conflict(s) found. Review the Audit Log.";
+            _conflictSummary.Text = _text.Format("scan.conflicts", "{count} possible reward/material conflict(s) found. Review the Audit Log.", ("count", conflicts.Count));
+            if (!string.IsNullOrWhiteSpace(buildSummary)) _conflictSummary.Text += " " + buildSummary;
             _conflictSummary.ForeColor = Ember;
             Append($"Conflict scan: {conflicts.Count} reward/material PAK(s) require manual disabling:", Ember);
             foreach (var file in conflicts) Append("  " + file, Ember);
         }
         var paksRoot = Path.Combine(gameRoot, "DS", "Content", "Paks");
-        var respawn = Directory.EnumerateFiles(paksRoot, "DS_TreasureRespawn*.pak", SearchOption.TopDirectoryOnly)
-            .Concat(Directory.Exists(Path.Combine(paksRoot, "~mods")) ? Directory.EnumerateFiles(Path.Combine(paksRoot, "~mods"), "DS_TreasureRespawn*.pak", SearchOption.TopDirectoryOnly) : [])
-            .FirstOrDefault();
-        if (respawn is not null)
+        var respawnPaks = (Directory.Exists(paksRoot)
+                ? Directory.EnumerateFiles(paksRoot, "DS_TreasureRespawn*.pak", SearchOption.TopDirectoryOnly)
+                : [])
+            .Concat(Directory.Exists(Path.Combine(paksRoot, "~mods"))
+                ? Directory.EnumerateFiles(Path.Combine(paksRoot, "~mods"), "DS_TreasureRespawn*.pak", SearchOption.TopDirectoryOnly)
+                : [])
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToList();
+        if (respawnPaks.Count > 0)
         {
-            if (conflicts.Count == 0) _conflictSummary.Text += " Treasure Respawn is compatible.";
-            Append("Treasure Respawn detected: compatible file topology (SectionTreasureBoxData only).", Teal);
+            var respawnConflict = respawnPaks.Any(x => conflicts.Contains(x, StringComparer.OrdinalIgnoreCase));
+            if (respawnConflict)
+                Append("A Treasure Respawn-named PAK contains a managed reward/material table and must be reviewed as a conflict.", Ember);
+            else
+            {
+                if (conflicts.Count == 0) _conflictSummary.Text += _text.Text("scan.respawnCompatible", " Treasure Respawn is compatible.");
+                Append("Treasure Respawn detected and inspected: no managed reward/material table overlap.", Teal);
+            }
         }
     }
 
@@ -807,7 +938,7 @@ internal sealed class MainForm : Form
         _tabs.SelectedIndex = Math.Clamp(index, 0, _tabs.TabCount - 1);
         _gamePath.Text = @"C:\Games\DragonSword Awakening";
         _outputPath.Text = @"C:\Users\Player\Documents\DragonSword Progression QOL Builds";
-        _conflictSummary.Text = "No known reward or material conflicts found.";
+        _conflictSummary.Text = _text.Text("scan.clear", "No known reward or material conflicts found.");
         _conflictSummary.ForeColor = Teal;
         if (!showcase) return;
 
@@ -838,9 +969,7 @@ internal sealed class MainForm : Form
         var candidates = directories.SelectMany(x => Directory.EnumerateFiles(x, "*.pak", SearchOption.TopDirectoryOnly))
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .Where(x => !Path.GetFileName(x).Equals(owned, StringComparison.OrdinalIgnoreCase))
-            .Where(x => !Path.GetFileName(x).StartsWith("pakchunk", StringComparison.OrdinalIgnoreCase))
-            .Where(x => !Path.GetFileName(x).StartsWith("DS_TreasureRespawn", StringComparison.OrdinalIgnoreCase))
-            .Where(x => RegexLike(Path.GetFileName(x), "Dungeon", "Reward", "Material", "Combined", "AllInOne", "ProgressionQoL", "Loot", "Drop"));
+            .Where(x => !Path.GetFileName(x).StartsWith("pakchunk", StringComparison.OrdinalIgnoreCase));
         var conflicts = new List<string>();
         foreach (var pak in candidates)
         {
@@ -852,6 +981,8 @@ internal sealed class MainForm : Form
             {
                 if (RegexLike(Path.GetFileName(pak), "Dungeon", "Reward", "Material", "AllInOne", "Combined", "ProgressionQoL"))
                     conflicts.Add(pak);
+                else
+                    Append($"Conflict scan could not inspect {Path.GetFileName(pak)}; no conflict was assumed.", Gold);
             }
         }
         return conflicts.Order(StringComparer.OrdinalIgnoreCase).ToList();
@@ -861,7 +992,7 @@ internal sealed class MainForm : Form
 
     private void BrowseGame()
     {
-        using var dialog = new FolderBrowserDialog { Description = "Select DragonSword Awakening, DS, Paks, ~mods, or Win64", UseDescriptionForTitle = true, SelectedPath = Directory.Exists(_gamePath.Text) ? _gamePath.Text : "" };
+        using var dialog = new FolderBrowserDialog { Description = _text.Text("browse.gameDescription", "Select DragonSword Awakening, DS, Paks, ~mods, or Win64"), UseDescriptionForTitle = true, SelectedPath = Directory.Exists(_gamePath.Text) ? _gamePath.Text : "" };
         if (dialog.ShowDialog(this) == DialogResult.OK)
         {
             _gamePath.Text = BuildEngine.ResolveGameRoot(dialog.SelectedPath) ?? dialog.SelectedPath;
@@ -871,7 +1002,7 @@ internal sealed class MainForm : Form
 
     private void BrowseOutput()
     {
-        using var dialog = new FolderBrowserDialog { Description = "Select where verified builds will be created", UseDescriptionForTitle = true, SelectedPath = Directory.Exists(_outputPath.Text) ? _outputPath.Text : "" };
+        using var dialog = new FolderBrowserDialog { Description = _text.Text("browse.outputDescription", "Select where verified builds will be created"), UseDescriptionForTitle = true, SelectedPath = Directory.Exists(_outputPath.Text) ? _outputPath.Text : "" };
         if (dialog.ShowDialog(this) == DialogResult.OK) _outputPath.Text = dialog.SelectedPath;
     }
 
@@ -880,9 +1011,11 @@ internal sealed class MainForm : Form
         _log.SelectionStart = _log.TextLength; _log.SelectionColor = color; _log.AppendText($"[{DateTime.Now:HH:mm:ss}] {text}\n"); _log.SelectionColor = _log.ForeColor; _log.ScrollToCaret();
     }
 
-    private static void StyleButton(Button button, Color back, Color fore)
+    private Font UiFont(float size, FontStyle style = FontStyle.Regular) => new(_uiFontFamily, size, style);
+
+    private void StyleButton(Button button, Color back, Color fore)
     {
-        button.FlatStyle = FlatStyle.Flat; button.FlatAppearance.BorderColor = fore; button.FlatAppearance.BorderSize = 1; button.BackColor = back; button.ForeColor = fore; button.Font = new Font("Segoe UI Semibold", 9f); button.Cursor = Cursors.Hand;
+        button.FlatStyle = FlatStyle.Flat; button.FlatAppearance.BorderColor = fore; button.FlatAppearance.BorderSize = 1; button.BackColor = back; button.ForeColor = fore; button.Font = UiFont(9f, FontStyle.Bold); button.Cursor = Cursors.Hand;
     }
 
     private sealed record Choice(int Value, string Label)
@@ -917,7 +1050,7 @@ internal sealed class MainForm : Form
         public int Value { get; private set; }
         public event EventHandler? ValueChanged;
 
-        public MultiplierDropDown(IReadOnlyList<Choice> choices, int selectedValue)
+        public MultiplierDropDown(IReadOnlyList<Choice> choices, int selectedValue, string fontFamily)
         {
             _choices = choices;
             AccessibleRole = AccessibleRole.ComboBox;
@@ -927,7 +1060,7 @@ internal sealed class MainForm : Form
             FlatAppearance.MouseDownBackColor = Color.FromArgb(54, 67, 73);
             BackColor = Ink;
             ForeColor = TextMain;
-            Font = new Font("Segoe UI Semibold", 9f);
+            Font = new Font(fontFamily, 9f, FontStyle.Bold);
             TextAlign = ContentAlignment.MiddleLeft;
             Padding = new Padding(8, 0, 24, 0);
             UseVisualStyleBackColor = false;
@@ -1144,8 +1277,13 @@ internal sealed class MainForm : Form
 
     private sealed class BannerPanel : Panel
     {
-        public BannerPanel()
+        private readonly LocalizationService _text;
+        private readonly string _fontFamily;
+
+        public BannerPanel(LocalizationService text, string fontFamily)
         {
+            _text = text;
+            _fontFamily = fontFamily;
             DoubleBuffered = true;
             ResizeRedraw = true;
         }
@@ -1165,18 +1303,18 @@ internal sealed class MainForm : Form
         {
             base.OnPaint(e);
             e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
-            using var titleFont = new Font("Segoe UI", 27f, FontStyle.Bold);
-            using var creditFont = new Font("Segoe UI", 10f, FontStyle.Bold);
-            using var buildFont = new Font("Segoe UI", 9.5f, FontStyle.Regular);
+            using var titleFont = new Font(_fontFamily, 27f, FontStyle.Bold);
+            using var creditFont = new Font(_fontFamily, 10f, FontStyle.Bold);
+            using var buildFont = new Font(_fontFamily, 9.5f, FontStyle.Regular);
             using var titleBrush = new SolidBrush(TextMain);
             using var creditBrush = new SolidBrush(Gold);
 
             const float titleY = 5f;
             var creditY = titleY + titleFont.GetHeight(e.Graphics) + 4f;
             var buildY = creditY + creditFont.GetHeight(e.Graphics) + 3f;
-            e.Graphics.DrawString("PROGRESSION QOL", titleFont, titleBrush, 34f, titleY);
-            e.Graphics.DrawString("DRAGONSWORD REWARD CONFIGURATOR  •  CREATED BY NECTARINES", creditFont, creditBrush, 38f, creditY);
-            e.Graphics.DrawString("VERSION 0.9.4 RC1  •  BUILT FOR GAME 1.0.10  •  ONE CUSTOM PAK  •  OFFLINE", buildFont, titleBrush, 39f, buildY);
+            e.Graphics.DrawString(_text.Text("banner.title", "PROGRESSION QOL"), titleFont, titleBrush, 34f, titleY);
+            e.Graphics.DrawString(_text.Text("banner.credit", "DRAGONSWORD REWARD CONFIGURATOR  •  CREATED BY NECTARINES"), creditFont, creditBrush, 38f, creditY);
+            e.Graphics.DrawString(_text.Text("banner.build", "VERSION 0.9.5  •  BUILT FOR GAME 1.0.10  •  ONE CUSTOM PAK  •  OFFLINE"), buildFont, titleBrush, 39f, buildY);
         }
     }
 }

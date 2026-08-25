@@ -25,3 +25,15 @@ internal sealed record BuildResult(
     int SpreadRewardRows,
     int GeneratedGroups,
     IReadOnlyList<string> PackedFiles);
+
+internal enum GameBuildCompatibilityKind
+{
+    Exact,
+    Newer,
+    Older,
+    Unknown
+}
+
+internal sealed record GameBuildCompatibility(
+    GameBuildCompatibilityKind Kind,
+    string? DetectedBuildId);
