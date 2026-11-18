@@ -1,4 +1,22 @@
+## 0.9.7-rc.1 — 2026-11-15
+
+- Re-extracted official game 1.1.2 / Steam build 26210326 tables; replace the old complete 1.0.10 reward baseline rather than changing only a version label.
+- Preserve all 22 added random groups and 13 new reward routes; refresh item classifications and supported activity relationships.
+- Derive 834 activity rows across 575 groups, including all 36 visible Hunts and map 100056, with existing first-clear/outside-route exclusions.
+- Update app version, exact Steam-build detection, visible baseline and all language version labels. Existing settings/profiles and limits remain compatible.
+- Pass five offline PAK builds, client/server preservation/parity checks, and ten inert install/recovery checks. No live game or save changes.
+- Release candidate: in-game testing NOT RUN; Karma shop, Ryza and historical Trait reports remain open pending runtime evidence. No claim of retroactive reward recovery.
 # Changelog
+
+## 0.9.6-rc.1 — 2026-09-07
+
+- Added an independent Tower of Trials multiplier from x1–x10.
+- Covers 78 verified one-time Tower routes: 68 Fragment of Memory rows and 10 Whirling Thoughts rows across floor-clear and cumulative-star rewards.
+- Added a dedicated Tower tab that explains exactly what changes and that previously collected rewards are not granted again.
+- Kept Tower rewards isolated from repeatable activities, world chests, Spread Equipment Rolls, and Favor Better Rarity.
+- Added build-time identity and quantity validation for every Tower row, plus a focused `--build-test-tower` audit command.
+- Preserved existing saved profiles by migrating the new Tower setting to vanilla x1 when the field is absent.
+- Retained the verified DragonSword 1.0.10 / Steam build 24831799 baseline. DragonSword 1.0.11 remains a newer, not-yet-certified build and receives the existing compatibility warning.
 
 ## 0.9.5-rc.1 — 2026-08-21
 

@@ -195,6 +195,21 @@
         }
       ]
     },
+    "1040501": {
+      "ID": 1040501,
+      "RewardDatas": [
+        {
+          "ID": 1040501,
+          "ContentsType": "STATIC_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [10405001, 10405002, 10405003, 10405004, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 1, 1, 1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
     "1060001": {
       "ID": 1060001,
       "RewardDatas": [
@@ -4230,6 +4245,21 @@
         }
       ]
     },
+    "1300050": {
+      "ID": 1300050,
+      "RewardDatas": [
+        {
+          "ID": 1300050,
+          "ContentsType": "RANDOM_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [13000500, 13000501, 0, 0, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
     "1300100": {
       "ID": 1300100,
       "RewardDatas": [
@@ -4301,6 +4331,21 @@
           "LevelMin": 1,
           "LevelMax": 9999,
           "RandomID": [13001400, 13001401, 0, 0, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
+    "1300150": {
+      "ID": 1300150,
+      "RewardDatas": [
+        {
+          "ID": 1300150,
+          "ContentsType": "RANDOM_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [13001500, 13001501, 0, 0, 0, 0, 0, 0, 0, 0],
           "RandomRate": [1, 1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
         }
       ]
@@ -4380,6 +4425,21 @@
         }
       ]
     },
+    "1300250": {
+      "ID": 1300250,
+      "RewardDatas": [
+        {
+          "ID": 1300250,
+          "ContentsType": "RANDOM_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [13002500, 13002501, 0, 0, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
     "1300300": {
       "ID": 1300300,
       "RewardDatas": [
@@ -4451,6 +4511,21 @@
           "LevelMin": 1,
           "LevelMax": 9999,
           "RandomID": [13003400, 13003401, 0, 0, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
+    "1300350": {
+      "ID": 1300350,
+      "RewardDatas": [
+        {
+          "ID": 1300350,
+          "ContentsType": "RANDOM_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [13003500, 13003501, 0, 0, 0, 0, 0, 0, 0, 0],
           "RandomRate": [1, 1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
         }
       ]
@@ -4530,6 +4605,21 @@
         }
       ]
     },
+    "1300450": {
+      "ID": 1300450,
+      "RewardDatas": [
+        {
+          "ID": 1300450,
+          "ContentsType": "RANDOM_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [13004500, 13004501, 0, 0, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
     "1300500": {
       "ID": 1300500,
       "RewardDatas": [
@@ -4601,6 +4691,21 @@
           "LevelMin": 1,
           "LevelMax": 9999,
           "RandomID": [13005400, 13005401, 0, 0, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
+    "1300550": {
+      "ID": 1300550,
+      "RewardDatas": [
+        {
+          "ID": 1300550,
+          "ContentsType": "RANDOM_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [13005500, 13005501, 0, 0, 0, 0, 0, 0, 0, 0],
           "RandomRate": [1, 1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
         }
       ]
@@ -31275,6 +31380,81 @@
         }
       ]
     },
+    "2800001": {
+      "ID": 2800001,
+      "RewardDatas": [
+        {
+          "ID": 2800001,
+          "ContentsType": "STATIC_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [28000010, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
+    "2800002": {
+      "ID": 2800002,
+      "RewardDatas": [
+        {
+          "ID": 2800002,
+          "ContentsType": "STATIC_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [28000020, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
+    "2800003": {
+      "ID": 2800003,
+      "RewardDatas": [
+        {
+          "ID": 2800003,
+          "ContentsType": "STATIC_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [28000030, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
+    "2800004": {
+      "ID": 2800004,
+      "RewardDatas": [
+        {
+          "ID": 2800004,
+          "ContentsType": "STATIC_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [28000040, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
+    "2800005": {
+      "ID": 2800005,
+      "RewardDatas": [
+        {
+          "ID": 2800005,
+          "ContentsType": "STATIC_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [28000050, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
     "3000000": {
       "ID": 3000000,
       "RewardDatas": [
@@ -35846,6 +36026,21 @@
           "LevelMin": 1,
           "LevelMax": 9999,
           "RandomID": [50004180, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          "RandomRate": [1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+        }
+      ]
+    },
+    "5000419": {
+      "ID": 5000419,
+      "RewardDatas": [
+        {
+          "ID": 5000419,
+          "ContentsType": "STATIC_REWARD",
+          "IsFieldDrop": false,
+          "DropType": "DIRECT",
+          "LevelMin": 1,
+          "LevelMax": 9999,
+          "RandomID": [50004190, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           "RandomRate": [1, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
         }
       ]

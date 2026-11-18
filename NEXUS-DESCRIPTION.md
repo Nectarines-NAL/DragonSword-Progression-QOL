@@ -1,111 +1,107 @@
-# Progression QOL — Reward Configurator
+[b][color=#e69138][size=5]Progression QOL Reward Configurator[/size][/color][/b]
 
-Created by **nectarines**
+Build one custom reward PAK from the settings you choose. Every multiplier starts at vanilla x1, and both Loot Shape options start disabled.
 
-Progression QOL lets you build one custom reward PAK instead of choosing between a pile of fixed multiplier files. Every setting starts at vanilla behavior, so you decide exactly what changes.
+[b]Release:[/b] 0.9.7 RC1
+[b]Game baseline:[/b] DragonSword 1.1.2 — Steam build 26210326
 
-**Current release candidate:** Progression QOL 0.9.5 RC1, validated for DragonSword: Awakening 1.0.10, Steam build 24831799.
+This release refreshes the official client and server tables and reward coverage, including all 36 visible Hunts. Existing saved profiles remain compatible. After upgrading the app, load your settings and use Build + Install to rebuild the installed PAK.
 
-## Updated for DragonSword 1.0.10
-
-- Revalidated against the unmodified 1.0.10 game tables
-- Confirmed every managed reward-system table is unchanged from the validated 1.0.9 baseline
-- Added Sunken Ruins and Ruins Beneath the Waves to Activity Gold and Crafting Materials
-- Added a separate Currency EXP Items control for Character, Equipment, and Karma EXP items
-- Retains the 1.0.9 fixes for activity rewards, World Gathering x20, Favor Better Rarity with Spread, and the Nightmare Barduk achievement
-- Added named profiles that remain available after updating or moving the app
-- Added a guided, confirmed return to vanilla behavior
-- Retained DPI-aware layout and scroll fallback for scaled displays
-- Added eleven editable interface languages with automatic English fallback
-- Added direct validation of every supported Trait Dungeon reward row and completion route during each build
-- Moved temporary pack/unpack work away from Documents when possible, with a writable-folder fallback
-- Expanded conflict detection to inspect every non-official PAK instead of relying on filenames
-- Changed automatic installation to `DS\Content\Paks\~mods` and safely migrates this app's older root-level PAK
-- Verifies a non-loadable temporary copy before disabling the currently installed Progression QOL PAK, then verifies the final destination again
-- Inspects Treasure Respawn by its internal file paths; the verified release remains compatible
-
-## What you can configure
+[color=#e69138][size=5][b]What you can configure[/b][/size][/color]
 
 - World gathering: plants, ore, and cooking-ingredient nodes
-- Enemy materials: ordinary and field-enemy material drops
-- Safe chest stacks: stackable rewards from one-time world exploration chests; dungeon chests, unique items, and progression items remain unchanged
-- Equipment from dungeons, hunts, raids, and Sudden Missions
-- Activity crafting materials, including boss parts, runes, upgrades, Trait stones, and the two hidden underwater dungeons
-- Currency EXP Items: Character, Equipment, and Karma EXP items from the three repeatable Currency Dungeons, independently configurable from other crafting materials
-- Adventurer's Emblems for the Exchange Shop
-- Gold and Mercenary Corps Rank EXP
-- Spread Equipment Rolls for more variety within the same total equipment quantity
-- Favor Better Rarity for supported mixed-tier equipment pools
-- Named profiles for saving and reloading favorite configurations
+- Material drops from ordinary and field enemies
+- Safe stackable rewards from one-time world exploration chests
+- Equipment from supported Dungeons, Hunts, Raids, and Sudden Missions
+- Activity crafting materials, including boss parts, Raid runes, upgrades, Trait stones, and underwater rewards
+- Character, Equipment, and Karma EXP items from repeatable Currency Dungeons
+- Adventurer's Emblems
+- Gold
+- Mercenary Corps Rank EXP
+- Tower of Trials rewards
+- Equipment roll variety
+- Supported mixed-tier rarity odds
 
-Equipment is capped at x10 because the game equipment inventory holds 500 items. World-chest scaling is also capped at x10.
+Equipment, Safe Chest Stacks, and Tower of Trials are capped at x10. Other quantity controls support up to x20.
 
-## Vanilla defaults
+[color=#e69138][size=5][b]Tower of Trials[/b][/size][/color]
 
-All multipliers open at `x1 — Default`. Spread Equipment Rolls and Favor Better Rarity open **off**, which preserves vanilla behavior. The displayed 90% better-tier value is only used if Favor Better Rarity is enabled.
+The independent Tower multiplier covers 78 verified one-time reward routes:
 
-**Spread off:** multiplied equipment remains one stacked result, matching vanilla reward behavior.
+[list]
+[*]68 Fragment of Memory rows[/*]
+[*]10 Whirling Thoughts rows[/*]
+[/list]
 
-**Spread on:** the same multiplied total is split into several independent selections from the original equipment pool. This can produce more item variety in one clear, but it does not force every item type, add quantity, affect Raid runes, or change equipment stats.
+These include verified floor-clear and cumulative-star rewards. The multiplier applies when an affected reward is newly earned or still waiting to be claimed. It does not change stars, difficulty, or rewards already collected, and it does not grant a completed reward again.
 
-**Favor Better Rarity off:** each supported pool uses its original odds.
+[color=#e69138][size=5][b]Loot Shape[/b][/size][/color]
 
-**Favor Better Rarity on:** a supported Rare/Epic pool favors Epic, while an Epic/Legendary pool favors Legendary. Supported Raid rune pools are included. The selected percentage is the chance for the better of those two available tiers; quantity and equipment main/substat rolls do not change.
+[b][color=#e69138]Spread Equipment Rolls — Off is vanilla behavior[/color][/b]
 
-**Raid runes:** Spread Equipment Rolls does not affect them. The Crafting Materials multiplier changes supported rune quantities, while Favor Better Rarity can change supported mixed-tier rune pools.
+With Spread disabled, multiplied equipment remains grouped into the original stacked reward result.
 
-**Profiles:** save the current controls under a custom name, then load them later from the **Profiles** button. Profiles are readable JSON stored in the current Windows user's Local AppData, so they remain available after replacing or moving the application folder. No username or drive is hard-coded. Portable profiles from an earlier version can be migrated automatically when beside the app or manually with **Import from Older Version**. The configurator always opens at vanilla defaults and loads a saved profile only when you choose it. Loading a profile does not install anything; use **Build + Install** afterward.
+With Spread enabled, the same total equipment quantity is divided into independent selections from the original equipment pool. This allows more variety during one clear, but it does not force unique item types, add quantity, affect Raid runes, or change equipment stats.
 
-**Returning to vanilla:** choose **Reset to Vanilla Defaults**, then select **Build + Install**. If the Progression QOL PAK is installed, the app asks before disabling and backing up that exact file. Other mods are not changed. The built-in Default state is the vanilla control state, not a saved profile.
+[b][color=#e69138]Favor Better Rarity — Off is vanilla behavior[/color][/b]
 
-## Install
+With this option disabled, supported reward pools retain their original odds. When enabled, supported Rare/Epic pools favor Epic and supported Epic/Legendary pools favor Legendary. The Better-Tier Chance controls how often the better listed tier is selected. Quantity and equipment main/substat rolls are unchanged.
+
+[color=#e69138][size=5][b]Safe Chest Stacks[/b][/size][/color]
+
+This setting affects supported stackable contents from one-time world exploration chests. It does not affect dungeon chests, unique equipment, progression items, or protected one-time rewards. Tower rewards have their own separate control.
+
+[color=#e69138][size=5][b]Profiles and languages[/b][/size][/color]
+
+Profiles save readable JSON settings in the current Windows user's Local AppData folder. They remain available when the application is updated or moved. Profiles never install anything automatically; load a profile and then select Build + Install.
+
+The configurator includes editable interface files for all eleven languages supported by DragonSword on Steam. English is the source language, and incomplete translations safely fall back to English per string.
+
+[color=#00ff00][size=5][b]Installation[/b][/size][/color]
 
 1. Install the Microsoft .NET 8 Desktop Runtime (x64) if needed.
-2. Extract the complete archive. Do not run it from inside the ZIP.
+2. Extract the complete archive to a normal folder. Do not run the app from inside the ZIP.
 3. Close DragonSword: Awakening.
-4. Run `DragonSword.ProgressionQoL.exe`.
+4. Run DragonSword.ProgressionQoL.exe.
 5. Confirm the game folder and choose your settings.
-6. Select **Build + Install**, review any conflict warning, and confirm.
+6. Select Build + Install, review any compatibility or conflict warning, and confirm.
 
-The app installs one file to `DS\Content\Paks\~mods`:
+The app installs one owned file to:
 
-`DS_ZZZ_ProgressionQoL_Configured_P.pak`
+DS\Content\Paks\~mods\DS_ZZZ_ProgressionQoL_Configured_P.pak
 
-To change settings later, open the app and use **Build + Install** again. The previous project PAK is disabled and backed up automatically. No manual deletion is required.
+To change settings later, open the app and use Build + Install again. The current Progression QOL PAK is replaced transactionally and the previous copy is preserved as a disabled backup. No manual deletion is required.
 
-## Compatibility
+To return this mod to vanilla behavior, use Profiles → Reset to Vanilla Defaults and then Build + Install. The app will ask before disabling its installed PAK. Other mods are never changed.
 
-This release was validated against DragonSword: Awakening 1.0.10, Steam build 24831799. A newer or unverifiable build receives a compatibility warning but may continue; a known older build must be updated first. The warning exists because game updates can change complete reward tables. If rewards behave unexpectedly on a newer build, restore vanilla behavior and watch this page for an update.
+[color=#e69138][size=5][b]Compatibility and conflicts[/b][/size][/color]
 
-Because two PAKs that replace the same Unreal reward tables cannot be row-merged at load time, disable any file identified by the built-in conflict scan before playing.
+Reward-table PAKs do not merge individual rows at game load. Disable any file identified by the built-in conflict scan before playing. The scanner reads other PAK listings only; it never deletes, moves, or disables another mod.
 
-## Fragment reward scope
+The app may generate these table paths:
 
-Fragment rewards are included only where their repeatable source is verified. Fragment of Sacred Light from supported Sudden Missions follows Crafting Materials, and verified Fragment of Memory rows in one-time world exploration chests follow Safe Chest Stacks. One-time, story, unknown, and unverified fragment routes—including Whirling Thoughts—are intentionally not multiplied.
+- DS/Content/Design/GameData/RewardRandomData.table
+- DS/Content/Design/GameData/RewardData.table when Spread is enabled
+- DS/Content/Design/GameData/PropCollectData.table when gathering is changed
+- Matching generated server XML files
 
-## Transparent and offline
+[color=#e69138][size=5][b]Transparent and offline[/b][/size][/color]
 
-- No internet connection, telemetry, or automatic updater
+- No network connection, telemetry, or automatic updater
 - No administrator request
 - No installer service or registry changes
 - No DLL injection or game executable modification
 - No obfuscation
-- Other PAKs are scanned read-only and never changed
 - Generated and installed PAKs are SHA-256 verified
 - Full source code and third-party license notices are provided
 
-The archive includes the open-source `repak` utility for local PAK creation and verification. It is not downloaded at runtime.
+The archive includes the open-source repak utility for local PAK creation and verification. It is not downloaded at runtime.
 
-## Independent work
+[size=4][b][color=#4da6ff]Source code and documentation[/color][/b][/size]
+[url=https://github.com/Nectarines-NAL/DragonSword-Progression-QOL]GitHub — DragonSword Progression QOL[/url]
 
-Progression QOL is independently authored from unmodified game-table baselines and nectarines' own Dungeon QOL target work. It does not require, ingest, copy, or redistribute another mod. It includes no third-party mod files, settings, branding, descriptions, screenshots, or artwork.
 
-The original fantasy reward-forge artwork was AI-generated specifically for this project and contains no game characters or logos. OpenAI Codex assisted with code, UI implementation, test tooling, and documentation. The application is unobfuscated and the matching source release is available for inspection.
 
-Source and issue tracker: https://github.com/Nectarines-NAL/DragonSword-Progression-QOL
+[b]Release status[/b]
 
-## Uninstall
-
-Close the game and remove `DS_ZZZ_ProgressionQoL_Configured_P.pak` from `DS\Content\Paks\~mods`. If an older release left the same filename directly in `DS\Content\Paks`, remove that copy too. Disabled backups are optional and stored in `DS\Content\Paks\ProgressionQoL-Backups`.
-
-If something looks wrong, tell us the activity or dungeon and what you expected versus what happened. We are happy to look into it and will ask for a build report only if it is actually needed.
+Offline build and installation/recovery checks passed. Gameplay testing is pending. Nexus is reviewing the new main archive, so its download is temporarily unavailable.

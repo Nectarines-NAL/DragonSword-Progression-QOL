@@ -408,6 +408,54 @@
         }
       ]
     },
+    "10405001": {
+      "ID": 10405001,
+      "RewardRandomDataArray": [
+        {
+          "ID": 10405001,
+          "ItemID": 1710525,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "10405002": {
+      "ID": 10405002,
+      "RewardRandomDataArray": [
+        {
+          "ID": 10405002,
+          "ItemID": 1450701,
+          "Min_ItemCount": 100,
+          "Max_ItemCount": 100,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "10405003": {
+      "ID": 10405003,
+      "RewardRandomDataArray": [
+        {
+          "ID": 10405003,
+          "ItemID": 1470001,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "10405004": {
+      "ID": 10405004,
+      "RewardRandomDataArray": [
+        {
+          "ID": 10405004,
+          "ItemID": 1000500,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 1
+        }
+      ]
+    },
     "10600011": {
       "ID": 10600011,
       "RewardRandomDataArray": [
@@ -9515,6 +9563,30 @@
         }
       ]
     },
+    "13000500": {
+      "ID": 13000500,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13000500,
+          "ItemID": 1000201,
+          "Min_ItemCount": 5000,
+          "Max_ItemCount": 5000,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13000501": {
+      "ID": 13000501,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13000501,
+          "ItemID": 1450701,
+          "Min_ItemCount": 100,
+          "Max_ItemCount": 100,
+          "ItemWeight": 1
+        }
+      ]
+    },
     "13001000": {
       "ID": 13001000,
       "RewardRandomDataArray": [
@@ -9767,6 +9839,30 @@
         }
       ]
     },
+    "13001500": {
+      "ID": 13001500,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13001500,
+          "ItemID": 1000201,
+          "Min_ItemCount": 5000,
+          "Max_ItemCount": 5000,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13001501": {
+      "ID": 13001501,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13001501,
+          "ItemID": 1450701,
+          "Min_ItemCount": 100,
+          "Max_ItemCount": 100,
+          "ItemWeight": 1
+        }
+      ]
+    },
     "13002000": {
       "ID": 13002000,
       "RewardRandomDataArray": [
@@ -10015,6 +10111,30 @@
           "ItemID": 1450701,
           "Min_ItemCount": 60,
           "Max_ItemCount": 60,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13002500": {
+      "ID": 13002500,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13002500,
+          "ItemID": 1000201,
+          "Min_ItemCount": 5000,
+          "Max_ItemCount": 5000,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13002501": {
+      "ID": 13002501,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13002501,
+          "ItemID": 1450701,
+          "Min_ItemCount": 100,
+          "Max_ItemCount": 100,
           "ItemWeight": 1
         }
       ]
@@ -10283,6 +10403,30 @@
         }
       ]
     },
+    "13003500": {
+      "ID": 13003500,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13003500,
+          "ItemID": 1000201,
+          "Min_ItemCount": 5000,
+          "Max_ItemCount": 5000,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13003501": {
+      "ID": 13003501,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13003501,
+          "ItemID": 1450701,
+          "Min_ItemCount": 100,
+          "Max_ItemCount": 100,
+          "ItemWeight": 1
+        }
+      ]
+    },
     "13004000": {
       "ID": 13004000,
       "RewardRandomDataArray": [
@@ -10547,6 +10691,30 @@
         }
       ]
     },
+    "13004500": {
+      "ID": 13004500,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13004500,
+          "ItemID": 1000201,
+          "Min_ItemCount": 5000,
+          "Max_ItemCount": 5000,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13004501": {
+      "ID": 13004501,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13004501,
+          "ItemID": 1450701,
+          "Min_ItemCount": 100,
+          "Max_ItemCount": 100,
+          "ItemWeight": 1
+        }
+      ]
+    },
     "13005000": {
       "ID": 13005000,
       "RewardRandomDataArray": [
@@ -10795,6 +10963,30 @@
           "ItemID": 1450701,
           "Min_ItemCount": 60,
           "Max_ItemCount": 60,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13005500": {
+      "ID": 13005500,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13005500,
+          "ItemID": 1000201,
+          "Min_ItemCount": 5000,
+          "Max_ItemCount": 5000,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "13005501": {
+      "ID": 13005501,
+      "RewardRandomDataArray": [
+        {
+          "ID": 13005501,
+          "ItemID": 1450701,
+          "Min_ItemCount": 100,
+          "Max_ItemCount": 100,
           "ItemWeight": 1
         }
       ]
@@ -11547,42 +11739,6 @@
         }
       ]
     },
-    "14001005": {
-      "ID": 14001005,
-      "RewardRandomDataArray": [
-        {
-          "ID": 14001005,
-          "ItemID": 1000001,
-          "Min_ItemCount": 200000,
-          "Max_ItemCount": 200000,
-          "ItemWeight": 1
-        }
-      ]
-    },
-    "14001105": {
-      "ID": 14001105,
-      "RewardRandomDataArray": [
-        {
-          "ID": 14001105,
-          "ItemID": 1000001,
-          "Min_ItemCount": 300000,
-          "Max_ItemCount": 300000,
-          "ItemWeight": 1
-        }
-      ]
-    },
-    "14001205": {
-      "ID": 14001205,
-      "RewardRandomDataArray": [
-        {
-          "ID": 14001205,
-          "ItemID": 1000001,
-          "Min_ItemCount": 350000,
-          "Max_ItemCount": 350000,
-          "ItemWeight": 1
-        }
-      ]
-    },
     "14001004": {
       "ID": 14001004,
       "RewardRandomDataArray": [
@@ -11702,6 +11858,42 @@
           "ItemID": 1450409,
           "Min_ItemCount": 3,
           "Max_ItemCount": 5,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "14001005": {
+      "ID": 14001005,
+      "RewardRandomDataArray": [
+        {
+          "ID": 14001005,
+          "ItemID": 1000001,
+          "Min_ItemCount": 200000,
+          "Max_ItemCount": 200000,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "14001105": {
+      "ID": 14001105,
+      "RewardRandomDataArray": [
+        {
+          "ID": 14001105,
+          "ItemID": 1000001,
+          "Min_ItemCount": 300000,
+          "Max_ItemCount": 300000,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "14001205": {
+      "ID": 14001205,
+      "RewardRandomDataArray": [
+        {
+          "ID": 14001205,
+          "ItemID": 1000001,
+          "Min_ItemCount": 350000,
+          "Max_ItemCount": 350000,
           "ItemWeight": 1
         }
       ]
@@ -31089,6 +31281,66 @@
         }
       ]
     },
+    "28000010": {
+      "ID": 28000010,
+      "RewardRandomDataArray": [
+        {
+          "ID": 28000010,
+          "ItemID": 1000501,
+          "Min_ItemCount": 10,
+          "Max_ItemCount": 10,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "28000020": {
+      "ID": 28000020,
+      "RewardRandomDataArray": [
+        {
+          "ID": 28000020,
+          "ItemID": 1000501,
+          "Min_ItemCount": 15,
+          "Max_ItemCount": 15,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "28000030": {
+      "ID": 28000030,
+      "RewardRandomDataArray": [
+        {
+          "ID": 28000030,
+          "ItemID": 1000501,
+          "Min_ItemCount": 25,
+          "Max_ItemCount": 25,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "28000040": {
+      "ID": 28000040,
+      "RewardRandomDataArray": [
+        {
+          "ID": 28000040,
+          "ItemID": 1000501,
+          "Min_ItemCount": 50,
+          "Max_ItemCount": 50,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "28000050": {
+      "ID": 28000050,
+      "RewardRandomDataArray": [
+        {
+          "ID": 28000050,
+          "ItemID": 1450410,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 1
+        }
+      ]
+    },
     "30000000": {
       "ID": 30000000,
       "RewardRandomDataArray": [
@@ -35091,6 +35343,18 @@
         {
           "ID": 50004180,
           "ItemID": 1710544,
+          "Min_ItemCount": 1,
+          "Max_ItemCount": 1,
+          "ItemWeight": 1
+        }
+      ]
+    },
+    "50004190": {
+      "ID": 50004190,
+      "RewardRandomDataArray": [
+        {
+          "ID": 50004190,
+          "ItemID": 1710526,
           "Min_ItemCount": 1,
           "Max_ItemCount": 1,
           "ItemWeight": 1

@@ -281,6 +281,47 @@ foreach ($entry in ($groupRarityMetadata.GetEnumerator() | Sort-Object Key)) {
     })
 }
 
+# Tower of Trials uses its own one-time floor-clear and cumulative-star routes.
+# Keep these rows independent from repeatable activities and world chests so the
+# configurator can scale them without broad item-ID matching.
+$towerRewardIDs = @(
+    2500000..2500017
+    2500100..2500119
+    2500200..2500219
+    2500300..2500319
+)
+$towerRewardIDSet = [Collections.Generic.HashSet[long]]::new()
+foreach ($rewardID in $towerRewardIDs) { [void]$towerRewardIDSet.Add([long]$rewardID) }
+$towerRows = [Collections.Generic.List[object]]::new()
+$towerKeys = [Collections.Generic.HashSet[string]]::new()
+foreach ($rewardID in $towerRewardIDs) {
+    $groupIDs = @(Get-RandomIDsForReward -RewardData $rewardData -RewardID $rewardID)
+    if ($groupIDs.Count -ne 1) {
+        throw "Tower reward $rewardID must reference exactly one random group; found $($groupIDs.Count)."
+    }
+    $groupID = [long]$groupIDs[0]
+    $property = $rewardRandom.PSObject.Properties["$groupID"]
+    if ($null -eq $property) { throw "RewardRandomData is missing Tower group $groupID." }
+    $rows = @($property.Value.RewardRandomDataArray)
+    if ($rows.Count -ne 1) { throw "Tower group $groupID must contain exactly one reward row; found $($rows.Count)." }
+    $row = $rows[0]
+    $itemID = [long]$row.ItemID
+    if ($itemID -notin 1450403, 1450822) { throw "Tower group $groupID contains unexpected item $itemID." }
+    $item = $items.PSObject.Properties["$itemID"].Value
+    if ($null -eq $item -or [string]$item.ItemType -ne 'COMMON') { throw "Tower item $itemID is missing or is not COMMON." }
+    if ([long]$row.Min_ItemCount -le 0 -or [long]$row.Max_ItemCount -le 0 -or [decimal]$row.ItemWeight -le 0) {
+        throw "Tower group $groupID contains an invalid quantity or weight."
+    }
+    if ($activityKeys.Contains("$groupID`:0")) { throw "Tower row $groupID`:0 overlaps a repeatable activity target." }
+    $outsideReferences = @($rewardReferences[$groupID] | Where-Object { -not $towerRewardIDSet.Contains([long]$_) })
+    if ($outsideReferences.Count -gt 0) { throw "Tower group $groupID is also used outside verified Tower routes: $($outsideReferences -join ', ')." }
+    $towerRows.Add((New-RowIdentity -GroupID $groupID -RowIndex 0 -Row $row -Bucket 'tower' -Category 'Tower' -ItemType ([string]$item.ItemType)))
+    [void]$towerKeys.Add("$groupID`:0")
+}
+if ($towerRows.Count -ne 78) { throw "Expected 78 Tower reward rows; found $($towerRows.Count)." }
+if (@($towerRows | Where-Object item_id -eq 1450403).Count -ne 68) { throw 'Expected 68 Fragment of Memory Tower rows.' }
+if (@($towerRows | Where-Object item_id -eq 1450822).Count -ne 10) { throw 'Expected 10 Whirling Thoughts Tower rows.' }
+
 $chestRewardIDs = [Collections.Generic.HashSet[long]]::new()
 foreach ($treasure in $treasureBoxes.PSObject.Properties.Value) {
     Add-PositiveIDs -Set $chestRewardIDs -Values $treasure.ItemRewardID
@@ -314,14 +355,17 @@ foreach ($groupID in ($chestRandomIDs | Sort-Object)) {
             if ($activityKeys.Contains("$groupID`:$index")) {
                 throw "World chest row $groupID`:$index overlaps an activity target."
             }
+            if ($towerKeys.Contains("$groupID`:$index")) {
+                throw "World chest row $groupID`:$index overlaps a Tower of Trials target."
+            }
             $chestRows.Add((New-RowIdentity -GroupID $groupID -RowIndex $index -Row $row))
         }
     }
 }
 
 $manifest = [ordered]@{
-    schema_version = 4
-    provenance = "Independently derived from unmodified DragonSword: Awakening 1.0.10 Steam build $supportedBuildID tables and nectarines' Dungeon QOL Sudden Mission research."
+    schema_version = 5
+    provenance = "Independently derived from unmodified DragonSword: Awakening 1.0.10 Steam build $supportedBuildID tables, including verified Tower of Trials RewardData/RewardRandomData routes, and nectarines' Dungeon QOL Sudden Mission research."
     game_version = '1.0.10'
     steam_build_id = $supportedBuildID
     baseline_sha256 = [ordered]@{
@@ -333,6 +377,7 @@ $manifest = [ordered]@{
     }
     activity_reward_rows = @($activityRows)
     rarity_groups = @($rarityGroups)
+    tower_reward_rows = @($towerRows)
     safe_world_chest_rows = @($chestRows)
     known_source_defects = @(
         foreach ($groupID in $missingChestGroups) {
@@ -354,6 +399,10 @@ $manifest = [ordered]@{
         activity_reward_rows = $activityRows.Count
         sudden_mission_groups = $suddenMissionGroups.Count
         rarity_groups = $rarityGroups.Count
+        tower_reward_groups = $towerRows.Count
+        tower_reward_rows = $towerRows.Count
+        tower_memory_rows = @($towerRows | Where-Object item_id -eq 1450403).Count
+        tower_whirling_thought_rows = @($towerRows | Where-Object item_id -eq 1450822).Count
         safe_world_chest_rows = $chestRows.Count
         missing_world_chest_groups = $missingChestGroups.Count
     }

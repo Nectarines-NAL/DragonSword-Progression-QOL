@@ -1,14 +1,14 @@
 {
-  "schema_version": 4,
-  "provenance": "Independently derived from unmodified DragonSword: Awakening 1.0.10 Steam build 24831799 tables and nectarines' Dungeon QOL Sudden Mission research.",
-  "game_version": "1.0.10",
-  "steam_build_id": "24831799",
+  "schema_version": 5,
+  "provenance": "Independently derived from unmodified DragonSword: Awakening 1.1.2 Steam build 26210326 tables, including verified Tower of Trials RewardData/RewardRandomData routes, and nectarines' Dungeon QOL Sudden Mission research.",
+  "game_version": "1.1.2",
+  "steam_build_id": "26210326",
   "baseline_sha256": {
-    "reward_random_client": "CBB0902F0ADD5F503400C121A31C3AE1643C064DDCFD6ADDE93429D9A620724C",
-    "reward_data_client": "3FF0A68F5D7BA0742F87A4A3C4E9963512A8E055C67DC2ED39745FD548A6F758",
+    "reward_random_client": "30D346B956017A47E98C82BC9394988D7DF1B08662113FE5AC088F6682FE8414",
+    "reward_data_client": "2960F20F98A6EB4755769279D29A0A609E46B73D09E8DD0D1A1806975F862B2A",
     "prop_collect_client": "8E24313BEB15404BABCE09C2BDAEBD99F58965E0B672260F225580625EE4FC7E",
-    "game_item_client": "B5B07ED22E82DBA08EB0D468F67009BFE855DDC0E02DF283E2F4F77B9BF875E4",
-    "map_dungeon_client": "9AB9C49773F6898024C7AACC715E034B07068CD768DDC8ADB613FE046B29AFA2"
+    "game_item_client": "87A5AC4509FEB23D2AF64943A76342AB88B1D2433730F28655211529C94CC0BC",
+    "map_dungeon_client": "6A6C69B417393BEDE7AD0E1CA7500B74FAC0CAECEA1CD6CCA2EBA27B22186465"
   },
   "activity_reward_rows": [
     {
@@ -4644,6 +4644,22 @@
       "item_type": "COMMON"
     },
     {
+      "group_id": 13000500,
+      "row_index": 0,
+      "item_id": 1000201,
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
+    },
+    {
+      "group_id": 13000501,
+      "row_index": 0,
+      "item_id": 1450701,
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
+    },
+    {
       "group_id": 13001000,
       "row_index": 0,
       "item_id": 1000201,
@@ -4812,6 +4828,22 @@
       "item_type": "COMMON"
     },
     {
+      "group_id": 13001500,
+      "row_index": 0,
+      "item_id": 1000201,
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
+    },
+    {
+      "group_id": 13001501,
+      "row_index": 0,
+      "item_id": 1450701,
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
+    },
+    {
       "group_id": 13002000,
       "row_index": 0,
       "item_id": 1000201,
@@ -4973,6 +5005,22 @@
     },
     {
       "group_id": 13002401,
+      "row_index": 0,
+      "item_id": 1450701,
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 13002500,
+      "row_index": 0,
+      "item_id": 1000201,
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
+    },
+    {
+      "group_id": 13002501,
       "row_index": 0,
       "item_id": 1450701,
       "bucket": "materials",
@@ -5156,6 +5204,22 @@
       "item_type": "COMMON"
     },
     {
+      "group_id": 13003500,
+      "row_index": 0,
+      "item_id": 1000201,
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
+    },
+    {
+      "group_id": 13003501,
+      "row_index": 0,
+      "item_id": 1450701,
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
+    },
+    {
       "group_id": 13004000,
       "row_index": 0,
       "item_id": 1000201,
@@ -5332,6 +5396,22 @@
       "item_type": "COMMON"
     },
     {
+      "group_id": 13004500,
+      "row_index": 0,
+      "item_id": 1000201,
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
+    },
+    {
+      "group_id": 13004501,
+      "row_index": 0,
+      "item_id": 1450701,
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
+    },
+    {
       "group_id": 13005000,
       "row_index": 0,
       "item_id": 1000201,
@@ -5493,6 +5573,22 @@
     },
     {
       "group_id": 13005401,
+      "row_index": 0,
+      "item_id": 1450701,
+      "bucket": "materials",
+      "activity_category": "Hunt",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 13005500,
+      "row_index": 0,
+      "item_id": 1000201,
+      "bucket": "rank_experience",
+      "activity_category": "Hunt",
+      "item_type": "PAY_ADV_EXP"
+    },
+    {
+      "group_id": 13005501,
       "row_index": 0,
       "item_id": 1450701,
       "bucket": "materials",
@@ -7868,6 +7964,632 @@
       ]
     }
   ],
+  "tower_reward_rows": [
+    {
+      "group_id": 25000000,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000010,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000020,
+      "row_index": 0,
+      "item_id": 1450822,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000030,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000040,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000050,
+      "row_index": 0,
+      "item_id": 1450822,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000060,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000070,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000080,
+      "row_index": 0,
+      "item_id": 1450822,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000090,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000100,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000110,
+      "row_index": 0,
+      "item_id": 1450822,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000120,
+      "row_index": 0,
+      "item_id": 1450822,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000130,
+      "row_index": 0,
+      "item_id": 1450822,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000140,
+      "row_index": 0,
+      "item_id": 1450822,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000150,
+      "row_index": 0,
+      "item_id": 1450822,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000160,
+      "row_index": 0,
+      "item_id": 1450822,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25000170,
+      "row_index": 0,
+      "item_id": 1450822,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001000,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001010,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001020,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001030,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001040,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001050,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001060,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001070,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001080,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001090,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001100,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001110,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001120,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001130,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001140,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001150,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001160,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001170,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001180,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25001190,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002000,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002010,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002020,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002030,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002040,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002050,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002060,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002070,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002080,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002090,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002100,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002110,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002120,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002130,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002140,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002150,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002160,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002170,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002180,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25002190,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003000,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003010,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003020,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003030,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003040,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003050,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003060,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003070,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003080,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003090,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003100,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003110,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003120,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003130,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003140,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003150,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003160,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003170,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003180,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    },
+    {
+      "group_id": 25003190,
+      "row_index": 0,
+      "item_id": 1450403,
+      "bucket": "tower",
+      "activity_category": "Tower",
+      "item_type": "COMMON"
+    }
+  ],
   "safe_world_chest_rows": [
     {
       "group_id": 15000001,
@@ -10036,13 +10758,17 @@
     "visible_normal_maps": 45,
     "visible_currency_maps": 15,
     "visible_trait_maps": 36,
-    "visible_hunt_maps": 30,
+    "visible_hunt_maps": 36,
     "visible_raid_maps": 6,
     "supported_underwater_maps": 2,
-    "activity_random_groups": 563,
-    "activity_reward_rows": 822,
+    "activity_random_groups": 575,
+    "activity_reward_rows": 834,
     "sudden_mission_groups": 11,
     "rarity_groups": 31,
+    "tower_reward_groups": 78,
+    "tower_reward_rows": 78,
+    "tower_memory_rows": 68,
+    "tower_whirling_thought_rows": 10,
     "safe_world_chest_rows": 431,
     "missing_world_chest_groups": 1
   }

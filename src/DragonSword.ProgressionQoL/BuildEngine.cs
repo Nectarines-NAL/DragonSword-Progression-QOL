@@ -13,8 +13,8 @@ namespace DragonSword.ProgressionQoL;
 internal sealed class BuildEngine
 {
     private const string PakName = "DS_ZZZ_ProgressionQoL_Configured_P.pak";
-    public const string SupportedGameVersion = "1.0.10";
-    public const string SupportedSteamBuildId = "24831799";
+    public const string SupportedGameVersion = "1.1.2";
+    public const string SupportedSteamBuildId = "26210326";
     private static readonly CultureInfo Invariant = CultureInfo.InvariantCulture;
     private static readonly Regex XmlId = new("\\b(?:\\w+:)?ID=\"(\\d+)\"", RegexOptions.Compiled);
 
@@ -66,12 +66,13 @@ internal sealed class BuildEngine
         var itemTypes = BuildItemTypeMap(gameItems);
         var activityTargets = ReadRowTargets(targets["activity_reward_rows"]);
         var chestTargets = ReadRowTargets(targets["safe_world_chest_rows"]);
-        var protectedRows = activityTargets.Concat(chestTargets).Select(RowKey).ToHashSet(StringComparer.Ordinal);
+        var towerTargets = ReadRowTargets(targets["tower_reward_rows"]);
+        var protectedRows = activityTargets.Concat(chestTargets).Concat(towerTargets).Select(RowKey).ToHashSet(StringComparer.Ordinal);
         var enemyTargets = DeriveEnemyMaterialTargets(vanillaRewardData, vanillaRandom, itemTypes)
             .Where(x => !protectedRows.Contains(RowKey(x))).ToList();
         var gatheringIds = DeriveGatheringTargets(vanillaCollect, itemTypes);
 
-        progress?.Report($"Applying {activityTargets.Count:N0} activity, {enemyTargets.Count:N0} enemy-material, and {chestTargets.Count:N0} chest rules...");
+        progress?.Report($"Applying {activityTargets.Count:N0} activity, {enemyTargets.Count:N0} enemy-material, {chestTargets.Count:N0} chest, and {towerTargets.Count:N0} Tower rules...");
         var activityChanged = 0;
         foreach (var target in activityTargets)
         {
@@ -112,6 +113,16 @@ internal sealed class BuildEngine
             }
         }
 
+        var towerChanged = 0;
+        if (config.TowerOfTrialsMultiplier != 1)
+        {
+            foreach (var target in towerTargets)
+            {
+                ScaleRewardRow(vanillaRandom, modifiedRandom, target, config.TowerOfTrialsMultiplier);
+                towerChanged++;
+            }
+        }
+
         var gatheringChanged = ScaleGathering(vanillaCollect, modifiedCollect, gatheringIds, config.WorldGatheringMultiplier);
         if (config.EnhancedRarity)
             ApplyRarity(modifiedRandom, targets["rarity_groups"] as JsonArray ?? [], config.HighGradeChance);
@@ -120,7 +131,7 @@ internal sealed class BuildEngine
             ? ApplySpreadRolls(modifiedRandom, modifiedRewardData, activityTargets, config.EquipmentMultiplier)
             : new SpreadResult(0, []);
 
-        var rewardChanged = activityChanged > 0 || enemyChanged > 0 || chestChanged > 0 || config.EnhancedRarity || spread.GeneratedGroups.Count > 0;
+        var rewardChanged = activityChanged > 0 || enemyChanged > 0 || chestChanged > 0 || towerChanged > 0 || config.EnhancedRarity || spread.GeneratedGroups.Count > 0;
         if (!rewardChanged && gatheringChanged == 0)
             throw new InvalidOperationException("Every option is still vanilla. Increase at least one value or enable a reward feature.");
 
@@ -148,6 +159,7 @@ internal sealed class BuildEngine
         }
 
         var traitValidation = ValidateTraitRewards(vanillaRandom, modifiedRandom, vanillaRewardData, modifiedRewardData, activityTargets, config);
+        var towerValidation = ValidateTowerRewards(vanillaRandom, modifiedRandom, towerTargets, config);
         foreach (var expected in packedFiles)
             RequireStagedFile(Path.Combine(stagingContent, expected.Replace('/', Path.DirectorySeparatorChar)));
 
@@ -185,13 +197,17 @@ internal sealed class BuildEngine
                 ["enemy_material_rows"] = enemyChanged,
                 ["activity_rows"] = activityChanged,
                 ["safe_chest_rows"] = chestChanged,
+                ["tower_reward_rows"] = towerChanged,
                 ["spread_reward_rows"] = spread.TransformedRows,
                 ["generated_random_groups"] = spread.GeneratedGroups.Count
             },
             ["validation"] = new JsonObject
             {
                 ["trait_reward_rows_checked"] = traitValidation.RewardRows,
-                ["trait_completion_routes_checked"] = traitValidation.CompletionRoutes
+                ["trait_completion_routes_checked"] = traitValidation.CompletionRoutes,
+                ["tower_reward_rows_checked"] = towerValidation.RewardRows,
+                ["tower_memory_rows_checked"] = towerValidation.MemoryRows,
+                ["tower_whirling_thought_rows_checked"] = towerValidation.WhirlingThoughtRows
             },
             ["packed_files"] = new JsonArray(packedFiles.Select(x => JsonValue.Create(x)).ToArray())
         };
@@ -202,7 +218,7 @@ internal sealed class BuildEngine
 
         TryDeleteBuildWorkspace(workRoot, buildRoot);
         progress?.Report("Build complete and hash-verified.");
-        return new BuildResult(pakPath, sha, packedFiles.Count, gatheringChanged, enemyChanged, activityChanged, chestChanged, spread.TransformedRows, spread.GeneratedGroups.Count, packedFiles);
+        return new BuildResult(pakPath, sha, packedFiles.Count, gatheringChanged, enemyChanged, activityChanged, chestChanged, towerChanged, spread.TransformedRows, spread.GeneratedGroups.Count, packedFiles);
     }
 
     public string Install(BuildResult result, string gameRoot, bool allowUnvalidatedBuild = false)
@@ -720,6 +736,34 @@ internal sealed class BuildEngine
         return new TraitValidationResult(traitTargets.Count, routeCount);
     }
 
+    private static TowerValidationResult ValidateTowerRewards(
+        JsonObject vanillaRandom,
+        JsonObject modifiedRandom,
+        IReadOnlyList<RowTarget> towerTargets,
+        BuildConfig config)
+    {
+        if (towerTargets.Count != 78)
+            throw new InvalidDataException($"The verified baseline must contain exactly 78 Tower of Trials reward rows; found {towerTargets.Count}.");
+
+        var memoryRows = towerTargets.Count(x => x.ItemId == 1450403);
+        var whirlingThoughtRows = towerTargets.Count(x => x.ItemId == 1450822);
+        if (memoryRows != 68 || whirlingThoughtRows != 10 || towerTargets.Any(x => x.ItemId is not 1450403 and not 1450822))
+            throw new InvalidDataException("Tower of Trials target identity validation failed.");
+
+        foreach (var target in towerTargets)
+        {
+            var source = RewardRow(vanillaRandom, target);
+            var destination = RewardRow(modifiedRandom, target);
+            var expected = (JsonObject)source.DeepClone();
+            expected["Min_ItemCount"] = checked(source["Min_ItemCount"]!.GetValue<long>() * config.TowerOfTrialsMultiplier);
+            expected["Max_ItemCount"] = checked(source["Max_ItemCount"]!.GetValue<long>() * config.TowerOfTrialsMultiplier);
+            if (!JsonNode.DeepEquals(expected, destination) || destination["ItemWeight"]!.GetValue<decimal>() <= 0)
+                throw new InvalidDataException($"Tower of Trials reward validation failed at {RowKey(target)}.");
+        }
+
+        return new TowerValidationResult(towerTargets.Count, memoryRows, whirlingThoughtRows);
+    }
+
     private static Dictionary<long, List<int>> MapXmlLines(List<string> lines)
     {
         var result = new Dictionary<long, List<int>>();
@@ -759,10 +803,12 @@ internal sealed class BuildEngine
 
     private static void Validate(BuildConfig c)
     {
-        foreach (var value in new[] { c.WorldGatheringMultiplier, c.EnemyMaterialMultiplier, c.EquipmentMultiplier, c.ActivityMaterialMultiplier, c.CurrencyExperienceItemMultiplier, c.AdventurerEmblemMultiplier, c.GoldMultiplier, c.RankExperienceMultiplier, c.WorldChestMultiplier })
+        foreach (var value in new[] { c.WorldGatheringMultiplier, c.EnemyMaterialMultiplier, c.EquipmentMultiplier, c.ActivityMaterialMultiplier, c.CurrencyExperienceItemMultiplier, c.AdventurerEmblemMultiplier, c.GoldMultiplier, c.RankExperienceMultiplier, c.WorldChestMultiplier, c.TowerOfTrialsMultiplier })
             if (value is < 1 or > 100) throw new ArgumentOutOfRangeException(nameof(c), "Multipliers must be between 1 and 100.");
         if (c.EquipmentMultiplier > 10)
             throw new ArgumentOutOfRangeException(nameof(c), "Equipment is capped at x10 to protect the game's 500-slot equipment inventory.");
+        if (c.TowerOfTrialsMultiplier > 10)
+            throw new ArgumentOutOfRangeException(nameof(c), "Tower of Trials rewards are capped at x10.");
         if (c.HighGradeChance is < 0 or > 100) throw new ArgumentOutOfRangeException(nameof(c), "High-grade chance must be between 0 and 100 percent.");
     }
 
@@ -828,4 +874,5 @@ internal sealed class BuildEngine
     private sealed record CloneDefinition(long SourceGroupId, long CloneGroupId, long Quantity);
     private sealed record SpreadResult(int TransformedRows, List<CloneDefinition> GeneratedGroups);
     private sealed record TraitValidationResult(int RewardRows, int CompletionRoutes);
+    private sealed record TowerValidationResult(int RewardRows, int MemoryRows, int WhirlingThoughtRows);
 }

@@ -42,7 +42,7 @@ internal sealed class MainForm : Form
     {
         _text = new LocalizationService(AppContext.BaseDirectory, localeOverride);
         _uiFontFamily = _text.CurrentLanguage.FontFamily;
-        Text = _text.Text("app.windowTitle", "DragonSword Progression QOL — 1.0.10 Release Candidate");
+        Text = _text.Text("app.windowTitle", "DragonSword Progression QOL — 1.1.2 Release Candidate");
         MinimumSize = new Size(1000, 700);
         var working = Screen.PrimaryScreen?.WorkingArea ?? new Rectangle(0, 0, 1600, 1000);
         Size = new Size(Math.Min(1480, working.Width - 96), Math.Min(1000, working.Height - 72));
@@ -74,6 +74,7 @@ internal sealed class MainForm : Form
         _tabs.Appearance = TabAppearance.Normal;
         _tabs.Padding = new Point(18, 8);
         _tabs.TabPages.Add(BuildRewardsTab());
+        _tabs.TabPages.Add(BuildTowerTab());
         _tabs.TabPages.Add(BuildPathsTab());
         _tabs.TabPages.Add(BuildLanguageTab());
         _tabs.TabPages.Add(BuildAuditTab());
@@ -179,6 +180,39 @@ internal sealed class MainForm : Form
                 AddToggle(_rarity, _text.Text("loot.rarity.title", "Favor better rarity"), _text.Text("loot.rarity.description", "Off (vanilla): original rarity odds. On: supported mixed-tier equipment and Raid rune pools favor their better listed tier. Quantity and item stats are unchanged."), RewardGlyph.Rarity),
                 rarityChance
             ]), 2, 0);
+        tab.Controls.Add(layout);
+        return tab;
+    }
+
+    private TabPage BuildTowerTab()
+    {
+        var tab = NewTab(_text.Text("tab.tower", "Tower"));
+        tab.AutoScroll = true;
+        var layout = new TableLayoutPanel { Dock = DockStyle.Fill, MinimumSize = new Size(900, 680), ColumnCount = 2, RowCount = 1, Padding = new Padding(8), BackColor = PanelColor };
+        layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 52f));
+        layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 48f));
+        layout.Controls.Add(BuildSection(
+            _text.Text("section.tower.title", "TOWER OF TRIALS"),
+            _text.Text("section.tower.description", "One-time floor-clear and cumulative-star rewards. x1 is vanilla."),
+            RewardGlyph.Tower,
+            [
+                AddMultiplier(
+                    _text.Text("reward.tower.title", "Tower rewards"),
+                    "tower",
+                    1,
+                    10,
+                    _text.Text("reward.tower.description", "Multiplies Fragment of Memory and Whirling Thoughts when newly earned or claimed. Does not change stars, difficulty, or rewards already collected."),
+                    RewardGlyph.Tower)
+            ]), 0, 0);
+        layout.Controls.Add(BuildSection(
+            _text.Text("section.towerDetails.title", "WHAT IT CHANGES"),
+            _text.Text("section.towerDetails.description", "Only the two verified Tower reward items below are multiplied."),
+            RewardGlyph.Tower,
+            [
+                Info(_text.Text("tower.memory.description", "Fragment of Memory from Tower floor clears and cumulative-star milestones.")),
+                Info(_text.Text("tower.thoughts.description", "Whirling Thoughts from the verified higher Tower milestones.")),
+                Info(_text.Text("tower.claim.description", "Only newly earned or unclaimed rewards are affected. Rewards already collected are not granted again."))
+            ]), 1, 0);
         tab.Controls.Add(layout);
         return tab;
     }
@@ -525,7 +559,7 @@ internal sealed class MainForm : Form
     private BuildConfig ReadConfig() => new(
         SelectedValue("gathering"), SelectedValue("enemy"), SelectedValue("equipment"),
         SelectedValue("activityMaterials"), SelectedValue("currencyXpItems"), SelectedValue("emblems"), SelectedValue("gold"), SelectedValue("rankXp"),
-        SelectedValue("chests"), _spread.Checked, _rarity.Checked, SelectedValue("rarityChance"));
+        SelectedValue("chests"), SelectedValue("tower"), _spread.Checked, _rarity.Checked, SelectedValue("rarityChance"));
 
     private int SelectedValue(string key) => _multipliers[key].Value;
 
@@ -543,6 +577,7 @@ internal sealed class MainForm : Form
             _multipliers["gold"].SetValue(config.GoldMultiplier);
             _multipliers["rankXp"].SetValue(config.RankExperienceMultiplier);
             _multipliers["chests"].SetValue(config.WorldChestMultiplier);
+            _multipliers["tower"].SetValue(config.TowerOfTrialsMultiplier);
             _multipliers["rarityChance"].SetValue((int)config.HighGradeChance);
             _spread.Checked = config.SpreadRolls;
             _rarity.Checked = config.EnhancedRarity;
@@ -715,7 +750,7 @@ internal sealed class MainForm : Form
 
     private void ResetToDefaults()
     {
-        ApplyConfig(new BuildConfig(1, 1, 1, 1, 1, 1, 1, 1, 1, false, false, 90m));
+        ApplyConfig(new BuildConfig(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, false, false, 90m));
         _currentProfileName = "Default";
         _configurationDirty = false;
         UpdateProfileStatus();
@@ -772,7 +807,7 @@ internal sealed class MainForm : Form
             _latestBuild = await _engine.BuildAsync(config, _outputPath.Text, progress);
             Append($"PAK: {_latestBuild.PakPath}", TextMain);
             Append($"SHA256: {_latestBuild.Sha256}", Teal);
-            Append($"Rows — gathering {_latestBuild.GatheringRows}, enemies {_latestBuild.EnemyMaterialRows}, activities {_latestBuild.ActivityRows}, chests {_latestBuild.ChestRows}, spread rewards {_latestBuild.SpreadRewardRows}.", Gold);
+            Append($"Rows — gathering {_latestBuild.GatheringRows}, enemies {_latestBuild.EnemyMaterialRows}, activities {_latestBuild.ActivityRows}, chests {_latestBuild.ChestRows}, Tower {_latestBuild.TowerRows}, spread rewards {_latestBuild.SpreadRewardRows}.", Gold);
             _status.Text = _text.Text("build.status.verified", "Build verified — not installed yet.");
             Append("BUILD VERIFIED — NOT INSTALLED YET.", Gold);
             InstallLatest();
@@ -832,6 +867,7 @@ internal sealed class MainForm : Form
         config.GoldMultiplier == 1 &&
         config.RankExperienceMultiplier == 1 &&
         config.WorldChestMultiplier == 1 &&
+        config.TowerOfTrialsMultiplier == 1 &&
         !config.SpreadRolls &&
         !config.EnhancedRarity;
 
@@ -951,6 +987,7 @@ internal sealed class MainForm : Form
         SetScreenshotValue("emblems", 5);
         SetScreenshotValue("gold", 10);
         SetScreenshotValue("rankXp", 5);
+        SetScreenshotValue("tower", 5);
         _spread.Checked = true;
         _rarity.Checked = true;
     }
@@ -1104,6 +1141,7 @@ internal sealed class MainForm : Form
         World,
         Activities,
         LootShape,
+        Tower,
         Gathering,
         Enemy,
         Chest,
@@ -1138,7 +1176,7 @@ internal sealed class MainForm : Form
             e.Graphics.ScaleTransform(Width / 36f, Height / 36f);
             using var background = new SolidBrush(Color.FromArgb(22, 28, 32));
             using var border = new Pen(Color.FromArgb(115, Gold), 1.2f);
-            using var pen = new Pen(_glyph is RewardGlyph.World or RewardGlyph.Activities or RewardGlyph.LootShape ? Gold : Teal, 2.1f)
+            using var pen = new Pen(_glyph is RewardGlyph.World or RewardGlyph.Activities or RewardGlyph.LootShape or RewardGlyph.Tower ? Gold : Teal, 2.1f)
             {
                 StartCap = LineCap.Round,
                 EndCap = LineCap.Round,
@@ -1170,6 +1208,19 @@ internal sealed class MainForm : Form
                     e.Graphics.FillEllipse(pen.Brush, 8, 22, 6, 6);
                     e.Graphics.FillEllipse(pen.Brush, 15, 22, 6, 6);
                     e.Graphics.FillEllipse(pen.Brush, 22, 22, 6, 6);
+                    break;
+                case RewardGlyph.Tower:
+                    e.Graphics.DrawRectangle(pen, 10, 12, 16, 16);
+                    e.Graphics.DrawLine(pen, 10, 12, 10, 8);
+                    e.Graphics.DrawLine(pen, 10, 8, 14, 8);
+                    e.Graphics.DrawLine(pen, 14, 8, 14, 12);
+                    e.Graphics.DrawLine(pen, 14, 12, 18, 12);
+                    e.Graphics.DrawLine(pen, 18, 12, 18, 8);
+                    e.Graphics.DrawLine(pen, 18, 8, 22, 8);
+                    e.Graphics.DrawLine(pen, 22, 8, 22, 12);
+                    e.Graphics.DrawLine(pen, 22, 12, 26, 12);
+                    e.Graphics.DrawLine(pen, 26, 12, 26, 8);
+                    e.Graphics.DrawArc(pen, 14, 20, 8, 13, 180, 180);
                     break;
                 case RewardGlyph.Gathering:
                     using (var path = new GraphicsPath())
@@ -1314,7 +1365,7 @@ internal sealed class MainForm : Form
             var buildY = creditY + creditFont.GetHeight(e.Graphics) + 3f;
             e.Graphics.DrawString(_text.Text("banner.title", "PROGRESSION QOL"), titleFont, titleBrush, 34f, titleY);
             e.Graphics.DrawString(_text.Text("banner.credit", "DRAGONSWORD REWARD CONFIGURATOR  •  CREATED BY NECTARINES"), creditFont, creditBrush, 38f, creditY);
-            e.Graphics.DrawString(_text.Text("banner.build", "VERSION 0.9.5  •  BUILT FOR GAME 1.0.10  •  ONE CUSTOM PAK  •  OFFLINE"), buildFont, titleBrush, 39f, buildY);
+            e.Graphics.DrawString(_text.Text("banner.build", "VERSION 0.9.7  •  BUILT FOR GAME 1.1.2  •  ONE CUSTOM PAK  •  OFFLINE"), buildFont, titleBrush, 39f, buildY);
         }
     }
 }

@@ -2,7 +2,7 @@
 
 An offline reward configurator for **DragonSword: Awakening**, created by **nectarines**.
 
-Version `0.9.5-rc.1` is a release candidate validated against unmodified game version 1.0.10, Steam build `24831799`. It builds one custom Unreal PAK from independently maintained targets and official game-table baselines. Every multiplier starts at vanilla `x1`; both optional loot-shape features start off.
+Version `0.9.7-rc.1` refreshes the official table baseline for game 1.1.2, Steam build `26210326`. Offline build, client/server parity, preservation and inert install/recovery checks pass. In-game testing of this release has NOT RUN; unresolved reports remain open. It builds one custom Unreal PAK from independently maintained targets and official game-table baselines. Every multiplier starts at vanilla `x1`; both optional loot-shape features start off.
 
 ## Features
 
@@ -11,6 +11,7 @@ Version `0.9.5-rc.1` is a release candidate validated against unmodified game ve
 - Dungeon, hunt, raid, and Sudden Mission equipment, crafting materials, Adventurer's Emblems, gold, and Mercenary Corps Rank EXP.
 - Verified Gold and Crafting Materials from Sunken Ruins and Ruins Beneath the Waves.
 - Independent Currency EXP Items control for Character, Equipment, and Karma EXP items from the three repeatable Currency Dungeons.
+- Independent Tower of Trials x1–x10 control for verified Fragment of Memory and Whirling Thoughts floor-clear and cumulative-star rewards.
 - Equipment is capped at x10 because the equipment inventory holds 500 items.
 - Optional Spread Equipment Rolls turns a multiplied equipment stack into several independent selections from the same pool, allowing more variety without forcing unique item types.
 - Optional Favor Better Rarity shifts supported mixed pools toward their better available tier without adding quantity.
@@ -71,13 +72,14 @@ The generated PAK may contain these game paths:
 
 Another PAK editing the same tables conflicts at the file level; Unreal PAK load order does not merge individual rows. The built-in scanner checks every non-official PAK in `Paks` and `Paks\~mods`—including Treasure Respawn by contents—and verifies its internal paths before warning.
 
-The table baseline was extracted from unmodified game version 1.0.10, Steam build `24831799`. Every managed reward-system table was confirmed byte-identical to the validated 1.0.9 baseline; only the English localization table changed. Automatic installation checks the local Steam manifest. A newer or unverifiable build receives a clear compatibility warning but may continue; a known older build remains blocked until the game is updated. Because a game update can change these full reward tables, restore vanilla behavior and watch the mod page for an update if rewards behave unexpectedly. Building alone never modifies the game.
+The table baseline was extracted from the 50 official archives of game 1.1.2, Steam build `26210326`. This replaces stale complete reward tables, preserves the current new reward routes, and derives supported targets from current game relationships. Rebuild the configured PAK using this release after upgrading; replacing the app alone does not replace a previously installed PAK. Saved profiles remain compatible and the app starts at vanilla defaults. Gameplay is not verified by offline table checks; see TESTING-1.1.2.md. Automatic installation checks the Steam manifest: older builds are blocked; newer or unverifiable builds require confirmation. Building alone never changes the game.
 
 ## Independent provenance
 
 - Activity targets come from the Dungeon QOL work authored by nectarines in this workspace.
 - Enemy-material and gathering targets are derived from unmodified game-table fields and item classifications.
 - Safe chest and rarity targets are derived from unmodified game-table relationships.
+- Tower targets follow 78 verified unmodified `RewardData` to `RewardRandomData` routes and are never selected globally by item ID.
 - The application does not ingest another mod, require another mod, or include another mod's files, settings, branding, or artwork.
 - Release artwork is an original AI-generated fantasy reward-forge scene created for this project. It contains no game characters, logos, or third-party mod assets.
 

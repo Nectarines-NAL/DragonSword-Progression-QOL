@@ -4,7 +4,7 @@
 
 - Windows 10 or Windows 11, 64-bit
 - DragonSword: Awakening
-- Game version 1.0.10, Steam build `24831799`, for this release candidate
+- Game version 1.1.2, Steam build `26210326`, for this release candidate
 - Microsoft .NET 8 Desktop Runtime, x64
 - About 15 MB for the application, plus space for generated builds
 

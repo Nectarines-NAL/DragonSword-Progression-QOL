@@ -10,6 +10,7 @@ internal sealed record BuildConfig(
     int GoldMultiplier,
     int RankExperienceMultiplier,
     int WorldChestMultiplier,
+    int TowerOfTrialsMultiplier,
     bool SpreadRolls,
     bool EnhancedRarity,
     decimal HighGradeChance);
@@ -22,6 +23,7 @@ internal sealed record BuildResult(
     int EnemyMaterialRows,
     int ActivityRows,
     int ChestRows,
+    int TowerRows,
     int SpreadRewardRows,
     int GeneratedGroups,
     IReadOnlyList<string> PackedFiles);

@@ -82,6 +82,8 @@ internal sealed class ProfileStore
             ?? throw new InvalidDataException("The selected profile is empty or invalid.");
         if (document.Settings.CurrencyExperienceItemMultiplier == 0)
             document = document with { Settings = document.Settings with { CurrencyExperienceItemMultiplier = document.Settings.ActivityMaterialMultiplier } };
+        if (document.Settings.TowerOfTrialsMultiplier == 0)
+            document = document with { Settings = document.Settings with { TowerOfTrialsMultiplier = 1 } };
         if (document.SchemaVersion != CurrentSchemaVersion)
             throw new InvalidDataException($"Profile schema {document.SchemaVersion} is unsupported. Expected {CurrentSchemaVersion}.");
         ValidateName(document.Name);
@@ -232,6 +234,7 @@ internal sealed class ProfileStore
         RequireChoice(nameof(settings.GoldMultiplier), settings.GoldMultiplier, GeneralMultipliers);
         RequireChoice(nameof(settings.RankExperienceMultiplier), settings.RankExperienceMultiplier, GeneralMultipliers);
         RequireChoice(nameof(settings.WorldChestMultiplier), settings.WorldChestMultiplier, LimitedMultipliers);
+        RequireChoice(nameof(settings.TowerOfTrialsMultiplier), settings.TowerOfTrialsMultiplier, LimitedMultipliers);
         if (!RarityChances.Contains(settings.HighGradeChance))
             throw new InvalidDataException($"HighGradeChance must be one of: {string.Join(", ", RarityChances)}.");
     }
